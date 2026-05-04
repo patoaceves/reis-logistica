@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Warehousing 3PL en México | REIS Logística</title>
+<meta name="description" content="Almacenamiento industrial 3PL con +126,000 m² en México. Bodegas Clase A en Ciudad Juárez, Monterrey y San Luis Potosí. Licencia IMMEX, certificación OEA, +15 años de experiencia." />
+<meta name="theme-color" content="#F4F7F8" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#F4F7F8" media="(prefers-color-scheme: dark)" />
+<meta name="color-scheme" content="light" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b1a22'/%3E%3Cpath d='M8 22V10h7a4 4 0 1 1 0 8h-3v4z M16 18l4 4 M22 12v10' stroke='%2337ae40' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Warehousing 3PL en México | REIS Logística" />
+<meta property="og:description" content="+126,000 m² de almacenamiento industrial Clase A en México." />
+<meta property="og:image" content="/assets/img/about-facility.jpg" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+<style>
+  /* ============================================================
+     DESIGN TOKENS — REIS LIGHT
+     ============================================================ */
+  html { background-color: #F4F7F8; }
+  :root {
+    /* Surface */
+    --bg:        #F4F7F8;
+    --bg-alt:    #EAF0F2;
+    --bg-card:   #FFFFFF;
+    --bg-dark:   #0b1a22;
+    --bg-dark-2: #142e3a;
+
+    /* Brand */
+    --green:      #2ea73a;
+    --green-2:    #37ae40;
+    --green-deep: #248a2f;
+    --green-soft: rgba(46, 167, 58, .08);
+    --blue:       #145474;
+    --blue-2:     #1d6e95;
+    --blue-soft:  rgba(20, 84, 116, .06);
+
+    /* Text */
+    --ink:        #0b1a22;
+    --ink-2:      #1c3540;
+    --ink-soft:   #2f4a55;
+    --ink-mute:   #5c7884;
+    --ink-dim:    #8aa0a8;
+    --ink-light:  #b9cbd1;
+    --on-dark:    #eaf2f5;
+    --on-dark-mute: #9bb1bb;
+
+    /* Lines */
+    --line:       #dee5e8;
+    --line-2:     #c5d2d8;
+    --line-dark:  rgba(255,255,255,.1);
+
+    /* Type */
+    --font-sans: 'Titillium Web', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    /* Layout */
+    --maxw: 1240px;
+    --r-sm: 6px;
+    --r-md: 12px;
+    --r-lg: 18px;
+    --r-xl: 24px;
+
+    /* Motion */
+    --ease: cubic-bezier(.2,.8,.2,1);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(11, 26, 34, .04), 0 1px 2px rgba(11, 26, 34, .02);
+    --shadow-md: 0 4px 16px -4px rgba(11, 26, 34, .08), 0 2px 4px rgba(11, 26, 34, .04);
+    --shadow-lg: 0 24px 48px -16px rgba(11, 26, 34, .12), 0 8px 16px -8px rgba(11, 26, 34, .06);
+  }
+
+  *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 80px; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; height: auto; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; border: 0; background: 0; color: inherit; }
+  input, select, textarea { font: inherit; color: inherit; }
+
+  /* Subtle blueprint grid only on body — much more subtle than dark version */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(rgba(11, 26, 34, .025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(11, 26, 34, .025) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+    z-index: 0;
+    mask-image: radial-gradient(ellipse at top, #000 20%, transparent 80%);
+  }
+
+  /* ============================================================
+     UTILITIES
+     ============================================================ */
+  .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  .mono { font-family: var(--font-mono); }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--green-deep);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 22px; height: 1px;
+    background: var(--green);
+  }
+  .eyebrow.on-dark { color: var(--green-2); }
+  .eyebrow.on-dark::before { background: var(--green-2); }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: var(--r-sm);
+    transition: all .2s var(--ease);
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--green);
+    color: #ffffff;
+    box-shadow: 0 6px 16px -8px var(--green);
+  }
+  .btn-primary:hover { background: var(--green-deep); transform: translateY(-1px); box-shadow: 0 10px 22px -8px var(--green); }
+  .btn-ghost {
+    border-color: var(--line-2);
+    color: var(--ink);
+    background: var(--bg-card);
+  }
+  .btn-ghost:hover { border-color: var(--green); color: var(--green-deep); }
+  .btn-dark {
+    background: var(--ink);
+    color: #ffffff;
+  }
+  .btn-dark:hover { background: var(--ink-2); }
+
+  .arrow-svg { width: 16px; height: 16px; }
+
+  /* ============================================================
+     NAV
+     ============================================================ */
+  .nav {
+    position: sticky;
+    top: 0; z-index: 50;
+    background: rgba(244, 247, 248, .82);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+  }
+  .nav-logo img { height: 38px; width: auto; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink-mute);
+    transition: color .15s var(--ease);
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta { display: flex; gap: 10px; align-items: center; }
+  .nav-status {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--green-deep); letter-spacing: .12em;
+    padding: 6px 12px; border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--bg-card);
+  }
+  @media (max-width: 880px) {
+    .nav-links, .nav-status { display: none; }
+  }
+
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero {
+    position: relative;
+    padding: 70px 0 90px;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 5.4vw, 72px);
+    line-height: 1.04;
+    letter-spacing: -.022em;
+    font-weight: 700;
+    margin: 22px 0 22px;
+    color: var(--ink);
+  }
+  .hero h1 .accent {
+    color: var(--green-deep);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .hero-sub {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink-mute);
+    max-width: 520px;
+    margin-bottom: 36px;
+  }
+  .hero-actions {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    margin-bottom: 44px;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    flex-wrap: wrap;
+  }
+  .hero-meta div { display: flex; flex-direction: column; gap: 2px; }
+  .hero-meta .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+  .hero-meta .value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  /* Hero image — actual photo with overlay frame */
+  .hero-visual {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .hero-visual img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .hero-visual::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(11, 26, 34, .6));
+    pointer-events: none;
+  }
+  .hero-visual .badge {
+    position: absolute;
+    bottom: 24px; left: 24px; right: 24px;
+    z-index: 2;
+    color: #fff;
+  }
+  .hero-visual .badge .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    opacity: .85;
+    margin-bottom: 6px;
+  }
+  .hero-visual .badge h3 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  /* Decorative corner brackets */
+  .hero-visual .bracket {
+    position: absolute;
+    width: 28px; height: 28px;
+    border: 2px solid var(--green-2);
+    z-index: 2;
+  }
+  .hero-visual .bracket.tl { top: 16px; left: 16px; border-right: 0; border-bottom: 0; }
+  .hero-visual .bracket.tr { top: 16px; right: 16px; border-left: 0; border-bottom: 0; }
+  .hero-visual .bracket.bl { bottom: 16px; left: 16px; border-right: 0; border-top: 0; opacity: .4; }
+  .hero-visual .bracket.br { bottom: 16px; right: 16px; border-left: 0; border-top: 0; opacity: .4; }
+
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero { padding: 40px 0 60px; }
+    .hero-visual { aspect-ratio: 16 / 11; }
+  }
+
+  /* ============================================================
+     KPI BAR
+     ============================================================ */
+  .kpi {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--bg-card);
+    padding: 36px 0;
+  }
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .kpi-item { padding: 0 12px; }
+  .kpi-item .num {
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 700; line-height: 1;
+    letter-spacing: -.02em;
+    color: var(--ink);
+  }
+  .kpi-item .num .plus {
+    color: var(--green); font-weight: 300; margin-right: 2px;
+  }
+  .kpi-item .num .unit {
+    font-size: .5em; color: var(--ink-mute);
+    margin-left: 4px; font-weight: 400;
+  }
+  .kpi-item .lbl {
+    font-family: var(--font-mono);
+    font-size: 12px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-mute);
+    margin-top: 10px;
+  }
+  @media (max-width: 700px) {
+    .kpi-grid { grid-template-columns: 1fr; gap: 24px; }
+  }
+
+  /* ============================================================
+     SECTION BASE
+     ============================================================ */
+  section.block { padding: 100px 0; position: relative; }
+  section.block.dark {
+    background: var(--bg-dark);
+    color: var(--on-dark);
+  }
+  section.block.dark .section-head h2 { color: #fff; }
+  section.block.dark .section-head p { color: var(--on-dark-mute); }
+
+  .section-head { max-width: 720px; margin-bottom: 56px; }
+  .section-head h2 {
+    font-size: clamp(32px, 3.6vw, 48px);
+    font-weight: 700; letter-spacing: -.018em;
+    line-height: 1.08; margin: 18px 0 14px;
+    color: var(--ink);
+  }
+  .section-head h2 .accent { color: var(--green-deep); font-weight: 300; font-style: italic; }
+  .section-head.on-dark h2 .accent { color: var(--green-2); }
+  .section-head p { color: var(--ink-mute); font-size: 17px; max-width: 640px; line-height: 1.65; }
+
+  /* ============================================================
+     ABOUT — "Somos REIS" with real facility image
+     ============================================================ */
+  .about {
+    background: var(--bg-card);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 70px;
+    align-items: center;
+  }
+  .about-image {
+    position: relative;
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    box-shadow: var(--shadow-md);
+  }
+  .about-image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .8s var(--ease);
+  }
+  .about-image:hover img { transform: scale(1.04); }
+  .about-image .floating-stat {
+    position: absolute;
+    bottom: 24px; left: 24px;
+    background: rgba(11, 26, 34, .92);
+    color: #fff;
+    padding: 18px 22px;
+    border-radius: var(--r-md);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,.1);
+  }
+  .about-image .floating-stat .num {
+    font-size: 28px; font-weight: 700; line-height: 1;
+  }
+  .about-image .floating-stat .num .plus { color: var(--green-2); font-weight: 300; }
+  .about-image .floating-stat .lbl {
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--on-dark-mute); margin-top: 4px;
+  }
+
+  .about-content h2 {
+    font-size: clamp(30px, 3.4vw, 44px);
+    font-weight: 700; letter-spacing: -.018em;
+    line-height: 1.1; margin: 18px 0 22px;
+  }
+  .about-content h2 .accent { color: var(--green-deep); font-weight: 300; font-style: italic; }
+  .about-content p {
+    color: var(--ink-soft); font-size: 16px; line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .about-content p strong { color: var(--ink); font-weight: 700; }
+  .about-tags {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+  .about-tag {
+    font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: .08em; text-transform: uppercase;
+    color: var(--ink-mute);
+    padding: 6px 12px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+  }
+
+  @media (max-width: 880px) {
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-image { aspect-ratio: 16 / 10; }
+  }
+
+  /* ============================================================
+     VIDEO SECTION
+     ============================================================ */
+  .video-section {
+    padding: 80px 0;
+    position: relative;
+  }
+  .video-frame {
+    position: relative;
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 16 / 9;
+    background: var(--ink);
+  }
+  .video-frame video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .video-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11,26,34,.0), rgba(11,26,34,.5));
+    pointer-events: none;
+    z-index: 1;
+  }
+  .video-overlay {
+    position: absolute;
+    bottom: 32px; left: 32px;
+    z-index: 2;
+    color: #fff;
+  }
+  .video-overlay .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--green-2);
+    margin-bottom: 8px;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .video-overlay .label::before {
+    content: ''; width: 22px; height: 1px; background: var(--green-2);
+  }
+  .video-overlay h3 {
+    font-size: clamp(22px, 2.4vw, 32px);
+    font-weight: 700;
+    line-height: 1.1;
+    max-width: 540px;
+  }
+
+  /* ============================================================
+     SERVICES — 3 cards with images
+     ============================================================ */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .service-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    transition: all .25s var(--ease);
+    display: flex; flex-direction: column;
+  }
+  .service-card:hover {
+    border-color: var(--line-2);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+  .service-card .image {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--bg-alt);
+  }
+  .service-card .image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .6s var(--ease);
+  }
+  .service-card:hover .image img { transform: scale(1.06); }
+  .service-card .image::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(11,26,34,.35));
+  }
+  .service-card .image .num {
+    position: absolute; top: 16px; left: 16px;
+    font-family: var(--font-mono);
+    font-size: 11px; color: #fff;
+    letter-spacing: .14em;
+    background: rgba(11, 26, 34, .65);
+    backdrop-filter: blur(8px);
+    padding: 5px 10px;
+    border-radius: var(--r-sm);
+    z-index: 1;
+  }
+  .service-card .body {
+    padding: 28px;
+    flex: 1;
+    display: flex; flex-direction: column;
+  }
+  .service-card .icon {
+    width: 44px; height: 44px;
+    border: 1px solid var(--line);
+    border-radius: var(--r-sm);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+    background: var(--green-soft);
+    color: var(--green-deep);
+  }
+  .service-card .icon svg { width: 22px; height: 22px; stroke-width: 1.6; }
+  .service-card h3 {
+    font-size: 22px; font-weight: 700;
+    margin-bottom: 10px; letter-spacing: -.01em;
+    color: var(--ink);
+  }
+  .service-card p {
+    color: var(--ink-mute); font-size: 14.5px; line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .service-card .features {
+    list-style: none; display: flex; flex-direction: column; gap: 8px;
+    padding-top: 18px; border-top: 1px dashed var(--line);
+    margin-top: auto;
+  }
+  .service-card .features li {
+    font-size: 13px; color: var(--ink-soft);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .service-card .features li::before {
+    content: ''; width: 5px; height: 5px;
+    background: var(--green); border-radius: 50%;
+    flex-shrink: 0;
+  }
+  @media (max-width: 880px) {
+    .services-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ============================================================
+     DIFFERENTIATORS — Bento (light)
+     ============================================================ */
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(220px, auto);
+    gap: 16px;
+  }
+  .bento-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: all .2s var(--ease);
+  }
+  .bento-card:hover { border-color: var(--line-2); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .bento-card.feature { grid-column: span 3; grid-row: span 2; }
+  .bento-card.span2   { grid-column: span 2; }
+
+  .bento-card .icon-box {
+    width: 42px; height: 42px;
+    border-radius: var(--r-sm);
+    background: var(--green-soft);
+    border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--green-deep);
+    margin-bottom: 18px;
+  }
+  .bento-card .icon-box svg { width: 22px; height: 22px; stroke-width: 1.6; }
+  .bento-card h4 {
+    font-size: 18px; font-weight: 700; margin-bottom: 8px;
+    letter-spacing: -.005em; color: var(--ink);
+  }
+  .bento-card p { color: var(--ink-mute); font-size: 14px; line-height: 1.6; }
+
+  .bento-card.feature {
+    background:
+      radial-gradient(ellipse at top right, var(--green-soft), transparent 60%),
+      var(--bg-card);
+  }
+  .bento-card.feature .icon-box { width: 56px; height: 56px; }
+  .bento-card.feature .icon-box svg { width: 28px; height: 28px; }
+  .bento-card.feature h4 { font-size: 28px; margin-bottom: 14px; }
+  .bento-card.feature p { font-size: 16px; max-width: 90%; }
+  .bento-card.feature .deco {
+    position: absolute;
+    bottom: -50px; right: -50px;
+    width: 240px; height: 240px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    opacity: .7;
+  }
+  .bento-card.feature .deco::before {
+    content: '';
+    position: absolute; inset: 30px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+  }
+  .bento-card.feature .deco::after {
+    content: '';
+    position: absolute; inset: 60px;
+    border: 1px dashed var(--line-2);
+    border-radius: 50%;
+  }
+
+  @media (max-width: 960px) {
+    .bento { grid-template-columns: repeat(2, 1fr); }
+    .bento-card.feature, .bento-card.span2 {
+      grid-column: span 2; grid-row: auto;
+    }
+  }
+  @media (max-width: 600px) {
+    .bento { grid-template-columns: 1fr; }
+    .bento-card.feature, .bento-card.span2 { grid-column: span 1; }
+  }
+
+  /* ============================================================
+     CAROUSEL — "Nuestros almacenes"
+     ============================================================ */
+  .carousel-section {
+    background: var(--bg-card);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .carousel-head {
+    display: flex; justify-content: space-between; align-items: end;
+    margin-bottom: 40px;
+    gap: 40px;
+  }
+  .carousel-head .text { max-width: 680px; }
+  .carousel-head h2 {
+    font-size: clamp(30px, 3.4vw, 44px);
+    font-weight: 700; letter-spacing: -.018em;
+    line-height: 1.1; margin: 14px 0 12px;
+  }
+  .carousel-head h2 .accent { color: var(--green-deep); font-weight: 300; font-style: italic; }
+  .carousel-head p { color: var(--ink-mute); font-size: 16px; }
+  .carousel-controls { display: flex; gap: 8px; }
+  .carousel-btn {
+    width: 44px; height: 44px;
+    border: 1px solid var(--line-2);
+    border-radius: 50%;
+    background: var(--bg-card);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+    transition: all .15s var(--ease);
+  }
+  .carousel-btn:hover:not(:disabled) {
+    border-color: var(--green); color: var(--green-deep);
+  }
+  .carousel-btn:disabled { opacity: .3; cursor: not-allowed; }
+  .carousel-btn svg { width: 16px; height: 16px; }
+
+  .carousel-track {
+    display: flex; gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 8px;
+    /* Allow images to bleed slightly past the container */
+    margin-right: -24px;
+    padding-right: 24px;
+  }
+  .carousel-track::-webkit-scrollbar { display: none; }
+  .carousel-card {
+    flex: 0 0 calc(50% - 8px);
+    scroll-snap-align: start;
+    border-radius: var(--r-md);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: var(--bg-alt);
+    box-shadow: var(--shadow-sm);
+  }
+  .carousel-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .6s var(--ease);
+  }
+  .carousel-card:hover img { transform: scale(1.04); }
+  .carousel-card::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(11,26,34,.7));
+    pointer-events: none;
+  }
+  .carousel-card .meta {
+    position: absolute;
+    bottom: 20px; left: 20px; right: 20px;
+    color: #fff; z-index: 1;
+  }
+  .carousel-card .meta .city {
+    font-family: var(--font-mono);
+    font-size: 11px; letter-spacing: .14em;
+    text-transform: uppercase;
+    opacity: .85;
+    margin-bottom: 4px;
+  }
+  .carousel-card .meta h4 {
+    font-size: 18px; font-weight: 700;
+  }
+  @media (max-width: 800px) {
+    .carousel-card { flex: 0 0 85%; }
+    .carousel-head { flex-direction: column; align-items: flex-start; gap: 20px; }
+  }
+
+  /* ============================================================
+     LOCATIONS
+     ============================================================ */
+  .locations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .loc-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    padding: 28px;
+    transition: all .2s var(--ease);
+  }
+  .loc-card:hover { border-color: var(--green); box-shadow: var(--shadow-md); }
+  .loc-card .pin {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--green-deep); margin-bottom: 14px;
+  }
+  .loc-card .pin svg { width: 12px; height: 12px; }
+  .loc-card h4 {
+    font-size: 24px; font-weight: 700;
+    margin-bottom: 6px; letter-spacing: -.01em;
+    color: var(--ink);
+  }
+  .loc-card .region {
+    font-size: 13px; color: var(--ink-mute);
+    margin-bottom: 22px;
+  }
+  .loc-card .stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+  }
+  .loc-card .stat .v {
+    font-family: var(--font-mono);
+    font-size: 16px; font-weight: 600; color: var(--ink);
+  }
+  .loc-card .stat .l {
+    font-size: 11px; color: var(--ink-dim);
+    letter-spacing: .08em; text-transform: uppercase;
+    margin-top: 4px;
+  }
+  @media (max-width: 880px) {
+    .locations { grid-template-columns: 1fr; }
+  }
+
+  /* ============================================================
+     INDUSTRIES
+     ============================================================ */
+  .industries-row {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin-top: 24px;
+  }
+  .industry-pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 14px; font-weight: 600;
+    color: var(--ink);
+    transition: all .2s var(--ease);
+  }
+  .industry-pill:hover {
+    border-color: var(--green);
+    color: var(--green-deep);
+  }
+  .industry-pill svg { width: 16px; height: 16px; color: var(--green-deep); }
+
+  /* ============================================================
+     CTA / QUOTE FORM (DARK contrast section)
+     ============================================================ */
+  section.block.cta-block {
+    background: var(--bg-dark);
+    color: var(--on-dark);
+    padding: 100px 0;
+  }
+  .cta-block::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 600px; height: 600px;
+    background: radial-gradient(ellipse, rgba(46,167,58,.12), transparent 60%);
+    pointer-events: none;
+  }
+  .cta-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 60px;
+    align-items: start;
+    position: relative; z-index: 1;
+  }
+  .cta-grid h2 {
+    font-size: clamp(32px, 3.6vw, 48px);
+    font-weight: 700; line-height: 1.08;
+    margin: 16px 0 18px; letter-spacing: -.018em;
+    color: #fff;
+  }
+  .cta-grid h2 .accent { color: var(--green-2); font-style: italic; font-weight: 300; }
+  .cta-grid p { color: var(--on-dark-mute); font-size: 16px; line-height: 1.65; margin-bottom: 32px; max-width: 480px; }
+  .cta-contact-list { display: flex; flex-direction: column; gap: 12px; }
+  .cta-contact-item {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 16px;
+    border: 1px solid var(--line-dark);
+    border-radius: var(--r-sm);
+    background: rgba(255,255,255,.025);
+  }
+  .cta-contact-item .ic {
+    width: 36px; height: 36px;
+    border-radius: var(--r-sm);
+    background: rgba(46,167,58,.15);
+    border: 1px solid var(--line-dark);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--green-2);
+    flex-shrink: 0;
+  }
+  .cta-contact-item .ic svg { width: 16px; height: 16px; stroke-width: 1.8; }
+  .cta-contact-item .info { display: flex; flex-direction: column; }
+  .cta-contact-item .info .name { font-size: 14px; font-weight: 600; color: #fff; }
+  .cta-contact-item .info .role { font-size: 12px; color: var(--on-dark-mute); font-family: var(--font-mono); letter-spacing: .04em; }
+
+  .cta-form {
+    background: rgba(255,255,255,.04);
+    border: 1px solid var(--line-dark);
+    border-radius: var(--r-md);
+    padding: 28px;
+    backdrop-filter: blur(10px);
+  }
+  .cta-form .form-title {
+    font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: .14em; text-transform: uppercase;
+    color: var(--green-2); margin-bottom: 24px;
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .cta-form .form-title::before {
+    content: ''; width: 22px; height: 1px; background: var(--green-2);
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+  .field label {
+    font-size: 11px; letter-spacing: .08em;
+    color: var(--on-dark-mute); text-transform: uppercase;
+    font-family: var(--font-mono);
+  }
+  .field input, .field select, .field textarea {
+    background: rgba(0,0,0,.25);
+    border: 1px solid var(--line-dark);
+    color: #fff;
+    padding: 12px 14px;
+    border-radius: var(--r-sm);
+    font-size: 14px;
+    transition: border-color .15s var(--ease);
+    width: 100%;
+    font-family: var(--font-sans);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: 0; border-color: var(--green-2);
+  }
+  .field select option { background: var(--ink); color: #fff; }
+  .field textarea { resize: vertical; min-height: 90px; }
+  .form-submit {
+    width: 100%; margin-top: 8px;
+    background: var(--green);
+    color: #fff;
+    padding: 16px; border-radius: var(--r-sm);
+    font-weight: 700; font-size: 15px;
+    transition: all .2s var(--ease);
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    box-shadow: 0 6px 22px -10px var(--green);
+  }
+  .form-submit:hover { background: var(--green-2); }
+  .form-fineprint {
+    font-size: 11px; color: var(--ink-dim);
+    margin-top: 14px; text-align: center;
+    font-family: var(--font-mono); letter-spacing: .04em;
+  }
+
+  @media (max-width: 880px) {
+    .cta-grid { grid-template-columns: 1fr; gap: 40px; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+  }
+
+  /* ============================================================
+     FOOTER (dark)
+     ============================================================ */
+  footer {
+    background: var(--bg-dark-2);
+    color: var(--on-dark);
+    padding: 60px 0 30px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-brand img { height: 38px; margin-bottom: 18px; }
+  .footer-brand p { color: var(--on-dark-mute); font-size: 14px; line-height: 1.6; max-width: 320px; }
+  .footer-col h5 {
+    font-family: var(--font-mono);
+    font-size: 11px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--green-2);
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col a { color: var(--on-dark-mute); font-size: 14px; transition: color .15s var(--ease); }
+  .footer-col a:hover { color: #fff; }
+  .footer-bottom {
+    padding-top: 24px;
+    border-top: 1px solid var(--line-dark);
+    display: flex; justify-content: space-between; align-items: center;
+    color: var(--ink-dim); font-size: 12px;
+    font-family: var(--font-mono); letter-spacing: .04em;
+    flex-wrap: wrap; gap: 12px;
+  }
+  @media (max-width: 880px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  }
+  @media (max-width: 520px) {
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+
+  /* WhatsApp floater */
+  .wa-float {
+    position: fixed;
+    bottom: 24px; right: 24px;
+    z-index: 100;
+    width: 56px; height: 56px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white;
+    box-shadow: 0 10px 30px -8px rgba(37,211,102,.5);
+    transition: transform .2s var(--ease);
+  }
+  .wa-float:hover { transform: scale(1.06); }
+  .wa-float svg { width: 28px; height: 28px; }
+
+  /* Reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- =========================================================
+     NAV
+     ========================================================= -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="https://static.wixstatic.com/media/78c590_4e2791f163fe4e0295b6f8f44179c16d~mv2.png/v1/crop/x_5,y_0,w_1601,h_659/fill/w_311,h_128,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/i42.png" alt="REIS Logística" />
+    </a>
+    <div class="nav-links">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#almacenes">Almacenes</a>
+      <a href="#ubicaciones">Ubicaciones</a>
+      <a href="#cotiza">Contacto</a>
+    </div>
+    <div class="nav-cta">
+      <span class="nav-status">OPERACIÓN 24/7</span>
+      <a href="#cotiza" class="btn btn-primary">Cotiza ahora</a>
+    </div>
+  </div>
+</nav>
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content reveal">
+        <span class="eyebrow">Warehousing 3PL · México</span>
+        <h1>
+          Almacenamiento que <span class="accent">optimiza</span> tu cadena de suministro.
+        </h1>
+        <p class="hero-sub">
+          +126,000 m² de bodegas industriales Clase A en Ciudad Juárez, Monterrey y San Luis Potosí. Gestión de inventarios precisa, integración 3PL y licencia IMMEX bajo un solo aliado estratégico.
+        </p>
+        <div class="hero-actions">
+          <a href="#cotiza" class="btn btn-primary">
+            Cotiza ahora
+            <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <span class="label">Certificación</span>
+            <span class="value">ISO · OEA / CTPAT</span>
+          </div>
+          <div>
+            <span class="label">Cobertura</span>
+            <span class="value">Bajío + Frontera Norte</span>
+          </div>
+          <div>
+            <span class="label">Sectores</span>
+            <span class="value">Automotriz · Aeroespacial · Alimentos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <span class="bracket tl"></span>
+        <span class="bracket tr"></span>
+        <span class="bracket bl"></span>
+        <span class="bracket br"></span>
+        <img src="/assets/img/hero.avif" alt="Centro logístico REIS al anochecer — bodega Clase A iluminada" loading="eager" />
+        <div class="badge">
+          <div class="label">CD. JUÁREZ · NIGHT OPS</div>
+          <h3>Clase A · CTPAT · 24/7</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     KPI BAR
+     ========================================================= -->
+<section class="kpi">
+  <div class="container">
+    <div class="kpi-grid">
+      <div class="kpi-item reveal">
+        <div class="num"><span class="plus">+</span><span data-counter="126000">0</span><span class="unit">m²</span></div>
+        <div class="lbl">Almacenamiento industrial</div>
+      </div>
+      <div class="kpi-item reveal">
+        <div class="num"><span class="plus">+</span><span data-counter="100">0</span></div>
+        <div class="lbl">Clientes activos</div>
+      </div>
+      <div class="kpi-item reveal">
+        <div class="num"><span class="plus">+</span><span data-counter="15">0</span><span class="unit">años</span></div>
+        <div class="lbl">Liderando la industria</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     ABOUT — "Somos REIS"
+     ========================================================= -->
+<section id="nosotros" class="block about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image reveal">
+        <img src="/assets/img/about-facility.jpg" alt="Centro logístico REIS Logística — fachada de bodega Clase A" loading="lazy" />
+        <div class="floating-stat">
+          <div class="num"><span class="plus">+</span>350</div>
+          <div class="lbl">Colaboradores en planta</div>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <span class="eyebrow">Sobre REIS</span>
+        <h2>Empresa mexicana, <span class="accent">aliados estratégicos</span> de tu logística.</h2>
+        <p>Somos una empresa mexicana dedicada a la <strong>logística para terceros (3PL)</strong> y al <strong>almacenamiento industrial</strong> para los sectores automotriz, electrodomésticos, aeroespacial y alimentos, con presencia en el bajío y en el noreste de México (frontera México–USA).</p>
+        <p>Contamos con más de <strong>quince años de experiencia</strong>, una plantilla laboral de más de 350 colaboradores, socios comerciales de clase mundial, y un espacio de almacenamiento de más de <strong>140,000 m² en 10 bodegas</strong> en México.</p>
+        <div class="about-tags">
+          <span class="about-tag">Automotriz</span>
+          <span class="about-tag">Aeroespacial</span>
+          <span class="about-tag">Electrodomésticos</span>
+          <span class="about-tag">Alimentos</span>
+          <span class="about-tag">Manufactura</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     VIDEO — Operaciones reel
+     ========================================================= -->
+<section class="video-section">
+  <div class="container">
+    <div class="video-frame reveal">
+      <video src="/assets/video/operaciones.mp4" autoplay muted loop playsinline preload="metadata" poster="/assets/img/about-facility.jpg"></video>
+      <div class="video-overlay">
+        <span class="label">REIS · OPERACIONES EN VIVO</span>
+        <h3>Así se mueve tu inventario, día y noche.</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SERVICES
+     ========================================================= -->
+<section id="servicios" class="block">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Cobertura integral</span>
+      <h2>Tres pilares, <span class="accent">una sola operación.</span></h2>
+      <p>3PL, IMMEX y logística integrada bajo un solo proveedor. Reducimos puntos de contacto, riesgos operativos y costos administrativos.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card reveal">
+        <div class="image">
+          <span class="num">01 / 3PL</span>
+          <img src="/assets/img/service-3pl.webp" alt="Servicios 3PL — almacén con racks industriales y operación de inventarios" loading="lazy" />
+        </div>
+        <div class="body">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>
+              <path d="M3 13h18M7 17h2M15 17h2"/>
+            </svg>
+          </div>
+          <h3>Servicios 3PL</h3>
+          <p>Almacenaje, control de inventarios, picking, packing y distribución. Soluciones traje a la medida según el sector y la rotación.</p>
+          <ul class="features">
+            <li>WMS integrado y trazabilidad en tiempo real</li>
+            <li>Producto doméstico e importado</li>
+            <li>Cross-docking y servicios VMI</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="image">
+          <span class="num">02 / IMMEX</span>
+          <img src="/assets/img/service-immex.jpg" alt="Licencia IMMEX — almacén con mercancía importada en racks industriales" loading="lazy" />
+        </div>
+        <div class="body">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="6" width="18" height="14" rx="2"/>
+              <path d="M3 10h18M8 6V4M16 6V4"/>
+              <path d="M9 14l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3>Licencia IMMEX</h3>
+          <p>Importación temporal de mercancía sin pago de aranceles ni IVA. Aprovecha ahorros significativos en capital de trabajo.</p>
+          <ul class="features">
+            <li>Importación de mercancía y consignación</li>
+            <li>Clasificación arancelaria especializada</li>
+            <li>Cumplimiento ante SAT y SE</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="image">
+          <span class="num">03 / LOGÍSTICA</span>
+          <img src="/assets/img/service-logistica.jpg" alt="Logística integrada — flota de transporte con tecnología avanzada en carretera" loading="lazy" />
+        </div>
+        <div class="body">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="6" width="14" height="12" rx="1"/>
+              <path d="M15 10h4l3 3v5h-7"/>
+              <circle cx="6" cy="20" r="2"/>
+              <circle cx="18" cy="20" r="2"/>
+            </svg>
+          </div>
+          <h3>Logística integrada</h3>
+          <p>Entregas Just-in-Time, secuenciales y distribución de material a línea de producción. Visibilidad de extremo a extremo.</p>
+          <ul class="features">
+            <li>Entregas JIT y secuenciales</li>
+            <li>Transporte a almacén y last-mile</li>
+            <li>Distribución de material a planta</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     DIFFERENTIATORS — BENTO
+     ========================================================= -->
+<section id="diferenciadores" class="block">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Por qué REIS</span>
+      <h2>Lo que nos <span class="accent">diferencia</span> en el mercado.</h2>
+      <p>No somos solo un proveedor de bodega. Operamos como aliados estratégicos en la logística integral de empresas del sector industrial.</p>
+    </div>
+
+    <div class="bento">
+      <div class="bento-card feature reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s-8-7-8-13a8 8 0 1 1 16 0c0 6-8 13-8 13z"/>
+            <circle cx="12" cy="9" r="3"/>
+          </svg>
+        </div>
+        <h4>Localización estratégica</h4>
+        <p>Nuestras 10 bodegas están ubicadas en los corredores industriales más relevantes de México: Bajío, frontera norte y zona automotriz. Acceso directo a aduanas y nodos ferroviarios.</p>
+        <div class="deco"></div>
+      </div>
+
+      <div class="bento-card span2 reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h4>Servicio al cliente excepcional</h4>
+        <p>Equipo dedicado disponible para atender solicitudes y emergencias de manera continua.</p>
+      </div>
+
+      <div class="bento-card reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M2 12h20"/>
+            <circle cx="12" cy="12" r="9"/>
+          </svg>
+        </div>
+        <h4>Flexibilidad y adaptabilidad</h4>
+        <p>Soluciones traje a la medida según rotación, sector y volumen.</p>
+      </div>
+
+      <div class="bento-card span2 reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 12l2 2 4-4"/>
+            <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.5 0 4.78.99 6.42 2.6"/>
+            <path d="M21 5v5h-5"/>
+          </svg>
+        </div>
+        <h4>Garantía de calidad y normatividad</h4>
+        <p>Certificaciones ISO y OEA / CTPAT siempre vigentes. Auditorías internas trimestrales.</p>
+      </div>
+
+      <div class="bento-card span2 reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M9 3v18"/>
+          </svg>
+        </div>
+        <h4>Instalaciones modernas y seguras</h4>
+        <p>La mayoría de nuestros edificios son Clase A bajo norma OEA / CTPAT.</p>
+      </div>
+
+      <div class="bento-card span2 reveal">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L4 7v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V7z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h4>Experiencia y reputación</h4>
+        <p>+15 años operando con conocimiento profundo del entorno logístico mexicano.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CAROUSEL — Nuestros almacenes
+     ========================================================= -->
+<section id="almacenes" class="block carousel-section">
+  <div class="container">
+    <div class="carousel-head reveal">
+      <div class="text">
+        <span class="eyebrow">Nuestros almacenes</span>
+        <h2>Bodegas industriales <span class="accent">a tu disposición.</span></h2>
+        <p>Una mirada a las instalaciones desde donde operamos para nuestros clientes en Ciudad Juárez, Monterrey y San Luis Potosí.</p>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="carPrev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-btn" id="carNext" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="carousel-track" id="carTrack">
+      <div class="carousel-card">
+        <img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="Bodega REIS — San Luis Potosí, Aurora Industriales" loading="lazy" />
+        <div class="meta">
+          <div class="city">San Luis Potosí</div>
+          <h4>Aurora · Bodega 1</h4>
+        </div>
+      </div>
+      <div class="carousel-card">
+        <img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="Bodega REIS — Monterrey, Edificio E1-A" loading="lazy" />
+        <div class="meta">
+          <div class="city">Monterrey</div>
+          <h4>Edificio E1-A</h4>
+        </div>
+      </div>
+      <div class="carousel-card">
+        <img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="Bodega REIS — Ciudad Juárez, Eastlake Logistics Park" loading="lazy" />
+        <div class="meta">
+          <div class="city">Ciudad Juárez</div>
+          <h4>Eastlake Logistics Park</h4>
+        </div>
+      </div>
+      <div class="carousel-card">
+        <img src="/assets/img/almacenes/04-slp-docks.jpg" alt="Bodega REIS — San Luis Potosí, andenes de carga" loading="lazy" />
+        <div class="meta">
+          <div class="city">San Luis Potosí</div>
+          <h4>Andenes principales</h4>
+        </div>
+      </div>
+      <div class="carousel-card">
+        <img src="/assets/img/almacenes/05-slp-green.jpg" alt="Bodega REIS — San Luis Potosí, acceso principal" loading="lazy" />
+        <div class="meta">
+          <div class="city">San Luis Potosí</div>
+          <h4>Acceso principal</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     LOCATIONS
+     ========================================================= -->
+<section id="ubicaciones" class="block">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Cobertura nacional</span>
+      <h2>Bodegas en los <span class="accent">corredores clave</span> de México.</h2>
+      <p>Presencia estratégica en frontera norte, bajío y zona industrial automotriz, con un punto de cruce en El Paso, TX.</p>
+    </div>
+
+    <div class="locations">
+      <div class="loc-card reveal">
+        <span class="pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s-8-7-8-13a8 8 0 1 1 16 0c0 6-8 13-8 13z"/>
+            <circle cx="12" cy="9" r="3"/>
+          </svg>
+          MX · Frontera Norte
+        </span>
+        <h4>Ciudad Juárez</h4>
+        <p class="region">Cruce binacional con El Paso, TX</p>
+        <div class="stats">
+          <div class="stat">
+            <div class="v">Clase A</div>
+            <div class="l">Tipo bodega</div>
+          </div>
+          <div class="stat">
+            <div class="v">CTPAT</div>
+            <div class="l">Certificación</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-card reveal">
+        <span class="pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s-8-7-8-13a8 8 0 1 1 16 0c0 6-8 13-8 13z"/>
+            <circle cx="12" cy="9" r="3"/>
+          </svg>
+          MX · Noreste
+        </span>
+        <h4>Monterrey</h4>
+        <p class="region">Hub industrial automotriz y manufactura</p>
+        <div class="stats">
+          <div class="stat">
+            <div class="v">Clase A</div>
+            <div class="l">Tipo bodega</div>
+          </div>
+          <div class="stat">
+            <div class="v">OEA</div>
+            <div class="l">Certificación</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-card reveal">
+        <span class="pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s-8-7-8-13a8 8 0 1 1 16 0c0 6-8 13-8 13z"/>
+            <circle cx="12" cy="9" r="3"/>
+          </svg>
+          MX · Bajío
+        </span>
+        <h4>San Luis Potosí</h4>
+        <p class="region">Eje 114 #590, Zona Industrial — sede REIS</p>
+        <div class="stats">
+          <div class="stat">
+            <div class="v">Clase A</div>
+            <div class="l">Tipo bodega</div>
+          </div>
+          <div class="stat">
+            <div class="v">IMMEX</div>
+            <div class="l">Programa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="industries-row reveal" style="margin-top: 60px;">
+      <span class="industry-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 16H9m10-7-2-3H7l-2 3M5 9v9a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2h6v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V9zM7 13h2M15 13h2"/>
+        </svg>
+        Automotriz
+      </span>
+      <span class="industry-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 16v-3a4 4 0 0 0-1.5-3.1L12 4 4.5 9.9A4 4 0 0 0 3 13v3M2 18h20l-2 4H4z"/>
+        </svg>
+        Aeroespacial
+      </span>
+      <span class="industry-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M9 21V9"/>
+        </svg>
+        Electrodomésticos
+      </span>
+      <span class="industry-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v6M8 8h8M6 8a6 6 0 0 0 12 0M5 22V11M19 22V11"/>
+        </svg>
+        Alimentos
+      </span>
+      <span class="industry-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 22h20M3 22V4l9-2 9 2v18M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h.01M15 17h.01"/>
+        </svg>
+        Manufactura
+      </span>
+      <span class="industry-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        E-commerce
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CTA / QUOTE FORM (DARK)
+     ========================================================= -->
+<section id="cotiza" class="block cta-block">
+  <div class="container">
+    <div class="cta-grid">
+      <div class="reveal">
+        <span class="eyebrow on-dark">Cotización en 24 horas</span>
+        <h2>¿Listos para <span class="accent">optimizar</span> tu warehousing?</h2>
+        <p>Agenda una llamada o envíanos los detalles. Un especialista te responde con cotización formal en menos de 24 horas hábiles.</p>
+
+        <div class="cta-contact-list">
+          <div class="cta-contact-item">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="info">
+              <span class="name">Juan Manuel Nava — SLP / MTY</span>
+              <span class="role">+52 444 140 6149 · juan.n@reisbl.com</span>
+            </div>
+          </div>
+          <div class="cta-contact-item">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="info">
+              <span class="name">Rafael Alvarado — Comercio Exterior</span>
+              <span class="role">+52 656 352 3565 · rafael.a@reisbl.com</span>
+            </div>
+          </div>
+          <div class="cta-contact-item">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="info">
+              <span class="name">Orlando Rubio — Cd. Juárez</span>
+              <span class="role">+52 444 719 7812 · orlando.r@reisbl.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="cta-form reveal" id="quoteForm" novalidate>
+        <div class="form-title">FORMATO DE COTIZACIÓN</div>
+        <div class="form-row">
+          <div class="field">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="field">
+            <label for="empresa">Empresa</label>
+            <input type="text" id="empresa" name="empresa" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="email">Correo corporativo</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="field">
+            <label for="telefono">WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+52" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="servicio">Servicio</label>
+            <select id="servicio" name="servicio" required>
+              <option value="" disabled selected>Selecciona</option>
+              <option>Almacenaje 3PL</option>
+              <option>Licencia IMMEX</option>
+              <option>Logística JIT</option>
+              <option>Solución integral</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="ubicacion">Ubicación</label>
+            <select id="ubicacion" name="ubicacion" required>
+              <option value="" disabled selected>Selecciona</option>
+              <option>Cd. Juárez</option>
+              <option>Monterrey</option>
+              <option>San Luis Potosí</option>
+              <option>El Paso, TX</option>
+              <option>Aún no defino</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="mensaje">Cuéntanos del proyecto (opcional)</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="m² requeridos, sector, volumen mensual…"></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          Solicitar cotización
+          <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <div class="form-fineprint">RESPUESTA EN ≤ 24 HRS HÁBILES</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://static.wixstatic.com/media/78c590_4e2791f163fe4e0295b6f8f44179c16d~mv2.png/v1/crop/x_5,y_0,w_1601,h_659/fill/w_311,h_128,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/i42.png" alt="REIS Logística" />
+        <p>Empresa mexicana especializada en logística 3PL y almacenamiento industrial para los sectores automotriz, electrodomésticos, aeroespacial y alimentos.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="#servicios">Warehousing 3PL</a></li>
+          <li><a href="/landing/comercio-exterior/">Comercio Exterior</a></li>
+          <li><a href="#servicios">Programa IMMEX</a></li>
+          <li><a href="#servicios">Logística JIT</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#ubicaciones">Ubicaciones</a></li>
+          <li><a href="#cotiza">Contacto</a></li>
+          <li><a href="https://www.linkedin.com/company/reisbl/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Dirección general</h5>
+        <ul>
+          <li style="color:var(--on-dark-mute);font-size:14px;line-height:1.6;">Eje 114 No. 590<br>Zona Industrial<br>San Luis Potosí, S.L.P.<br>78395</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 REIS Logistics · Todos los derechos reservados</span>
+      <span>CERTIFICADO ISO · OEA / CTPAT</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp floater -->
+<a class="wa-float" href="https://wa.me/+524447197812/?text=Hola,%20quiero%20cotizar%20warehousing%20con%20REIS%20Log%C3%ADstica." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982 1-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  /* ============================================================
+     ANIMATED COUNTERS
+     ============================================================ */
+  function animateCounter(el, target) {
+    const duration = 1800;
+    const start = performance.now();
+    const fmt = (n) => n.toLocaleString('es-MX');
+    function tick(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = fmt(Math.round(target * eased));
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  /* ============================================================
+     REVEAL ON SCROLL + COUNTERS
+     ============================================================ */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      el.classList.add('in');
+      el.querySelectorAll('[data-counter]').forEach(c => {
+        if (c.dataset.done) return;
+        c.dataset.done = '1';
+        animateCounter(c, parseInt(c.dataset.counter, 10));
+      });
+      io.unobserve(el);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* ============================================================
+     CAROUSEL
+     ============================================================ */
+  (function carousel() {
+    const track = document.getElementById('carTrack');
+    const prev  = document.getElementById('carPrev');
+    const next  = document.getElementById('carNext');
+    if (!track) return;
+
+    function step() {
+      const card = track.querySelector('.carousel-card');
+      if (!card) return 320;
+      const gap = 16;
+      return card.getBoundingClientRect().width + gap;
+    }
+    function update() {
+      prev.disabled = track.scrollLeft <= 4;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+    }
+    prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left:  step(), behavior: 'smooth' }));
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    requestAnimationFrame(update);
+  })();
+
+  /* ============================================================
+     FORM HANDLER (WhatsApp fallback — replace with GHL webhook)
+     ============================================================ */
+  document.getElementById('quoteForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(this));
+    const text = encodeURIComponent(
+      `Hola REIS, quiero cotizar warehousing.\n\n` +
+      `Nombre: ${data.nombre}\nEmpresa: ${data.empresa}\nEmail: ${data.email}\n` +
+      `WhatsApp: ${data.telefono}\nServicio: ${data.servicio}\nUbicación: ${data.ubicacion}\n` +
+      (data.mensaje ? `\nDetalles: ${data.mensaje}` : '')
+    );
+    window.open(`https://wa.me/+524447197812/?text=${text}`, '_blank');
+  });
+</script>
+
+</body>
+</html>

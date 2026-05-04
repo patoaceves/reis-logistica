@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>REIS Logística | Hub de Landings</title>
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#F4F7F8" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b1a22'/%3E%3Cpath d='M8 22V10h7a4 4 0 1 1 0 8h-3v4z M16 18l4 4 M22 12v10' stroke='%2337ae40' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  html { background-color: #F4F7F8; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Titillium Web', system-ui, sans-serif;
+    background: #F4F7F8; color: #0b1a22;
+    min-height: 100vh;
+    display: grid; place-items: center;
+    padding: 40px 24px;
+  }
+  body::before {
+    content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image:
+      linear-gradient(rgba(11,26,34,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(11,26,34,.025) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse at top, #000 30%, transparent 80%);
+  }
+  .wrap { max-width: 720px; width: 100%; position: relative; z-index: 1; }
+  img { height: 46px; margin-bottom: 32px; }
+  h1 { font-size: 36px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 12px; line-height: 1.1; }
+  h1 .accent { color: #248a2f; font-style: italic; font-weight: 300; }
+  .lead { color: #5c7884; font-size: 16px; margin-bottom: 40px; max-width: 520px; line-height: 1.6; }
+  .meta {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    letter-spacing: .14em; text-transform: uppercase; color: #248a2f;
+    margin-bottom: 14px;
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .meta::before { content: ''; width: 22px; height: 1px; background: #2ea73a; }
+  .grid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+  .card {
+    background: #fff; border: 1px solid #dee5e8;
+    border-radius: 12px; padding: 24px;
+    transition: all .2s cubic-bezier(.2,.8,.2,1);
+    display: flex; flex-direction: column; gap: 8px;
+    box-shadow: 0 1px 3px rgba(11,26,34,.04);
+  }
+  .card:hover { border-color: #2ea73a; transform: translateY(-2px); box-shadow: 0 8px 24px -8px rgba(11,26,34,.1); }
+  .card .num { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8aa0a8; letter-spacing: .14em; }
+  .card h3 { font-size: 18px; font-weight: 700; color: #0b1a22; }
+  .card p { font-size: 13px; color: #5c7884; }
+  .card.disabled { opacity: .55; pointer-events: none; }
+  .card.disabled::after { content: 'Próximamente'; font-size: 10px; font-family: 'JetBrains Mono', monospace; color: #8aa0a8; letter-spacing: .12em; margin-top: 4px; }
+  .footer { margin-top: 40px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8aa0a8; letter-spacing: .08em; }
+  @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <img src="https://static.wixstatic.com/media/78c590_4e2791f163fe4e0295b6f8f44179c16d~mv2.png/v1/crop/x_5,y_0,w_1601,h_659/fill/w_311,h_128,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/i42.png" alt="REIS Logística" />
+    <span class="meta">REIS · Campaign Hub</span>
+    <h1>Landings <span class="accent">activas.</span></h1>
+    <p class="lead">Páginas de campaña desplegadas para REIS Logística. Selecciona una para previsualizar.</p>
+
+    <div class="grid">
+      <a href="/landing/warehousing" class="card">
+        <span class="num">01 / WAREHOUSING</span>
+        <h3>Almacenamiento 3PL</h3>
+        <p>Bodegas Clase A · Cd. Juárez, MTY, SLP</p>
+      </a>
+      <a href="/landing/comercio-exterior" class="card disabled" aria-disabled="true">
+        <span class="num">02 / COMEX</span>
+        <h3>Comercio Exterior</h3>
+        <p>Licencia IMMEX · Importación temporal</p>
+      </a>
+    </div>
+
+    <div class="footer">© 2026 REIS LOGISTICS · INTERNAL HUB</div>
+  </div>
+</body>
+</html>
