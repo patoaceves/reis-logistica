@@ -746,27 +746,7 @@
     transition: transform .6s var(--ease);
   }
   .carousel-card:hover img { transform: scale(1.04); }
-  .carousel-card::after {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg, transparent 50%, rgba(11,26,34,.7));
-    pointer-events: none;
-  }
-  .carousel-card .meta {
-    position: absolute;
-    bottom: 20px; left: 20px; right: 20px;
-    color: #fff; z-index: 1;
-  }
-  .carousel-card .meta .city {
-    font-family: var(--font-mono);
-    font-size: 11px; letter-spacing: .14em;
-    text-transform: uppercase;
-    opacity: .85;
-    margin-bottom: 4px;
-  }
-  .carousel-card .meta h4 {
-    font-size: 18px; font-weight: 700;
-  }
+
   @media (max-width: 800px) {
     .carousel-card { flex: 0 0 85%; }
     .carousel-head { flex-direction: column; align-items: flex-start; gap: 20px; }
@@ -1044,7 +1024,7 @@
       <a href="#cotiza">Contacto</a>
     </div>
     <div class="nav-cta">
-      <span class="nav-status">OPERACIÓN 24/7</span>
+
       <a href="#cotiza" class="btn btn-primary">Cotiza ahora</a>
     </div>
   </div>
@@ -1359,38 +1339,18 @@
     <div class="carousel-track" id="carTrack">
       <div class="carousel-card">
         <img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="Bodega REIS — San Luis Potosí, Aurora Industriales" loading="lazy" />
-        <div class="meta">
-          <div class="city">San Luis Potosí</div>
-          <h4>Aurora · Bodega 1</h4>
-        </div>
       </div>
       <div class="carousel-card">
         <img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="Bodega REIS — Monterrey, Edificio E1-A" loading="lazy" />
-        <div class="meta">
-          <div class="city">Monterrey</div>
-          <h4>Edificio E1-A</h4>
-        </div>
       </div>
       <div class="carousel-card">
         <img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="Bodega REIS — Ciudad Juárez, Eastlake Logistics Park" loading="lazy" />
-        <div class="meta">
-          <div class="city">Ciudad Juárez</div>
-          <h4>Eastlake Logistics Park</h4>
-        </div>
       </div>
       <div class="carousel-card">
         <img src="/assets/img/almacenes/04-slp-docks.jpg" alt="Bodega REIS — San Luis Potosí, andenes de carga" loading="lazy" />
-        <div class="meta">
-          <div class="city">San Luis Potosí</div>
-          <h4>Andenes principales</h4>
-        </div>
       </div>
       <div class="carousel-card">
         <img src="/assets/img/almacenes/05-slp-green.jpg" alt="Bodega REIS — San Luis Potosí, acceso principal" loading="lazy" />
-        <div class="meta">
-          <div class="city">San Luis Potosí</div>
-          <h4>Acceso principal</h4>
-        </div>
       </div>
     </div>
   </div>
