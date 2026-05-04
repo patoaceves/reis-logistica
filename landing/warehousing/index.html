@@ -121,13 +121,15 @@
     color: var(--green-deep);
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    font-weight: 500;
+    gap: 10px;
+    font-weight: 600;
   }
   .eyebrow::before {
     content: '';
-    width: 22px; height: 1px;
+    width: 8px; height: 8px;
     background: var(--green);
+    border-radius: 2px;
+    flex-shrink: 0;
   }
   .eyebrow.on-dark { color: var(--green-2); }
   .eyebrow.on-dark::before { background: var(--green-2); }
@@ -190,8 +192,19 @@
     font-weight: 600;
     color: var(--ink-mute);
     transition: color .15s var(--ease);
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 100%;
+    bottom: -4px;
+    height: 2px;
+    background: var(--green);
+    transition: right .22s var(--ease);
   }
   .nav-links a:hover { color: var(--ink); }
+  .nav-links a:hover::after { right: 0; }
   .nav-cta { display: flex; gap: 10px; align-items: center; }
   .nav-status {
     display: inline-flex; align-items: center; gap: 8px;
@@ -230,7 +243,7 @@
   .hero h1 .accent {
     color: var(--green-deep);
     font-style: italic;
-    font-weight: 300;
+    font-weight: 700;
   }
   .hero-sub {
     font-size: 18px;
@@ -252,11 +265,10 @@
   }
   .hero-meta div { display: flex; flex-direction: column; gap: 2px; }
   .hero-meta .label {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--ink-dim);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--ink-mute);
   }
   .hero-meta .value {
     font-size: 15px;
@@ -340,17 +352,17 @@
     color: var(--ink);
   }
   .kpi-item .num .plus {
-    color: var(--green); font-weight: 300; margin-right: 2px;
+    color: var(--green); font-weight: 700; margin-right: 2px;
   }
   .kpi-item .num .unit {
     font-size: .5em; color: var(--ink-mute);
     margin-left: 4px; font-weight: 400;
   }
   .kpi-item .lbl {
-    font-family: var(--font-mono);
-    font-size: 12px; letter-spacing: .1em;
-    text-transform: uppercase; color: var(--ink-mute);
-    margin-top: 10px;
+    font-family: var(--font-sans);
+    font-size: 14px; font-weight: 400;
+    color: var(--ink-mute);
+    margin-top: 8px;
   }
   @media (max-width: 700px) {
     .kpi-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -374,7 +386,7 @@
     line-height: 1.08; margin: 18px 0 14px;
     color: var(--ink);
   }
-  .section-head h2 .accent { color: var(--green-deep); font-weight: 300; font-style: italic; }
+  .section-head h2 .accent { color: var(--green-deep); font-weight: 700; font-style: italic; }
   .section-head.on-dark h2 .accent { color: var(--green-2); }
   .section-head p { color: var(--ink-mute); font-size: 17px; max-width: 640px; line-height: 1.65; }
 
@@ -418,7 +430,7 @@
   .about-image .floating-stat .num {
     font-size: 28px; font-weight: 700; line-height: 1;
   }
-  .about-image .floating-stat .num .plus { color: var(--green-2); font-weight: 300; }
+  .about-image .floating-stat .num .plus { color: var(--green-2); font-weight: 700; }
   .about-image .floating-stat .lbl {
     font-family: var(--font-mono); font-size: 10px;
     letter-spacing: .12em; text-transform: uppercase;
@@ -430,26 +442,73 @@
     font-weight: 700; letter-spacing: -.018em;
     line-height: 1.1; margin: 18px 0 22px;
   }
-  .about-content h2 .accent { color: var(--green-deep); font-weight: 300; font-style: italic; }
+  .about-content h2 .accent { color: var(--green-deep); font-weight: 700; font-style: italic; }
   .about-content p {
     color: var(--ink-soft); font-size: 16px; line-height: 1.7;
     margin-bottom: 16px;
   }
   .about-content p strong { color: var(--ink); font-weight: 700; }
-  .about-tags {
-    display: flex; flex-wrap: wrap; gap: 8px;
-    margin-top: 24px;
-    padding-top: 24px;
+  .about-content .stat-hi {
+    font-weight: 700;
+    color: var(--ink);
+  }
+  /* Industries grid — tipo Integer, paleta REIS */
+  .industries {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 28px;
+    padding-top: 28px;
     border-top: 1px solid var(--line);
   }
-  .about-tag {
-    font-family: var(--font-mono); font-size: 11px;
-    letter-spacing: .08em; text-transform: uppercase;
-    color: var(--ink-mute);
-    padding: 6px 12px;
-    background: var(--bg);
+  @media (min-width: 600px) {
+    .industries { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 960px) {
+    .industries { grid-template-columns: repeat(5, 1fr); }
+  }
+  .industry {
+    position: relative;
+    background: var(--bg-alt);
     border: 1px solid var(--line);
-    border-radius: 999px;
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    overflow: hidden;
+    transition: border-color .22s var(--ease), transform .22s var(--ease), background .22s var(--ease);
+  }
+  .industry::before {
+    content: '';
+    position: absolute;
+    bottom: -50%; right: -30%;
+    width: 140px; height: 140px;
+    background: radial-gradient(circle, rgba(46,167,58,.14), transparent 60%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .22s var(--ease);
+  }
+  .industry:hover { border-color: var(--green); transform: translateY(-2px); background: var(--bg-card); }
+  .industry:hover::before { opacity: 1; }
+  .industry__icon {
+    width: 40px; height: 40px;
+    color: var(--green-deep);
+    background: rgba(46, 167, 58, .1);
+    border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 7px;
+    flex-shrink: 0;
+  }
+  .industry__icon svg { width: 100%; height: 100%; }
+  .industry__name {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -.01em;
+    line-height: 1.2;
   }
 
   @media (max-width: 880px) {
@@ -522,15 +581,15 @@
     position: relative;
     background: var(--bg-card);
     border: 1px solid var(--line);
-    border-radius: var(--r-md);
+    border-radius: 16px;
     overflow: hidden;
-    transition: all .25s var(--ease);
+    transition: border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
     display: flex; flex-direction: column;
   }
   .service-card:hover {
-    border-color: var(--line-2);
+    border-color: var(--green);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
   }
   .service-card .image {
     position: relative;
@@ -543,54 +602,49 @@
     object-fit: cover;
     transition: transform .6s var(--ease);
   }
-  .service-card:hover .image img { transform: scale(1.06); }
+  .service-card:hover .image img { transform: scale(1.04); }
   .service-card .image::after {
     content: '';
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, transparent 60%, rgba(11,26,34,.35));
-  }
-  .service-card .image .num {
-    position: absolute; top: 16px; left: 16px;
-    font-family: var(--font-mono);
-    font-size: 11px; color: #fff;
-    letter-spacing: .14em;
-    background: rgba(11, 26, 34, .65);
-    backdrop-filter: blur(8px);
-    padding: 5px 10px;
-    border-radius: var(--r-sm);
-    z-index: 1;
+    background: linear-gradient(180deg, transparent 55%, rgba(11,26,34,.25));
   }
   .service-card .body {
-    padding: 28px;
+    padding: 28px 28px 32px;
     flex: 1;
     display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
   }
-  .service-card .icon {
-    width: 44px; height: 44px;
-    border: 1px solid var(--line);
-    border-radius: var(--r-sm);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 18px;
-    background: var(--green-soft);
-    color: var(--green-deep);
+  .service-card .service-num {
+    position: absolute;
+    bottom: -1rem; right: -0.5rem;
+    font-size: clamp(5rem, 10vw, 8rem);
+    font-weight: 900;
+    color: rgba(46, 167, 58, .07);
+    letter-spacing: -.04em;
+    line-height: 1;
+    pointer-events: none;
+    z-index: 0;
+    transition: color .25s var(--ease);
   }
-  .service-card .icon svg { width: 22px; height: 22px; stroke-width: 1.6; }
+  .service-card:hover .service-num { color: rgba(46, 167, 58, .13); }
   .service-card h3 {
-    font-size: 22px; font-weight: 700;
-    margin-bottom: 10px; letter-spacing: -.01em;
-    color: var(--ink);
+    font-size: 21px; font-weight: 700;
+    margin-bottom: 10px; letter-spacing: -.02em;
+    color: var(--green-deep); line-height: 1.15;
+    position: relative; z-index: 1;
   }
   .service-card p {
     color: var(--ink-mute); font-size: 14.5px; line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 20px; font-weight: 400;
+    position: relative; z-index: 1;
   }
   .service-card .features {
-    list-style: none; display: flex; flex-direction: column; gap: 8px;
-    padding-top: 18px; border-top: 1px dashed var(--line);
+    list-style: none; display: flex; flex-direction: column; gap: 9px;
+    padding-top: 18px; border-top: 1px solid var(--line);
     margin-top: auto;
   }
   .service-card .features li {
-    font-size: 13px; color: var(--ink-soft);
+    font-size: 13.5px; color: var(--ink-soft); font-weight: 500;
     display: flex; align-items: center; gap: 10px;
   }
   .service-card .features li::before {
@@ -700,7 +754,7 @@
     font-weight: 700; letter-spacing: -.018em;
     line-height: 1.1; margin: 14px 0 12px;
   }
-  .carousel-head h2 .accent { color: var(--green-deep); font-weight: 300; font-style: italic; }
+  .carousel-head h2 .accent { color: var(--green-deep); font-weight: 700; font-style: italic; }
   .carousel-head p { color: var(--ink-mute); font-size: 16px; }
   .carousel-controls { display: flex; gap: 8px; }
   .carousel-btn {
@@ -855,7 +909,7 @@
     margin: 16px 0 18px; letter-spacing: -.018em;
     color: #fff;
   }
-  .cta-grid h2 .accent { color: var(--green-2); font-style: italic; font-weight: 300; }
+  .cta-grid h2 .accent { color: var(--green-2); font-style: italic; font-weight: 700; }
   .cta-grid p { color: var(--on-dark-mute); font-size: 16px; line-height: 1.65; margin-bottom: 32px; max-width: 480px; }
   .cta-contact-list { display: flex; flex-direction: column; gap: 12px; }
   .cta-contact-item {
@@ -890,11 +944,9 @@
     font-family: var(--font-mono); font-size: 11px;
     letter-spacing: .14em; text-transform: uppercase;
     color: var(--green-2); margin-bottom: 24px;
-    display: inline-flex; align-items: center; gap: 12px;
+    display: block;
   }
-  .cta-form .form-title::before {
-    content: ''; width: 22px; height: 1px; background: var(--green-2);
-  }
+
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
   .field label {
@@ -985,16 +1037,21 @@
     position: fixed;
     bottom: 24px; right: 24px;
     z-index: 100;
-    width: 56px; height: 56px;
+    height: 48px;
     background: #25d366;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
+    border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 10px;
     color: white;
+    padding: 0 20px 0 14px;
     box-shadow: 0 10px 30px -8px rgba(37,211,102,.5);
-    transition: transform .2s var(--ease);
+    transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
   }
-  .wa-float:hover { transform: scale(1.06); }
-  .wa-float svg { width: 28px; height: 28px; }
+  .wa-float:hover { transform: translateY(-2px); box-shadow: 0 14px 36px -8px rgba(37,211,102,.6); }
+  .wa-float svg { width: 22px; height: 22px; flex-shrink: 0; }
 
   /* Reveal on scroll */
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
@@ -1014,7 +1071,7 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">
-      <img src="https://static.wixstatic.com/media/78c590_4e2791f163fe4e0295b6f8f44179c16d~mv2.png/v1/crop/x_5,y_0,w_1601,h_659/fill/w_311,h_128,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/i42.png" alt="REIS Logística" />
+      <img src="/assets/img/reis-logo.png" alt="REIS Logística" />
     </a>
     <div class="nav-links">
       <a href="#nosotros">Nosotros</a>
@@ -1037,12 +1094,12 @@
   <div class="container">
     <div class="hero-grid">
       <div class="hero-content reveal">
-        <span class="eyebrow">Warehousing 3PL · México</span>
+        <span class="eyebrow">Warehousing 3PL</span>
         <h1>
           Almacenamiento que <span class="accent">optimiza</span> tu cadena de suministro.
         </h1>
         <p class="hero-sub">
-          +126,000 m² de bodegas industriales Clase A en Ciudad Juárez, Monterrey y San Luis Potosí. Gestión de inventarios precisa, integración 3PL y licencia IMMEX bajo un solo aliado estratégico.
+          <strong>+126,000 m²</strong> de bodegas industriales Clase A en Ciudad Juárez, Monterrey y San Luis Potosí. Gestión de inventarios precisa, integración 3PL y licencia IMMEX bajo un solo aliado estratégico.
         </p>
         <div class="hero-actions">
           <a href="#cotiza" class="btn btn-primary">
@@ -1074,7 +1131,6 @@
         <span class="bracket br"></span>
         <img src="/assets/img/hero.avif" alt="Centro logístico REIS al anochecer — bodega Clase A iluminada" loading="eager" />
         <div class="badge">
-          <div class="label">CD. JUÁREZ · NIGHT OPS</div>
         </div>
       </div>
     </div>
@@ -1120,13 +1176,54 @@
         <span class="eyebrow">Sobre REIS</span>
         <h2>Empresa mexicana, <span class="accent">aliados estratégicos</span> de tu logística.</h2>
         <p>Somos una empresa mexicana dedicada a la <strong>logística para terceros (3PL)</strong> y al <strong>almacenamiento industrial</strong> para los sectores automotriz, electrodomésticos, aeroespacial y alimentos, con presencia en el bajío y en el noreste de México (frontera México–USA).</p>
-        <p>Contamos con más de <strong>quince años de experiencia</strong>, una plantilla laboral de más de 350 colaboradores, socios comerciales de clase mundial, y un espacio de almacenamiento de más de <strong>140,000 m² en 10 bodegas</strong> en México.</p>
-        <div class="about-tags">
-          <span class="about-tag">Automotriz</span>
-          <span class="about-tag">Aeroespacial</span>
-          <span class="about-tag">Electrodomésticos</span>
-          <span class="about-tag">Alimentos</span>
-          <span class="about-tag">Manufactura</span>
+        <p>Contamos con más de <span class="stat-hi">15</span> años de experiencia, una plantilla de más de <span class="stat-hi">350</span> colaboradores, y un espacio de almacenamiento de más de <span class="stat-hi">140,000 m²</span> en <span class="stat-hi">10</span> bodegas en México.</p>
+        <div class="industries">
+          <article class="industry">
+            <div class="industry__icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 35V18l8 5v-5l8 5v-5l8 5V10h6v25H5z"/>
+                <path d="M11 28h2M19 28h2M27 28h2"/>
+              </svg>
+            </div>
+            <span class="industry__name">Automotriz</span>
+          </article>
+          <article class="industry">
+            <div class="industry__icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 32V14l6-4 6 4 6-4 6 4v18H8z"/>
+                <path d="M14 32v-8h6v8M26 20h2M26 26h2"/>
+              </svg>
+            </div>
+            <span class="industry__name">Aeroespacial</span>
+          </article>
+          <article class="industry">
+            <div class="industry__icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="14" width="24" height="16" rx="2"/>
+                <path d="M14 14v-4M26 14v-4M8 22h24M14 22v8M20 22v8M26 22v8"/>
+              </svg>
+            </div>
+            <span class="industry__name">Electrodomésticos</span>
+          </article>
+          <article class="industry">
+            <div class="industry__icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 8c-6 0-10 4-10 9 0 6 4 10 10 13 6-3 10-7 10-13 0-5-4-9-10-9z"/>
+                <path d="M15 19l3 3 7-7"/>
+              </svg>
+            </div>
+            <span class="industry__name">Alimentos</span>
+          </article>
+          <article class="industry">
+            <div class="industry__icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="10" y="10" width="20" height="20" rx="2"/>
+                <rect x="15" y="15" width="10" height="10" rx="1"/>
+                <path d="M15 5v5M25 5v5M15 30v5M25 30v5M5 15h5M5 25h5M30 15h5M30 25h5"/>
+              </svg>
+            </div>
+            <span class="industry__name">Manufactura</span>
+          </article>
         </div>
       </div>
     </div>
@@ -1141,7 +1238,6 @@
     <div class="video-frame reveal">
       <video src="/assets/video/operaciones.mp4" autoplay muted loop playsinline preload="metadata" poster="/assets/img/about-facility.jpg"></video>
       <div class="video-overlay">
-        <span class="label">REIS · OPERACIONES EN VIVO</span>
         <h3>Así se mueve tu inventario, día y noche.</h3>
       </div>
     </div>
@@ -1162,16 +1258,10 @@
     <div class="services-grid">
       <article class="service-card reveal">
         <div class="image">
-          <span class="num">01 / 3PL</span>
           <img src="/assets/img/service-3pl.webp" alt="Servicios 3PL — almacén con racks industriales y operación de inventarios" loading="lazy" />
         </div>
         <div class="body">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>
-              <path d="M3 13h18M7 17h2M15 17h2"/>
-            </svg>
-          </div>
+          <div class="service-num">01</div>
           <h3>Servicios 3PL</h3>
           <p>Almacenaje, control de inventarios, picking, packing y distribución. Soluciones traje a la medida según el sector y la rotación.</p>
           <ul class="features">
@@ -1184,17 +1274,10 @@
 
       <article class="service-card reveal">
         <div class="image">
-          <span class="num">02 / IMMEX</span>
           <img src="/assets/img/service-immex.jpg" alt="Licencia IMMEX — almacén con mercancía importada en racks industriales" loading="lazy" />
         </div>
         <div class="body">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="6" width="18" height="14" rx="2"/>
-              <path d="M3 10h18M8 6V4M16 6V4"/>
-              <path d="M9 14l2 2 4-4"/>
-            </svg>
-          </div>
+          <div class="service-num">02</div>
           <h3>Licencia IMMEX</h3>
           <p>Importación temporal de mercancía sin pago de aranceles ni IVA. Aprovecha ahorros significativos en capital de trabajo.</p>
           <ul class="features">
@@ -1207,18 +1290,10 @@
 
       <article class="service-card reveal">
         <div class="image">
-          <span class="num">03 / LOGÍSTICA</span>
           <img src="/assets/img/service-logistica.jpg" alt="Logística integrada — flota de transporte con tecnología avanzada en carretera" loading="lazy" />
         </div>
         <div class="body">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="1" y="6" width="14" height="12" rx="1"/>
-              <path d="M15 10h4l3 3v5h-7"/>
-              <circle cx="6" cy="20" r="2"/>
-              <circle cx="18" cy="20" r="2"/>
-            </svg>
-          </div>
+          <div class="service-num">03</div>
           <h3>Logística integrada</h3>
           <p>Entregas Just-in-Time, secuenciales y distribución de material a línea de producción. Visibilidad de extremo a extremo.</p>
           <ul class="features">
@@ -1246,9 +1321,9 @@
     <div class="bento">
       <div class="bento-card feature reveal">
         <div class="icon-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s-8-7-8-13a8 8 0 1 1 16 0c0 6-8 13-8 13z"/>
-            <circle cx="12" cy="9" r="3"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-6 9 6v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
           </svg>
         </div>
         <h4>Localización estratégica</h4>
@@ -1258,8 +1333,10 @@
 
       <div class="bento-card span2 reveal">
         <div class="icon-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
           </svg>
         </div>
         <h4>Servicio al cliente excepcional</h4>
@@ -1268,9 +1345,9 @@
 
       <div class="bento-card reveal">
         <div class="icon-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2v20M2 12h20"/>
-            <circle cx="12" cy="12" r="9"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
           </svg>
         </div>
         <h4>Flexibilidad y adaptabilidad</h4>
@@ -1279,10 +1356,9 @@
 
       <div class="bento-card span2 reveal">
         <div class="icon-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 12l2 2 4-4"/>
-            <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.5 0 4.78.99 6.42 2.6"/>
-            <path d="M21 5v5h-5"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 11 12 14 22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
           </svg>
         </div>
         <h4>Garantía de calidad y normatividad</h4>
@@ -1291,9 +1367,9 @@
 
       <div class="bento-card span2 reveal">
         <div class="icon-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="3" width="18" height="18" rx="2"/>
-            <path d="M3 9h18M9 3v18"/>
+            <path d="M3 9h18M9 21V9"/>
           </svg>
         </div>
         <h4>Instalaciones modernas y seguras</h4>
@@ -1302,9 +1378,9 @@
 
       <div class="bento-card span2 reveal">
         <div class="icon-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2L4 7v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V7z"/>
-            <path d="M9 12l2 2 4-4"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
           </svg>
         </div>
         <h4>Experiencia y reputación</h4>
@@ -1432,48 +1508,6 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="industries-row reveal" style="margin-top: 60px;">
-      <span class="industry-pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 16H9m10-7-2-3H7l-2 3M5 9v9a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2h6v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V9zM7 13h2M15 13h2"/>
-        </svg>
-        Automotriz
-      </span>
-      <span class="industry-pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 16v-3a4 4 0 0 0-1.5-3.1L12 4 4.5 9.9A4 4 0 0 0 3 13v3M2 18h20l-2 4H4z"/>
-        </svg>
-        Aeroespacial
-      </span>
-      <span class="industry-pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="3" width="18" height="18" rx="2"/>
-          <path d="M3 9h18M9 21V9"/>
-        </svg>
-        Electrodomésticos
-      </span>
-      <span class="industry-pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2v6M8 8h8M6 8a6 6 0 0 0 12 0M5 22V11M19 22V11"/>
-        </svg>
-        Alimentos
-      </span>
-      <span class="industry-pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M2 22h20M3 22V4l9-2 9 2v18M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h.01M15 17h.01"/>
-        </svg>
-        Manufactura
-      </span>
-      <span class="industry-pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="9" cy="21" r="1"/>
-          <circle cx="20" cy="21" r="1"/>
-          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-        </svg>
-        E-commerce
-      </span>
     </div>
   </div>
 </section>
@@ -1630,6 +1664,7 @@
 <!-- WhatsApp floater -->
 <a class="wa-float" href="https://wa.me/+524447197812/?text=Hola,%20quiero%20cotizar%20warehousing%20con%20REIS%20Log%C3%ADstica." target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982 1-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  Contáctanos
 </a>
 
 <script>
