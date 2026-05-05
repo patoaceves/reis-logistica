@@ -505,7 +505,7 @@
   }
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
+    grid-template-columns: 1fr 1.5fr;
     gap: 56px;
     align-items: center;
   }
@@ -532,7 +532,7 @@
   .about-video {
     position: relative;
     width: 100%;
-    max-width: 640px;
+    max-width: 832px;
     aspect-ratio: 5 / 4;
     margin: 0 auto;
     border-radius: 24px;
@@ -1771,10 +1771,6 @@
 
         <div class="form-card__row">
           <div class="form-card__field">
-            <label for="hf-empresa">Empresa <span class="req">*</span></label>
-            <input type="text" id="hf-empresa" name="empresa" required />
-          </div>
-          <div class="form-card__field">
             <label for="hf-telefono">Teléfono <span class="req">*</span></label>
             <div class="form-card__phone">
               <select id="hf-lada" name="lada" aria-label="Clave de país">
@@ -1792,10 +1788,7 @@
               <input type="tel" id="hf-telefono" name="telefono" placeholder="10 dígitos" required />
             </div>
           </div>
-        </div>
-
-        <div class="form-card__row">
-          <div class="form-card__field form-card__field--full">
+          <div class="form-card__field">
             <label for="hf-correo">Correo electrónico <span class="req">*</span></label>
             <input type="email" id="hf-correo" name="correo" required />
           </div>
@@ -1818,7 +1811,11 @@
         </div>
 
         <div class="form-card__row">
-          <div class="form-card__field form-card__field--full">
+          <div class="form-card__field">
+            <label for="hf-empresa">Empresa <span class="req">*</span></label>
+            <input type="text" id="hf-empresa" name="empresa" required />
+          </div>
+          <div class="form-card__field">
             <label for="hf-ubicacion">Ubicación <span class="req">*</span></label>
             <select id="hf-ubicacion" name="ubicacion" required>
               <option value="" disabled selected>Selecciona…</option>
@@ -2282,10 +2279,6 @@
 
         <div class="form-card__row">
           <div class="form-card__field">
-            <label for="cf-empresa">Empresa <span class="req">*</span></label>
-            <input type="text" id="cf-empresa" name="empresa" required />
-          </div>
-          <div class="form-card__field">
             <label for="cf-telefono">Teléfono <span class="req">*</span></label>
             <div class="form-card__phone">
               <select id="cf-lada" name="lada" aria-label="Clave de país">
@@ -2303,10 +2296,7 @@
               <input type="tel" id="cf-telefono" name="telefono" placeholder="10 dígitos" required />
             </div>
           </div>
-        </div>
-
-        <div class="form-card__row">
-          <div class="form-card__field form-card__field--full">
+          <div class="form-card__field">
             <label for="cf-correo">Correo electrónico <span class="req">*</span></label>
             <input type="email" id="cf-correo" name="correo" required />
           </div>
@@ -2329,7 +2319,11 @@
         </div>
 
         <div class="form-card__row">
-          <div class="form-card__field form-card__field--full">
+          <div class="form-card__field">
+            <label for="cf-empresa">Empresa <span class="req">*</span></label>
+            <input type="text" id="cf-empresa" name="empresa" required />
+          </div>
+          <div class="form-card__field">
             <label for="cf-ubicacion">Ubicación <span class="req">*</span></label>
             <select id="cf-ubicacion" name="ubicacion" required>
               <option value="" disabled selected>Selecciona…</option>
