@@ -373,11 +373,10 @@
     max-width: 540px;
   }
   .hero-call__label {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,.6);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,.78);
   }
   .hero-call__phone {
     display: inline-flex;
@@ -480,12 +479,12 @@
   }
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 48px;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
     align-items: center;
   }
   .about-content {
-    max-width: 820px;
+    max-width: 620px;
   }
   .about-content h2 {
     font-size: clamp(30px, 3.4vw, 44px);
@@ -503,12 +502,14 @@
     color: var(--ink);
   }
 
-  /* About BIG video — primary visual element */
+  /* About vertical video — iPhone-style portrait ratio */
   .about-video {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: var(--r-xl);
+    max-width: 380px;
+    aspect-ratio: 9 / 16;
+    margin: 0 auto;
+    border-radius: 28px;
     overflow: hidden;
     box-shadow: 0 32px 64px -20px rgba(11, 26, 34, .25), 0 12px 24px -10px rgba(11, 26, 34, .12);
     background: var(--ink);
@@ -521,49 +522,52 @@
   .about-video::before {
     content: '';
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(11,26,34,.0), rgba(11,26,34,.45));
+    background: linear-gradient(180deg, rgba(11,26,34,.0) 60%, rgba(11,26,34,.7));
     pointer-events: none;
     z-index: 1;
   }
   .about-video__overlay {
     position: absolute;
-    bottom: 32px; left: 32px;
+    bottom: 24px; left: 24px; right: 24px;
     z-index: 2;
     color: #fff;
   }
   .about-video__overlay .label {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: .14em;
-    text-transform: uppercase;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .04em;
     color: var(--green-2);
-    margin-bottom: 8px;
-    display: inline-flex; align-items: center; gap: 10px;
+    margin-bottom: 6px;
+    display: inline-flex; align-items: center; gap: 8px;
+    text-transform: uppercase;
   }
   .about-video__overlay .label::before {
-    content: ''; width: 22px; height: 1px; background: var(--green-2);
+    content: ''; width: 18px; height: 1px; background: var(--green-2);
   }
   .about-video__overlay h3 {
-    font-size: clamp(22px, 2.6vw, 36px);
+    font-size: 20px;
     font-weight: 700;
-    line-height: 1.15;
-    max-width: 560px;
+    line-height: 1.2;
     letter-spacing: -.012em;
   }
-  @media (max-width: 760px) {
-    .about-video { aspect-ratio: 4 / 3; border-radius: var(--r-lg); }
-    .about-video__overlay { bottom: 20px; left: 20px; right: 20px; }
+  @media (max-width: 880px) {
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-content { max-width: 100%; }
+    .about-video { max-width: 320px; }
   }
 
   /* ============================================================
      FORM CARD — Integer-style white quote form (used in hero + CTA)
      ============================================================ */
   .form-card {
-    background: #fff;
-    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, .94);
+    border: 1px solid rgba(255, 255, 255, .6);
     border-radius: 20px;
     padding: 32px;
-    box-shadow: 0 24px 48px -16px rgba(11, 26, 34, .14), 0 8px 20px -8px rgba(11, 26, 34, .08);
+    box-shadow: 0 24px 48px -16px rgba(11, 26, 34, .18), 0 8px 20px -8px rgba(11, 26, 34, .1);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     position: relative;
     color: var(--ink);
   }
@@ -573,6 +577,7 @@
     letter-spacing: -.015em;
     color: var(--ink);
     margin-bottom: 8px;
+    line-height: 1.15;
   }
   .form-card__sub {
     font-size: 14px;
@@ -606,7 +611,9 @@
     font-weight: 400;
     margin-left: 4px;
   }
-  .form-card__field input,
+  .form-card__field input[type="text"],
+  .form-card__field input[type="email"],
+  .form-card__field input[type="tel"],
   .form-card__field select,
   .form-card__field textarea {
     background: #f8fafa;
@@ -635,9 +642,50 @@
     resize: vertical;
     min-height: 90px;
   }
+
+  /* Radio group */
+  .form-card__radios {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    padding: 4px 0 2px;
+  }
+  .form-card__radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .form-card__radio input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--line-2);
+    border-radius: 50%;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    transition: border-color .15s var(--ease);
+    background: #fff;
+  }
+  .form-card__radio input[type="radio"]:checked {
+    border-color: var(--green);
+  }
+  .form-card__radio input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: var(--green);
+    border-radius: 50%;
+  }
+
   .form-card__submit {
     width: 100%;
-    margin-top: 18px;
+    margin-top: 22px;
     background: var(--green);
     color: #fff;
     padding: 16px;
@@ -673,10 +721,10 @@
     .form-card__row .form-card__field { margin-bottom: 14px; }
   }
   /* ============================================================
-     INDUSTRIAS — Integer-style dedicated section (3+2 grid)
+     INDUSTRIAS — Green-dominant section (3+2 grid)
      ============================================================ */
   .industrias-block {
-    background: var(--bg-dark);
+    background: linear-gradient(180deg, #0d3b1f 0%, #0a2f18 100%);
     color: var(--on-dark);
     position: relative;
     overflow: hidden;
@@ -685,8 +733,8 @@
     content: '';
     position: absolute; inset: 0;
     background-image:
-      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
     background-size: 80px 80px;
     pointer-events: none;
     mask-image: radial-gradient(ellipse at center, #000 30%, transparent 80%);
@@ -697,7 +745,7 @@
     bottom: -20%; left: 50%;
     transform: translateX(-50%);
     width: 700px; height: 400px;
-    background: radial-gradient(ellipse, rgba(46,167,58,.15), transparent 60%);
+    background: radial-gradient(ellipse, rgba(110, 231, 138, .18), transparent 60%);
     filter: blur(60px); pointer-events: none;
   }
   .industrias-block .section-head {
@@ -706,28 +754,30 @@
     margin: 0 auto 56px;
   }
   .industrias-block .section-head .eyebrow { justify-content: center; }
+  .industrias-block .section-head .eyebrow.on-dark { color: #b6f3c5; }
+  .industrias-block .section-head .eyebrow.on-dark.shape-diamond::before { background: #b6f3c5; }
   .industrias-block .section-head h2 { color: #fff; }
   .industrias-block .section-head h2 .accent-light {
-    color: var(--green-2); font-style: italic; font-weight: 700;
+    color: #b6f3c5; font-style: italic; font-weight: 700;
   }
   .industrias-block .section-head p {
-    color: rgba(255,255,255,.7);
+    color: rgba(255,255,255,.78);
     margin: 14px auto 0;
   }
   .industrias-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 12px;
     margin: 0 auto;
     position: relative; z-index: 1;
   }
   @media (min-width: 700px) {
-    .industrias-grid { grid-template-columns: repeat(2, 1fr); max-width: 720px; }
+    .industrias-grid { grid-template-columns: repeat(2, 1fr); max-width: 620px; }
   }
   @media (min-width: 1000px) {
     .industrias-grid {
       grid-template-columns: repeat(6, 1fr);
-      max-width: 960px;
+      max-width: 840px;
     }
     .industrias-grid > :nth-child(1) { grid-column: 1 / span 2; }
     .industrias-grid > :nth-child(2) { grid-column: 3 / span 2; }
@@ -739,11 +789,11 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 22px 26px;
-    background: rgba(255,255,255,.04);
-    border: 1px solid rgba(255,255,255,.1);
-    border-radius: 14px;
+    gap: 14px;
+    padding: 18px 20px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 12px;
     backdrop-filter: blur(8px);
     overflow: hidden;
     transition: border-color .25s var(--ease), background .25s var(--ease), transform .25s var(--ease);
@@ -753,22 +803,22 @@
     position: absolute;
     bottom: -50%; right: -30%;
     width: 160px; height: 160px;
-    background: radial-gradient(circle, rgba(46,167,58,.18), transparent 60%);
+    background: radial-gradient(circle, rgba(182, 243, 197, .18), transparent 60%);
     pointer-events: none;
     opacity: 0;
     transition: opacity .25s var(--ease);
   }
   .industria-card:hover {
-    border-color: rgba(46,167,58,.5);
-    background: rgba(255,255,255,.06);
+    border-color: rgba(182, 243, 197, .55);
+    background: rgba(255,255,255,.09);
     transform: translateY(-2px);
   }
   .industria-card:hover::before { opacity: 1; }
   .industria-card__icon {
-    width: 44px; height: 44px; min-width: 44px;
-    color: var(--green-2);
-    background: rgba(46, 167, 58, .14);
-    border: 1px solid rgba(46, 167, 58, .25);
+    width: 42px; height: 42px; min-width: 42px;
+    color: #b6f3c5;
+    background: rgba(182, 243, 197, .12);
+    border: 1px solid rgba(182, 243, 197, .28);
     border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
     padding: 8px;
@@ -778,11 +828,11 @@
   .industria-card__icon svg { width: 100%; height: 100%; }
   .industria-card__name {
     font-family: var(--font-sans);
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     color: #fff;
     letter-spacing: -.005em;
-    line-height: 1.25;
+    line-height: 1.2;
     position: relative; z-index: 1;
   }
   .industrias-cta {
@@ -794,6 +844,15 @@
   .industrias-cta .btn-primary {
     padding: 16px 28px;
     font-size: 15px;
+    background: #fff;
+    color: #0a2f18;
+    box-shadow: 0 8px 22px -10px rgba(255,255,255,.4);
+  }
+  .industrias-cta .btn-primary:hover {
+    background: #b6f3c5;
+    color: #0a2f18;
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px -10px rgba(182,243,197,.6);
   }
 
   /* ============================================================
@@ -1146,36 +1205,88 @@
   }
   .cta-grid h2 .accent { color: var(--green-2); font-style: italic; font-weight: 700; }
   .cta-grid p { color: var(--on-dark-mute); font-size: 16px; line-height: 1.65; margin-bottom: 32px; max-width: 480px; }
-  .cta-contact-list { display: flex; flex-direction: column; gap: 12px; }
-  .cta-contact-item {
-    display: flex; align-items: center; gap: 14px;
-    padding: 14px 16px;
-    border: 1px solid var(--line-dark);
-    border-radius: var(--r-sm);
-    background: rgba(255,255,255,.025);
+  /* City contact cards — sectioned by city + Comercio Exterior */
+  .city-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 4px;
   }
-  .cta-contact-item .ic {
-    width: 36px; height: 36px;
-    border-radius: var(--r-sm);
-    background: rgba(46,167,58,.15);
+  .city-card {
+    padding: 18px 18px 16px;
     border: 1px solid var(--line-dark);
-    display: flex; align-items: center; justify-content: center;
+    border-radius: var(--r-md);
+    background: rgba(255,255,255,.04);
+    transition: border-color .2s var(--ease), background .2s var(--ease);
+  }
+  .city-card:hover {
+    border-color: rgba(46,167,58,.35);
+    background: rgba(255,255,255,.06);
+  }
+  .city-card--all {
+    grid-column: 1 / -1;
+    background: rgba(46,167,58,.08);
+    border-color: rgba(46,167,58,.25);
+  }
+  .city-card__city {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
     color: var(--green-2);
+    margin-bottom: 6px;
+  }
+  .city-card__city::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--green-2);
     flex-shrink: 0;
   }
-  .cta-contact-item .ic svg { width: 16px; height: 16px; stroke-width: 1.8; }
-  .cta-contact-item .info { display: flex; flex-direction: column; }
-  .cta-contact-item .info .name { font-size: 14px; font-weight: 600; color: #fff; }
-  .cta-contact-item .info .role {
+  .city-card__name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  .city-card__actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .city-card__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid var(--line-dark);
+    border-radius: 999px;
+    background: rgba(255,255,255,.04);
+    color: rgba(255,255,255,.92);
     font-size: 13px;
-    color: var(--on-dark-mute);
-    font-family: var(--font-sans);
-    letter-spacing: 0;
-    margin-top: 2px;
+    font-weight: 500;
+    transition: all .15s var(--ease);
+  }
+  .city-card__btn:hover {
+    border-color: var(--green-2);
+    background: rgba(46,167,58,.15);
+    color: #fff;
+  }
+  .city-card__btn svg {
+    width: 14px; height: 14px;
+    color: var(--green-2);
+    flex-shrink: 0;
   }
 
   @media (max-width: 880px) {
     .cta-grid { grid-template-columns: 1fr; gap: 40px; }
+    .city-cards { grid-template-columns: 1fr; }
+    .city-card--all { grid-column: 1; }
   }
 
   /* ============================================================
@@ -1576,7 +1687,7 @@
       </div>
 
       <form class="form-card hero-form reveal" id="heroQuoteForm" novalidate>
-        <h3 class="form-card__title">Solicitar cotización</h3>
+        <h3 class="form-card__title">Recibe una cotización hoy mismo.</h3>
         <p class="form-card__sub">Sin costo, sin compromiso. Te respondemos en <strong>menos de 24 hrs hábiles</strong>.</p>
 
         <div class="form-card__row">
@@ -1585,35 +1696,43 @@
             <input type="text" id="hf-nombre" name="nombre" required />
           </div>
           <div class="form-card__field">
-            <label for="hf-empresa">Empresa <span class="req">*</span></label>
-            <input type="text" id="hf-empresa" name="empresa" required />
+            <label for="hf-apellidos">Apellidos <span class="req">*</span></label>
+            <input type="text" id="hf-apellidos" name="apellidos" required />
           </div>
         </div>
 
         <div class="form-card__row">
-          <div class="form-card__field">
-            <label for="hf-correo">Correo <span class="req">*</span></label>
+          <div class="form-card__field form-card__field--full">
+            <label for="hf-correo">Correo electrónico <span class="req">*</span></label>
             <input type="email" id="hf-correo" name="correo" required />
           </div>
-          <div class="form-card__field">
-            <label for="hf-telefono">Teléfono <span class="req">*</span></label>
-            <input type="tel" id="hf-telefono" name="telefono" placeholder="+52" required />
+        </div>
+
+        <div class="form-card__row">
+          <div class="form-card__field form-card__field--full">
+            <label>Tipo de Servicio <span class="req">*</span></label>
+            <div class="form-card__radios">
+              <label class="form-card__radio">
+                <input type="radio" name="servicio" value="Almacenaje" checked />
+                Almacenaje
+              </label>
+              <label class="form-card__radio">
+                <input type="radio" name="servicio" value="Comercio Exterior" />
+                Comercio Exterior
+              </label>
+            </div>
           </div>
         </div>
 
         <div class="form-card__row">
-          <div class="form-card__field">
+          <div class="form-card__field form-card__field--full">
             <label for="hf-ubicacion">Ubicación <span class="req">*</span></label>
-            <input type="text" id="hf-ubicacion" name="ubicacion" placeholder="Ej. Apodaca, NL" required />
-          </div>
-          <div class="form-card__field">
-            <label for="hf-m2">m² estimados <span class="req">*</span></label>
-            <select id="hf-m2" name="m2" required>
+            <select id="hf-ubicacion" name="ubicacion" required>
               <option value="" disabled selected>Selecciona…</option>
-              <option>Menos de 1,000 m²</option>
-              <option>1,000 – 5,000 m²</option>
-              <option>5,000 – 15,000 m²</option>
-              <option>Más de 15,000 m²</option>
+              <option>Cd. Juárez</option>
+              <option>Monterrey</option>
+              <option>San Luis Potosí</option>
+              <option>El Paso, TX</option>
               <option>Aún no defino</option>
             </select>
           </div>
@@ -1621,8 +1740,15 @@
 
         <div class="form-card__row">
           <div class="form-card__field form-card__field--full">
-            <label for="hf-notas">Notas <span class="opt">(opcional)</span></label>
-            <textarea id="hf-notas" name="notas" rows="3" placeholder="Tipo de operación, turnos, accesos, particularidades…"></textarea>
+            <label for="hf-fuente">¿Cómo escuchó de REIS Logistics? <span class="req">*</span></label>
+            <select id="hf-fuente" name="fuente" required>
+              <option value="" disabled selected>Elige una opción</option>
+              <option>Google</option>
+              <option>LinkedIn</option>
+              <option>Facebook</option>
+              <option>Sitio web</option>
+              <option>Recomendación</option>
+            </select>
           </div>
         </div>
 
@@ -1759,7 +1885,7 @@
 
     <div class="industrias-cta reveal">
       <a href="#cotiza" class="btn btn-primary">
-        Cotiza tu solución de warehousing
+        Cotiza tu Solución de Warehousing
         <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -1948,48 +2074,74 @@
     <div class="cta-grid">
       <div class="reveal">
         <span class="eyebrow on-dark">Cotización en 24 horas</span>
-        <h2>¿Listos para <span class="accent">optimizar</span> tu warehousing?</h2>
-        <p>Agenda una llamada o envíanos los detalles. Un especialista te responde con cotización formal en menos de 24 horas hábiles.</p>
+        <h2>Recibe una <span class="accent">cotización</span> hoy mismo.</h2>
+        <p>Llámanos directo al especialista de tu ciudad o envíanos los detalles. Cotización formal en menos de 24 horas hábiles.</p>
 
-        <div class="cta-contact-list">
-          <div class="cta-contact-item">
-            <div class="ic">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
-              </svg>
-            </div>
-            <div class="info">
-              <span class="name">Juan Manuel Nava — SLP / MTY</span>
-              <span class="role">+52 444 140 6149 · juan.n@reisbl.com</span>
-            </div>
-          </div>
-          <div class="cta-contact-item">
-            <div class="ic">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
-              </svg>
-            </div>
-            <div class="info">
-              <span class="name">Rafael Alvarado — Comercio Exterior</span>
-              <span class="role">+52 656 352 3565 · rafael.a@reisbl.com</span>
+        <div class="city-cards">
+          <div class="city-card">
+            <span class="city-card__city">San Luis Potosí</span>
+            <p class="city-card__name">Juan Manuel Nava</p>
+            <div class="city-card__actions">
+              <a href="tel:+524441406149" class="city-card__btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+                +52 444 140 6149
+              </a>
+              <a href="mailto:juan.n@reisbl.com" class="city-card__btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email
+              </a>
             </div>
           </div>
-          <div class="cta-contact-item">
-            <div class="ic">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
-              </svg>
+
+          <div class="city-card">
+            <span class="city-card__city">Monterrey</span>
+            <p class="city-card__name">Juan Manuel Nava</p>
+            <div class="city-card__actions">
+              <a href="tel:+524441406149" class="city-card__btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+                +52 444 140 6149
+              </a>
+              <a href="mailto:juan.n@reisbl.com" class="city-card__btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email
+              </a>
             </div>
-            <div class="info">
-              <span class="name">Orlando Rubio — Cd. Juárez</span>
-              <span class="role">+52 444 719 7812 · orlando.r@reisbl.com</span>
+          </div>
+
+          <div class="city-card">
+            <span class="city-card__city">Cd. Juárez</span>
+            <p class="city-card__name">Orlando Rubio</p>
+            <div class="city-card__actions">
+              <a href="tel:+524447197812" class="city-card__btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+                +52 444 719 7812
+              </a>
+              <a href="mailto:orlando.r@reisbl.com" class="city-card__btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email
+              </a>
+            </div>
+          </div>
+
+          <div class="city-card city-card--all">
+            <span class="city-card__city">Comercio Exterior · Todas las ciudades</span>
+            <p class="city-card__name">Rafael Alvarado</p>
+            <div class="city-card__actions">
+              <a href="tel:+526563523565" class="city-card__btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+                +52 656 352 3565
+              </a>
+              <a href="mailto:rafael.a@reisbl.com" class="city-card__btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email
+              </a>
             </div>
           </div>
         </div>
       </div>
 
       <form class="form-card reveal" id="quoteForm" novalidate>
-        <h3 class="form-card__title">Solicitar cotización</h3>
+        <h3 class="form-card__title">Recibe una cotización hoy mismo.</h3>
         <p class="form-card__sub">Sin costo, sin compromiso. Te respondemos en <strong>menos de 24 hrs hábiles</strong>.</p>
 
         <div class="form-card__row">
@@ -1998,35 +2150,43 @@
             <input type="text" id="cf-nombre" name="nombre" required />
           </div>
           <div class="form-card__field">
-            <label for="cf-empresa">Empresa <span class="req">*</span></label>
-            <input type="text" id="cf-empresa" name="empresa" required />
+            <label for="cf-apellidos">Apellidos <span class="req">*</span></label>
+            <input type="text" id="cf-apellidos" name="apellidos" required />
           </div>
         </div>
 
         <div class="form-card__row">
-          <div class="form-card__field">
-            <label for="cf-correo">Correo <span class="req">*</span></label>
+          <div class="form-card__field form-card__field--full">
+            <label for="cf-correo">Correo electrónico <span class="req">*</span></label>
             <input type="email" id="cf-correo" name="correo" required />
           </div>
-          <div class="form-card__field">
-            <label for="cf-telefono">Teléfono <span class="req">*</span></label>
-            <input type="tel" id="cf-telefono" name="telefono" placeholder="+52" required />
+        </div>
+
+        <div class="form-card__row">
+          <div class="form-card__field form-card__field--full">
+            <label>Tipo de Servicio <span class="req">*</span></label>
+            <div class="form-card__radios">
+              <label class="form-card__radio">
+                <input type="radio" name="servicio" value="Almacenaje" checked />
+                Almacenaje
+              </label>
+              <label class="form-card__radio">
+                <input type="radio" name="servicio" value="Comercio Exterior" />
+                Comercio Exterior
+              </label>
+            </div>
           </div>
         </div>
 
         <div class="form-card__row">
-          <div class="form-card__field">
+          <div class="form-card__field form-card__field--full">
             <label for="cf-ubicacion">Ubicación <span class="req">*</span></label>
-            <input type="text" id="cf-ubicacion" name="ubicacion" placeholder="Ej. Apodaca, NL" required />
-          </div>
-          <div class="form-card__field">
-            <label for="cf-m2">m² estimados <span class="req">*</span></label>
-            <select id="cf-m2" name="m2" required>
+            <select id="cf-ubicacion" name="ubicacion" required>
               <option value="" disabled selected>Selecciona…</option>
-              <option>Menos de 1,000 m²</option>
-              <option>1,000 – 5,000 m²</option>
-              <option>5,000 – 15,000 m²</option>
-              <option>Más de 15,000 m²</option>
+              <option>Cd. Juárez</option>
+              <option>Monterrey</option>
+              <option>San Luis Potosí</option>
+              <option>El Paso, TX</option>
               <option>Aún no defino</option>
             </select>
           </div>
@@ -2034,8 +2194,15 @@
 
         <div class="form-card__row">
           <div class="form-card__field form-card__field--full">
-            <label for="cf-notas">Notas <span class="opt">(opcional)</span></label>
-            <textarea id="cf-notas" name="notas" rows="3" placeholder="Tipo de operación, turnos, accesos, particularidades…"></textarea>
+            <label for="cf-fuente">¿Cómo escuchó de REIS Logistics? <span class="req">*</span></label>
+            <select id="cf-fuente" name="fuente" required>
+              <option value="" disabled selected>Elige una opción</option>
+              <option>Google</option>
+              <option>LinkedIn</option>
+              <option>Facebook</option>
+              <option>Sitio web</option>
+              <option>Recomendación</option>
+            </select>
           </div>
         </div>
 
@@ -2176,9 +2343,11 @@
   function buildQuoteText(data, source) {
     return encodeURIComponent(
       `Hola REIS, quiero solicitar una cotización (${source}).\n\n` +
-      `Nombre: ${data.nombre || ''}\nEmpresa: ${data.empresa || ''}\nCorreo: ${data.correo || data.email || ''}\n` +
-      `Teléfono: ${data.telefono || ''}\nUbicación: ${data.ubicacion || ''}\nm² estimados: ${data.m2 || ''}\n` +
-      (data.notas ? `\nNotas: ${data.notas}` : '')
+      `Nombre: ${data.nombre || ''} ${data.apellidos || ''}\n` +
+      `Correo: ${data.correo || ''}\n` +
+      `Tipo de servicio: ${data.servicio || ''}\n` +
+      `Ubicación: ${data.ubicacion || ''}\n` +
+      `Fuente: ${data.fuente || ''}`
     );
   }
 
