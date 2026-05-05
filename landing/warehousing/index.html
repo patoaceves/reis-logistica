@@ -259,7 +259,7 @@
   }
 
   /* ============================================================
-     HERO — Full-bleed background image
+     HERO — Full-bleed background image + form card on right
      ============================================================ */
   .hero {
     position: relative;
@@ -268,6 +268,7 @@
     align-items: center;
     overflow: hidden;
     isolation: isolate;
+    padding: 80px 0;
   }
   .hero__bg {
     position: absolute;
@@ -280,7 +281,6 @@
     object-fit: cover;
     object-position: center 35%;
   }
-  /* Dark gradient — strong on left where text sits, lighter on right */
   .hero__overlay {
     position: absolute;
     inset: 0;
@@ -289,11 +289,10 @@
       linear-gradient(95deg,
         rgba(8, 18, 25, .92) 0%,
         rgba(11, 26, 34, .82) 35%,
-        rgba(11, 26, 34, .55) 65%,
-        rgba(11, 26, 34, .35) 100%),
+        rgba(11, 26, 34, .68) 60%,
+        rgba(11, 26, 34, .55) 100%),
       radial-gradient(ellipse at 15% 60%, rgba(46, 167, 58, .18), transparent 55%);
   }
-  /* Subtle grid texture on top of the overlay */
   .hero__overlay::after {
     content: '';
     position: absolute; inset: 0;
@@ -304,16 +303,17 @@
     pointer-events: none;
     mask-image: radial-gradient(ellipse at left, #000 30%, transparent 80%);
   }
-  .hero-content {
-    max-width: 660px;
-    padding: 80px 0 60px;
-    color: #fff;
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
   }
-  .hero-content .eyebrow {
-    color: #d8f3dd;
-  }
+  .hero-content { color: #fff; }
+  .hero-content .eyebrow { color: #d8f3dd; }
   .hero h1 {
-    font-size: clamp(34px, 5vw, 68px);
+    font-size: clamp(34px, 4.4vw, 60px);
     line-height: 1.05;
     letter-spacing: -.022em;
     font-weight: 700;
@@ -327,58 +327,85 @@
     font-weight: 700;
   }
   .hero-sub {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.6;
     color: rgba(255,255,255,.85);
     max-width: 540px;
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
   .hero-sub strong { color: #fff; font-weight: 700; }
-  .hero-actions {
-    display: flex; gap: 12px; flex-wrap: wrap;
-    margin-bottom: 44px;
-  }
-  /* Ghost button in hero needs dark-image variant */
-  .hero-actions .btn-ghost {
-    background: rgba(255,255,255,.08);
-    border-color: rgba(255,255,255,.25);
-    color: #fff;
-    backdrop-filter: blur(8px);
-  }
-  .hero-actions .btn-ghost:hover {
-    background: rgba(255,255,255,.15);
-    border-color: var(--green-2);
-    color: #fff;
-  }
-  .hero-meta {
+  .hero-features {
+    list-style: none;
     display: flex;
-    gap: 32px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(255,255,255,.18);
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
   }
-  .hero-meta div { display: flex; flex-direction: column; gap: 2px; }
-  .hero-meta .label {
-    font-family: var(--font-sans);
-    font-size: 12px;
-    font-weight: 400;
-    color: rgba(255,255,255,.65);
-  }
-  .hero-meta .value {
+  .hero-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
+    color: rgba(255,255,255,.92);
+  }
+  .hero-features li::before {
+    content: '';
+    width: 22px; height: 22px;
+    background: var(--green);
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13px;
+  }
+  .hero-call {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 20px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 14px;
+    backdrop-filter: blur(8px);
+    max-width: 540px;
+  }
+  .hero-call__label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+  }
+  .hero-call__phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
     color: #fff;
+  }
+  .hero-call__phone:hover { color: var(--green-2); }
+  .hero-call__phone svg {
+    width: 16px; height: 16px;
+    color: var(--green-2);
   }
 
-  @media (max-width: 880px) {
-    .hero { min-height: calc(100vh - 70px); }
-    .hero-content { padding: 60px 0 40px; }
+  /* Hero form card adjustments */
+  .hero-form { max-width: 520px; margin-left: auto; }
+
+  @media (max-width: 980px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-form { max-width: 100%; margin-left: 0; }
+    .hero { padding: 60px 0 40px; }
     .hero__overlay {
       background:
         linear-gradient(180deg,
           rgba(8, 18, 25, .85) 0%,
-          rgba(11, 26, 34, .75) 60%,
-          rgba(11, 26, 34, .55) 100%),
+          rgba(11, 26, 34, .8) 60%,
+          rgba(11, 26, 34, .65) 100%),
         radial-gradient(ellipse at 50% 80%, rgba(46, 167, 58, .15), transparent 60%);
     }
   }
@@ -453,11 +480,13 @@
   }
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1.05fr;
-    gap: 60px;
+    grid-template-columns: 1fr;
+    gap: 48px;
     align-items: center;
   }
-
+  .about-content {
+    max-width: 820px;
+  }
   .about-content h2 {
     font-size: clamp(30px, 3.4vw, 44px);
     font-weight: 700; letter-spacing: -.018em;
@@ -474,23 +503,78 @@
     color: var(--ink);
   }
 
-  /* About inline quote form — Integer-style white card */
-  .about-form {
+  /* About BIG video — primary visual element */
+  .about-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    box-shadow: 0 32px 64px -20px rgba(11, 26, 34, .25), 0 12px 24px -10px rgba(11, 26, 34, .12);
+    background: var(--ink);
+  }
+  .about-video video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .about-video::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(11,26,34,.0), rgba(11,26,34,.45));
+    pointer-events: none;
+    z-index: 1;
+  }
+  .about-video__overlay {
+    position: absolute;
+    bottom: 32px; left: 32px;
+    z-index: 2;
+    color: #fff;
+  }
+  .about-video__overlay .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--green-2);
+    margin-bottom: 8px;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .about-video__overlay .label::before {
+    content: ''; width: 22px; height: 1px; background: var(--green-2);
+  }
+  .about-video__overlay h3 {
+    font-size: clamp(22px, 2.6vw, 36px);
+    font-weight: 700;
+    line-height: 1.15;
+    max-width: 560px;
+    letter-spacing: -.012em;
+  }
+  @media (max-width: 760px) {
+    .about-video { aspect-ratio: 4 / 3; border-radius: var(--r-lg); }
+    .about-video__overlay { bottom: 20px; left: 20px; right: 20px; }
+  }
+
+  /* ============================================================
+     FORM CARD — Integer-style white quote form (used in hero + CTA)
+     ============================================================ */
+  .form-card {
     background: #fff;
     border: 1px solid var(--line);
     border-radius: 20px;
-    padding: 36px;
-    box-shadow: 0 24px 48px -16px rgba(11, 26, 34, .08), 0 8px 20px -8px rgba(11, 26, 34, .05);
+    padding: 32px;
+    box-shadow: 0 24px 48px -16px rgba(11, 26, 34, .14), 0 8px 20px -8px rgba(11, 26, 34, .08);
     position: relative;
+    color: var(--ink);
   }
-  .about-form__title {
+  .form-card__title {
     font-size: 22px;
     font-weight: 700;
     letter-spacing: -.015em;
     color: var(--ink);
     margin-bottom: 8px;
   }
-  .about-form__sub {
+  .form-card__sub {
     font-size: 14px;
     line-height: 1.55;
     color: var(--ink-mute);
@@ -498,33 +582,33 @@
     padding-bottom: 22px;
     border-bottom: 1px solid var(--line);
   }
-  .about-form__sub strong { color: var(--ink); font-weight: 700; }
-  .about-form__row {
+  .form-card__sub strong { color: var(--ink); font-weight: 700; }
+  .form-card__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
     margin-bottom: 14px;
   }
-  .about-form__field { display: flex; flex-direction: column; gap: 6px; }
-  .about-form__field--full { grid-column: 1 / -1; }
-  .about-form__field label {
+  .form-card__field { display: flex; flex-direction: column; gap: 6px; }
+  .form-card__field--full { grid-column: 1 / -1; }
+  .form-card__field label {
     font-size: 13px;
     font-weight: 600;
     color: var(--ink);
     letter-spacing: 0;
   }
-  .about-form__field label .req {
+  .form-card__field label .req {
     color: #d23b3b;
     margin-left: 2px;
   }
-  .about-form__field label .opt {
+  .form-card__field label .opt {
     color: var(--ink-dim);
     font-weight: 400;
     margin-left: 4px;
   }
-  .about-form__field input,
-  .about-form__field select,
-  .about-form__field textarea {
+  .form-card__field input,
+  .form-card__field select,
+  .form-card__field textarea {
     background: #f8fafa;
     border: 1px solid var(--line);
     color: var(--ink);
@@ -535,25 +619,25 @@
     transition: border-color .15s var(--ease), background .15s var(--ease), box-shadow .15s var(--ease);
     width: 100%;
   }
-  .about-form__field input::placeholder,
-  .about-form__field textarea::placeholder {
+  .form-card__field input::placeholder,
+  .form-card__field textarea::placeholder {
     color: var(--ink-dim);
   }
-  .about-form__field input:focus,
-  .about-form__field select:focus,
-  .about-form__field textarea:focus {
+  .form-card__field input:focus,
+  .form-card__field select:focus,
+  .form-card__field textarea:focus {
     outline: 0;
     border-color: var(--green);
     background: #fff;
     box-shadow: 0 0 0 3px rgba(46,167,58,.12);
   }
-  .about-form__field textarea {
+  .form-card__field textarea {
     resize: vertical;
     min-height: 90px;
   }
-  .about-form__submit {
+  .form-card__submit {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 18px;
     background: var(--green);
     color: #fff;
     padding: 16px;
@@ -564,30 +648,29 @@
     display: flex; align-items: center; justify-content: center; gap: 10px;
     box-shadow: 0 8px 20px -8px var(--green);
   }
-  .about-form__submit:hover {
+  .form-card__submit:hover {
     background: var(--green-deep);
     transform: translateY(-1px);
     box-shadow: 0 14px 28px -10px var(--green);
   }
-  .about-form__legal {
+  .form-card__legal {
     font-size: 12px;
     color: var(--ink-dim);
     margin-top: 14px;
     text-align: center;
     line-height: 1.5;
   }
-  .about-form__legal a {
+  .form-card__legal a {
     color: var(--ink-mute);
     text-decoration: underline;
     text-underline-offset: 2px;
   }
-  .about-form__legal a:hover { color: var(--green-deep); }
+  .form-card__legal a:hover { color: var(--green-deep); }
 
   @media (max-width: 880px) {
-    .about-grid { grid-template-columns: 1fr; gap: 40px; }
-    .about-form { padding: 28px 22px; }
-    .about-form__row { grid-template-columns: 1fr; gap: 0; margin-bottom: 0; }
-    .about-form__row .about-form__field { margin-bottom: 14px; }
+    .form-card { padding: 26px 22px; }
+    .form-card__row { grid-template-columns: 1fr; gap: 0; margin-bottom: 0; }
+    .form-card__row .form-card__field { margin-bottom: 14px; }
   }
   /* ============================================================
      INDUSTRIAS — Integer-style dedicated section (3+2 grid)
@@ -639,17 +722,16 @@
     position: relative; z-index: 1;
   }
   @media (min-width: 700px) {
-    .industrias-grid { grid-template-columns: repeat(2, 1fr); }
+    .industrias-grid { grid-template-columns: repeat(2, 1fr); max-width: 720px; }
   }
   @media (min-width: 1000px) {
     .industrias-grid {
       grid-template-columns: repeat(6, 1fr);
+      max-width: 960px;
     }
-    /* Top row: 3 cards spanning 2 cols each = 6 */
     .industrias-grid > :nth-child(1) { grid-column: 1 / span 2; }
     .industrias-grid > :nth-child(2) { grid-column: 3 / span 2; }
     .industrias-grid > :nth-child(3) { grid-column: 5 / span 2; }
-    /* Bottom row: 2 cards centered (offset by 1) */
     .industrias-grid > :nth-child(4) { grid-column: 2 / span 2; }
     .industrias-grid > :nth-child(5) { grid-column: 4 / span 2; }
   }
@@ -1084,65 +1166,16 @@
   .cta-contact-item .ic svg { width: 16px; height: 16px; stroke-width: 1.8; }
   .cta-contact-item .info { display: flex; flex-direction: column; }
   .cta-contact-item .info .name { font-size: 14px; font-weight: 600; color: #fff; }
-  .cta-contact-item .info .role { font-size: 12px; color: var(--on-dark-mute); font-family: var(--font-mono); letter-spacing: .04em; }
-
-  .cta-form {
-    background: rgba(255,255,255,.04);
-    border: 1px solid var(--line-dark);
-    border-radius: var(--r-md);
-    padding: 28px;
-    backdrop-filter: blur(10px);
-  }
-  .cta-form .form-title {
-    font-family: var(--font-sans); font-size: 15px;
-    font-weight: 700; text-transform: none;
-    color: var(--green-2); margin-bottom: 24px;
-    display: block; letter-spacing: 0;
-  }
-
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
-  .field label {
-    font-size: 13px; letter-spacing: 0;
-    color: var(--on-dark-mute); text-transform: none;
-    font-family: var(--font-sans); font-weight: 600;
-  }
-  .field input, .field select, .field textarea {
-    background: rgba(0,0,0,.25);
-    border: 1px solid var(--line-dark);
-    color: #fff;
-    padding: 12px 14px;
-    border-radius: var(--r-sm);
-    font-size: 14px;
-    transition: border-color .15s var(--ease);
-    width: 100%;
+  .cta-contact-item .info .role {
+    font-size: 13px;
+    color: var(--on-dark-mute);
     font-family: var(--font-sans);
-  }
-  .field input:focus, .field select:focus, .field textarea:focus {
-    outline: 0; border-color: var(--green-2);
-  }
-  .field select option { background: var(--ink); color: #fff; }
-  .field textarea { resize: vertical; min-height: 90px; }
-  .form-submit {
-    width: 100%; margin-top: 8px;
-    background: var(--green);
-    color: #fff;
-    padding: 16px; border-radius: var(--r-sm);
-    font-weight: 700; font-size: 15px;
-    transition: all .2s var(--ease);
-    display: flex; align-items: center; justify-content: center; gap: 10px;
-    box-shadow: 0 6px 22px -10px var(--green);
-  }
-  .form-submit:hover { background: var(--green-2); }
-  .form-fineprint {
-    font-size: 11px; color: var(--ink-dim);
-    margin-top: 14px; text-align: center;
-    font-family: var(--font-mono); letter-spacing: .04em;
+    letter-spacing: 0;
+    margin-top: 2px;
   }
 
   @media (max-width: 880px) {
     .cta-grid { grid-template-columns: 1fr; gap: 40px; }
-    .form-row { grid-template-columns: 1fr; gap: 0; }
   }
 
   /* ============================================================
@@ -1511,7 +1544,7 @@
 </nav>
 
 <!-- =========================================================
-     HERO — Full-bleed background with team + facility
+     HERO — Full-bleed background + form card (Integer-style)
      ========================================================= -->
 <section class="hero">
   <div class="hero__bg">
@@ -1519,21 +1552,87 @@
   </div>
   <div class="hero__overlay"></div>
   <div class="container">
-    <div class="hero-content reveal">
-      <span class="eyebrow shape-diamond">Warehousing 3PL</span>
-      <h1>
-        Almacenamiento que <span class="accent">optimiza</span> tu cadena de suministro.
-      </h1>
-      <p class="hero-sub">
-        <strong>+126,000 m²</strong> de bodegas industriales Clase A en Ciudad Juárez, Monterrey y San Luis Potosí. Gestión de inventarios precisa, integración 3PL y licencia IMMEX bajo un solo aliado estratégico.
-      </p>
-      <div class="hero-actions">
-        <a href="#cotiza" class="btn btn-primary">
-          Cotiza ahora
-          <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+    <div class="hero-grid">
+      <div class="hero-content reveal">
+        <span class="eyebrow shape-triangle">Warehousing 3PL en México</span>
+        <h1>
+          Almacenamiento que <span class="accent">optimiza</span> tu cadena de suministro.
+        </h1>
+        <p class="hero-sub">
+          <strong>+126,000 m²</strong> de bodegas industriales Clase A en Cd. Juárez, Monterrey y SLP. Gestión de inventarios precisa e integración 3PL bajo un solo aliado estratégico.
+        </p>
+        <ul class="hero-features">
+          <li>Bodegas Clase A en 3 ciudades estratégicas</li>
+          <li>Licencia IMMEX y certificación OEA / CTPAT</li>
+          <li>WMS integrado y trazabilidad en tiempo real</li>
+        </ul>
+        <div class="hero-call">
+          <span class="hero-call__label">¿Prefieres hablar?</span>
+          <a href="tel:+524447197812" class="hero-call__phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            +52 444 719 7812
+          </a>
+        </div>
       </div>
+
+      <form class="form-card hero-form reveal" id="heroQuoteForm" novalidate>
+        <h3 class="form-card__title">Solicitar cotización</h3>
+        <p class="form-card__sub">Sin costo, sin compromiso. Te respondemos en <strong>menos de 24 hrs hábiles</strong>.</p>
+
+        <div class="form-card__row">
+          <div class="form-card__field">
+            <label for="hf-nombre">Nombre <span class="req">*</span></label>
+            <input type="text" id="hf-nombre" name="nombre" required />
+          </div>
+          <div class="form-card__field">
+            <label for="hf-empresa">Empresa <span class="req">*</span></label>
+            <input type="text" id="hf-empresa" name="empresa" required />
+          </div>
+        </div>
+
+        <div class="form-card__row">
+          <div class="form-card__field">
+            <label for="hf-correo">Correo <span class="req">*</span></label>
+            <input type="email" id="hf-correo" name="correo" required />
+          </div>
+          <div class="form-card__field">
+            <label for="hf-telefono">Teléfono <span class="req">*</span></label>
+            <input type="tel" id="hf-telefono" name="telefono" placeholder="+52" required />
+          </div>
+        </div>
+
+        <div class="form-card__row">
+          <div class="form-card__field">
+            <label for="hf-ubicacion">Ubicación <span class="req">*</span></label>
+            <input type="text" id="hf-ubicacion" name="ubicacion" placeholder="Ej. Apodaca, NL" required />
+          </div>
+          <div class="form-card__field">
+            <label for="hf-m2">m² estimados <span class="req">*</span></label>
+            <select id="hf-m2" name="m2" required>
+              <option value="" disabled selected>Selecciona…</option>
+              <option>Menos de 1,000 m²</option>
+              <option>1,000 – 5,000 m²</option>
+              <option>5,000 – 15,000 m²</option>
+              <option>Más de 15,000 m²</option>
+              <option>Aún no defino</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-card__row">
+          <div class="form-card__field form-card__field--full">
+            <label for="hf-notas">Notas <span class="opt">(opcional)</span></label>
+            <textarea id="hf-notas" name="notas" rows="3" placeholder="Tipo de operación, turnos, accesos, particularidades…"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="form-card__submit">
+          Enviar solicitud
+          <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+
+        <p class="form-card__legal">Al enviar aceptas nuestro <a href="#">Aviso de Privacidad</a>.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -1572,64 +1671,13 @@
         <p>Somos una empresa mexicana dedicada a la <strong>logística para terceros (3PL)</strong> y al <strong>almacenamiento industrial</strong> para los sectores automotriz, electrodomésticos, aeroespacial y alimentos, con presencia en el bajío y en el noreste de México (frontera México–USA).</p>
         <p>Contamos con más de <span class="stat-hi">15</span> años de experiencia, una plantilla de más de <span class="stat-hi">350</span> colaboradores, y un espacio de almacenamiento de más de <span class="stat-hi">140,000 m²</span> en <span class="stat-hi">10</span> bodegas en México.</p>
       </div>
-      <form class="about-form reveal" id="aboutQuoteForm" novalidate>
-        <h3 class="about-form__title">Solicitar cotización</h3>
-        <p class="about-form__sub">Sin costo, sin compromiso. Te respondemos en <strong>menos de 24 hrs hábiles</strong>.</p>
-
-        <div class="about-form__row">
-          <div class="about-form__field">
-            <label for="af-nombre">Nombre <span class="req">*</span></label>
-            <input type="text" id="af-nombre" name="nombre" required />
-          </div>
-          <div class="about-form__field">
-            <label for="af-empresa">Empresa <span class="req">*</span></label>
-            <input type="text" id="af-empresa" name="empresa" required />
-          </div>
+      <div class="about-video reveal">
+        <video src="/assets/video/operaciones.mp4" autoplay muted loop playsinline preload="metadata" poster="/assets/img/about-facility.jpg"></video>
+        <div class="about-video__overlay">
+          <span class="label">Operaciones REIS</span>
+          <h3>Así se mueve tu inventario, día y noche.</h3>
         </div>
-
-        <div class="about-form__row">
-          <div class="about-form__field">
-            <label for="af-correo">Correo <span class="req">*</span></label>
-            <input type="email" id="af-correo" name="correo" required />
-          </div>
-          <div class="about-form__field">
-            <label for="af-telefono">Teléfono <span class="req">*</span></label>
-            <input type="tel" id="af-telefono" name="telefono" placeholder="+52" required />
-          </div>
-        </div>
-
-        <div class="about-form__row">
-          <div class="about-form__field">
-            <label for="af-ubicacion">Ubicación <span class="req">*</span></label>
-            <input type="text" id="af-ubicacion" name="ubicacion" placeholder="Ej. Apodaca, NL" required />
-          </div>
-          <div class="about-form__field">
-            <label for="af-m2">m² estimados <span class="req">*</span></label>
-            <select id="af-m2" name="m2" required>
-              <option value="" disabled selected>Selecciona…</option>
-              <option>Menos de 1,000 m²</option>
-              <option>1,000 – 5,000 m²</option>
-              <option>5,000 – 15,000 m²</option>
-              <option>Más de 15,000 m²</option>
-              <option>Aún no defino</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="about-form__row">
-          <div class="about-form__field about-form__field--full">
-            <label for="af-notas">Notas <span class="opt">(opcional)</span></label>
-            <textarea id="af-notas" name="notas" rows="3" placeholder="Tipo de operación, turnos, accesos, particularidades…"></textarea>
-          </div>
-        </div>
-
-        <button type="submit" class="about-form__submit">
-          Enviar solicitud
-          <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </button>
-
-        <p class="about-form__legal">Al enviar aceptas nuestro <a href="#">Aviso de Privacidad</a>.</p>
-      </form>
+      </div>
     </div>
   </div>
 </section>
@@ -1640,7 +1688,7 @@
 <section class="block industrias-block">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow on-dark shape-triangle">Para qué industrias</span>
+      <span class="eyebrow on-dark shape-diamond">Para qué industrias</span>
       <h2>Logística para sectores que <span class="accent-light">no toleran errores.</span></h2>
       <p>Diseñamos operaciones a la medida para industrias con altos estándares de cumplimiento, trazabilidad y tiempos de respuesta.</p>
     </div>
@@ -1648,12 +1696,12 @@
     <div class="industrias-grid">
       <article class="industria-card reveal">
         <div class="industria-card__icon" aria-hidden="true">
-          <!-- Automotriz: carrito side view -->
+          <!-- Automotriz: llanta / tire -->
           <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 25v-3l2.5-1 2-6c.4-1.2 1.5-2 2.8-2h13.4c1.3 0 2.4.8 2.8 2l2 6 2.5 1v3"/>
-            <path d="M6 25h28"/>
-            <circle cx="13" cy="26" r="3"/>
-            <circle cx="27" cy="26" r="3"/>
+            <circle cx="20" cy="20" r="14"/>
+            <circle cx="20" cy="20" r="5"/>
+            <path d="M20 6v3M20 31v3M6 20h3M31 20h3"/>
+            <path d="M11 11l2.2 2.2M26.8 26.8l2.2 2.2M29 11l-2.2 2.2M11 29l2.2-2.2"/>
           </svg>
         </div>
         <span class="industria-card__name">Automotriz</span>
@@ -1714,20 +1762,6 @@
         Cotiza tu solución de warehousing
         <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- =========================================================
-     VIDEO — Operaciones reel
-     ========================================================= -->
-<section class="video-section">
-  <div class="container">
-    <div class="video-frame reveal">
-      <video src="/assets/video/operaciones.mp4" autoplay muted loop playsinline preload="metadata" poster="/assets/img/about-facility.jpg"></video>
-      <div class="video-overlay">
-        <h3>Así se mueve tu inventario, día y noche.</h3>
-      </div>
     </div>
   </div>
 </section>
@@ -1855,32 +1889,6 @@
   </div>
 </section>
 
-<section id="almacenes" class="block carousel-section">
-  <div class="container">
-    <div class="carousel-head reveal">
-      <span class="eyebrow shape-circle">Nuestros almacenes</span>
-      <h2>Bodegas industriales <span class="accent">a tu disposición.</span></h2>
-      <p>Instalaciones Clase A en Ciudad Juárez, Monterrey y San Luis Potosí.</p>
-    </div>
-  </div>
-  <div class="carousel-marquee" aria-hidden="true">
-    <div class="carousel-marquee__track">
-      <!-- Set A -->
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="Bodega REIS — San Luis Potosí, Aurora Industriales" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="Bodega REIS — Monterrey, Edificio E1-A" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="Bodega REIS — Ciudad Juárez, Eastlake Logistics Park" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="Bodega REIS — San Luis Potosí, andenes de carga" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/05-slp-green.jpg" alt="Bodega REIS — San Luis Potosí, acceso principal" loading="lazy" /></div>
-      <!-- Set B (duplicate for seamless loop) -->
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/05-slp-green.jpg" alt="" loading="lazy" /></div>
-    </div>
-  </div>
-</section>
-
 <!-- =========================================================
      CLIENTES
      ========================================================= -->
@@ -1939,7 +1947,7 @@
   <div class="container">
     <div class="cta-grid">
       <div class="reveal">
-        <span class="eyebrow on-dark shape-bar">Cotización en 24 horas</span>
+        <span class="eyebrow on-dark">Cotización en 24 horas</span>
         <h2>¿Listos para <span class="accent">optimizar</span> tu warehousing?</h2>
         <p>Agenda una llamada o envíanos los detalles. Un especialista te responde con cotización formal en menos de 24 horas hábiles.</p>
 
@@ -1980,61 +1988,93 @@
         </div>
       </div>
 
-      <form class="cta-form reveal" id="quoteForm" novalidate>
-        <div class="form-title">FORMATO DE COTIZACIÓN</div>
-        <div class="form-row">
-          <div class="field">
-            <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" required />
+      <form class="form-card reveal" id="quoteForm" novalidate>
+        <h3 class="form-card__title">Solicitar cotización</h3>
+        <p class="form-card__sub">Sin costo, sin compromiso. Te respondemos en <strong>menos de 24 hrs hábiles</strong>.</p>
+
+        <div class="form-card__row">
+          <div class="form-card__field">
+            <label for="cf-nombre">Nombre <span class="req">*</span></label>
+            <input type="text" id="cf-nombre" name="nombre" required />
           </div>
-          <div class="field">
-            <label for="empresa">Empresa</label>
-            <input type="text" id="empresa" name="empresa" required />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="field">
-            <label for="email">Correo corporativo</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="field">
-            <label for="telefono">WhatsApp</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="+52" required />
+          <div class="form-card__field">
+            <label for="cf-empresa">Empresa <span class="req">*</span></label>
+            <input type="text" id="cf-empresa" name="empresa" required />
           </div>
         </div>
-        <div class="form-row">
-          <div class="field">
-            <label for="servicio">Servicio</label>
-            <select id="servicio" name="servicio" required>
-              <option value="" disabled selected>Selecciona</option>
-              <option>Almacenaje 3PL</option>
-              <option>Licencia IMMEX</option>
-              <option>Logística JIT</option>
-              <option>Solución integral</option>
-            </select>
+
+        <div class="form-card__row">
+          <div class="form-card__field">
+            <label for="cf-correo">Correo <span class="req">*</span></label>
+            <input type="email" id="cf-correo" name="correo" required />
           </div>
-          <div class="field">
-            <label for="ubicacion">Ubicación</label>
-            <select id="ubicacion" name="ubicacion" required>
-              <option value="" disabled selected>Selecciona</option>
-              <option>Cd. Juárez</option>
-              <option>Monterrey</option>
-              <option>San Luis Potosí</option>
-              <option>El Paso, TX</option>
+          <div class="form-card__field">
+            <label for="cf-telefono">Teléfono <span class="req">*</span></label>
+            <input type="tel" id="cf-telefono" name="telefono" placeholder="+52" required />
+          </div>
+        </div>
+
+        <div class="form-card__row">
+          <div class="form-card__field">
+            <label for="cf-ubicacion">Ubicación <span class="req">*</span></label>
+            <input type="text" id="cf-ubicacion" name="ubicacion" placeholder="Ej. Apodaca, NL" required />
+          </div>
+          <div class="form-card__field">
+            <label for="cf-m2">m² estimados <span class="req">*</span></label>
+            <select id="cf-m2" name="m2" required>
+              <option value="" disabled selected>Selecciona…</option>
+              <option>Menos de 1,000 m²</option>
+              <option>1,000 – 5,000 m²</option>
+              <option>5,000 – 15,000 m²</option>
+              <option>Más de 15,000 m²</option>
               <option>Aún no defino</option>
             </select>
           </div>
         </div>
-        <div class="field">
-          <label for="mensaje">Cuéntanos del proyecto (opcional)</label>
-          <textarea id="mensaje" name="mensaje" rows="3" placeholder="m² requeridos, sector, volumen mensual…"></textarea>
+
+        <div class="form-card__row">
+          <div class="form-card__field form-card__field--full">
+            <label for="cf-notas">Notas <span class="opt">(opcional)</span></label>
+            <textarea id="cf-notas" name="notas" rows="3" placeholder="Tipo de operación, turnos, accesos, particularidades…"></textarea>
+          </div>
         </div>
-        <button type="submit" class="form-submit">
-          Solicitar cotización
+
+        <button type="submit" class="form-card__submit">
+          Enviar solicitud
           <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </button>
-        <div class="form-fineprint">RESPUESTA EN ≤ 24 HRS HÁBILES</div>
+
+        <p class="form-card__legal">Al enviar aceptas nuestro <a href="#">Aviso de Privacidad</a>.</p>
       </form>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     ALMACENES — Last section before footer
+     ========================================================= -->
+<section id="almacenes" class="block carousel-section">
+  <div class="container">
+    <div class="carousel-head reveal">
+      <span class="eyebrow shape-circle">Nuestros almacenes</span>
+      <h2>Bodegas industriales <span class="accent">a tu disposición.</span></h2>
+      <p>Instalaciones Clase A en Ciudad Juárez, Monterrey y San Luis Potosí.</p>
+    </div>
+  </div>
+  <div class="carousel-marquee" aria-hidden="true">
+    <div class="carousel-marquee__track">
+      <!-- Set A -->
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="Bodega REIS — San Luis Potosí, Aurora Industriales" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="Bodega REIS — Monterrey, Edificio E1-A" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="Bodega REIS — Ciudad Juárez, Eastlake Logistics Park" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="Bodega REIS — San Luis Potosí, andenes de carga" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/05-slp-green.jpg" alt="Bodega REIS — San Luis Potosí, acceso principal" loading="lazy" /></div>
+      <!-- Set B (duplicate for seamless loop) -->
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/05-slp-green.jpg" alt="" loading="lazy" /></div>
     </div>
   </div>
 </section>
@@ -2133,28 +2173,25 @@
   /* ============================================================
      FORM HANDLERS (WhatsApp fallback — replace with GHL webhook)
      ============================================================ */
+  function buildQuoteText(data, source) {
+    return encodeURIComponent(
+      `Hola REIS, quiero solicitar una cotización (${source}).\n\n` +
+      `Nombre: ${data.nombre || ''}\nEmpresa: ${data.empresa || ''}\nCorreo: ${data.correo || data.email || ''}\n` +
+      `Teléfono: ${data.telefono || ''}\nUbicación: ${data.ubicacion || ''}\nm² estimados: ${data.m2 || ''}\n` +
+      (data.notas ? `\nNotas: ${data.notas}` : '')
+    );
+  }
+
+  document.getElementById('heroQuoteForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(this));
+    window.open(`https://wa.me/+524447197812/?text=${buildQuoteText(data, 'hero')}`, '_blank');
+  });
+
   document.getElementById('quoteForm').addEventListener('submit', function(e){
     e.preventDefault();
     const data = Object.fromEntries(new FormData(this));
-    const text = encodeURIComponent(
-      `Hola REIS, quiero cotizar warehousing.\n\n` +
-      `Nombre: ${data.nombre}\nEmpresa: ${data.empresa}\nEmail: ${data.email}\n` +
-      `WhatsApp: ${data.telefono}\nServicio: ${data.servicio}\nUbicación: ${data.ubicacion}\n` +
-      (data.mensaje ? `\nDetalles: ${data.mensaje}` : '')
-    );
-    window.open(`https://wa.me/+524447197812/?text=${text}`, '_blank');
-  });
-
-  document.getElementById('aboutQuoteForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(this));
-    const text = encodeURIComponent(
-      `Hola REIS, quiero solicitar una cotización.\n\n` +
-      `Nombre: ${data.nombre}\nEmpresa: ${data.empresa}\nCorreo: ${data.correo}\n` +
-      `Teléfono: ${data.telefono}\nUbicación: ${data.ubicacion}\nm² estimados: ${data.m2}\n` +
-      (data.notas ? `\nNotas: ${data.notas}` : '')
-    );
-    window.open(`https://wa.me/+524447197812/?text=${text}`, '_blank');
+    window.open(`https://wa.me/+524447197812/?text=${buildQuoteText(data, 'cta')}`, '_blank');
   });
 </script>
 
