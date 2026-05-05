@@ -8,7 +8,8 @@
 <meta name="theme-color" content="#F4F7F8" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#F4F7F8" media="(prefers-color-scheme: dark)" />
 <meta name="color-scheme" content="light" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b1a22'/%3E%3Cpath d='M8 22V10h7a4 4 0 1 1 0 8h-3v4z M16 18l4 4 M22 12v10' stroke='%2337ae40' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="icon" type="image/png" href="/assets/img/isotipo.png" />
+<link rel="apple-touch-icon" href="/assets/img/isotipo.png" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -214,7 +215,7 @@
     max-width: var(--maxw);
     margin: 0 auto;
   }
-  .nav-logo img { height: 38px; width: auto; transition: filter .3s var(--ease); filter: brightness(0) invert(1); }
+  .nav-logo img { height: 38px; width: auto; transition: opacity .3s var(--ease); }
   .nav-links { display: flex; gap: 28px; align-items: center; }
   .nav-links a {
     font-size: 15px;
@@ -371,36 +372,49 @@
     background-repeat: no-repeat;
     background-size: 13px;
   }
-  .hero-call {
+  /* Hero contact buttons (Llamar + WhatsApp) */
+  .hero-contact-actions {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 14px 20px;
-    background: rgba(255,255,255,.06);
-    border: 1px solid rgba(255,255,255,.14);
-    border-radius: 14px;
-    backdrop-filter: blur(8px);
+    gap: 12px;
+    flex-wrap: wrap;
     max-width: 540px;
   }
-  .hero-call__label {
-    font-family: var(--font-sans);
-    font-size: 13px;
-    font-weight: 500;
-    color: rgba(255,255,255,.78);
-  }
-  .hero-call__phone {
+  .hero-contact-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #fff;
+    gap: 10px;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .2s var(--ease);
+    border: 1px solid transparent;
   }
-  .hero-call__phone:hover { color: var(--green-2); }
-  .hero-call__phone svg {
-    width: 16px; height: 16px;
-    color: var(--green-2);
+  .hero-contact-btn svg {
+    width: 18px; height: 18px;
+    flex-shrink: 0;
+  }
+  .hero-contact-btn--call {
+    background: rgba(255,255,255,.1);
+    border-color: rgba(255,255,255,.25);
+    color: #fff;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .hero-contact-btn--call:hover {
+    background: rgba(255,255,255,.18);
+    border-color: rgba(255,255,255,.5);
+    transform: translateY(-1px);
+  }
+  .hero-contact-btn--wa {
+    background: #25D366;
+    color: #fff;
+    box-shadow: 0 8px 22px -10px #25D366;
+  }
+  .hero-contact-btn--wa:hover {
+    background: #1eb557;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px -10px #25D366;
   }
 
   /* Hero form card adjustments */
@@ -490,8 +504,8 @@
   }
   .about-grid {
     display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 56px;
     align-items: center;
   }
   .about-content {
@@ -517,7 +531,7 @@
   .about-video {
     position: relative;
     width: 100%;
-    max-width: 480px;
+    max-width: 624px;
     aspect-ratio: 1 / 1;
     margin: 0 auto;
     border-radius: 24px;
@@ -572,13 +586,13 @@
      FORM CARD — Integer-style white quote form (used in hero + CTA)
      ============================================================ */
   .form-card {
-    background: rgba(255, 255, 255, .82);
-    border: 1px solid rgba(255, 255, 255, .65);
+    background: rgba(255, 255, 255, .92);
+    border: 1px solid rgba(255, 255, 255, .8);
     border-radius: 20px;
     padding: 32px;
-    box-shadow: 0 24px 48px -16px rgba(11, 26, 34, .22), 0 8px 20px -8px rgba(11, 26, 34, .12);
-    backdrop-filter: blur(18px) saturate(140%);
-    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    box-shadow: 0 24px 48px -16px rgba(11, 26, 34, .25), 0 8px 20px -8px rgba(11, 26, 34, .14);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
     position: relative;
     color: var(--ink);
   }
@@ -865,6 +879,22 @@
     color: var(--green-deep);
     transform: translateY(-1px);
     box-shadow: 0 14px 28px -10px rgba(214,255,224,.5);
+  }
+  /* Watermark — isotipo blanco abajo derecha */
+  .industrias-watermark {
+    position: absolute;
+    right: -40px;
+    bottom: -60px;
+    width: 320px;
+    height: 320px;
+    opacity: .07;
+    pointer-events: none;
+    z-index: 0;
+    transform: rotate(-12deg);
+  }
+  .industrias-watermark img { width: 100%; height: 100%; object-fit: contain; }
+  @media (max-width: 880px) {
+    .industrias-watermark { width: 200px; height: 200px; right: -30px; bottom: -40px; }
   }
 
   /* ============================================================
@@ -1655,7 +1685,7 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">
-      <img src="/assets/img/reis-logo.png" alt="REIS Logística" />
+      <img src="/assets/img/reis-logo-blanco.png" alt="REIS Logística" />
     </a>
     <div class="nav-links">
       <a href="#nosotros">Nosotros</a>
@@ -1696,11 +1726,14 @@
           <li>Licencia IMMEX y certificación OEA / CTPAT</li>
           <li>WMS integrado y trazabilidad en tiempo real</li>
         </ul>
-        <div class="hero-call">
-          <span class="hero-call__label">¿Prefieres hablar?</span>
-          <a href="tel:+524447197812" class="hero-call__phone">
+        <div class="hero-contact-actions">
+          <a href="tel:+524447197812" class="hero-contact-btn hero-contact-btn--call">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
-            +52 444 719 7812
+            Llámanos
+          </a>
+          <a href="https://wa.me/524447197812" target="_blank" rel="noopener" class="hero-contact-btn hero-contact-btn--wa">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+            WhatsApp
           </a>
         </div>
       </div>
@@ -1842,6 +1875,9 @@
      INDUSTRIAS — Para qué sectores (independent section)
      ========================================================= -->
 <section class="block industrias-block">
+  <div class="industrias-watermark" aria-hidden="true">
+    <img src="/assets/img/isotipo-blanco.png" alt="" />
+  </div>
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow on-dark shape-diamond">Para qué industrias</span>
@@ -2089,7 +2125,7 @@
   <div class="container">
     <div class="clientes-cta reveal">
       <a href="#cotiza" class="btn">
-        Conecta Con Nosotros
+        Conecta con Nosotros
         <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -2294,7 +2330,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="https://static.wixstatic.com/media/78c590_4e2791f163fe4e0295b6f8f44179c16d~mv2.png/v1/crop/x_5,y_0,w_1601,h_659/fill/w_311,h_128,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/i42.png" alt="REIS Logística" />
+        <img src="/assets/img/reis-logo-blanco.png" alt="REIS Logística" />
         <p>Empresa mexicana especializada en logística 3PL y almacenamiento industrial para los sectores automotriz, electrodomésticos, aeroespacial y alimentos.</p>
       </div>
       <div class="footer-col">
