@@ -197,12 +197,14 @@
      NAV
      ============================================================ */
   .nav {
-    position: sticky;
-    top: 0; z-index: 50;
-    background: rgba(244, 247, 248, .82);
-    backdrop-filter: saturate(180%) blur(14px);
-    -webkit-backdrop-filter: saturate(180%) blur(14px);
-    border-bottom: 1px solid var(--line);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    background: linear-gradient(180deg, rgba(8, 18, 25, .68) 0%, rgba(8, 18, 25, .25) 60%, rgba(8, 18, 25, 0) 100%);
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    border-bottom: 1px solid transparent;
+    transition: background .3s var(--ease), backdrop-filter .3s var(--ease), border-color .3s var(--ease);
   }
   .nav-inner {
     display: flex;
@@ -212,12 +214,12 @@
     max-width: var(--maxw);
     margin: 0 auto;
   }
-  .nav-logo img { height: 38px; width: auto; }
+  .nav-logo img { height: 38px; width: auto; transition: filter .3s var(--ease); filter: brightness(0) invert(1); }
   .nav-links { display: flex; gap: 28px; align-items: center; }
   .nav-links a {
     font-size: 15px;
     font-weight: 600;
-    color: var(--ink-mute);
+    color: rgba(255, 255, 255, .82);
     transition: color .15s var(--ease);
     position: relative;
   }
@@ -227,10 +229,10 @@
     left: 0; right: 100%;
     bottom: -4px;
     height: 2px;
-    background: var(--green);
+    background: var(--green-2);
     transition: right .22s var(--ease);
   }
-  .nav-links a:hover { color: var(--ink); }
+  .nav-links a:hover { color: #fff; }
   .nav-links a:hover::after { right: 0; }
   .nav-cta { display: flex; gap: 10px; align-items: center; }
   .nav-cta-btn {
@@ -239,7 +241,7 @@
     background: var(--green);
     color: #ffffff;
     border-radius: var(--r-sm);
-    box-shadow: 0 6px 16px -8px var(--green);
+    box-shadow: 0 6px 16px -8px rgba(0,0,0,.35);
   }
   .nav-cta-btn:hover {
     background: var(--green-deep);
@@ -249,11 +251,20 @@
   .nav-status {
     display: inline-flex; align-items: center; gap: 8px;
     font-family: var(--font-mono); font-size: 11px;
-    color: var(--green-deep); letter-spacing: .12em;
-    padding: 6px 12px; border: 1px solid var(--line);
+    color: var(--green-2); letter-spacing: .12em;
+    padding: 6px 12px; border: 1px solid rgba(255,255,255,.18);
     border-radius: 999px;
-    background: var(--bg-card);
+    background: rgba(255,255,255,.08);
   }
+
+  /* Scrolled state — solid dark surface */
+  .nav.is-scrolled {
+    background: rgba(11, 26, 34, .92);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom-color: rgba(255,255,255,.08);
+  }
+
   @media (max-width: 880px) {
     .nav-links, .nav-status { display: none; }
   }
@@ -263,12 +274,12 @@
      ============================================================ */
   .hero {
     position: relative;
-    min-height: calc(100vh - 70px);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
     isolation: isolate;
-    padding: 80px 0;
+    padding: 110px 0 80px;
   }
   .hero__bg {
     position: absolute;
@@ -479,7 +490,7 @@
   }
   .about-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1.1fr 1fr;
     gap: 60px;
     align-items: center;
   }
@@ -502,14 +513,14 @@
     color: var(--ink);
   }
 
-  /* About vertical video — iPhone-style portrait ratio */
+  /* About square video */
   .about-video {
     position: relative;
     width: 100%;
-    max-width: 380px;
-    aspect-ratio: 9 / 16;
+    max-width: 480px;
+    aspect-ratio: 1 / 1;
     margin: 0 auto;
-    border-radius: 28px;
+    border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 32px 64px -20px rgba(11, 26, 34, .25), 0 12px 24px -10px rgba(11, 26, 34, .12);
     background: var(--ink);
@@ -554,20 +565,20 @@
   @media (max-width: 880px) {
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .about-content { max-width: 100%; }
-    .about-video { max-width: 320px; }
+    .about-video { max-width: 420px; }
   }
 
   /* ============================================================
      FORM CARD — Integer-style white quote form (used in hero + CTA)
      ============================================================ */
   .form-card {
-    background: rgba(255, 255, 255, .94);
-    border: 1px solid rgba(255, 255, 255, .6);
+    background: rgba(255, 255, 255, .82);
+    border: 1px solid rgba(255, 255, 255, .65);
     border-radius: 20px;
     padding: 32px;
-    box-shadow: 0 24px 48px -16px rgba(11, 26, 34, .18), 0 8px 20px -8px rgba(11, 26, 34, .1);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 24px 48px -16px rgba(11, 26, 34, .22), 0 8px 20px -8px rgba(11, 26, 34, .12);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
     position: relative;
     color: var(--ink);
   }
@@ -721,10 +732,10 @@
     .form-card__row .form-card__field { margin-bottom: 14px; }
   }
   /* ============================================================
-     INDUSTRIAS — Green-dominant section (3+2 grid)
+     INDUSTRIAS — Green-dominant section (REIS identity)
      ============================================================ */
   .industrias-block {
-    background: linear-gradient(180deg, #0d3b1f 0%, #0a2f18 100%);
+    background: linear-gradient(160deg, var(--green-deep) 0%, #176b22 50%, #114a17 100%);
     color: var(--on-dark);
     position: relative;
     overflow: hidden;
@@ -733,8 +744,8 @@
     content: '';
     position: absolute; inset: 0;
     background-image:
-      linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+      linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
     background-size: 80px 80px;
     pointer-events: none;
     mask-image: radial-gradient(ellipse at center, #000 30%, transparent 80%);
@@ -744,9 +755,9 @@
     position: absolute;
     bottom: -20%; left: 50%;
     transform: translateX(-50%);
-    width: 700px; height: 400px;
-    background: radial-gradient(ellipse, rgba(110, 231, 138, .18), transparent 60%);
-    filter: blur(60px); pointer-events: none;
+    width: 800px; height: 500px;
+    background: radial-gradient(ellipse, rgba(214, 255, 224, .22), transparent 60%);
+    filter: blur(70px); pointer-events: none;
   }
   .industrias-block .section-head {
     position: relative; z-index: 1;
@@ -754,14 +765,14 @@
     margin: 0 auto 56px;
   }
   .industrias-block .section-head .eyebrow { justify-content: center; }
-  .industrias-block .section-head .eyebrow.on-dark { color: #b6f3c5; }
-  .industrias-block .section-head .eyebrow.on-dark.shape-diamond::before { background: #b6f3c5; }
+  .industrias-block .section-head .eyebrow.on-dark { color: #d6ffe0; }
+  .industrias-block .section-head .eyebrow.on-dark.shape-diamond::before { background: #d6ffe0; }
   .industrias-block .section-head h2 { color: #fff; }
   .industrias-block .section-head h2 .accent-light {
-    color: #b6f3c5; font-style: italic; font-weight: 700;
+    color: #d6ffe0; font-style: italic; font-weight: 700;
   }
   .industrias-block .section-head p {
-    color: rgba(255,255,255,.78);
+    color: rgba(255,255,255,.82);
     margin: 14px auto 0;
   }
   .industrias-grid {
@@ -791,8 +802,8 @@
     align-items: center;
     gap: 14px;
     padding: 18px 20px;
-    background: rgba(255,255,255,.06);
-    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.2);
     border-radius: 12px;
     backdrop-filter: blur(8px);
     overflow: hidden;
@@ -803,22 +814,22 @@
     position: absolute;
     bottom: -50%; right: -30%;
     width: 160px; height: 160px;
-    background: radial-gradient(circle, rgba(182, 243, 197, .18), transparent 60%);
+    background: radial-gradient(circle, rgba(214, 255, 224, .22), transparent 60%);
     pointer-events: none;
     opacity: 0;
     transition: opacity .25s var(--ease);
   }
   .industria-card:hover {
-    border-color: rgba(182, 243, 197, .55);
-    background: rgba(255,255,255,.09);
+    border-color: rgba(214, 255, 224, .6);
+    background: rgba(255,255,255,.14);
     transform: translateY(-2px);
   }
   .industria-card:hover::before { opacity: 1; }
   .industria-card__icon {
     width: 42px; height: 42px; min-width: 42px;
-    color: #b6f3c5;
-    background: rgba(182, 243, 197, .12);
-    border: 1px solid rgba(182, 243, 197, .28);
+    color: #d6ffe0;
+    background: rgba(214, 255, 224, .18);
+    border: 1px solid rgba(214, 255, 224, .35);
     border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
     padding: 8px;
@@ -844,15 +855,16 @@
   .industrias-cta .btn-primary {
     padding: 16px 28px;
     font-size: 15px;
+    border-radius: 999px;
     background: #fff;
-    color: #0a2f18;
-    box-shadow: 0 8px 22px -10px rgba(255,255,255,.4);
+    color: var(--green-deep);
+    box-shadow: 0 8px 22px -10px rgba(0,0,0,.3);
   }
   .industrias-cta .btn-primary:hover {
-    background: #b6f3c5;
-    color: #0a2f18;
+    background: #d6ffe0;
+    color: var(--green-deep);
     transform: translateY(-1px);
-    box-shadow: 0 14px 28px -10px rgba(182,243,197,.6);
+    box-shadow: 0 14px 28px -10px rgba(214,255,224,.5);
   }
 
   /* ============================================================
@@ -1224,7 +1236,6 @@
     background: rgba(255,255,255,.06);
   }
   .city-card--all {
-    grid-column: 1 / -1;
     background: rgba(46,167,58,.08);
     border-color: rgba(46,167,58,.25);
   }
@@ -1242,9 +1253,9 @@
   }
   .city-card__city::before {
     content: '';
-    width: 6px; height: 6px;
-    border-radius: 50%;
+    width: 7px; height: 7px;
     background: var(--green-2);
+    transform: rotate(45deg);
     flex-shrink: 0;
   }
   .city-card__name {
@@ -1286,7 +1297,6 @@
   @media (max-width: 880px) {
     .cta-grid { grid-template-columns: 1fr; gap: 40px; }
     .city-cards { grid-template-columns: 1fr; }
-    .city-card--all { grid-column: 1; }
   }
 
   /* ============================================================
@@ -1392,21 +1402,30 @@
     position: relative;
     overflow: hidden;
   }
+  /* Nebulous gradient orbs instead of grid */
   .dif-block::before {
     content: '';
     position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-    background-size: 80px 80px;
+    background:
+      radial-gradient(ellipse 600px 400px at 18% 22%, rgba(46, 167, 58, .22), transparent 60%),
+      radial-gradient(ellipse 500px 600px at 88% 78%, rgba(34, 139, 48, .18), transparent 65%),
+      radial-gradient(ellipse 400px 300px at 60% 35%, rgba(110, 231, 138, .08), transparent 70%);
     pointer-events: none;
+    filter: blur(2px);
   }
+  /* Soft diagonal stroke pattern (replaces grid) */
   .dif-block::after {
     content: '';
-    position: absolute; top: 10%; right: -10%;
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(46,167,58,.15), transparent 60%);
-    filter: blur(60px); pointer-events: none;
+    position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 80px,
+      rgba(255,255,255,.025) 80px,
+      rgba(255,255,255,.025) 81px
+    );
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at center, #000 20%, transparent 75%);
   }
   .dif-block .section-head { position: relative; z-index: 1; }
   .dif-block .section-head h2 { color: var(--on-dark); }
@@ -1702,6 +1721,17 @@
         </div>
 
         <div class="form-card__row">
+          <div class="form-card__field">
+            <label for="hf-empresa">Empresa <span class="req">*</span></label>
+            <input type="text" id="hf-empresa" name="empresa" required />
+          </div>
+          <div class="form-card__field">
+            <label for="hf-telefono">Teléfono <span class="req">*</span></label>
+            <input type="tel" id="hf-telefono" name="telefono" placeholder="+52" required />
+          </div>
+        </div>
+
+        <div class="form-card__row">
           <div class="form-card__field form-card__field--full">
             <label for="hf-correo">Correo electrónico <span class="req">*</span></label>
             <input type="email" id="hf-correo" name="correo" required />
@@ -1792,7 +1822,7 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-content reveal">
-        <span class="eyebrow shape-circle">Sobre REIS</span>
+        <span class="eyebrow">Sobre REIS</span>
         <h2>Empresa mexicana, <span class="accent">aliados estratégicos</span> de tu logística.</h2>
         <p>Somos una empresa mexicana dedicada a la <strong>logística para terceros (3PL)</strong> y al <strong>almacenamiento industrial</strong> para los sectores automotriz, electrodomésticos, aeroespacial y alimentos, con presencia en el bajío y en el noreste de México (frontera México–USA).</p>
         <p>Contamos con más de <span class="stat-hi">15</span> años de experiencia, una plantilla de más de <span class="stat-hi">350</span> colaboradores, y un espacio de almacenamiento de más de <span class="stat-hi">140,000 m²</span> en <span class="stat-hi">10</span> bodegas en México.</p>
@@ -1898,7 +1928,7 @@
 <section id="servicios" class="block">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow shape-diamond">Cobertura integral</span>
+      <span class="eyebrow shape-triangle">Cobertura integral</span>
       <h2>Tres pilares, <span class="accent">una sola operación.</span></h2>
       <p>3PL, IMMEX y logística integrada bajo un solo proveedor. Reducimos puntos de contacto, riesgos operativos y costos administrativos.</p>
     </div>
@@ -2021,7 +2051,7 @@
 <section id="clientes" class="block clientes-block">
   <div class="container">
     <div class="section-head section-head--center reveal">
-      <span class="eyebrow shape-triangle">Nuestros clientes</span>
+      <span class="eyebrow shape-diamond">Nuestros clientes</span>
       <h2>Empresas que <span class="accent">confían</span> en REIS.</h2>
     </div>
   </div>
@@ -2059,7 +2089,7 @@
   <div class="container">
     <div class="clientes-cta reveal">
       <a href="#cotiza" class="btn">
-        Agenda una consultoría en logística
+        Conecta Con Nosotros
         <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -2067,7 +2097,36 @@
 </section>
 
 <!-- =========================================================
-     CTA / QUOTE FORM (DARK)
+     ALMACENES — Bodegas carousel (penultimate)
+     ========================================================= -->
+<section id="almacenes" class="block carousel-section">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow shape-triangle">Nuestros almacenes</span>
+      <h2>Bodegas industriales <span class="accent">a tu disposición.</span></h2>
+      <p>Instalaciones Clase A en Ciudad Juárez, Monterrey y San Luis Potosí.</p>
+    </div>
+  </div>
+  <div class="carousel-marquee" aria-hidden="true">
+    <div class="carousel-marquee__track">
+      <!-- Set A -->
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="Bodega REIS — San Luis Potosí, Aurora Industriales" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="Bodega REIS — Monterrey, Edificio E1-A" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="Bodega REIS — Ciudad Juárez, Eastlake Logistics Park" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="Bodega REIS — San Luis Potosí, andenes de carga" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/05-slp-green.jpg" alt="Bodega REIS — San Luis Potosí, acceso principal" loading="lazy" /></div>
+      <!-- Set B (duplicate for seamless loop) -->
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/05-slp-green.jpg" alt="" loading="lazy" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CTA / QUOTE FORM (DARK) — Last content section
      ========================================================= -->
 <section id="cotiza" class="block cta-block">
   <div class="container">
@@ -2124,7 +2183,7 @@
           </div>
 
           <div class="city-card city-card--all">
-            <span class="city-card__city">Comercio Exterior · Todas las ciudades</span>
+            <span class="city-card__city">Comercio Exterior</span>
             <p class="city-card__name">Rafael Alvarado</p>
             <div class="city-card__actions">
               <a href="tel:+526563523565" class="city-card__btn">
@@ -2152,6 +2211,17 @@
           <div class="form-card__field">
             <label for="cf-apellidos">Apellidos <span class="req">*</span></label>
             <input type="text" id="cf-apellidos" name="apellidos" required />
+          </div>
+        </div>
+
+        <div class="form-card__row">
+          <div class="form-card__field">
+            <label for="cf-empresa">Empresa <span class="req">*</span></label>
+            <input type="text" id="cf-empresa" name="empresa" required />
+          </div>
+          <div class="form-card__field">
+            <label for="cf-telefono">Teléfono <span class="req">*</span></label>
+            <input type="tel" id="cf-telefono" name="telefono" placeholder="+52" required />
           </div>
         </div>
 
@@ -2213,35 +2283,6 @@
 
         <p class="form-card__legal">Al enviar aceptas nuestro <a href="#">Aviso de Privacidad</a>.</p>
       </form>
-    </div>
-  </div>
-</section>
-
-<!-- =========================================================
-     ALMACENES — Last section before footer
-     ========================================================= -->
-<section id="almacenes" class="block carousel-section">
-  <div class="container">
-    <div class="carousel-head reveal">
-      <span class="eyebrow shape-circle">Nuestros almacenes</span>
-      <h2>Bodegas industriales <span class="accent">a tu disposición.</span></h2>
-      <p>Instalaciones Clase A en Ciudad Juárez, Monterrey y San Luis Potosí.</p>
-    </div>
-  </div>
-  <div class="carousel-marquee" aria-hidden="true">
-    <div class="carousel-marquee__track">
-      <!-- Set A -->
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="Bodega REIS — San Luis Potosí, Aurora Industriales" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="Bodega REIS — Monterrey, Edificio E1-A" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="Bodega REIS — Ciudad Juárez, Eastlake Logistics Park" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="Bodega REIS — San Luis Potosí, andenes de carga" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/05-slp-green.jpg" alt="Bodega REIS — San Luis Potosí, acceso principal" loading="lazy" /></div>
-      <!-- Set B (duplicate for seamless loop) -->
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/05-slp-green.jpg" alt="" loading="lazy" /></div>
     </div>
   </div>
 </section>
@@ -2335,6 +2376,20 @@
 
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+  /* ============================================================
+     NAV — toggle scrolled state
+     ============================================================ */
+  (function() {
+    const nav = document.querySelector('.nav');
+    if (!nav) return;
+    const onScroll = () => {
+      if (window.scrollY > 40) nav.classList.add('is-scrolled');
+      else nav.classList.remove('is-scrolled');
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+
 
 
   /* ============================================================
@@ -2344,6 +2399,8 @@
     return encodeURIComponent(
       `Hola REIS, quiero solicitar una cotización (${source}).\n\n` +
       `Nombre: ${data.nombre || ''} ${data.apellidos || ''}\n` +
+      `Empresa: ${data.empresa || ''}\n` +
+      `Teléfono: ${data.telefono || ''}\n` +
       `Correo: ${data.correo || ''}\n` +
       `Tipo de servicio: ${data.servicio || ''}\n` +
       `Ubicación: ${data.ubicacion || ''}\n` +
