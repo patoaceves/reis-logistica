@@ -39,6 +39,7 @@
     --green:      #2ea73a;
     --green-2:    #37ae40;
     --green-deep: #248a2f;
+    --green-bright: #4cc859;
     --green-soft: rgba(46, 167, 58, .08);
     --blue:       #145474;
     --blue-2:     #1d6e95;
@@ -179,7 +180,7 @@
     color: #ffffff;
     box-shadow: 0 6px 16px -8px var(--green);
   }
-  .btn-primary:hover { background: var(--green-deep); transform: translateY(-1px); box-shadow: 0 10px 22px -8px var(--green); }
+  .btn-primary:hover { background: var(--green-bright); transform: translateY(-1px); box-shadow: 0 10px 24px -8px var(--green-bright); }
   .btn-ghost {
     border-color: var(--line-2);
     color: var(--ink);
@@ -215,7 +216,7 @@
     max-width: var(--maxw);
     margin: 0 auto;
   }
-  .nav-logo img { height: 38px; width: auto; transition: opacity .3s var(--ease); }
+  .nav-logo img { height: 50px; width: auto; transition: opacity .3s var(--ease); }
   .nav-links { display: flex; gap: 28px; align-items: center; }
   .nav-links a {
     font-size: 15px;
@@ -245,9 +246,9 @@
     box-shadow: 0 6px 16px -8px rgba(0,0,0,.35);
   }
   .nav-cta-btn:hover {
-    background: var(--green-deep);
+    background: var(--green-bright);
     transform: translateY(-1px);
-    box-shadow: 0 10px 22px -8px var(--green);
+    box-shadow: 0 10px 24px -8px var(--green-bright);
   }
   .nav-status {
     display: inline-flex; align-items: center; gap: 8px;
@@ -412,17 +413,17 @@
     box-shadow: 0 8px 22px -10px #25D366;
   }
   .hero-contact-btn--wa:hover {
-    background: #1eb557;
+    background: #3ddf78;
     transform: translateY(-1px);
-    box-shadow: 0 12px 26px -10px #25D366;
+    box-shadow: 0 12px 28px -8px rgba(61,223,120,.6);
   }
 
   /* Hero form card adjustments */
-  .hero-form { max-width: 520px; margin-left: auto; }
+  .hero-form { margin-left: auto; }
 
   @media (max-width: 980px) {
     .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-    .hero-form { max-width: 100%; margin-left: 0; }
+    .hero-form { margin-left: 0; }
     .hero { padding: 60px 0 40px; }
     .hero__overlay {
       background:
@@ -586,13 +587,13 @@
      FORM CARD — Integer-style white quote form (used in hero + CTA)
      ============================================================ */
   .form-card {
-    background: rgba(255, 255, 255, .92);
-    border: 1px solid rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, .68);
+    border: 1px solid rgba(255, 255, 255, .55);
     border-radius: 20px;
     padding: 32px;
-    box-shadow: 0 24px 48px -16px rgba(11, 26, 34, .25), 0 8px 20px -8px rgba(11, 26, 34, .14);
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    box-shadow: 0 24px 64px -16px rgba(11, 26, 34, .35), 0 0 0 1px rgba(255, 255, 255, .15);
+    backdrop-filter: blur(22px) saturate(180%);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
     position: relative;
     color: var(--ink);
   }
@@ -605,8 +606,8 @@
     line-height: 1.15;
   }
   .form-card__sub {
-    font-size: 14px;
-    line-height: 1.55;
+    font-size: 16px;
+    line-height: 1.5;
     color: var(--ink-mute);
     margin-bottom: 22px;
     padding-bottom: 22px;
@@ -722,9 +723,9 @@
     box-shadow: 0 8px 20px -8px var(--green);
   }
   .form-card__submit:hover {
-    background: var(--green-deep);
+    background: var(--green-bright);
     transform: translateY(-1px);
-    box-shadow: 0 14px 28px -10px var(--green);
+    box-shadow: 0 14px 30px -8px var(--green-bright);
   }
   .form-card__legal {
     font-size: 12px;
@@ -1270,9 +1271,7 @@
     border-color: rgba(46,167,58,.25);
   }
   .city-card__city {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    display: inline-block;
     font-family: var(--font-sans);
     font-size: 12px;
     font-weight: 700;
@@ -1280,13 +1279,6 @@
     text-transform: uppercase;
     color: var(--green-2);
     margin-bottom: 6px;
-  }
-  .city-card__city::before {
-    content: '';
-    width: 7px; height: 7px;
-    background: var(--green-2);
-    transform: rotate(45deg);
-    flex-shrink: 0;
   }
   .city-card__name {
     font-size: 15px;
@@ -1343,7 +1335,7 @@
     gap: 40px;
     margin-bottom: 40px;
   }
-  .footer-brand img { height: 38px; margin-bottom: 18px; }
+  .footer-brand img { height: 50px; margin-bottom: 18px; }
   .footer-brand p { color: var(--on-dark-mute); font-size: 14px; line-height: 1.6; max-width: 320px; }
   .footer-col h5 {
     font-family: var(--font-mono);
@@ -1605,9 +1597,9 @@
     box-shadow: 0 8px 20px -8px var(--green);
   }
   .clientes-cta .btn:hover {
-    background: var(--green-deep);
+    background: var(--green-bright);
     transform: translateY(-2px);
-    box-shadow: 0 14px 28px -10px var(--green);
+    box-shadow: 0 14px 30px -8px var(--green-bright);
   }
   @media (max-width: 700px) {
     .marquee-clients__item {
