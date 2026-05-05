@@ -667,6 +667,17 @@
     min-height: 90px;
   }
 
+  /* Phone with country code prefix */
+  .form-card__phone {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 8px;
+  }
+  .form-card__phone select {
+    padding-left: 10px;
+    padding-right: 8px;
+  }
+
   /* Radio group */
   .form-card__radios {
     display: flex;
@@ -1454,9 +1465,9 @@
   }
   .dif-bg-logo {
     position: absolute; bottom: 24px; right: 32px;
-    width: 180px; height: auto;
+    width: 252px; height: auto;
     pointer-events: none; z-index: 1;
-    opacity: .12; filter: brightness(0) invert(1);
+    opacity: .12;
   }
   .dif-bg-logo img { width: 100%; height: auto; display: block; }
   .dif-grid {
@@ -1750,7 +1761,21 @@
           </div>
           <div class="form-card__field">
             <label for="hf-telefono">Teléfono <span class="req">*</span></label>
-            <input type="tel" id="hf-telefono" name="telefono" placeholder="+52" required />
+            <div class="form-card__phone">
+              <select id="hf-lada" name="lada" aria-label="Clave de país">
+                <option value="+52" selected>🇲🇽 +52</option>
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+34">🇪🇸 +34</option>
+                <option value="+57">🇨🇴 +57</option>
+                <option value="+54">🇦🇷 +54</option>
+                <option value="+56">🇨🇱 +56</option>
+                <option value="+51">🇵🇪 +51</option>
+                <option value="+55">🇧🇷 +55</option>
+                <option value="+44">🇬🇧 +44</option>
+                <option value="+49">🇩🇪 +49</option>
+              </select>
+              <input type="tel" id="hf-telefono" name="telefono" placeholder="10 dígitos" required />
+            </div>
           </div>
         </div>
 
@@ -2247,7 +2272,21 @@
           </div>
           <div class="form-card__field">
             <label for="cf-telefono">Teléfono <span class="req">*</span></label>
-            <input type="tel" id="cf-telefono" name="telefono" placeholder="+52" required />
+            <div class="form-card__phone">
+              <select id="cf-lada" name="lada" aria-label="Clave de país">
+                <option value="+52" selected>🇲🇽 +52</option>
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+34">🇪🇸 +34</option>
+                <option value="+57">🇨🇴 +57</option>
+                <option value="+54">🇦🇷 +54</option>
+                <option value="+56">🇨🇱 +56</option>
+                <option value="+51">🇵🇪 +51</option>
+                <option value="+55">🇧🇷 +55</option>
+                <option value="+44">🇬🇧 +44</option>
+                <option value="+49">🇩🇪 +49</option>
+              </select>
+              <input type="tel" id="cf-telefono" name="telefono" placeholder="10 dígitos" required />
+            </div>
           </div>
         </div>
 
@@ -2426,7 +2465,7 @@
       `Hola REIS, quiero solicitar una cotización (${source}).\n\n` +
       `Nombre: ${data.nombre || ''} ${data.apellidos || ''}\n` +
       `Empresa: ${data.empresa || ''}\n` +
-      `Teléfono: ${data.telefono || ''}\n` +
+      `Teléfono: ${data.lada || ''} ${data.telefono || ''}\n` +
       `Correo: ${data.correo || ''}\n` +
       `Tipo de servicio: ${data.servicio || ''}\n` +
       `Ubicación: ${data.ubicacion || ''}\n` +
