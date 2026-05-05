@@ -219,7 +219,7 @@
   .nav-logo img { height: 50px; width: auto; transition: opacity .3s var(--ease); }
   .nav-links { display: flex; gap: 28px; align-items: center; }
   .nav-links a {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 600;
     color: rgba(255, 255, 255, .82);
     transition: color .15s var(--ease);
@@ -239,7 +239,7 @@
   .nav-cta { display: flex; gap: 10px; align-items: center; }
   .nav-cta-btn {
     padding: 10px 18px;
-    font-size: 14px;
+    font-size: 16px;
     background: var(--green);
     color: #ffffff;
     border-radius: var(--r-sm);
@@ -671,6 +671,23 @@
   }
   .form-card__field input::placeholder,
   .form-card__field textarea::placeholder {
+    color: var(--ink-dim);
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 1;
+  }
+  /* Disabled-selected option acts as placeholder — match input placeholder style */
+  .form-card__field select {
+    color: var(--ink);
+  }
+  .form-card__field select:has(option[value=""]:checked) {
+    color: var(--ink-dim);
+  }
+  .form-card__field select option {
+    color: var(--ink);
+    font-size: 14px;
+  }
+  .form-card__field select option[value=""] {
     color: var(--ink-dim);
   }
   .form-card__field input:focus,
@@ -1761,11 +1778,11 @@
         <div class="form-card__row">
           <div class="form-card__field">
             <label for="hf-nombre">Nombre <span class="req">*</span></label>
-            <input type="text" id="hf-nombre" name="nombre" required />
+            <input type="text" id="hf-nombre" name="nombre" placeholder="Nombre(s)" required />
           </div>
           <div class="form-card__field">
             <label for="hf-apellidos">Apellidos <span class="req">*</span></label>
-            <input type="text" id="hf-apellidos" name="apellidos" required />
+            <input type="text" id="hf-apellidos" name="apellidos" placeholder="Apellido(s)" required />
           </div>
         </div>
 
@@ -1790,7 +1807,7 @@
           </div>
           <div class="form-card__field">
             <label for="hf-correo">Correo electrónico <span class="req">*</span></label>
-            <input type="email" id="hf-correo" name="correo" required />
+            <input type="email" id="hf-correo" name="correo" placeholder="ejemplo@dominio.com" required />
           </div>
         </div>
 
@@ -1813,7 +1830,7 @@
         <div class="form-card__row">
           <div class="form-card__field">
             <label for="hf-empresa">Empresa <span class="req">*</span></label>
-            <input type="text" id="hf-empresa" name="empresa" required />
+            <input type="text" id="hf-empresa" name="empresa" placeholder="Nombre de tu empresa" required />
           </div>
           <div class="form-card__field">
             <label for="hf-ubicacion">Ubicación <span class="req">*</span></label>
@@ -2201,38 +2218,38 @@
 
         <div class="city-cards">
           <div class="city-card">
+            <span class="city-card__city">SLP | MTY</span>
+            <p class="city-card__name">Juan Manuel Nava Gaspar</p>
+            <div class="city-card__actions">
+              <a href="tel:+524441406149" class="city-card__btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+                +52 444 140 6149
+              </a>
+              <a href="mailto:juan.n@reisbl.com" class="city-card__btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email
+              </a>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <span class="city-card__city">Ciudad Juárez</span>
+            <p class="city-card__name">Gerardo Carlos Zamarripa</p>
+            <div class="city-card__actions">
+              <a href="tel:+526563507690" class="city-card__btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+                +52 656 350 7690
+              </a>
+              <a href="mailto:gerardo.c@reisbl.com" class="city-card__btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email
+              </a>
+            </div>
+          </div>
+
+          <div class="city-card">
             <span class="city-card__city">San Luis Potosí</span>
-            <p class="city-card__name">Juan Manuel Nava</p>
-            <div class="city-card__actions">
-              <a href="tel:+524441406149" class="city-card__btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
-                +52 444 140 6149
-              </a>
-              <a href="mailto:juan.n@reisbl.com" class="city-card__btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                Email
-              </a>
-            </div>
-          </div>
-
-          <div class="city-card">
-            <span class="city-card__city">Monterrey</span>
-            <p class="city-card__name">Juan Manuel Nava</p>
-            <div class="city-card__actions">
-              <a href="tel:+524441406149" class="city-card__btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
-                +52 444 140 6149
-              </a>
-              <a href="mailto:juan.n@reisbl.com" class="city-card__btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                Email
-              </a>
-            </div>
-          </div>
-
-          <div class="city-card">
-            <span class="city-card__city">Cd. Juárez</span>
-            <p class="city-card__name">Orlando Rubio</p>
+            <p class="city-card__name">Orlando Rubio Cano</p>
             <div class="city-card__actions">
               <a href="tel:+524447197812" class="city-card__btn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
@@ -2269,11 +2286,11 @@
         <div class="form-card__row">
           <div class="form-card__field">
             <label for="cf-nombre">Nombre <span class="req">*</span></label>
-            <input type="text" id="cf-nombre" name="nombre" required />
+            <input type="text" id="cf-nombre" name="nombre" placeholder="Nombre(s)" required />
           </div>
           <div class="form-card__field">
             <label for="cf-apellidos">Apellidos <span class="req">*</span></label>
-            <input type="text" id="cf-apellidos" name="apellidos" required />
+            <input type="text" id="cf-apellidos" name="apellidos" placeholder="Apellido(s)" required />
           </div>
         </div>
 
@@ -2298,7 +2315,7 @@
           </div>
           <div class="form-card__field">
             <label for="cf-correo">Correo electrónico <span class="req">*</span></label>
-            <input type="email" id="cf-correo" name="correo" required />
+            <input type="email" id="cf-correo" name="correo" placeholder="ejemplo@dominio.com" required />
           </div>
         </div>
 
@@ -2321,7 +2338,7 @@
         <div class="form-card__row">
           <div class="form-card__field">
             <label for="cf-empresa">Empresa <span class="req">*</span></label>
-            <input type="text" id="cf-empresa" name="empresa" required />
+            <input type="text" id="cf-empresa" name="empresa" placeholder="Nombre de tu empresa" required />
           </div>
           <div class="form-card__field">
             <label for="cf-ubicacion">Ubicación <span class="req">*</span></label>
