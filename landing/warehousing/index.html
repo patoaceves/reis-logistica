@@ -193,7 +193,20 @@
   }
   .btn-dark:hover { background: var(--ink-2); }
 
-  .arrow-svg { width: 16px; height: 16px; }
+  .arrow-svg {
+    width: 16px;
+    height: 16px;
+    transition: transform .25s var(--ease);
+    flex-shrink: 0;
+  }
+  /* Move arrow right on parent hover */
+  .btn:hover .arrow-svg,
+  .nav-cta-btn:hover .arrow-svg,
+  .form-card__submit:hover .arrow-svg,
+  .clientes-cta .btn:hover .arrow-svg,
+  .industrias-cta .btn:hover .arrow-svg {
+    transform: translateX(4px);
+  }
 
   /* ============================================================
      NAV
