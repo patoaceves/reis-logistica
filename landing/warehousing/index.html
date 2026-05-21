@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Warehousing 3PL en México | REIS Logística</title>
+<title>Warehousing 3PL | REIS Logística</title>
 <meta name="description" content="Almacenamiento industrial 3PL con +140,000 m² en México y El Paso, TX. Bodegas Clase A en Ciudad Juárez, Monterrey, San Luis Potosí y El Paso. Licencia IMMEX, certificación OEA, +15 años de experiencia." />
 <meta name="theme-color" content="#F4F7F8" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#F4F7F8" media="(prefers-color-scheme: dark)" />
@@ -13,7 +13,7 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Warehousing 3PL en México | REIS Logística" />
+<meta property="og:title" content="Warehousing 3PL | REIS Logística" />
 <meta property="og:description" content="+140,000 m² de almacenamiento industrial Clase A en México y El Paso, TX." />
 <meta property="og:image" content="/assets/img/about-facility.jpg" />
 
@@ -249,7 +249,7 @@
   }
   .nav-links a:hover { color: #fff; }
   .nav-links a:hover::after { right: 0; }
-  .nav-cta { display: flex; gap: 10px; align-items: center; }
+  .nav-cta { display: flex; gap: 20px; align-items: center; }
   .nav-cta-btn {
     padding: 10px 18px;
     font-size: 16px;
@@ -1616,6 +1616,14 @@
     transform: translateY(-3px);
     box-shadow: 0 12px 24px -10px rgba(11, 26, 34, .15);
   }
+  /* Logo items that need dark background (white/light logos) */
+  .marquee-clients__item--dark {
+    background: #1a1a2e;
+    border-color: #1a1a2e;
+  }
+  .marquee-clients__item--dark:hover {
+    border-color: #2ea73a;
+  }
   .marquee-clients__item img {
     max-height: 80px;
     max-width: 200px;
@@ -1707,6 +1715,8 @@
   }
 
   /* Language toggle */
+  :root { --nav-ink: #fff; --nav-line: rgba(255,255,255,.25); }
+  .nav.scrolled { --nav-ink: var(--ink); --nav-line: var(--line); }
   .lang-toggle {
     display: inline-flex; align-items: center; gap: 5px;
     background: none; border: 1px solid var(--nav-line, rgba(255,255,255,.25));
@@ -1741,11 +1751,11 @@
       <img src="/assets/img/reis-logo-blanco.png" alt="REIS Logística" />
     </a>
     <div class="nav-links">
-      <a href="#nosotros">Nosotros</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#almacenes">Almacenes</a>
-      <a href="#clientes">Clientes</a>
-      <a href="#cotiza">Contacto</a>
+      <a href="#nosotros" data-i18n="nav.nosotros">Nosotros</a>
+      <a href="#servicios" data-i18n="nav.servicios">Servicios</a>
+      <a href="#almacenes" data-i18n="nav.almacenes">Almacenes</a>
+      <a href="#clientes" data-i18n="nav.clientes">Clientes</a>
+      <a href="#cotiza" data-i18n="nav.contacto">Contacto</a>
     </div>
     <div class="nav-cta">
       <button class="lang-toggle" id="langToggle" aria-label="Switch language">
@@ -1772,7 +1782,7 @@
   <div class="container">
     <div class="hero-grid">
       <div class="hero-content reveal">
-        <span class="eyebrow shape-triangle">Warehousing 3PL en México</span>
+        <span class="eyebrow shape-triangle">Warehousing 3PL</span>
         <h1>
           Almacenamiento que <span class="accent">optimiza</span> tu cadena de suministro.
         </h1>
@@ -1780,9 +1790,9 @@
           <strong>+140,000 m²</strong> de bodegas industriales Clase A en Ciudad Juárez, Monterrey, San Luis Potosí y El Paso, TX. Gestión de inventarios precisa e integración 3PL bajo un solo aliado estratégico.
         </p>
         <ul class="hero-features">
-          <li>Bodegas Clase A en 3 ciudades estratégicas</li>
-          <li>Licencia IMMEX y certificación OEA / CTPAT</li>
-          <li>WMS integrado y trazabilidad en tiempo real</li>
+          <li><span data-i18n="hero.li1">Bodegas Clase A en 4 ubicaciones estratégicas</span></li>
+          <li><span data-i18n="hero.li2">Licencia IMMEX y certificación OEA / CTPAT</span></li>
+          <li><span data-i18n="hero.li3">WMS integrado y trazabilidad en tiempo real</span></li>
         </ul>
         <div class="hero-contact-actions">
           <a href="tel:+524447197812" class="hero-contact-btn hero-contact-btn--call">
@@ -2047,7 +2057,7 @@
           <h3>Servicios 3PL</h3>
           <p>Almacenaje, control de inventarios, picking, packing y distribución. Soluciones traje a la medida según el sector y la rotación.</p>
           <ul class="features">
-            <li>WMS integrado y trazabilidad en tiempo real</li>
+            <li><span data-i18n="hero.li3">WMS integrado y trazabilidad en tiempo real</span></li>
             <li>Producto doméstico e importado</li>
             <li>Cross-docking y servicios VMI</li>
           </ul>
@@ -2166,18 +2176,18 @@
         <img src="/assets/img/clientes/lear.svg" alt="Lear Corporation" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
-        <img src="/assets/img/clientes/honeywell.jpg" alt="Honeywell" loading="lazy" />
+        <img src="/assets/img/clientes/honeywell.png" alt="Honeywell" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
         <img src="/assets/img/clientes/flex.png" alt="Flex" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
-        <img src="/assets/img/clientes/phinia.jpg" alt="PHINIA" loading="lazy" />
+        <img src="/assets/img/clientes/phinia.png" alt="PHINIA" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
         <img src="/assets/img/clientes/harman.svg" alt="Harman" loading="lazy" />
       </div>
-      <div class="marquee-clients__item">
+      <div class="marquee-clients__item marquee-clients__item--dark">
         <img src="/assets/img/clientes/cooper.png" alt="Cooper Lighting" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
@@ -2191,18 +2201,18 @@
         <img src="/assets/img/clientes/lear.svg" alt="" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
-        <img src="/assets/img/clientes/honeywell.jpg" alt="" loading="lazy" />
+        <img src="/assets/img/clientes/honeywell.png" alt="" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
         <img src="/assets/img/clientes/flex.png" alt="" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
-        <img src="/assets/img/clientes/phinia.jpg" alt="" loading="lazy" />
+        <img src="/assets/img/clientes/phinia.png" alt="" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
         <img src="/assets/img/clientes/harman.svg" alt="Harman" loading="lazy" />
       </div>
-      <div class="marquee-clients__item">
+      <div class="marquee-clients__item marquee-clients__item--dark">
         <img src="/assets/img/clientes/cooper.png" alt="Cooper Lighting" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
@@ -2434,9 +2444,9 @@
       <div class="footer-col">
         <h5>Empresa</h5>
         <ul>
-          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#nosotros" data-i18n="nav.nosotros">Nosotros</a></li>
           <li><a href="#ubicaciones">Ubicaciones</a></li>
-          <li><a href="#cotiza">Contacto</a></li>
+          <li><a href="#cotiza" data-i18n="nav.contacto">Contacto</a></li>
           <li><a href="https://www.linkedin.com/company/reisbl/" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
@@ -2545,131 +2555,222 @@
     window.open(`https://wa.me/+524447197812/?text=${buildQuoteText(data, 'cta')}`, '_blank');
   });
   /* ============================================================
-     LANGUAGE TOGGLE — i18n
+     LANGUAGE TOGGLE — complete i18n engine
      ============================================================ */
   (function() {
-    const t = {
-      es: {
-        'nav-nosotros': 'Nosotros',
-        'nav-servicios': 'Servicios',
-        'nav-almacenes': 'Almacenes',
-        'nav-clientes': 'Clientes',
-        'nav-contacto': 'Contacto',
-        'nav-cta': 'Cotiza ahora',
-        'hero-eyebrow': 'Warehousing 3PL',
-        'hero-h1': 'Almacenamiento que <span class="accent">optimiza</span> tu cadena de suministro.',
-        'hero-sub': '<strong>+140,000 m²</strong> de bodegas industriales Clase A en Ciudad Juárez, Monterrey, San Luis Potosí y El Paso, TX. Gestión de inventarios precisa e integración 3PL bajo un solo aliado estratégico.',
-        'hero-cta1': 'Cotiza ahora',
-        'hero-cta2': 'Ver servicios',
-        'kpi-lbl1': 'Almacenamiento industrial',
-        'kpi-lbl2': 'Clientes activos',
-        'kpi-lbl3': 'Liderando la industria',
-        'about-eyebrow': 'Sobre REIS',
-        'about-h2': 'Empresa mexicana, <span class="accent">aliados estratégicos</span> de tu logística.',
-        'about-p1': 'Somos una empresa mexicana dedicada a la <strong>logística para terceros (3PL)</strong> y al <strong>almacenamiento industrial</strong> para los sectores automotriz, electrodomésticos, aeroespacial y alimentos, con presencia en el bajío y el noreste de México (frontera México–USA), incluyendo operaciones en El Paso, TX.',
-        'about-p2': 'Contamos con más de <span class="stat-hi">15</span> años de experiencia, una plantilla de más de <span class="stat-hi">350</span> colaboradores, y un espacio de almacenamiento de más de <span class="stat-hi">140,000 m²</span> en <span class="stat-hi">10</span> bodegas en México y El Paso, TX.',
-        'servicios-eyebrow': 'Cobertura integral',
-        'servicios-h2': 'Tres pilares, <span class="accent">una sola operación.</span>',
-        'servicios-sub': '3PL, IMMEX y logística integrada bajo un solo proveedor. Reducimos puntos de contacto, riesgos operativos y costos administrativos.',
-        'dif-eyebrow': 'Por qué REIS',
-        'dif-h2': 'Lo que nos <span class="accent-light">diferencia</span><br>en el mercado.',
-        'clientes-eyebrow': 'Nuestros clientes',
-        'clientes-h2': 'Empresas que <span class="accent">confían</span> en REIS.',
-        'almacenes-eyebrow': 'Nuestros almacenes',
-        'almacenes-h2': 'Bodegas industriales <span class="accent">a tu disposición.</span>',
-        'almacenes-sub': 'Instalaciones Clase A en Ciudad Juárez, Monterrey, San Luis Potosí y El Paso, TX.',
-        'cta-eyebrow': 'Cotización en 24 horas',
-        'cta-h2': 'Recibe una <span class="accent">cotización</span> hoy mismo.',
-        'cta-sub': 'Llámanos directo al especialista de tu ciudad o envíanos los detalles. Cotización formal en menos de 24 horas hábiles.',
+    var lang = 'es';
+
+    // All translatable strings keyed by selector
+    var translations = {
+      // ── NAV ──────────────────────────────────────────────────
+      '[href="#nosotros"].nav-links a,a[href="#nosotros"]':  { es: 'Nosotros',   en: 'About' },
+      'a[href="#servicios"]':  { es: 'Servicios',  en: 'Services' },
+      'a[href="#almacenes"]':  { es: 'Almacenes',  en: 'Warehouses' },
+      'a[href="#clientes"]':   { es: 'Clientes',   en: 'Clients' },
+      'a[href="#cotiza"].nav-links a': { es: 'Contacto', en: 'Contact' },
+      '.nav-cta-btn':          { es: 'Cotiza ahora', en: 'Get a quote', keepSvg: true },
+
+      // ── HERO ─────────────────────────────────────────────────
+      '.hero .eyebrow':        { es: 'Warehousing 3PL', en: 'Warehousing 3PL' },
+      '.hero h1':              { es: 'Almacenamiento que <span class="accent">optimiza</span> tu cadena de suministro.', en: 'Storage that <span class="accent">optimizes</span> your supply chain.' },
+      '.hero-sub':             { es: '<strong>+140,000 m²</strong> de bodegas industriales Clase A en Ciudad Juárez, Monterrey, San Luis Potosí y El Paso, TX. Gestión de inventarios precisa e integración 3PL bajo un solo aliado estratégico.', en: '<strong>+140,000 m²</strong> of Class A industrial warehouses in Ciudad Juárez, Monterrey, San Luis Potosí and El Paso, TX. Precise inventory management and 3PL integration under a single strategic partner.' },
+      '.hero-actions .btn-primary': { es: 'Cotiza ahora', en: 'Get a quote', keepSvg: true },
+      '.hero-actions .btn-ghost':   { es: 'Ver servicios', en: 'Our services' },
+
+      // ── HERO BULLETS ─────────────────────────────────────────
+      '[data-i18n="hero.li1"]': { es: 'Bodegas Clase A en 4 ubicaciones estratégicas', en: 'Class A warehouses in 4 strategic locations' },
+      '[data-i18n="hero.li2"]': { es: 'Licencia IMMEX y certificación OEA / CTPAT', en: 'IMMEX license and OEA / CTPAT certification' },
+      '[data-i18n="hero.li3"]': { es: 'WMS integrado y trazabilidad en tiempo real', en: 'Integrated WMS and real-time traceability' },
+
+      // ── HERO FORM (in-hero) ───────────────────────────────────
+      '.hero-form h3':          { es: 'Recibe una cotización hoy mismo.', en: 'Get a quote today.' },
+
+      // ── KPI BAR ───────────────────────────────────────────────
+      '.kpi-item:nth-child(1) .lbl': { es: 'Almacenamiento industrial', en: 'Industrial storage' },
+      '.kpi-item:nth-child(2) .lbl': { es: 'Clientes activos',          en: 'Active clients' },
+      '.kpi-item:nth-child(3) .lbl': { es: 'Liderando la industria',    en: 'Years of leadership' },
+      '.kpi-item:nth-child(3) .unit': { es: 'años', en: 'yrs' },
+
+      // ── ABOUT ─────────────────────────────────────────────────
+      '#nosotros .eyebrow':    { es: 'Sobre REIS', en: 'About REIS' },
+      '#nosotros .about-content h2': { es: 'Empresa mexicana, <span class="accent">aliados estratégicos</span> de tu logística.', en: 'Mexican company, <span class="accent">strategic partners</span> for your logistics.' },
+      '#nosotros .about-content p:first-of-type': { es: 'Somos una empresa mexicana dedicada a la <strong>logística para terceros (3PL)</strong> y al <strong>almacenamiento industrial</strong> para los sectores automotriz, electrodomésticos, aeroespacial y alimentos, con presencia en el bajío y el noreste de México (frontera México–USA), incluyendo operaciones en El Paso, TX.', en: 'We are a Mexican company dedicated to <strong>third-party logistics (3PL)</strong> and <strong>industrial warehousing</strong> for the automotive, appliance, aerospace, and food sectors, with a presence in the Bajío and northeastern Mexico (Mexico–USA border), including operations in El Paso, TX.' },
+      '#nosotros .about-content p:last-of-type':  { es: 'Contamos con más de <span class="stat-hi">15</span> años de experiencia, una plantilla de más de <span class="stat-hi">350</span> colaboradores, y un espacio de almacenamiento de más de <span class="stat-hi">140,000 m²</span> en <span class="stat-hi">10</span> bodegas en México y El Paso, TX.', en: 'We have more than <span class="stat-hi">15</span> years of experience, a workforce of over <span class="stat-hi">350</span> employees, and a storage footprint of more than <span class="stat-hi">140,000 m²</span> across <span class="stat-hi">10</span> warehouses in Mexico and El Paso, TX.' },
+
+      // ── VIDEO ─────────────────────────────────────────────────
+      '.about-video__overlay h3': { es: 'Así se mueve tu inventario, día y noche.', en: 'This is how your inventory moves, day and night.' },
+      '.about-video__overlay .label': { es: 'Operaciones REIS', en: 'REIS Operations' },
+
+      // ── INDUSTRIAS ────────────────────────────────────────────
+      '.industrias-block .eyebrow':    { es: 'Para qué industrias', en: 'Industries we serve' },
+      '.industrias-block .section-head h2': { es: 'Logística para sectores que <span class="accent">no toleran errores.</span>', en: 'Logistics for sectors that <span class="accent">tolerate no errors.</span>' },
+      '.industrias-block .section-head p':  { es: 'Diseñamos operaciones a la medida para industrias con altos estándares de cumplimiento, calidad y cadena de frío.', en: 'We design tailored operations for industries with the highest standards of compliance, quality, and cold chain.' },
+      '.industry:nth-child(1) .industry__name': { es: 'Automotriz',       en: 'Automotive' },
+      '.industry:nth-child(2) .industry__name': { es: 'Aeroespacial',     en: 'Aerospace' },
+      '.industry:nth-child(3) .industry__name': { es: 'Electrodomésticos',en: 'Appliances' },
+      '.industry:nth-child(4) .industry__name': { es: 'Alimentos',        en: 'Food' },
+      '.industry:nth-child(5) .industry__name': { es: 'Manufactura',      en: 'Manufacturing' },
+
+      // ── SERVICIOS ─────────────────────────────────────────────
+      '#servicios .eyebrow':           { es: 'Cobertura integral',  en: 'Full coverage' },
+      '#servicios .section-head h2':   { es: 'Tres pilares, <span class="accent">una sola operación.</span>', en: 'Three pillars, <span class="accent">one single operation.</span>' },
+      '#servicios .section-head p':    { es: '3PL, IMMEX y logística integrada bajo un solo proveedor. Reducimos puntos de contacto, riesgos operativos y costos administrativos.', en: '3PL, IMMEX and integrated logistics under one provider. We reduce touchpoints, operational risks and administrative costs.' },
+
+      // Service card 1
+      '.service-card:nth-child(1) h3': { es: 'Servicios 3PL',  en: '3PL Services' },
+      '.service-card:nth-child(1) p':  { es: 'Almacenaje, control de inventarios, picking, packing y distribución. Soluciones escalables según tu volumen y rotación.', en: 'Warehousing, inventory control, picking, packing and distribution. Scalable solutions based on your volume and turnover.' },
+      '.service-card:nth-child(1) .features li:nth-child(1)': { es: 'WMS integrado y trazabilidad en tiempo real', en: 'Integrated WMS and real-time traceability' },
+      '.service-card:nth-child(1) .features li:nth-child(2)': { es: 'Producto doméstico e importado', en: 'Domestic and imported goods' },
+      '.service-card:nth-child(1) .features li:nth-child(3)': { es: 'Cross-docking y servicios VMI', en: 'Cross-docking and VMI services' },
+
+      // Service card 2
+      '.service-card:nth-child(2) h3': { es: 'Licencia IMMEX',  en: 'IMMEX License' },
+      '.service-card:nth-child(2) p':  { es: 'Importación temporal de mercancía sin pago de aranceles ni IVA. Aprovecha ahorros significativos en tu operación de comercio exterior.', en: 'Temporary import of goods without paying tariffs or VAT. Take advantage of significant savings in your foreign trade operation.' },
+      '.service-card:nth-child(2) .features li:nth-child(1)': { es: 'Importación de mercancía y consignación', en: 'Goods import and consignment' },
+      '.service-card:nth-child(2) .features li:nth-child(2)': { es: 'Clasificación arancelaria especializada', en: 'Specialized tariff classification' },
+      '.service-card:nth-child(2) .features li:nth-child(3)': { es: 'Cumplimiento ante SAT y SE', en: 'SAT and SE regulatory compliance' },
+
+      // Service card 3
+      '.service-card:nth-child(3) h3': { es: 'Logística integrada',  en: 'Integrated logistics' },
+      '.service-card:nth-child(3) p':  { es: 'Entregas Just-in-Time, secuenciales y distribución de material a línea de producción. Coordinación total desde tu almacén hasta planta.', en: 'Just-in-Time, sequential deliveries and material distribution to the production line. Full coordination from your warehouse to the plant.' },
+      '.service-card:nth-child(3) .features li:nth-child(1)': { es: 'Entregas JIT y secuenciales', en: 'JIT and sequential deliveries' },
+      '.service-card:nth-child(3) .features li:nth-child(2)': { es: 'Transporte a almacén y last-mile', en: 'Warehouse transport and last-mile' },
+      '.service-card:nth-child(3) .features li:nth-child(3)': { es: 'Distribución de material a planta', en: 'Material distribution to plant' },
+
+      // ── DIFERENCIADORES ───────────────────────────────────────
+      '#diferenciadores .eyebrow':   { es: 'Por qué REIS', en: 'Why REIS' },
+      '#diferenciadores .section-head h2': { es: 'Lo que nos <span class="accent-light">diferencia</span><br>en el mercado.', en: 'What sets us <span class="accent-light">apart</span><br>in the market.' },
+      '.dif-item:nth-child(1) h3':   { es: 'Localización estratégica',     en: 'Strategic location' },
+      '.dif-item:nth-child(1) p':    { es: '10 bodegas en los corredores más relevantes: Bajío, frontera norte y zona automotriz. Acceso directo a aduanas y nodos ferroviarios.', en: '10 warehouses in the most relevant corridors: Bajío, northern border and automotive zone. Direct access to customs and rail nodes.' },
+      '.dif-item:nth-child(2) h3':   { es: 'Servicio al cliente excepcional', en: 'Exceptional customer service' },
+      '.dif-item:nth-child(2) p':    { es: 'Equipo dedicado disponible para atender solicitudes y emergencias de manera continua, sin intermediarios.', en: 'Dedicated team available to handle requests and emergencies continuously, without intermediaries.' },
+      '.dif-item:nth-child(3) h3':   { es: 'Flexibilidad a la medida',     en: 'Tailored flexibility' },
+      '.dif-item:nth-child(3) p':    { es: 'Soluciones diseñadas según la rotación, sector y volumen de cada cliente. Sin contratos rígidos.', en: 'Solutions designed according to each client\'s turnover, sector and volume. No rigid contracts.' },
+      '.dif-item:nth-child(4) h3':   { es: 'Calidad y certificaciones',    en: 'Quality and certifications' },
+      '.dif-item:nth-child(4) p':    { es: 'ISO y OEA / CTPAT siempre vigentes. Auditorías internas trimestrales y documentación para cumplimiento regulatorio.', en: 'ISO and OEA / CTPAT always current. Quarterly internal audits and documentation for regulatory compliance.' },
+      '.dif-item:nth-child(5) h3':   { es: 'Instalaciones Clase A',        en: 'Class A facilities' },
+      '.dif-item:nth-child(5) p':    { es: 'Bodegas modernas bajo norma OEA / CTPAT con seguridad perimetral, control de temperatura y andenes de alto tráfico.', en: 'Modern warehouses under OEA / CTPAT standards with perimeter security, temperature control and high-traffic docks.' },
+      '.dif-item:nth-child(6) h3':   { es: '+15 años de experiencia',      en: '+15 years of experience' },
+      '.dif-item:nth-child(6) p':    { es: 'Conocimiento profundo del entorno logístico mexicano: sus tiempos, sus aduanas y sus corredores industriales.', en: 'Deep knowledge of the Mexican logistics landscape: its timelines, customs processes and industrial corridors.' },
+
+      // ── CLIENTES ──────────────────────────────────────────────
+      '#clientes .eyebrow':     { es: 'Nuestros clientes', en: 'Our clients' },
+      '#clientes .section-head h2': { es: 'Empresas que <span class="accent">confían</span> en REIS.', en: 'Companies that <span class="accent">trust</span> REIS.' },
+      '.clientes-cta .btn':     { es: 'Conecta con Nosotros', en: 'Connect with Us', keepSvg: true },
+
+      // ── ALMACENES ─────────────────────────────────────────────
+      '#almacenes .eyebrow':    { es: 'Nuestros almacenes', en: 'Our warehouses' },
+      '#almacenes .section-head h2':  { es: 'Bodegas industriales <span class="accent">a tu disposición.</span>', en: 'Industrial warehouses <span class="accent">at your disposal.</span>' },
+      '#almacenes .section-head p':   { es: 'Instalaciones Clase A en Ciudad Juárez, Monterrey, San Luis Potosí y El Paso, TX.', en: 'Class A facilities in Ciudad Juárez, Monterrey, San Luis Potosí and El Paso, TX.' },
+
+      // ── CTA / FORM ────────────────────────────────────────────
+      '#cotiza .eyebrow':       { es: 'Cotización en 24 horas', en: 'Quote within 24 hours' },
+      '#cotiza .cta-grid h2':   { es: 'Recibe una <span class="accent">cotización</span> hoy mismo.', en: 'Get a <span class="accent">quote</span> today.' },
+      '#cotiza .cta-grid > div > p': { es: 'Llámanos directo al especialista de tu ciudad o envíanos los detalles. Cotización formal en menos de 24 horas hábiles.', en: "Call your city's specialist directly or send us the details. Formal quote in less than 24 business hours." },
+
+      // Contact city labels
+      '.city-card:nth-child(1) .city-card__city': { es: 'Ciudad Juárez',            en: 'Ciudad Juárez' },
+      '.city-card:nth-child(2) .city-card__city': { es: 'San Luis Potosí | Monterrey', en: 'San Luis Potosí | Monterrey' },
+      '.city-card:nth-child(3) .city-card__city': { es: 'Comercio Exterior',         en: 'Foreign Trade' },
+
+      // CTA form title
+      '.form-card__title':      { es: 'Recibe una cotización hoy mismo.', en: 'Get a quote today.' },
+      '.form-card__field label[for="cf-nombre"]':    { es: 'Nombre', en: 'First name' },
+      '.form-card__field label[for="cf-apellidos"]': { es: 'Apellidos', en: 'Last name' },
+      '.form-card__field label[for="cf-empresa"]':   { es: 'Empresa', en: 'Company' },
+      '.form-card__field label[for="cf-correo"]':    { es: 'Correo electrónico', en: 'Email' },
+      '.form-card__field label[for="cf-lada"]':      { es: 'Lada', en: 'Country code' },
+      '.form-card__field label[for="cf-telefono"]':  { es: 'Teléfono', en: 'Phone' },
+      '.form-card__field label[for="cf-servicio"]':  { es: 'Servicio de interés', en: 'Service of interest' },
+      '.form-card__field label[for="cf-ubicacion"]': { es: 'Ubicación', en: 'Location' },
+      '.form-card__field label[for="cf-fuente"]':    { es: '¿Cómo escuchó de REIS Logistics?', en: 'How did you hear about REIS Logistics?' },
+
+      // Hero form labels
+      '.hero-form .form-card__field label[for="hf-empresa"]':   { es: 'Empresa', en: 'Company' },
+      '.hero-form .form-card__field label[for="hf-ubicacion"]': { es: 'Ubicación', en: 'Location' },
+      '.hero-form .form-card__field label[for="hf-fuente"]':    { es: '¿Cómo escuchó de REIS Logistics?', en: 'How did you hear about REIS Logistics?' },
+
+      // Submit buttons
+      '.form-card__submit':     { es: 'Solicitar cotización', en: 'Request a quote', keepSvg: true },
+
+      // ── FOOTER ────────────────────────────────────────────────
+      'footer .footer-brand p':  { es: 'Empresa mexicana especializada en logística 3PL y almacenamiento industrial para sectores automotriz, aeroespacial y manufactura.', en: 'Mexican company specializing in 3PL logistics and industrial warehousing for automotive, aerospace and manufacturing sectors.' },
+      'footer h5:nth-of-type(1)': { es: 'Servicios', en: 'Services' },
+      'footer h5:nth-of-type(2)': { es: 'Empresa',   en: 'Company' },
+      'footer h5:nth-of-type(3)': { es: 'Dirección general', en: 'General management' },
+      'footer .footer-links a[href*="warehousing"]': { es: 'Warehousing 3PL', en: 'Warehousing 3PL' },
+      'footer .footer-links a[href*="comercio"]':    { es: 'Comercio Exterior', en: 'Foreign Trade' },
+      '.footer-legal span':      { es: '© 2026 REIS Logistics · Todos los derechos reservados', en: '© 2026 REIS Logistics · All rights reserved' },
+      '.footer-cert span':       { es: 'CERTIFICADO ISO · OEA / CTPAT', en: 'CERTIFIED ISO · OEA / CTPAT' },
+
+      // WA float
+      '.wa-float__label':       { es: 'Contáctanos', en: 'Contact us' },
+    };
+
+    // Select options translation map
+    var selectOptions = {
+      '#cf-ubicacion, #hf-ubicacion': {
+        es: ['Selecciona…','Cd. Juárez','Monterrey','San Luis Potosí','El Paso, TX','Aún no defino'],
+        en: ['Select…','Cd. Juárez','Monterrey','San Luis Potosí','El Paso, TX','Not defined yet']
       },
-      en: {
-        'nav-nosotros': 'About',
-        'nav-servicios': 'Services',
-        'nav-almacenes': 'Warehouses',
-        'nav-clientes': 'Clients',
-        'nav-contacto': 'Contact',
-        'nav-cta': 'Get a quote',
-        'hero-eyebrow': 'Warehousing 3PL',
-        'hero-h1': 'Storage that <span class="accent">optimizes</span> your supply chain.',
-        'hero-sub': '<strong>+140,000 m²</strong> of Class A industrial warehouses in Ciudad Juárez, Monterrey, San Luis Potosí and El Paso, TX. Precise inventory management and 3PL integration under a single strategic partner.',
-        'hero-cta1': 'Get a quote',
-        'hero-cta2': 'Our services',
-        'kpi-lbl1': 'Industrial storage',
-        'kpi-lbl2': 'Active clients',
-        'kpi-lbl3': 'Leading the industry',
-        'about-eyebrow': 'About REIS',
-        'about-h2': 'Mexican company, <span class="accent">strategic partners</span> for your logistics.',
-        'about-p1': 'We are a Mexican company dedicated to <strong>third-party logistics (3PL)</strong> and <strong>industrial warehousing</strong> for the automotive, appliance, aerospace, and food sectors, with a presence in the Bajío and northeastern Mexico (Mexico–USA border), including operations in El Paso, TX.',
-        'about-p2': 'We have more than <span class="stat-hi">15</span> years of experience, a workforce of over <span class="stat-hi">350</span> employees, and a storage footprint of more than <span class="stat-hi">140,000 m²</span> across <span class="stat-hi">10</span> warehouses in Mexico and El Paso, TX.',
-        'servicios-eyebrow': 'Full coverage',
-        'servicios-h2': 'Three pillars, <span class="accent">one single operation.</span>',
-        'servicios-sub': '3PL, IMMEX and integrated logistics under one provider. We reduce touchpoints, operational risks and administrative costs.',
-        'dif-eyebrow': 'Why REIS',
-        'dif-h2': 'What sets us <span class="accent-light">apart</span><br>in the market.',
-        'clientes-eyebrow': 'Our clients',
-        'clientes-h2': 'Companies that <span class="accent">trust</span> REIS.',
-        'almacenes-eyebrow': 'Our warehouses',
-        'almacenes-h2': 'Industrial warehouses <span class="accent">at your disposal.</span>',
-        'almacenes-sub': 'Class A facilities in Ciudad Juárez, Monterrey, San Luis Potosí and El Paso, TX.',
-        'cta-eyebrow': 'Quote within 24 hours',
-        'cta-h2': 'Get a <span class="accent">quote</span> today.',
-        'cta-sub': "Call your city's specialist directly or send us the details. Formal quote in less than 24 business hours.",
+      '#cf-fuente, #hf-fuente': {
+        es: ['Elige una opción','Google','LinkedIn','Facebook','Sitio web','Recomendación'],
+        en: ['Choose an option','Google','LinkedIn','Facebook','Website','Referral']
+      },
+      '#cf-servicio': {
+        es: ['Elige un servicio','Warehousing 3PL','Licencia IMMEX','Logística integrada','Cross-docking','Otro'],
+        en: ['Choose a service','Warehousing 3PL','IMMEX License','Integrated logistics','Cross-docking','Other']
       }
     };
 
-    let lang = 'es';
-
-    const map = {
-      'nav-nosotros':   () => document.querySelector('.nav-links a[href="#nosotros"]'),
-      'nav-servicios':  () => document.querySelector('.nav-links a[href="#servicios"]'),
-      'nav-almacenes':  () => document.querySelector('.nav-links a[href="#almacenes"]'),
-      'nav-clientes':   () => document.querySelector('.nav-links a[href="#clientes"]'),
-      'nav-contacto':   () => document.querySelector('.nav-links a[href="#cotiza"]'),
-      'nav-cta':        () => document.querySelector('.nav-cta-btn'),
-      'hero-eyebrow':   () => document.querySelector('.hero .eyebrow'),
-      'hero-h1':        () => document.querySelector('.hero h1'),
-      'hero-sub':       () => document.querySelector('.hero-sub'),
-      'hero-cta1':      () => document.querySelector('.hero-actions .btn-primary'),
-      'hero-cta2':      () => document.querySelector('.hero-actions .btn-ghost'),
-      'kpi-lbl1':       () => document.querySelectorAll('.kpi-item .lbl')[0],
-      'kpi-lbl2':       () => document.querySelectorAll('.kpi-item .lbl')[1],
-      'kpi-lbl3':       () => document.querySelectorAll('.kpi-item .lbl')[2],
-      'about-eyebrow':  () => document.querySelector('#nosotros .eyebrow'),
-      'about-h2':       () => document.querySelector('#nosotros .about-content h2'),
-      'about-p1':       () => document.querySelectorAll('#nosotros .about-content p')[0],
-      'about-p2':       () => document.querySelectorAll('#nosotros .about-content p')[1],
-      'servicios-eyebrow': () => document.querySelector('#servicios .eyebrow'),
-      'servicios-h2':   () => document.querySelector('#servicios .section-head h2'),
-      'servicios-sub':  () => document.querySelector('#servicios .section-head p'),
-      'dif-eyebrow':    () => document.querySelector('#diferenciadores .eyebrow'),
-      'dif-h2':         () => document.querySelector('#diferenciadores .section-head h2'),
-      'clientes-eyebrow': () => document.querySelector('#clientes .eyebrow'),
-      'clientes-h2':    () => document.querySelector('#clientes .section-head h2'),
-      'almacenes-eyebrow': () => document.querySelector('#almacenes .eyebrow'),
-      'almacenes-h2':   () => document.querySelector('#almacenes .section-head h2'),
-      'almacenes-sub':  () => document.querySelector('#almacenes .section-head p'),
-      'cta-eyebrow':    () => document.querySelector('#cotiza .eyebrow'),
-      'cta-h2':         () => document.querySelector('#cotiza h2'),
-      'cta-sub':        () => document.querySelector('#cotiza .cta-grid > div > p'),
-    };
-
-    function applyLang(l) {
-      const dict = t[l];
-      Object.entries(map).forEach(([key, getter]) => {
-        const el = getter();
-        if (el && dict[key] !== undefined) el.innerHTML = dict[key];
+    function applyTranslations(l) {
+      Object.entries(translations).forEach(function(entry) {
+        var sel = entry[0], dict = entry[1];
+        var val = dict[l];
+        if (val === undefined) return;
+        try {
+          var els = document.querySelectorAll(sel);
+          els.forEach(function(el) {
+            if (dict.keepSvg) {
+              // Keep first SVG child if present
+              var svg = el.querySelector('svg');
+              el.innerHTML = val;
+              if (svg) el.appendChild(svg);
+            } else {
+              el.innerHTML = val;
+            }
+          });
+        } catch(e) {}
       });
+
+      // Translate select options
+      Object.entries(selectOptions).forEach(function(entry) {
+        var sel = entry[0], dict = entry[1];
+        var opts = dict[l];
+        if (!opts) return;
+        try {
+          document.querySelectorAll(sel).forEach(function(select) {
+            var options = select.querySelectorAll('option');
+            opts.forEach(function(text, i) {
+              if (options[i]) options[i].textContent = text;
+            });
+          });
+        } catch(e) {}
+      });
+
+      // Update lang attribute and toggle labels
       document.documentElement.lang = l;
-      document.getElementById('langLabel').textContent = l.toUpperCase();
-      document.getElementById('langAlt').textContent = l === 'es' ? 'EN' : 'ES';
+      var label = document.getElementById('langLabel');
+      var alt   = document.getElementById('langAlt');
+      if (label) label.textContent = l.toUpperCase();
+      if (alt)   alt.textContent   = l === 'es' ? 'EN' : 'ES';
     }
 
-    document.getElementById('langToggle').addEventListener('click', () => {
+    document.getElementById('langToggle').addEventListener('click', function() {
       lang = lang === 'es' ? 'en' : 'es';
-      applyLang(lang);
+      applyTranslations(lang);
     });
   })();
-
 
 </script>
 </body>
