@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Warehousing 3PL en México | REIS Logística</title>
-<meta name="description" content="Almacenamiento industrial 3PL con +126,000 m² en México. Bodegas Clase A en Ciudad Juárez, Monterrey y San Luis Potosí. Licencia IMMEX, certificación OEA, +15 años de experiencia." />
+<meta name="description" content="Almacenamiento industrial 3PL con +140,000 m² en México y El Paso, TX. Bodegas Clase A en Ciudad Juárez, Monterrey, San Luis Potosí y El Paso. Licencia IMMEX, certificación OEA, +15 años de experiencia." />
 <meta name="theme-color" content="#F4F7F8" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#F4F7F8" media="(prefers-color-scheme: dark)" />
 <meta name="color-scheme" content="light" />
@@ -14,7 +14,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Warehousing 3PL en México | REIS Logística" />
-<meta property="og:description" content="+126,000 m² de almacenamiento industrial Clase A en México." />
+<meta property="og:description" content="+140,000 m² de almacenamiento industrial Clase A en México y El Paso, TX." />
 <meta property="og:image" content="/assets/img/about-facility.jpg" />
 
 <!-- Fonts -->
@@ -1706,6 +1706,20 @@
     100% { transform: scale(1.5); opacity: 0; }
   }
 
+  /* Language toggle */
+  .lang-toggle {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: none; border: 1px solid var(--nav-line, rgba(255,255,255,.25));
+    border-radius: 999px; padding: 5px 12px;
+    font-family: var(--font-sans); font-size: 13px; font-weight: 600;
+    color: var(--nav-ink, #fff); cursor: pointer;
+    transition: border-color .2s, background .2s;
+    letter-spacing: .04em;
+  }
+  .lang-toggle:hover { background: rgba(255,255,255,.1); }
+  .lang-toggle__active { color: var(--green-2, #37ae40); }
+  .lang-toggle__sep { opacity: .4; }
+
   /* Reveal on scroll */
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
   .reveal.in { opacity: 1; transform: none; }
@@ -1734,6 +1748,11 @@
       <a href="#cotiza">Contacto</a>
     </div>
     <div class="nav-cta">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="lang-toggle__active" id="langLabel">ES</span>
+        <span class="lang-toggle__sep">·</span>
+        <span id="langAlt">EN</span>
+      </button>
       <a href="#cotiza" class="btn nav-cta-btn">
         Cotiza ahora
         <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -1758,7 +1777,7 @@
           Almacenamiento que <span class="accent">optimiza</span> tu cadena de suministro.
         </h1>
         <p class="hero-sub">
-          <strong>+126,000 m²</strong> de bodegas industriales Clase A en Cd. Juárez, Monterrey y SLP. Gestión de inventarios precisa e integración 3PL bajo un solo aliado estratégico.
+          <strong>+140,000 m²</strong> de bodegas industriales Clase A en Ciudad Juárez, Monterrey, San Luis Potosí y El Paso, TX. Gestión de inventarios precisa e integración 3PL bajo un solo aliado estratégico.
         </p>
         <ul class="hero-features">
           <li>Bodegas Clase A en 3 ciudades estratégicas</li>
@@ -1882,7 +1901,7 @@
   <div class="container">
     <div class="kpi-grid">
       <div class="kpi-item reveal">
-        <div class="num"><span class="plus">+</span><span data-counter="126000">0</span><span class="unit">m²</span></div>
+        <div class="num"><span class="plus">+</span><span data-counter="140000">0</span><span class="unit">m²</span></div>
         <div class="lbl">Almacenamiento industrial</div>
       </div>
       <div class="kpi-item reveal">
@@ -1906,8 +1925,8 @@
       <div class="about-content reveal">
         <span class="eyebrow">Sobre REIS</span>
         <h2>Empresa mexicana, <span class="accent">aliados estratégicos</span> de tu logística.</h2>
-        <p>Somos una empresa mexicana dedicada a la <strong>logística para terceros (3PL)</strong> y al <strong>almacenamiento industrial</strong> para los sectores automotriz, electrodomésticos, aeroespacial y alimentos, con presencia en el bajío y en el noreste de México (frontera México–USA).</p>
-        <p>Contamos con más de <span class="stat-hi">15</span> años de experiencia, una plantilla de más de <span class="stat-hi">350</span> colaboradores, y un espacio de almacenamiento de más de <span class="stat-hi">140,000 m²</span> en <span class="stat-hi">10</span> bodegas en México.</p>
+        <p>Somos una empresa mexicana dedicada a la <strong>logística para terceros (3PL)</strong> y al <strong>almacenamiento industrial</strong> para los sectores automotriz, electrodomésticos, aeroespacial y alimentos, con presencia en el bajío y el noreste de México (frontera México–USA), incluyendo operaciones en El Paso, TX.</p>
+        <p>Contamos con más de <span class="stat-hi">15</span> años de experiencia, una plantilla de más de <span class="stat-hi">350</span> colaboradores, y un espacio de almacenamiento de más de <span class="stat-hi">140,000 m²</span> en <span class="stat-hi">10</span> bodegas en México y El Paso, TX.</p>
       </div>
       <div class="about-video reveal">
         <video src="/assets/video/operaciones.mp4" autoplay muted loop playsinline preload="metadata" poster="/assets/img/about-facility.jpg"></video>
@@ -2155,6 +2174,18 @@
       <div class="marquee-clients__item">
         <img src="/assets/img/clientes/phinia.jpg" alt="PHINIA" loading="lazy" />
       </div>
+      <div class="marquee-clients__item">
+        <img src="/assets/img/clientes/harman.svg" alt="Harman" loading="lazy" />
+      </div>
+      <div class="marquee-clients__item">
+        <img src="/assets/img/clientes/cooper.png" alt="Cooper Lighting" loading="lazy" />
+      </div>
+      <div class="marquee-clients__item">
+        <img src="/assets/img/clientes/valeo.png" alt="Valeo" loading="lazy" />
+      </div>
+      <div class="marquee-clients__item">
+        <img src="/assets/img/clientes/nippon.png" alt="Nippon Paint Automotive" loading="lazy" />
+      </div>
       <!-- duplicate for seamless loop -->
       <div class="marquee-clients__item">
         <img src="/assets/img/clientes/lear.svg" alt="" loading="lazy" />
@@ -2167,6 +2198,18 @@
       </div>
       <div class="marquee-clients__item">
         <img src="/assets/img/clientes/phinia.jpg" alt="" loading="lazy" />
+      </div>
+      <div class="marquee-clients__item">
+        <img src="/assets/img/clientes/harman.svg" alt="Harman" loading="lazy" />
+      </div>
+      <div class="marquee-clients__item">
+        <img src="/assets/img/clientes/cooper.png" alt="Cooper Lighting" loading="lazy" />
+      </div>
+      <div class="marquee-clients__item">
+        <img src="/assets/img/clientes/valeo.png" alt="Valeo" loading="lazy" />
+      </div>
+      <div class="marquee-clients__item">
+        <img src="/assets/img/clientes/nippon.png" alt="Nippon Paint Automotive" loading="lazy" />
       </div>
     </div>
   </div>
@@ -2189,23 +2232,25 @@
     <div class="section-head section-head--center reveal">
       <span class="eyebrow shape-triangle">Nuestros almacenes</span>
       <h2>Bodegas industriales <span class="accent">a tu disposición.</span></h2>
-      <p>Instalaciones Clase A en Ciudad Juárez, Monterrey y San Luis Potosí.</p>
+      <p>Instalaciones Clase A en Ciudad Juárez, Monterrey, San Luis Potosí y El Paso, TX.</p>
     </div>
   </div>
   <div class="carousel-marquee" aria-hidden="true">
     <div class="carousel-marquee__track">
       <!-- Set A -->
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="Bodega REIS — San Luis Potosí, Aurora Industriales" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="Bodega REIS — Monterrey, Edificio E1-A" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="Bodega REIS — Ciudad Juárez, Eastlake Logistics Park" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="Bodega REIS — San Luis Potosí, andenes de carga" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/05-slp-green.jpg" alt="Bodega REIS — San Luis Potosí, acceso principal" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="Bodega REIS — San Luis Potosí" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="Bodega REIS — Ciudad Juárez" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="Bodega REIS — San Luis Potosí" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/05-slp-green.jpg" alt="Bodega REIS — San Luis Potosí" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/06-elpaso-docks.jpg" alt="Bodega REIS — El Paso, TX" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/07-elpaso-bldg1.jpg" alt="Bodega REIS — El Paso, TX" loading="lazy" /></div>
       <!-- Set B (duplicate for seamless loop) -->
       <div class="carousel-marquee__card"><img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="" loading="lazy" /></div>
-      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="" loading="lazy" /></div>
       <div class="carousel-marquee__card"><img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="" loading="lazy" /></div>
       <div class="carousel-marquee__card"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="" loading="lazy" /></div>
       <div class="carousel-marquee__card"><img src="/assets/img/almacenes/05-slp-green.jpg" alt="" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/06-elpaso-docks.jpg" alt="" loading="lazy" /></div>
+      <div class="carousel-marquee__card"><img src="/assets/img/almacenes/07-elpaso-bldg1.jpg" alt="" loading="lazy" /></div>
     </div>
   </div>
 </section>
@@ -2223,7 +2268,7 @@
 
         <div class="city-cards">
           <div class="city-card">
-            <span class="city-card__city">SLP | MTY</span>
+            <span class="city-card__city">Ciudad Juárez</span>
             <p class="city-card__name">Juan Manuel Nava Gaspar</p>
             <div class="city-card__actions">
               <a href="tel:+524441406149" class="city-card__btn">
@@ -2238,22 +2283,7 @@
           </div>
 
           <div class="city-card">
-            <span class="city-card__city">Ciudad Juárez</span>
-            <p class="city-card__name">Gerardo Carlos Zamarripa</p>
-            <div class="city-card__actions">
-              <a href="tel:+526563507690" class="city-card__btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
-                +52 656 350 7690
-              </a>
-              <a href="mailto:gerardo.c@reisbl.com" class="city-card__btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                Email
-              </a>
-            </div>
-          </div>
-
-          <div class="city-card">
-            <span class="city-card__city">San Luis Potosí</span>
+            <span class="city-card__city">San Luis Potosí | Monterrey</span>
             <p class="city-card__name">Orlando Rubio Cano</p>
             <div class="city-card__actions">
               <a href="tel:+524447197812" class="city-card__btn">
@@ -2514,7 +2544,133 @@
     const data = Object.fromEntries(new FormData(this));
     window.open(`https://wa.me/+524447197812/?text=${buildQuoteText(data, 'cta')}`, '_blank');
   });
-</script>
+  /* ============================================================
+     LANGUAGE TOGGLE — i18n
+     ============================================================ */
+  (function() {
+    const t = {
+      es: {
+        'nav-nosotros': 'Nosotros',
+        'nav-servicios': 'Servicios',
+        'nav-almacenes': 'Almacenes',
+        'nav-clientes': 'Clientes',
+        'nav-contacto': 'Contacto',
+        'nav-cta': 'Cotiza ahora',
+        'hero-eyebrow': 'Warehousing 3PL',
+        'hero-h1': 'Almacenamiento que <span class="accent">optimiza</span> tu cadena de suministro.',
+        'hero-sub': '<strong>+140,000 m²</strong> de bodegas industriales Clase A en Ciudad Juárez, Monterrey, San Luis Potosí y El Paso, TX. Gestión de inventarios precisa e integración 3PL bajo un solo aliado estratégico.',
+        'hero-cta1': 'Cotiza ahora',
+        'hero-cta2': 'Ver servicios',
+        'kpi-lbl1': 'Almacenamiento industrial',
+        'kpi-lbl2': 'Clientes activos',
+        'kpi-lbl3': 'Liderando la industria',
+        'about-eyebrow': 'Sobre REIS',
+        'about-h2': 'Empresa mexicana, <span class="accent">aliados estratégicos</span> de tu logística.',
+        'about-p1': 'Somos una empresa mexicana dedicada a la <strong>logística para terceros (3PL)</strong> y al <strong>almacenamiento industrial</strong> para los sectores automotriz, electrodomésticos, aeroespacial y alimentos, con presencia en el bajío y el noreste de México (frontera México–USA), incluyendo operaciones en El Paso, TX.',
+        'about-p2': 'Contamos con más de <span class="stat-hi">15</span> años de experiencia, una plantilla de más de <span class="stat-hi">350</span> colaboradores, y un espacio de almacenamiento de más de <span class="stat-hi">140,000 m²</span> en <span class="stat-hi">10</span> bodegas en México y El Paso, TX.',
+        'servicios-eyebrow': 'Cobertura integral',
+        'servicios-h2': 'Tres pilares, <span class="accent">una sola operación.</span>',
+        'servicios-sub': '3PL, IMMEX y logística integrada bajo un solo proveedor. Reducimos puntos de contacto, riesgos operativos y costos administrativos.',
+        'dif-eyebrow': 'Por qué REIS',
+        'dif-h2': 'Lo que nos <span class="accent-light">diferencia</span><br>en el mercado.',
+        'clientes-eyebrow': 'Nuestros clientes',
+        'clientes-h2': 'Empresas que <span class="accent">confían</span> en REIS.',
+        'almacenes-eyebrow': 'Nuestros almacenes',
+        'almacenes-h2': 'Bodegas industriales <span class="accent">a tu disposición.</span>',
+        'almacenes-sub': 'Instalaciones Clase A en Ciudad Juárez, Monterrey, San Luis Potosí y El Paso, TX.',
+        'cta-eyebrow': 'Cotización en 24 horas',
+        'cta-h2': 'Recibe una <span class="accent">cotización</span> hoy mismo.',
+        'cta-sub': 'Llámanos directo al especialista de tu ciudad o envíanos los detalles. Cotización formal en menos de 24 horas hábiles.',
+      },
+      en: {
+        'nav-nosotros': 'About',
+        'nav-servicios': 'Services',
+        'nav-almacenes': 'Warehouses',
+        'nav-clientes': 'Clients',
+        'nav-contacto': 'Contact',
+        'nav-cta': 'Get a quote',
+        'hero-eyebrow': 'Warehousing 3PL',
+        'hero-h1': 'Storage that <span class="accent">optimizes</span> your supply chain.',
+        'hero-sub': '<strong>+140,000 m²</strong> of Class A industrial warehouses in Ciudad Juárez, Monterrey, San Luis Potosí and El Paso, TX. Precise inventory management and 3PL integration under a single strategic partner.',
+        'hero-cta1': 'Get a quote',
+        'hero-cta2': 'Our services',
+        'kpi-lbl1': 'Industrial storage',
+        'kpi-lbl2': 'Active clients',
+        'kpi-lbl3': 'Leading the industry',
+        'about-eyebrow': 'About REIS',
+        'about-h2': 'Mexican company, <span class="accent">strategic partners</span> for your logistics.',
+        'about-p1': 'We are a Mexican company dedicated to <strong>third-party logistics (3PL)</strong> and <strong>industrial warehousing</strong> for the automotive, appliance, aerospace, and food sectors, with a presence in the Bajío and northeastern Mexico (Mexico–USA border), including operations in El Paso, TX.',
+        'about-p2': 'We have more than <span class="stat-hi">15</span> years of experience, a workforce of over <span class="stat-hi">350</span> employees, and a storage footprint of more than <span class="stat-hi">140,000 m²</span> across <span class="stat-hi">10</span> warehouses in Mexico and El Paso, TX.',
+        'servicios-eyebrow': 'Full coverage',
+        'servicios-h2': 'Three pillars, <span class="accent">one single operation.</span>',
+        'servicios-sub': '3PL, IMMEX and integrated logistics under one provider. We reduce touchpoints, operational risks and administrative costs.',
+        'dif-eyebrow': 'Why REIS',
+        'dif-h2': 'What sets us <span class="accent-light">apart</span><br>in the market.',
+        'clientes-eyebrow': 'Our clients',
+        'clientes-h2': 'Companies that <span class="accent">trust</span> REIS.',
+        'almacenes-eyebrow': 'Our warehouses',
+        'almacenes-h2': 'Industrial warehouses <span class="accent">at your disposal.</span>',
+        'almacenes-sub': 'Class A facilities in Ciudad Juárez, Monterrey, San Luis Potosí and El Paso, TX.',
+        'cta-eyebrow': 'Quote within 24 hours',
+        'cta-h2': 'Get a <span class="accent">quote</span> today.',
+        'cta-sub': 'Call your city's specialist directly or send us the details. Formal quote in less than 24 business hours.',
+      }
+    };
+
+    let lang = 'es';
+
+    const map = {
+      'nav-nosotros':   () => document.querySelector('.nav-links a[href="#nosotros"]'),
+      'nav-servicios':  () => document.querySelector('.nav-links a[href="#servicios"]'),
+      'nav-almacenes':  () => document.querySelector('.nav-links a[href="#almacenes"]'),
+      'nav-clientes':   () => document.querySelector('.nav-links a[href="#clientes"]'),
+      'nav-contacto':   () => document.querySelector('.nav-links a[href="#cotiza"]'),
+      'nav-cta':        () => document.querySelector('.nav-cta-btn'),
+      'hero-eyebrow':   () => document.querySelector('.hero .eyebrow'),
+      'hero-h1':        () => document.querySelector('.hero h1'),
+      'hero-sub':       () => document.querySelector('.hero-sub'),
+      'hero-cta1':      () => document.querySelector('.hero-actions .btn-primary'),
+      'hero-cta2':      () => document.querySelector('.hero-actions .btn-ghost'),
+      'kpi-lbl1':       () => document.querySelectorAll('.kpi-item .lbl')[0],
+      'kpi-lbl2':       () => document.querySelectorAll('.kpi-item .lbl')[1],
+      'kpi-lbl3':       () => document.querySelectorAll('.kpi-item .lbl')[2],
+      'about-eyebrow':  () => document.querySelector('#nosotros .eyebrow'),
+      'about-h2':       () => document.querySelector('#nosotros .about-content h2'),
+      'about-p1':       () => document.querySelectorAll('#nosotros .about-content p')[0],
+      'about-p2':       () => document.querySelectorAll('#nosotros .about-content p')[1],
+      'servicios-eyebrow': () => document.querySelector('#servicios .eyebrow'),
+      'servicios-h2':   () => document.querySelector('#servicios .section-head h2'),
+      'servicios-sub':  () => document.querySelector('#servicios .section-head p'),
+      'dif-eyebrow':    () => document.querySelector('#diferenciadores .eyebrow'),
+      'dif-h2':         () => document.querySelector('#diferenciadores .section-head h2'),
+      'clientes-eyebrow': () => document.querySelector('#clientes .eyebrow'),
+      'clientes-h2':    () => document.querySelector('#clientes .section-head h2'),
+      'almacenes-eyebrow': () => document.querySelector('#almacenes .eyebrow'),
+      'almacenes-h2':   () => document.querySelector('#almacenes .section-head h2'),
+      'almacenes-sub':  () => document.querySelector('#almacenes .section-head p'),
+      'cta-eyebrow':    () => document.querySelector('#cotiza .eyebrow'),
+      'cta-h2':         () => document.querySelector('#cotiza h2'),
+      'cta-sub':        () => document.querySelector('#cotiza .cta-grid > div > p'),
+    };
+
+    function applyLang(l) {
+      const dict = t[l];
+      Object.entries(map).forEach(([key, getter]) => {
+        const el = getter();
+        if (el && dict[key] !== undefined) el.innerHTML = dict[key];
+      });
+      document.documentElement.lang = l;
+      document.getElementById('langLabel').textContent = l.toUpperCase();
+      document.getElementById('langAlt').textContent = l === 'es' ? 'EN' : 'ES';
+    }
+
+    document.getElementById('langToggle').addEventListener('click', () => {
+      lang = lang === 'es' ? 'en' : 'es';
+      applyLang(lang);
+    });
+  })();
+
+
 
 </body>
 </html>
