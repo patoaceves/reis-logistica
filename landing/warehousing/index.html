@@ -1730,6 +1730,13 @@
   .lang-toggle__active { color: var(--green-2, #37ae40); }
   .lang-toggle__sep { opacity: .4; }
 
+
+  /* Cooper logo — needs light gray bg to show on white */
+  .marquee-clients__item:has(.cooper-logo) {
+    background: #f2f2f2;
+    border-color: #e0e0e0;
+  }
+  img.cooper-logo { max-width: 220px; max-height: 80px; }
   /* Reveal on scroll */
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
   .reveal.in { opacity: 1; transform: none; }
@@ -2188,7 +2195,7 @@
         <img src="/assets/img/clientes/harman.svg" alt="Harman" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
-        <img src="/assets/img/clientes/cooper.png" alt="Cooper Lighting" loading="lazy" />
+        <img src="/assets/img/clientes/cooper.png" class="cooper-logo" alt="Cooper Lighting" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
         <img src="/assets/img/clientes/valeo.png" alt="Valeo" loading="lazy" />
@@ -2213,7 +2220,7 @@
         <img src="/assets/img/clientes/harman.svg" alt="Harman" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
-        <img src="/assets/img/clientes/cooper.png" alt="Cooper Lighting" loading="lazy" />
+        <img src="/assets/img/clientes/cooper.png" class="cooper-logo" alt="Cooper Lighting" loading="lazy" />
       </div>
       <div class="marquee-clients__item">
         <img src="/assets/img/clientes/valeo.png" alt="Valeo" loading="lazy" />
