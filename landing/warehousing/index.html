@@ -831,8 +831,7 @@
   .industrias-block .section-head .eyebrow.on-dark.shape-diamond::before { background: #d6ffe0; }
   .industrias-block .section-head h2 { color: #fff; }
   .industrias-block .section-head h2 .accent-light {
-    color: #ffffff; font-style: italic; font-weight: 900;
-    text-shadow: 0 0 40px rgba(255,255,255,.45);
+    color: #145474; font-style: italic; font-weight: 700;
   }
   .industrias-block .section-head p {
     color: rgba(255,255,255,.82);
@@ -1812,18 +1811,18 @@
 
         <div class="form-card__row">
           <div class="form-card__field">
-            <label for="hf-nombre">Nombre <span class="req">*</span></label>
+            <label for="hf-nombre" data-i18n="form.nombre">Nombre <span class="req">*</span></label>
             <input type="text" id="hf-nombre" name="nombre" placeholder="Nombre(s)" data-i18n-ph="ph.nombre" required />
           </div>
           <div class="form-card__field">
-            <label for="hf-apellidos">Apellidos <span class="req">*</span></label>
+            <label for="hf-apellidos" data-i18n="form.apellidos">Apellidos <span class="req">*</span></label>
             <input type="text" id="hf-apellidos" name="apellidos" placeholder="Apellido(s)" data-i18n-ph="ph.apellidos" required />
           </div>
         </div>
 
         <div class="form-card__row">
           <div class="form-card__field">
-            <label for="hf-telefono">Teléfono <span class="req">*</span></label>
+            <label for="hf-telefono" data-i18n="form.telefono">Teléfono <span class="req">*</span></label>
             <div class="form-card__phone">
               <select id="hf-lada" name="lada" aria-label="Clave de país">
                 <option value="+52" selected>+52</option>
@@ -1841,14 +1840,14 @@
             </div>
           </div>
           <div class="form-card__field">
-            <label for="hf-correo">Correo electrónico <span class="req">*</span></label>
+            <label for="hf-correo" data-i18n="form.correo">Correo electrónico <span class="req">*</span></label>
             <input type="email" id="hf-correo" name="correo" placeholder="ejemplo@dominio.com" required />
           </div>
         </div>
 
         <div class="form-card__row">
           <div class="form-card__field form-card__field--full">
-            <label>Tipo de Servicio <span class="req">*</span></label>
+            <label data-i18n="form.servicio">Tipo de Servicio <span class="req">*</span></label>
             <div class="form-card__radios">
               <label class="form-card__radio">
                 <input type="radio" name="servicio" value="Almacenaje" checked />
@@ -1864,11 +1863,11 @@
 
         <div class="form-card__row">
           <div class="form-card__field">
-            <label for="hf-empresa">Empresa <span class="req">*</span></label>
+            <label for="hf-empresa" data-i18n="form.empresa">Empresa <span class="req">*</span></label>
             <input type="text" id="hf-empresa" name="empresa" placeholder="Nombre de tu empresa" data-i18n-ph="ph.empresa" required />
           </div>
           <div class="form-card__field">
-            <label for="hf-ubicacion">Ubicación <span class="req">*</span></label>
+            <label for="hf-ubicacion" data-i18n="form.ubicacion">Ubicación <span class="req">*</span></label>
             <select id="hf-ubicacion" name="ubicacion" required>
               <option value="" disabled selected>Selecciona…</option>
               <option>Cd. Juárez</option>
@@ -1882,7 +1881,7 @@
 
         <div class="form-card__row">
           <div class="form-card__field form-card__field--full">
-            <label for="hf-fuente">¿Cómo escuchó de REIS Logistics? <span class="req">*</span></label>
+            <label for="hf-fuente" data-i18n="form.fuente">¿Cómo escuchó de REIS Logistics? <span class="req">*</span></label>
             <select id="hf-fuente" name="fuente" required>
               <option value="" disabled selected>Elige una opción</option>
               <option>Google</option>
@@ -2330,18 +2329,18 @@
 
         <div class="form-card__row">
           <div class="form-card__field">
-            <label for="cf-nombre">Nombre <span class="req">*</span></label>
+            <label for="cf-nombre" data-i18n="form.nombre">Nombre <span class="req">*</span></label>
             <input type="text" id="cf-nombre" name="nombre" placeholder="Nombre(s)" data-i18n-ph="ph.nombre" required />
           </div>
           <div class="form-card__field">
-            <label for="cf-apellidos">Apellidos <span class="req">*</span></label>
+            <label for="cf-apellidos" data-i18n="form.apellidos">Apellidos <span class="req">*</span></label>
             <input type="text" id="cf-apellidos" name="apellidos" placeholder="Apellido(s)" data-i18n-ph="ph.apellidos" required />
           </div>
         </div>
 
         <div class="form-card__row">
           <div class="form-card__field">
-            <label for="cf-telefono">Teléfono <span class="req">*</span></label>
+            <label for="cf-telefono" data-i18n="form.telefono">Teléfono <span class="req">*</span></label>
             <div class="form-card__phone">
               <select id="cf-lada" name="lada" aria-label="Clave de país">
                 <option value="+52" selected>+52</option>
@@ -2359,14 +2358,14 @@
             </div>
           </div>
           <div class="form-card__field">
-            <label for="cf-correo">Correo electrónico <span class="req">*</span></label>
+            <label for="cf-correo" data-i18n="form.correo">Correo electrónico <span class="req">*</span></label>
             <input type="email" id="cf-correo" name="correo" placeholder="ejemplo@dominio.com" required />
           </div>
         </div>
 
         <div class="form-card__row">
           <div class="form-card__field form-card__field--full">
-            <label>Tipo de Servicio <span class="req">*</span></label>
+            <label data-i18n="form.servicio">Tipo de Servicio <span class="req">*</span></label>
             <div class="form-card__radios">
               <label class="form-card__radio">
                 <input type="radio" name="servicio" value="Almacenaje" checked />
@@ -2382,11 +2381,11 @@
 
         <div class="form-card__row">
           <div class="form-card__field">
-            <label for="cf-empresa">Empresa <span class="req">*</span></label>
+            <label for="cf-empresa" data-i18n="form.empresa">Empresa <span class="req">*</span></label>
             <input type="text" id="cf-empresa" name="empresa" placeholder="Nombre de tu empresa" data-i18n-ph="ph.empresa" required />
           </div>
           <div class="form-card__field">
-            <label for="cf-ubicacion">Ubicación <span class="req">*</span></label>
+            <label for="cf-ubicacion" data-i18n="form.ubicacion">Ubicación <span class="req">*</span></label>
             <select id="cf-ubicacion" name="ubicacion" required>
               <option value="" disabled selected>Selecciona…</option>
               <option>Cd. Juárez</option>
@@ -2400,7 +2399,7 @@
 
         <div class="form-card__row">
           <div class="form-card__field form-card__field--full">
-            <label for="cf-fuente">¿Cómo escuchó de REIS Logistics? <span class="req">*</span></label>
+            <label for="cf-fuente" data-i18n="form.fuente">¿Cómo escuchó de REIS Logistics? <span class="req">*</span></label>
             <select id="cf-fuente" name="fuente" required>
               <option value="" disabled selected>Elige una opción</option>
               <option>Google</option>
@@ -2725,6 +2724,19 @@
 
       // Cotiza warehousing CTA button
       '.industrias-cta .btn-primary': { es: 'Cotiza tu Solución de Warehousing', en: 'Quote your Warehousing Solution', keepSvg: true },
+
+      // Form labels
+      '[data-i18n="form.nombre"]':    { es: 'Nombre <span class="req">*</span>', en: 'Name <span class="req">*</span>' },
+      '[data-i18n="form.apellidos"]': { es: 'Apellidos <span class="req">*</span>', en: 'Last name <span class="req">*</span>' },
+      '[data-i18n="form.telefono"]':  { es: 'Teléfono <span class="req">*</span>', en: 'Phone <span class="req">*</span>' },
+      '[data-i18n="form.correo"]':    { es: 'Correo electrónico <span class="req">*</span>', en: 'Email <span class="req">*</span>' },
+      '[data-i18n="form.servicio"]':  { es: 'Tipo de Servicio <span class="req">*</span>', en: 'Service type <span class="req">*</span>' },
+      '[data-i18n="form.empresa"]':   { es: 'Empresa <span class="req">*</span>', en: 'Company <span class="req">*</span>' },
+      '[data-i18n="form.ubicacion"]': { es: 'Ubicación <span class="req">*</span>', en: 'Location <span class="req">*</span>' },
+      '[data-i18n="form.fuente"]':    { es: '¿Cómo escuchó de REIS Logistics? <span class="req">*</span>', en: 'How did you hear about REIS Logistics? <span class="req">*</span>' },
+      // Radio labels
+      '[data-i18n="radio.almacenaje"]': { es: 'Almacenaje', en: 'Warehousing' },
+      '[data-i18n="radio.exterior"]':   { es: 'Comercio Exterior', en: 'Foreign Trade' },
       // WA float
       '.wa-float__label':       { es: 'Contáctanos', en: 'Contact us' },
     };
