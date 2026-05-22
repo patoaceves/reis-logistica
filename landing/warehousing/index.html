@@ -831,7 +831,7 @@
   .industrias-block .section-head .eyebrow.on-dark.shape-diamond::before { background: #d6ffe0; }
   .industrias-block .section-head h2 { color: #fff; }
   .industrias-block .section-head h2 .accent-light {
-    color: #145474; font-style: italic; font-weight: 700;
+    color: rgba(255,255,255,.65); font-style: italic; font-weight: 700;
   }
   .industrias-block .section-head p {
     color: rgba(255,255,255,.82);
@@ -1841,7 +1841,7 @@
           </div>
           <div class="form-card__field">
             <label for="hf-correo" data-i18n="form.correo">Correo electrónico <span class="req">*</span></label>
-            <input type="email" id="hf-correo" name="correo" placeholder="ejemplo@dominio.com" required />
+            <input type="email" id="hf-correo" name="correo" placeholder="ejemplo@dominio.com" data-i18n-ph="ph.correo" required />
           </div>
         </div>
 
@@ -1851,11 +1851,11 @@
             <div class="form-card__radios">
               <label class="form-card__radio">
                 <input type="radio" name="servicio" value="Almacenaje" checked />
-                Almacenaje
+                <span data-i18n="radio.almacenaje">Almacenaje</span>
               </label>
               <label class="form-card__radio">
                 <input type="radio" name="servicio" value="Comercio Exterior" />
-                Comercio Exterior
+                <span data-i18n="radio.exterior">Comercio Exterior</span>
               </label>
             </div>
           </div>
@@ -2359,7 +2359,7 @@
           </div>
           <div class="form-card__field">
             <label for="cf-correo" data-i18n="form.correo">Correo electrónico <span class="req">*</span></label>
-            <input type="email" id="cf-correo" name="correo" placeholder="ejemplo@dominio.com" required />
+            <input type="email" id="cf-correo" name="correo" placeholder="ejemplo@dominio.com" data-i18n-ph="ph.correo" required />
           </div>
         </div>
 
@@ -2369,11 +2369,11 @@
             <div class="form-card__radios">
               <label class="form-card__radio">
                 <input type="radio" name="servicio" value="Almacenaje" checked />
-                Almacenaje
+                <span data-i18n="radio.almacenaje">Almacenaje</span>
               </label>
               <label class="form-card__radio">
                 <input type="radio" name="servicio" value="Comercio Exterior" />
-                Comercio Exterior
+                <span data-i18n="radio.exterior">Comercio Exterior</span>
               </label>
             </div>
           </div>
@@ -2430,36 +2430,36 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="/assets/img/reis-logo-blanco.png" alt="REIS Logística" />
-        <p>Empresa mexicana especializada en logística 3PL y almacenamiento industrial para los sectores automotriz, electrodomésticos, aeroespacial y alimentos.</p>
+        <p data-i18n="footer.brand">Empresa mexicana especializada en logística 3PL y almacenamiento industrial para los sectores automotriz, electrodomésticos, aeroespacial y alimentos.</p>
       </div>
       <div class="footer-col">
-        <h5>Servicios</h5>
+        <h5 data-i18n="footer.h.servicios">Servicios</h5>
         <ul>
           <li><a href="#servicios">Warehousing 3PL</a></li>
-          <li><a href="/landing/comercio-exterior/">Comercio Exterior</a></li>
-          <li><a href="#servicios">Programa IMMEX</a></li>
-          <li><a href="#servicios">Logística JIT</a></li>
+          <li><a href="/landing/comercio-exterior/" data-i18n="footer.link.exterior">Comercio Exterior</a></li>
+          <li><a href="#servicios" data-i18n="footer.link.immex">Programa IMMEX</a></li>
+          <li><a href="#servicios" data-i18n="footer.link.jit">Logística JIT</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Empresa</h5>
+        <h5 data-i18n="footer.h.empresa">Empresa</h5>
         <ul>
           <li><a href="#nosotros" data-i18n="nav.nosotros">Nosotros</a></li>
-          <li><a href="#ubicaciones">Ubicaciones</a></li>
+          <li><a href="#ubicaciones" data-i18n="footer.link.ubicaciones">Ubicaciones</a></li>
           <li><a href="#cotiza" data-i18n="nav.contacto">Contacto</a></li>
           <li><a href="https://www.linkedin.com/company/reisbl/" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Dirección general</h5>
+        <h5 data-i18n="footer.h.direccion">Dirección general</h5>
         <ul>
           <li style="color:var(--on-dark-mute);font-size:14px;line-height:1.6;">Eje 114 No. 590<br>Zona Industrial<br>San Luis Potosí, S.L.P.<br>78395</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 REIS Logistics · Todos los derechos reservados</span>
-      <span>CERTIFICADO ISO · OEA / CTPAT</span>
+      <span data-i18n="footer.legal">© 2026 REIS Logistics · Todos los derechos reservados</span>
+      <span data-i18n="footer.cert">CERTIFICADO ISO · OEA / CTPAT</span>
     </div>
   </div>
 </footer>
@@ -2737,6 +2737,18 @@
       // Radio labels
       '[data-i18n="radio.almacenaje"]': { es: 'Almacenaje', en: 'Warehousing' },
       '[data-i18n="radio.exterior"]':   { es: 'Comercio Exterior', en: 'Foreign Trade' },
+
+      // Footer
+      '[data-i18n="footer.brand"]':           { es: 'Empresa mexicana especializada en logística 3PL y almacenamiento industrial para los sectores automotriz, electrodomésticos, aeroespacial y alimentos.', en: 'Mexican company specializing in 3PL logistics and industrial warehousing for the automotive, appliance, aerospace and food sectors.' },
+      '[data-i18n="footer.h.servicios"]':      { es: 'Servicios',          en: 'Services' },
+      '[data-i18n="footer.h.empresa"]':        { es: 'Empresa',            en: 'Company' },
+      '[data-i18n="footer.h.direccion"]':      { es: 'Dirección general',  en: 'General address' },
+      '[data-i18n="footer.link.exterior"]':    { es: 'Comercio Exterior',  en: 'Foreign Trade' },
+      '[data-i18n="footer.link.immex"]':       { es: 'Programa IMMEX',     en: 'IMMEX Program' },
+      '[data-i18n="footer.link.jit"]':         { es: 'Logística JIT',      en: 'JIT Logistics' },
+      '[data-i18n="footer.link.ubicaciones"]': { es: 'Ubicaciones',        en: 'Locations' },
+      '[data-i18n="footer.legal"]':            { es: '© 2026 REIS Logistics · Todos los derechos reservados', en: '© 2026 REIS Logistics · All rights reserved' },
+      '[data-i18n="footer.cert"]':             { es: 'CERTIFICADO ISO · OEA / CTPAT', en: 'CERTIFIED ISO · OEA / CTPAT' },
       // WA float
       '.wa-float__label':       { es: 'Contáctanos', en: 'Contact us' },
     };
@@ -2784,6 +2796,7 @@
         'ph.apellidos': { es: 'Apellido(s)',          en: 'Last name(s)' },
         'ph.telefono':  { es: '10 dígitos',           en: '10 digits' },
         'ph.empresa':   { es: 'Nombre de tu empresa', en: 'Your company name' },
+        'ph.correo':    { es: 'ejemplo@dominio.com',  en: 'example@domain.com' },
       };
       document.querySelectorAll('[data-i18n-ph]').forEach(function(el) {
         var key = el.getAttribute('data-i18n-ph');
