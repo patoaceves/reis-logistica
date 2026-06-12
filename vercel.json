@@ -6,21 +6,74 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
       ]
     },
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     }
   ],
   "redirects": [
-    { "source": "/warehousing", "destination": "/landing/warehousing", "permanent": false },
-    { "source": "/comercio-exterior", "destination": "/landing/comercio-exterior", "permanent": false }
+    {
+      "source": "/warehousing",
+      "destination": "/landing/warehousing",
+      "permanent": false
+    },
+    {
+      "source": "/comercio-exterior",
+      "destination": "/landing/comercio-exterior",
+      "permanent": false
+    },
+    {
+      "source": "/post/logística-t-mec-2026-cómo-preparar-las-cadenas-de-suministro-ante-el-nuevo-equilibrio-comercial-de",
+      "destination": "/blog/logistica-t-mec-2026",
+      "permanent": true
+    },
+    {
+      "source": "/post/logística-2026-cómo-operar-ante-cambios-comerciales-aranceles-y-mayor-volatilidad-regulatoria",
+      "destination": "/blog/logistica-2026",
+      "permanent": true
+    },
+    {
+      "source": "/post/inteligencia-artificial-en-logística-en-méxico-la-transformación-que-redefine-las-cadenas-de-sumini",
+      "destination": "/blog/inteligencia-artificial-logistica-mexico",
+      "permanent": true
+    },
+    {
+      "source": "/post/mercado-de-transporte-de-carga-y-logística-en-méxico-crecerá-5-38-en-2026-impulsado-por-nearshoring",
+      "destination": "/blog/mercado-transporte-carga-mexico-2026",
+      "permanent": true
+    },
+    {
+      "source": "/post/mercado-de-warehousing-en-méxico-crecimiento-tecnología-y-oportunidades-hacia-2034",
+      "destination": "/blog/mercado-warehousing-mexico-2034",
+      "permanent": true
+    },
+    {
+      "source": "/post/foreign-trade-zones-para-exportadores-ventajas-logísticas-y-fiscales-en-la-frontera-méxico-estados",
+      "destination": "/blog/foreign-trade-zones-exportadores",
+      "permanent": true
+    }
   ]
 }

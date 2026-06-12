@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Servicios | REIS Logística · Warehousing, Comercio Exterior y Logística</title>
+<meta name="description" content="Servicios de REIS Logística: warehousing 3PL, comercio exterior (IMMEX) y logística integrada en México y El Paso, TX. Almacenaje, JIT, last-mile y distribución a planta bajo un solo aliado." />
+<meta name="theme-color" content="#0b1a22" />
+<meta name="color-scheme" content="light" />
+<link rel="icon" type="image/png" href="/assets/img/isotipo.png" />
+<link rel="apple-touch-icon" href="/assets/img/isotipo.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Servicios | REIS Logística" />
+<meta property="og:description" content="+140,000 m² de almacenamiento industrial Clase A en México y El Paso, TX. Logística 3PL, IMMEX y comercio exterior bajo un solo aliado estratégico." />
+<meta property="og:image" content="/assets/img/about-facility.jpg" />
+<meta property="og:url" content="https://www.reislogistica.com/servicios" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Montserrat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+<style>
+  /* ============================================================
+     DESIGN TOKENS - REIS LIGHT
+     ============================================================ */
+  html { background-color: #F4F7F8; }
+  :root {
+    /* Surface */
+    --bg:        #F4F7F8;
+    --bg-alt:    #EAF0F2;
+    --bg-card:   #FFFFFF;
+    --bg-dark:   #0b1a22;
+    --bg-dark-2: #142e3a;
+
+    /* Brand */
+    --green:      #2ea73a;
+    --green-2:    #37ae40;
+    --green-deep: #248a2f;
+    --green-bright: #4cc859;
+    --green-soft: rgba(46, 167, 58, .08);
+    --blue:       #145474;
+    --blue-2:     #1d6e95;
+    --blue-soft:  rgba(20, 84, 116, .06);
+
+    /* Text */
+    --ink:        #0b1a22;
+    --ink-2:      #1c3540;
+    --ink-soft:   #2f4a55;
+    --ink-mute:   #5c7884;
+    --ink-dim:    #8aa0a8;
+    --ink-light:  #b9cbd1;
+    --on-dark:    #eaf2f5;
+    --on-dark-mute: #9bb1bb;
+
+    /* Lines */
+    --line:       #dee5e8;
+    --line-2:     #c5d2d8;
+    --line-dark:  rgba(255,255,255,.1);
+
+    /* Type */
+    --font-sans: 'Titillium Web', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --font-eyebrow: 'Montserrat', system-ui, sans-serif;
+
+    /* Layout */
+    --maxw: 1240px;
+    --r-sm: 6px;
+    --r-md: 12px;
+    --r-lg: 18px;
+    --r-xl: 24px;
+
+    /* Motion */
+    --ease: cubic-bezier(.2,.8,.2,1);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(11, 26, 34, .04), 0 1px 2px rgba(11, 26, 34, .02);
+    --shadow-md: 0 4px 16px -4px rgba(11, 26, 34, .08), 0 2px 4px rgba(11, 26, 34, .04);
+    --shadow-lg: 0 24px 48px -16px rgba(11, 26, 34, .12), 0 8px 16px -8px rgba(11, 26, 34, .06);
+  }
+
+  *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 80px; }
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(rgba(11,26,34,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(11,26,34,.045) 1px, transparent 1px);
+    background-size: 58px 58px;
+    color: var(--ink);
+    line-height: 1.55;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; height: auto; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; border: 0; background: 0; color: inherit; }
+  input, select, textarea { font: inherit; color: inherit; }
+
+  /* Subtle blueprint grid on body */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(rgba(11, 26, 34, .025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(11, 26, 34, .025) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+    z-index: 0;
+    mask-image: radial-gradient(ellipse at top, #000 20%, transparent 80%);
+  }
+
+  /* ============================================================
+     UTILITIES
+     ============================================================ */
+  .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  .mono { font-family: var(--font-mono); }
+
+  .logo-inline { display: inline-block; vertical-align: baseline; width: auto; }
+  .logo-inline--h2 { height: .82em; transform: translateY(.04em); }
+  .eyebrow--logo { display: inline-flex; align-items: center; gap: 6px; }
+  .logo-inline--eyebrow { height: 1.15em; }
+  .eyebrow {
+    font-family: var(--font-eyebrow);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--green-deep);
+    display: inline-block;
+    letter-spacing: .005em;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  .eyebrow::after {
+    content: '';
+    position: absolute; left: 0; bottom: 0;
+    width: 22px; height: 2px; border-radius: 2px;
+    background: var(--green);
+    transition: width .28s var(--ease);
+  }
+  .eyebrow:hover::after { width: 100%; }
+  .hero__content .eyebrow:hover::after { width: 22px; }
+  .eyebrow.on-dark { color: var(--green-2); }
+  .eyebrow.on-dark::after { background: var(--green-2); }
+  .eyebrow.on-image { color: #d8f3dd; }
+  .eyebrow.on-image::after { background: var(--green-2); }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: inherit; font-weight: 600; font-size: 15px;
+    padding: 11px 20px; border-radius: 12px;
+    cursor: pointer; border: 1px solid transparent;
+    position: relative; overflow: hidden; white-space: nowrap; text-decoration: none;
+    transition: color .3s cubic-bezier(.22,.61,.36,1), border-color .3s cubic-bezier(.22,.61,.36,1), transform .2s cubic-bezier(.22,.61,.36,1);
+  }
+  .btn:active { transform: scale(.97); }
+  /* wrapper keeps text above the sweep fill */
+  .bl { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 8px; }
+  /* Primary: green outline filled by a sweep on hover (light backgrounds) */
+  .btn-primary { background: transparent; border: 1.5px solid var(--green); color: var(--green-deep); }
+  .btn-primary::before { content: ""; position: absolute; inset: 0; background: var(--green); transform: translateX(-101%); transition: transform .42s cubic-bezier(.22,.61,.36,1); }
+  .btn-primary:hover { color: #fff; border-color: var(--green); }
+  .btn-primary:hover::before { transform: translateX(0); }
+  /* On dark sections: light outline + white text, fills green on hover */
+  .btn-primary.on-dark { border-color: rgba(255,255,255,.55); color: #fff; }
+  .btn-primary.on-dark:hover { color: #fff; border-color: var(--green); }
+  .btn-ghost { border-color: var(--line-2); color: var(--ink); background: var(--bg-card); }
+  .btn-ghost:hover { border-color: var(--green); color: var(--green-deep); }
+
+  .arrow-svg { width: 16px; height: 16px; transition: transform .25s var(--ease); flex-shrink: 0; }
+  .btn:hover .arrow-svg,
+  .nav-cta-btn:hover .arrow-svg,
+  .section-cta:hover .arrow-svg,
+  .clientes-cta .btn:hover .arrow-svg,
+  .industrias-cta .btn:hover .arrow-svg { transform: translateX(4px); }
+
+  /* Inline section link (editorial arrow link) */
+  .section-cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 700; font-size: 15px; color: var(--green-deep);
+    transition: color .2s var(--ease);
+  }
+  .section-cta:hover { color: var(--green-bright); }
+
+  /* ============================================================
+     NAV
+     ============================================================ */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    background: linear-gradient(180deg, rgba(8, 18, 25, .68) 0%, rgba(8, 18, 25, .25) 60%, rgba(8, 18, 25, 0) 100%);
+    border-bottom: 1px solid transparent;
+    transition: background .3s var(--ease), backdrop-filter .3s var(--ease), border-color .3s var(--ease);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: var(--maxw); margin: 0 auto; }
+  .nav-logo img { height: 50px; width: auto; transition: opacity .3s var(--ease); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a {
+    font-size: 17px; font-weight: 600; color: rgba(255, 255, 255, .82);
+    transition: color .15s var(--ease); position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; left: 0; right: 100%; bottom: -4px;
+    height: 2px; background: var(--green-2); transition: right .22s var(--ease);
+  }
+  .nav-links a:hover { color: #fff; }
+  .nav-links a:hover::after { right: 0; }
+  .nav-cta { display: flex; gap: 18px; align-items: center; }
+  .nav-cta-btn { padding: 10px 22px; font-size: 15px; }
+  .nav.is-scrolled {
+    background: rgba(11, 26, 34, .92);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom-color: rgba(255,255,255,.08);
+  }
+  /* Lang toggle */
+  .lang-toggle {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: none; border: 1px solid rgba(255,255,255,.25);
+    border-radius: 999px; padding: 5px 12px;
+    font-family: var(--font-sans); font-size: 13px; font-weight: 600;
+    color: #fff; cursor: pointer; transition: border-color .2s, background .2s; letter-spacing: .04em;
+  }
+  .lang-toggle:hover { background: rgba(255,255,255,.1); }
+  .lang-toggle__active { color: var(--green-2); }
+  .lang-toggle__sep { opacity: .4; }
+
+  /* Mobile menu button */
+  .nav-burger { display: none; width: 42px; height: 42px; align-items: center; justify-content: center; border-radius: 8px; color: #fff; }
+  .nav-burger svg { width: 24px; height: 24px; }
+  .mobile-menu {
+    position: fixed; inset: 0; z-index: 60; background: rgba(11, 26, 34, .98);
+    backdrop-filter: blur(8px); display: flex; flex-direction: column;
+    padding: 90px 28px 40px; gap: 6px;
+    transform: translateX(100%); transition: transform .32s var(--ease); visibility: hidden;
+  }
+  .mobile-menu.open { transform: none; visibility: visible; }
+  .mobile-menu a { color: #fff; font-size: 22px; font-weight: 700; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .mobile-menu a:last-of-type { border-bottom: 0; }
+  .mobile-menu .btn-primary { margin-top: 18px; justify-content: center; padding: 16px; font-size: 16px; }
+  .mobile-close { position: absolute; top: 22px; right: 24px; width: 42px; height: 42px; color: #fff; }
+  .mobile-close svg { width: 26px; height: 26px; }
+
+  @media (max-width: 980px) {
+    .nav-links { display: none; }
+    .nav-cta .nav-cta-btn { display: none; }
+    .nav-burger { display: inline-flex; }
+  }
+
+  /* ============================================================
+     HERO - Glowy waves (canvas)
+     ============================================================ */
+  .hero {
+    position: relative; min-height: 80vh; min-height: 80svh;
+    display: flex; align-items: center; overflow: hidden; isolation: isolate;
+    padding: 108px 0 38px; background: #07131b;
+  }
+  .hero__bg { position: absolute; inset: 0; z-index: 0; }
+  .hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+  /* legibility overlay (heavier on the text side, photo is bright) */
+  .hero__overlay {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background:
+      linear-gradient(180deg, transparent 60%, rgba(6,18,26,.4) 82%, #06121a 100%),
+      linear-gradient(95deg, rgba(5,12,18,.93) 0%, rgba(6,16,22,.78) 38%, rgba(6,16,22,.46) 70%, rgba(6,16,22,.3) 100%);
+  }
+  .hero__content { position: relative; z-index: 2; max-width: 660px; color: #fff; }
+  .hero__content .eyebrow { color: #d8f3dd; }
+  .hero h1 {
+    font-size: clamp(38px, 5.4vw, 68px); line-height: 1.04; letter-spacing: -.024em;
+    font-weight: 700; margin: 22px 0 22px; color: #fff; overflow-wrap: break-word;
+    text-shadow: 0 2px 24px rgba(0,0,0,.45);
+  }
+  .hero h1 .accent { color: var(--green-bright); font-weight: 700; }
+  .hero-sub { font-size: clamp(16px,1.4vw,19px); line-height: 1.62; color: rgba(255,255,255,.96); max-width: 560px; margin-bottom: 36px; text-shadow: 0 1px 12px rgba(0,0,0,.4); }
+  .hero-sub strong { color: #fff; font-weight: 700; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-actions .btn { padding: 12px 24px; font-size: 15.5px; }
+  @media (max-width: 760px) { .hero { padding: 100px 0 70px; } }
+
+  /* ============================================================
+     KPI BAR
+     ============================================================ */
+  .kpi { background: #06121a; padding: 0 0 34px; position: relative; }
+  .kpi::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 780px 200px at 50% 6%, rgba(46,167,58,.13), transparent 70%); pointer-events: none; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; z-index: 1; padding-top: 8px; }
+  .kpi-item { padding: 0 20px; position: relative; }
+  .kpi-item + .kpi-item::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: rgba(255,255,255,.08); }
+  .kpi-item .num { font-size: clamp(38px, 4.8vw, 60px); font-weight: 700; line-height: 1; letter-spacing: -.01em; color: transparent; -webkit-text-stroke: 1.4px rgba(255,255,255,.92); }
+  .kpi-item .num .plus { color: var(--green-2); -webkit-text-stroke: 0; font-weight: 600; margin-right: 2px; }
+  .kpi-item .num .unit { font-size: .40em; color: var(--on-dark-mute); -webkit-text-stroke: 0; margin-left: 5px; font-weight: 600; }
+  .kpi-item .lbl { font-size: 14px; font-weight: 500; color: var(--on-dark-mute); margin-top: 10px; }
+  @media (max-width: 820px) { .kpi-item + .kpi-item:nth-child(odd)::before { display: none; } }
+  @media (max-width: 820px) { .kpi-grid { grid-template-columns: 1fr 1fr; gap: 28px; } }
+
+  /* ============================================================
+     SECTION BASE
+     ============================================================ */
+  section.block { padding: 74px 0; position: relative; }
+  .section-head { max-width: 720px; margin-bottom: 56px; }
+  .section-head--center { text-align: center; margin: 0 auto 56px; }
+  .section-head--center .eyebrow::after { left: 50%; transform: translateX(-50%); }
+  .section-head h2 { font-size: clamp(32px, 3.6vw, 48px); font-weight: 700; letter-spacing: -.018em; line-height: 1.08; margin: 18px 0 14px; color: var(--ink); }
+  .section-head h2 .accent { color: var(--green-deep); font-weight: 700; }
+  .section-head p { color: var(--ink-mute); font-size: 17px; max-width: 640px; line-height: 1.65; }
+  .section-head--center p { margin-left: auto; margin-right: auto; }
+
+  /* ============================================================
+     ABOUT teaser
+     ============================================================ */
+  .about { background-color: var(--bg-alt); background-image: linear-gradient(rgba(11,26,34,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(11,26,34,.06) 1px, transparent 1px); background-size: 58px 58px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.45fr; gap: 56px; align-items: center; }
+  .about-content { max-width: 620px; }
+  .about-content h2 { font-size: clamp(30px, 3.4vw, 44px); font-weight: 700; letter-spacing: -.018em; line-height: 1.1; margin: 18px 0 22px; }
+  .about-content h2 .accent { color: var(--green-deep); font-weight: 700; }
+  .about-content p { color: var(--ink-soft); font-size: 16px; line-height: 1.7; margin-bottom: 16px; }
+  .about-content p strong { color: var(--ink); font-weight: 700; }
+  .about-content .stat-hi { font-weight: 700; color: var(--ink); }
+  .about-content .about-link { margin-top: 14px; }
+  .about-video {
+    position: relative; width: 100%; max-width: 720px; aspect-ratio: 5 / 4; margin: 0 auto;
+    border-radius: 24px; overflow: hidden;
+    box-shadow: 0 32px 64px -20px rgba(11, 26, 34, .25), 0 12px 24px -10px rgba(11, 26, 34, .12); background: var(--ink);
+  }
+  .about-video video, .about-video img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .about-video::before { content: none; }
+  .about-video__overlay { position: absolute; bottom: 24px; left: 24px; right: 24px; z-index: 2; color: #fff; }
+  .about-video__overlay .label { font-size: 12px; font-weight: 600; letter-spacing: .04em; color: var(--green-2); margin-bottom: 6px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; }
+  .about-video__overlay .label::before { content: ''; width: 18px; height: 1px; background: var(--green-2); }
+  .about-video__overlay h3 { font-size: 20px; font-weight: 700; line-height: 1.2; letter-spacing: -.012em; }
+  @media (max-width: 880px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } .about-content { max-width: 100%; } .about-video { max-width: 480px; } }
+  /* Sobre REIS - scroll cards (sticky stack) */
+  .about { background-color: var(--bg-alt); position: relative; }
+  .about-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .shuffle { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 10px; aspect-ratio: 1; max-width: 520px; margin-left: auto; }
+  .shuffle__cell { border-radius: 12px; overflow: hidden; box-shadow: 0 10px 26px -14px rgba(7,19,27,.4); will-change: transform; }
+  .shuffle__cell img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  @media (max-width: 880px) { .about-grid2 { grid-template-columns: 1fr; gap: 36px; } .shuffle { max-width: 440px; margin: 0 auto; } }
+  .about-intro { max-width: 760px; margin: 0 auto; text-align: center; padding: 74px 0 6px; }
+  .about-intro h2 { font-size: clamp(30px, 3.4vw, 44px); font-weight: 700; letter-spacing: -.018em; line-height: 1.12; margin: 16px 0 18px; }
+  .about-intro h2 .accent { color: var(--green-deep); font-weight: 700; }
+  .about-intro p { color: var(--ink-soft); font-size: 16.5px; line-height: 1.7; }
+  .stack { padding-bottom: 36px; }
+  .stack__card { height: 100vh; display: flex; align-items: center; justify-content: center; position: sticky; top: 0; padding: 0 20px; }
+  .stack__inner { position: relative; width: min(940px, 92vw); height: min(70vh, 520px); border-radius: 24px; overflow: hidden; box-shadow: 0 34px 90px -34px rgba(7,19,27,.55); }
+  .stack__inner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .stack__inner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(7,19,27,.92) 0%, rgba(7,19,27,.4) 44%, rgba(7,19,27,0) 70%); }
+  .stack__cap { position: absolute; left: 40px; right: 40px; bottom: 36px; z-index: 2; color: #fff; }
+  .stack__n { font-size: 13px; font-weight: 700; letter-spacing: .14em; color: var(--green-bright); }
+  .stack__cap h3 { font-size: clamp(24px, 3vw, 38px); font-weight: 700; letter-spacing: -.02em; line-height: 1.1; margin: 8px 0 10px; }
+  .stack__cap p { font-size: 16.5px; line-height: 1.55; color: rgba(255,255,255,.88); max-width: 540px; }
+  @media (max-width: 760px) {
+    .about-intro { padding: 56px 0 4px; }
+    .stack__card { height: 88vh; padding: 0 14px; }
+    .stack__inner { height: min(66vh, 460px); border-radius: 18px; }
+    .stack__cap { left: 24px; right: 24px; bottom: 26px; }
+  }
+
+  /* ============================================================
+     SERVICES overview (3 pillars) - dark interactive waves bg
+     ============================================================ */
+  .services-waves { position: relative; background: radial-gradient(125% 125% at 15% 0%, #1a4456 0%, #123444 36%, #0a2230 68%, #07131b 100%); color: var(--on-dark); overflow: hidden; isolation: isolate; }
+  .services-waves .waves-canvas { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; display: block; }
+  .services-waves__overlay { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(55% 60% at 88% 16%, rgba(46,167,58,.16), transparent 66%); }
+  .services-waves { --mx: 70%; --my: 20%; }
+  .services-waves__spot { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(440px circle at var(--mx) var(--my), rgba(76,200,89,.16), transparent 64%); opacity: 0; transition: opacity .4s var(--ease); }
+  .services-waves:hover .services-waves__spot { opacity: 1; }
+  .services-waves .container { position: relative; z-index: 2; }
+  .services-waves .section-head .eyebrow { color: #d8f3dd; }
+  .services-waves .section-head h2 { color: #fff; }
+  .services-waves .section-head h2 .accent { color: var(--green-bright); }
+  .services-waves .section-head p { color: var(--on-dark-mute); }
+  /* Cobertura integral - interactive accordion + image reveal */
+  .pillars { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; margin-top: 8px; }
+  .pillars__list { list-style: none; }
+  .pillars__item { border-top: 1px solid rgba(255,255,255,.12); }
+  .pillars__item:last-child { border-bottom: 1px solid rgba(255,255,255,.12); }
+  .pillars__name { display: block; width: 100%; text-align: left; background: none; border: 0; cursor: pointer; font-family: inherit; font-size: clamp(23px, 2.9vw, 35px); font-weight: 700; letter-spacing: -.02em; line-height: 1.2; color: rgba(255,255,255,.34); padding: 18px 0; transition: color .3s var(--ease); }
+  .pillars__name:hover { color: rgba(255,255,255,.72); }
+  .pillars__item.is-active .pillars__name { color: var(--green-bright); }
+  .pillars__desc { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows .5s var(--ease), opacity .4s var(--ease); }
+  .pillars__desc-inner { overflow: hidden; min-height: 0; }
+  .pillars__item.is-active .pillars__desc { grid-template-rows: 1fr; opacity: 1; }
+  .pillars__desc-inner > p { color: var(--on-dark-mute); font-size: 15px; line-height: 1.6; padding-bottom: 14px; max-width: 470px; font-weight: 500; }
+  .pillars__desc .features { list-style: none; display: flex; flex-direction: column; gap: 9px; padding-bottom: 20px; }
+  .pillars__desc .features li { position: relative; padding-left: 18px; color: var(--on-dark-mute); font-size: 14.5px; line-height: 1.5; }
+  .pillars__desc .features li::before { content: ''; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: var(--green-bright); }
+  .pillars__media { position: relative; aspect-ratio: 4 / 3; border-radius: 20px; overflow: hidden; box-shadow: 0 26px 64px -26px rgba(0,0,0,.65); }
+  .pillars__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); z-index: 1; }
+  @media (max-width: 860px) {
+    .pillars { grid-template-columns: 1fr; gap: 28px; }
+    .pillars__media { order: -1; aspect-ratio: 16/10; }
+    .pillars__name { font-size: 24px; padding: 15px 0; }
+  }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .service-card { position: relative; background: var(--bg-card); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; transition: border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease); }
+  .service-card:hover { border-color: var(--green); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .service-card { padding: 14px; }
+  .service-card__media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg-alt); border-radius: 14px; }
+  .service-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+  .service-card:hover .service-card__media img { transform: scale(1.05); }
+  .service-card__body { padding: 18px 12px 8px; flex: 1; display: flex; flex-direction: column; }
+  .service-card__body h3 { font-size: 21px; font-weight: 700; color: var(--ink); letter-spacing: -.02em; line-height: 1.15; margin-bottom: 10px; }
+  .service-card__body > p { color: var(--ink-soft); font-size: 15px; line-height: 1.6; margin-bottom: 18px; font-weight: 500; }
+  .service-card .features { list-style: none; display: flex; flex-direction: column; gap: 11px; padding-top: 16px; border-top: 1px solid var(--line); margin-top: auto; }
+  .service-card .features li { font-size: 14.5px; color: var(--ink); font-weight: 600; display: flex; align-items: flex-start; gap: 11px; }
+  .service-card .features li::before { content: ''; width: 5px; height: 5px; margin-top: 8px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
+  .services-cta { display: flex; justify-content: center; margin-top: 48px; }
+  @media (max-width: 880px) { .services-grid { grid-template-columns: 1fr; } }
+
+
+  /* ============================================================
+     DIFFERENTIATORS - dark
+     ============================================================ */
+  .dif-block { background: var(--bg-dark); color: var(--on-dark); position: relative; overflow: hidden; }
+  .dif-block::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 600px 420px at 14% 16%, rgba(46,167,58,.18), transparent 62%), radial-gradient(ellipse 540px 540px at 90% 88%, rgba(20,84,116,.24), transparent 66%); pointer-events: none; }
+  .dif-block .section-head { position: relative; z-index: 1; }
+  .dif-block .section-head h2 { color: var(--on-dark); }
+  .dif-block .section-head h2 .accent-light { color: var(--green-2); font-weight: 700; }
+  .dif-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; position: relative; z-index: 1; }
+  @media (max-width: 940px) { .dif-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .dif-grid { grid-template-columns: 1fr; } }
+  .dif-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 18px; padding: 28px 26px; transition: border-color .25s var(--ease), background .25s var(--ease), transform .25s var(--ease); }
+  .dif-card:hover { border-color: rgba(46,167,58,.5); background: rgba(46,167,58,.06); transform: translateY(-3px); }
+  .dif-card__num { font-family: var(--font-sans); font-size: 38px; font-weight: 700; color: transparent; -webkit-text-stroke: 1.4px rgba(76,200,89,.9); letter-spacing: -.01em; line-height: 1; margin-bottom: 14px; display: inline-block; transition: -webkit-text-stroke .25s var(--ease); }
+  .dif-card:hover .dif-card__num { -webkit-text-stroke: 1.4px var(--green-bright); }
+  .dif-card h3 { font-size: 18px; font-weight: 700; color: #fff; letter-spacing: -.01em; line-height: 1.2; margin-bottom: 8px; }
+  .dif-card p { font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,.72); }
+
+  /* ============================================================
+     CLIENTS marquee
+     ============================================================ */
+  .clientes-block { background: transparent; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); position: relative; }
+  .block.clientes-block { padding: 54px 0 58px; }
+  .clientes-block .section-head { margin-bottom: 30px; }
+  .marquee-clients { width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, black 5%, black 95%, transparent); mask-image: linear-gradient(90deg, transparent, black 5%, black 95%, transparent); position: relative; z-index: 1; }
+  .marquee-clients__track { display: flex; gap: 18px; width: max-content; animation: clientsScroll 38s linear infinite; }
+  .marquee-clients:hover .marquee-clients__track { animation-play-state: paused; }
+  .marquee-clients__item { flex-shrink: 0; display: flex; align-items: center; justify-content: center; height: 124px; width: 226px; padding: 20px 26px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow-sm); transition: border-color .2s var(--ease), transform .2s var(--ease), box-shadow .2s var(--ease); }
+  .marquee-clients__item:hover { border-color: var(--green); transform: translateY(-3px); box-shadow: 0 12px 24px -10px rgba(11,26,34,.15); }
+  .marquee-clients__item img { max-height: 62px; max-width: 162px; width: auto; height: auto; object-fit: contain; display: block; }
+  @keyframes clientsScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (max-width: 700px) { .marquee-clients__item { height: 100px; width: 168px; padding: 16px; } .marquee-clients__item img { max-height: 48px; max-width: 124px; } }
+
+  /* ============================================================
+     UBICACIONES preview (interactive cards)
+     ============================================================ */
+  .ubicaciones-block {
+    background-color: #18702a;
+    background-image:
+      linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px),
+      linear-gradient(135deg, #20822b 0%, #18702a 46%, #114e1a 100%);
+    background-size: 80px 80px, 80px 80px, 100% 100%;
+    position: relative;
+  }
+  .map-frame { max-width: 1000px; margin: 0 auto; }
+  .block.ubicaciones-block { padding: 52px 0 56px; }
+  .ubicaciones-block .section-head { margin-bottom: 14px; }
+  .map-figure img { width: 100%; display: block; }
+  /* Interactive locations map */
+  .imap { position: relative; max-width: 1120px; margin: 0 auto; aspect-ratio: 1120 / 560; }
+  .imap__routes { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; z-index: 1; }
+  .imap__guide { fill: none; stroke: rgba(210,250,220,.18); stroke-width: 1; vector-effect: non-scaling-stroke; }
+  .imap__truck { fill: #f1fff7; opacity: 0; filter: drop-shadow(0 0 1.4px rgba(150,255,190,.9)); }
+  @media (prefers-reduced-motion: reduce) { .imap__truck { display: none; } } 8% { opacity: 1; } 86% { stroke-dashoffset: var(--end, -120); opacity: 1; } 100% { stroke-dashoffset: var(--end, -120); opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .imap__comet { animation: none; opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .imap__routes path { animation: none; opacity: 0; } }
+  .imap__label { position: absolute; transform: translateX(-50%); color: #fff; font-size: 12.5px; font-weight: 700; letter-spacing: -.01em; white-space: nowrap; pointer-events: none; transition: opacity .3s var(--ease); z-index: 3; background: rgba(6,26,14,.62); padding: 3px 9px; border-radius: 999px; box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+  .imap__label.is-on { opacity: 0; }
+  .imap__base { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 62%; height: auto; }
+  .imap__lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; z-index: 2; }
+  .imap__lines line { stroke: rgba(255,255,255,.9); stroke-width: 1.6; stroke-dasharray: 4 4; vector-effect: non-scaling-stroke; opacity: 0; transition: opacity .35s var(--ease); }
+  .imap__lines line.is-on { opacity: .9; }
+  .imap__pin { position: absolute; width: 19px; height: 19px; border-radius: 50%; background: var(--green-bright); border: 3px solid #fff; transform: translate(-50%,-50%); cursor: pointer; padding: 0; box-shadow: 0 2px 10px rgba(0,0,0,.4); transition: transform .2s var(--ease); z-index: 3; }
+  .imap__pin::after { content: ''; position: absolute; inset: -7px; border-radius: 50%; border: 2px solid rgba(76,200,89,.6); opacity: 0; }
+  .imap__pin:hover, .imap__pin.is-on { transform: translate(-50%,-50%) scale(1.2); }
+  .imap__pin:hover::after, .imap__pin.is-on::after { animation: pinpulse 1.5s ease-out infinite; }
+  @keyframes pinpulse { 0% { opacity: .7; transform: scale(.7); } 100% { opacity: 0; transform: scale(1.7); } }
+  .imap__card { position: absolute; width: 196px; opacity: 0; transform: translateY(6px) scale(.97); transition: opacity .35s var(--ease), transform .35s var(--ease); pointer-events: none; z-index: 4; }
+  .imap__card.is-on { opacity: 1; transform: none; }
+  .imap__card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; display: block; box-shadow: 0 16px 38px -14px rgba(0,0,0,.65); border: 2px solid rgba(255,255,255,.9); }
+  .imap__card figcaption { margin-top: 8px; text-align: center; color: #fff; font-weight: 700; font-size: 15px; letter-spacing: -.01em; }
+  @media (max-width: 720px) {
+    .imap__card { width: 116px; }
+    .imap__card figcaption { font-size: 12.5px; }
+    .imap__pin { width: 16px; height: 16px; border-width: 2.5px; }
+  }
+  .map-frame__panel { position: relative; aspect-ratio: 21 / 9; border-radius: 24px; overflow: hidden; background: radial-gradient(130% 130% at 25% 0%, #143444 0%, var(--bg-dark) 60%, #06121a 100%); border: 1px solid rgba(255,255,255,.08); box-shadow: var(--shadow-lg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+  .map-frame__panel::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px); background-size: 26px 26px; mask-image: radial-gradient(ellipse at center, #000 35%, transparent 85%); pointer-events: none; }
+  .map-frame__panel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .map-frame__panel svg { width: 46px; height: 46px; color: var(--green-2); position: relative; z-index: 1; }
+  .map-frame__panel .t { font-family: var(--font-sans); font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--on-dark-mute); position: relative; z-index: 1; }
+  .map-cities { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 14px; margin-top: 22px; }
+  .map-city { display: inline-flex; align-items: center; gap: 9px; padding: 11px 18px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 999px; font-size: 14px; font-weight: 700; color: var(--ink); box-shadow: var(--shadow-sm); }
+  .map-city i { width: 9px; height: 9px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+  .map-city--usa i { background: var(--blue-2); }
+  .map-city em { font-style: normal; font-weight: 500; color: var(--ink-mute); font-size: 12.5px; }
+  .ubicaciones-cta { display: flex; justify-content: center; margin-top: 10px; }
+  .ubicaciones-block .section-head .eyebrow { color: #eafff0; }
+  .ubicaciones-block .section-head .eyebrow::after { background: #bff2c8; }
+  .ubicaciones-block .section-head h2 { color: #fff; }
+  .ubicaciones-block .section-head h2 .accent { color: #fff; }
+
+  /* ============================================================
+     ALMACENES carousel
+     ============================================================ */
+  .carousel-section { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; }
+  .carousel-marquee { width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent); mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent); }
+  .carousel-marquee__track { display: flex; gap: 16px; width: max-content; animation: almacenesScroll 50s linear infinite; }
+  .carousel-marquee:hover .carousel-marquee__track { animation-play-state: paused; }
+  .carousel-marquee__card { flex: 0 0 auto; width: clamp(280px, 38vw, 460px); aspect-ratio: 4/3; border-radius: 14px; overflow: hidden; background: var(--bg-card); box-shadow: var(--shadow-sm); }
+  .carousel-marquee__card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s var(--ease); }
+  .carousel-marquee__card:hover img { transform: scale(1.04); }
+  @keyframes almacenesScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (max-width: 800px) { .carousel-marquee__card { width: 78vw; } .carousel-marquee__track { animation-duration: 40s; } }
+
+  /* ============================================================
+     CTA contact teaser (dark)
+     ============================================================ */
+  .cta-block { background: var(--bg-dark); color: var(--on-dark); position: relative; overflow: hidden; }
+  .cta-block::before { content: ''; position: absolute; top: -10%; right: -5%; width: 600px; height: 600px; background: radial-gradient(ellipse, rgba(46,167,58,.14), transparent 60%); pointer-events: none; }
+  .cta-inner { position: relative; z-index: 1; text-align: center; max-width: 760px; margin: 0 auto; }
+  .cta-inner .eyebrow { color: var(--green-2); }
+  .cta-inner .eyebrow::after { background: var(--green-2); left: 50%; transform: translateX(-50%); }
+  .cta-inner h2 { font-size: clamp(34px, 4vw, 54px); font-weight: 700; line-height: 1.06; margin: 18px 0 18px; letter-spacing: -.02em; color: #fff; }
+  .cta-inner h2 .accent { color: var(--green-2); font-weight: 700; }
+  @media (min-width: 620px) { .cta-inner h2 { white-space: nowrap; } }
+  .cta-inner p { color: var(--on-dark-mute); font-size: 17px; line-height: 1.65; margin: 0 auto 36px; max-width: 560px; }
+  .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .cta-actions .btn { padding: 12px 24px; font-size: 15.5px; }
+  .cta-actions .btn-glass { padding: 16px 30px; font-size: 16px; border-radius: 12px; background: #25D366; border: 1px solid #25D366; color: #fff; display: inline-flex; align-items: center; gap: 10px; transition: all .2s var(--ease); }
+  .cta-actions .btn-glass:hover { background: #1fb85a; border-color: #1fb85a; transform: translateY(-1px); }
+  .cta-actions .btn-glass svg { width: 18px; height: 18px; }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  footer { background: var(--bg-dark-2); color: var(--on-dark); padding: 60px 0 30px; }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .footer-brand img { height: 50px; margin-bottom: 18px; }
+  .footer-brand p { color: var(--on-dark-mute); font-size: 14px; line-height: 1.6; max-width: 320px; }
+  .footer-col h5 { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--green-2); margin-bottom: 16px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col a { color: var(--on-dark-mute); font-size: 14px; transition: color .15s var(--ease); }
+  .footer-col a:hover { color: #fff; }
+  .footer-bottom { padding-top: 24px; border-top: 1px solid var(--line-dark); display: flex; justify-content: space-between; align-items: center; color: var(--ink-dim); font-size: 12px; font-family: var(--font-mono); letter-spacing: .04em; flex-wrap: wrap; gap: 12px; }
+  @media (max-width: 880px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
+
+  /* ============================================================
+     WHATSAPP FLOATER
+     ============================================================ */
+  .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 100; display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px 12px 14px; background: #25D366; color: #fff; border-radius: 999px; font-size: 15px; font-weight: 600; letter-spacing: -.005em; box-shadow: 0 6px 18px -4px rgba(14,14,31,.28); transition: background .2s var(--ease), transform .2s var(--ease); }
+  .wa-float:hover { background: #1EBE5C; transform: translateY(-2px); }
+  .wa-float__icon { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; flex-shrink: 0; }
+  .wa-float__icon svg { width: 100%; height: 100%; }
+  .wa-float__label { white-space: nowrap; }
+  @media (max-width: 560px) { .wa-float__label { display: none; } .wa-float { padding: 14px; } }
+
+  /* Reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+  /* ===== Scroll-expansion hero ===== */
+  .herox { position: relative; height: 220vh; background: var(--bg-dark); }
+  .herox__sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+  .herox__topscrim { position: absolute; top: 0; left: 0; right: 0; height: 140px; z-index: 5; background: linear-gradient(180deg, rgba(6,18,26,.6), transparent); pointer-events: none; }
+  .herox__media { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: var(--mw, 62vw); height: var(--mh, 66vh); border-radius: var(--mr, 20px); overflow: hidden; box-shadow: 0 40px 120px -50px rgba(0,0,0,.7); will-change: width, height; }
+  .herox__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .herox__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,18,26,.08) 0%, rgba(6,18,26,.42) 60%, rgba(6,18,26,.82) 100%); opacity: var(--scrim, .35); }
+  .herox__intro { position: absolute; z-index: 4; top: 50%; left: 50%; transform: translate(-50%, calc(-50% + var(--introY, 0px))); width: min(900px, 90vw); text-align: center; color: #fff; opacity: var(--introOp, 1); pointer-events: none; }
+  .herox__intro::before { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 135%; height: 155%; background: radial-gradient(ellipse at center, rgba(6,18,26,.62) 0%, rgba(6,18,26,.24) 46%, transparent 72%); z-index: -1; pointer-events: none; }
+  .herox__intro .eyebrow { color: rgba(255,255,255,.92); }
+  .herox__lead { font-size: clamp(36px, 6.4vw, 86px); font-weight: 700; letter-spacing: -.022em; line-height: 1.03; margin: 16px 0 24px; text-shadow: 0 6px 40px rgba(0,0,0,.45); }
+  .herox__lead .accent { color: var(--green-bright); }
+  .herox__hint { display: inline-flex; align-items: center; gap: 8px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.85); }
+  .herox__hint svg { width: 17px; height: 17px; animation: heroxbob 1.8s ease-in-out infinite; }
+  @keyframes heroxbob { 0%,100% { transform: translateY(-2px); } 50% { transform: translateY(3px); } }
+  .herox__content { position: absolute; z-index: 4; left: 0; right: 0; bottom: clamp(54px, 9vh, 108px); padding: 0 7vw; color: #fff; opacity: var(--contentOp, 0); transform: translateY(var(--contentY, 26px)); pointer-events: var(--contentPE, none); }
+  .herox__content h1 { font-size: clamp(30px, 4.4vw, 60px); font-weight: 700; letter-spacing: -.02em; line-height: 1.08; max-width: 17ch; margin: 0 0 16px; text-shadow: 0 4px 30px rgba(0,0,0,.4); }
+  .herox__content h1 .accent { color: var(--green-bright); }
+  .herox__content .hero-sub { max-width: 54ch; font-size: clamp(15px, 1.4vw, 18px); line-height: 1.6; color: rgba(255,255,255,.88); margin: 0 0 24px; text-shadow: 0 2px 18px rgba(0,0,0,.4); }
+  @media (max-width: 760px) { .herox { height: 200vh; } .herox__content { padding: 0 24px; bottom: 64px; } }
+  @media (prefers-reduced-motion: reduce) {
+    .herox { height: 100vh; }
+    .herox__media { width: 100vw !important; height: 100vh !important; border-radius: 0 !important; }
+    .herox__scrim { opacity: 1 !important; } .herox__intro { opacity: 0 !important; }
+    .herox__content { opacity: 1 !important; transform: none !important; pointer-events: auto !important; }
+  }
+  
+  /* ============================================================
+     SERVICIOS PAGE - interactive
+     ============================================================ */
+  .nav-links a[aria-current="page"], .mobile-menu a[aria-current="page"] { color: var(--green-bright); }
+
+  /* ---- HERO: glowy reactive waves ---- */
+  .whero { position: relative; min-height: 92vh; display: flex; align-items: center; justify-content: center; overflow: hidden; isolation: isolate; padding: 150px 0 90px; background: var(--bg-dark); }
+  .whero__canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; display: block; }
+  .whero::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 72% 56% at 50% 48%, rgba(11,26,34,.5) 0%, transparent 72%); }
+  .whero__content { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; padding: 0 24px; text-align: center; color: #fff; }
+  .whero__content .eyebrow { justify-content: center; color: #d8f3dd; }
+  .whero__content .eyebrow::before { background: var(--green-2); }
+  .whero h1 { font-size: clamp(38px,5.4vw,68px); line-height: 1.1; letter-spacing: -.026em; font-weight: 700; margin: 18px auto 24px; color: rgba(255,255,255,.82); }
+  .whero__rot { display: inline-flex; align-items: center; justify-content: center; min-height: 1.12em; }
+  .whero__word { color: rgba(255,255,255,.82); }
+  .whero__caret { display: inline-block; width: 3px; height: .96em; margin-left: 7px; border-radius: 2px; background: var(--green-bright); box-shadow: 0 0 10px rgba(76,200,89,.7); animation: whBlink 1.05s steps(1) infinite; }
+  @keyframes whBlink { 0%,50% { opacity: 1; } 50.01%,100% { opacity: 0; } }
+  .whero h1 .accent { background: none; -webkit-text-fill-color: rgba(255,255,255,.82); color: rgba(255,255,255,.82); font-style: normal; }
+  .whero__sub { font-size: clamp(16px,1.5vw,20px); line-height: 1.6; color: rgba(255,255,255,.82); max-width: 620px; margin: 0 auto 32px; }
+  .whero__actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* ---- SERVICES (no numbers, hover-reveal cards) ---- */
+  .svc2 { padding: 96px 0; background: var(--bg); }
+  .svc2__head { max-width: 720px; margin-bottom: 46px; }
+  .svc2__head h2 { font-size: clamp(28px,3.6vw,44px); font-weight: 700; letter-spacing: -.02em; color: var(--ink); margin: 12px 0 12px; }
+  .svc2__head h2 .accent { color: var(--green-deep); font-style: normal; }
+  .svc2__head p { color: var(--ink-mute); font-size: 17px; line-height: 1.6; max-width: 620px; }
+  .svc2__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  .svc2card { position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 4/5; display: flex; align-items: flex-end; isolation: isolate; box-shadow: var(--shadow-md); }
+  .svc2card__bg { position: absolute; inset: 0; z-index: 0; }
+  .svc2card__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .7s var(--ease); }
+  .svc2card:hover .svc2card__bg img { transform: scale(1.06); }
+  .svc2card__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(11,26,34,.08) 0%, rgba(11,26,34,.55) 55%, rgba(11,26,34,.93) 100%); transition: background .35s var(--ease); }
+  .svc2card:hover .svc2card__scrim { background: linear-gradient(180deg, rgba(11,26,34,.28) 0%, rgba(11,26,34,.74) 45%, rgba(8,22,14,.97) 100%); }
+  .svc2card__body { position: relative; z-index: 2; padding: 28px; color: #fff; width: 100%; }
+  .svc2card__body h3 { font-size: 24px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 10px; }
+  .svc2card__body > p { font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,.84); margin-bottom: 0; }
+  .svc2card__feats { list-style: none; display: grid; gap: 9px; overflow: hidden; max-height: 0; opacity: 0; margin-top: 0; transition: max-height .45s var(--ease), opacity .35s var(--ease), margin-top .45s var(--ease); }
+  .svc2card:hover .svc2card__feats { max-height: 260px; opacity: 1; margin-top: 18px; }
+  .svc2card__feats li { position: relative; padding-left: 20px; font-size: 14px; line-height: 1.45; color: #eafff0; }
+  .svc2card__feats li::before { content: ''; position: absolute; left: 0; top: 7px; width: 7px; height: 7px; border-radius: 2px; background: var(--green-bright); }
+  .svc2card__plus { position: absolute; top: 22px; right: 22px; z-index: 3; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,.4); display: flex; align-items: center; justify-content: center; color: #fff; transition: background .3s var(--ease), transform .3s var(--ease), border-color .3s; }
+  .svc2card__plus svg { width: 18px; height: 18px; }
+  .svc2card:hover .svc2card__plus { background: var(--green); border-color: var(--green); transform: translate(3px,-3px); }
+  @media (max-width: 900px) { .svc2__grid { grid-template-columns: 1fr; } .svc2card { aspect-ratio: 16/11; } .svc2card__feats { max-height: 260px; opacity: 1; margin-top: 18px; } .svc2card__plus { display: none; } }
+
+  /* ---- VIDEO ---- */
+  .svcvid { padding: 16px 0 96px; background: var(--bg-alt); }
+  .svcvid__head { max-width: 720px; margin-bottom: 32px; }
+  .svcvid__head h2 { font-size: clamp(26px,3.4vw,42px); font-weight: 700; letter-spacing: -.02em; color: var(--ink); margin-top: 12px; }
+  .svcvid__head h2 .accent { color: var(--green-deep); font-style: normal; }
+  .svcvid__wrap { position: relative; max-width: 1180px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 40px 80px -30px rgba(11,26,34,.5); background: var(--ink); aspect-ratio: 16/9; }
+  .svcvid__wrap video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .svcvid__tag { position: absolute; top: 22px; left: 24px; z-index: 2; display: inline-flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #fff; background: rgba(11,26,34,.5); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); padding: 8px 14px; border-radius: 999px; pointer-events: none; }
+  .svcvid__tag::before { content: ''; width: 8px; height: 8px; border-radius: 2px; background: var(--green-bright); }
+  @media (max-width: 700px) { .svcvid__wrap { border-radius: 16px; } }
+
+  /* ---- TIMELINE (illuminates on scroll) ---- */
+  .svctl { padding: 96px 0; background: var(--bg-dark-2); color: #fff; position: relative; overflow: hidden; }
+  .svctl::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 640px 440px at 18% 8%, rgba(46,167,58,.16), transparent 60%); pointer-events: none; }
+  .svctl__head { max-width: 680px; margin: 0 auto 56px; text-align: center; position: relative; z-index: 1; }
+  .svctl__head .eyebrow { justify-content: center; color: var(--green-2); }
+  .svctl__head .eyebrow::before { background: var(--green-2); }
+  .svctl__head h2 { font-size: clamp(28px,3.6vw,44px); font-weight: 700; letter-spacing: -.02em; color: #fff; margin-top: 12px; }
+  .svctl__head h2 .accent { color: var(--green-2); font-style: normal; }
+  .svctl__rail { position: relative; max-width: 760px; margin: 0 auto; padding-left: 64px; z-index: 1; }
+  .svctl__line { position: absolute; left: 19px; top: 18px; width: 2px; background: rgba(255,255,255,.16); border-radius: 2px; }
+  .svctl__fill { position: absolute; left: 0; top: 0; width: 100%; height: 0; background: linear-gradient(180deg, var(--green-bright), var(--green)); border-radius: 2px; box-shadow: 0 0 12px rgba(76,200,89,.55); }
+  .svctl__step { position: relative; padding: 0 0 46px; }
+  .svctl__step:last-child { padding-bottom: 0; }
+  .svctl__dot { position: absolute; left: -64px; top: -2px; width: 40px; height: 40px; border-radius: 50%; background: var(--bg-dark-2); border: 2px solid rgba(255,255,255,.22); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; color: rgba(255,255,255,.5); transition: all .4s var(--ease); z-index: 1; }
+  .svctl__step.is-lit .svctl__dot { border-color: var(--green-bright); background: var(--green); color: #fff; box-shadow: 0 0 0 6px rgba(46,167,58,.18), 0 0 18px rgba(76,200,89,.5); }
+  .svctl__step h3 { font-size: 20px; font-weight: 700; letter-spacing: -.01em; margin-bottom: 8px; color: rgba(255,255,255,.5); transition: color .4s var(--ease); }
+  .svctl__step p { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.4); max-width: 52ch; transition: color .4s var(--ease); }
+  .svctl__step.is-lit h3 { color: #fff; }
+  .svctl__step.is-lit p { color: rgba(255,255,255,.8); }
+
+  /* ---- SECTORES (sliding marquee) ---- */
+  .svcsec2 { padding: 56px 0; background: var(--bg); overflow: hidden; position: relative; }
+  .svcsec2::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(11,26,34,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(11,26,34,.05) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse 82% 92% at 50% 50%, #000 42%, transparent 92%); mask-image: radial-gradient(ellipse 82% 92% at 50% 50%, #000 42%, transparent 92%); }
+  .svcsec2 > .container, .svcsec2 > .svcmq { position: relative; z-index: 1; }
+  .svcsec2__head { max-width: 720px; margin: 0 auto 28px; text-align: center; }
+  .svcsec2__head .eyebrow { justify-content: center; }
+  .svcsec2__head h2 { font-size: clamp(28px,3.6vw,44px); font-weight: 700; letter-spacing: -.02em; color: var(--ink); margin-top: 12px; }
+  .svcsec2__head h2 .accent { color: var(--green-deep); font-style: normal; }
+  .svcmq { width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  .svcmq + .svcmq { margin-top: 18px; }
+  .svcmq__track { display: flex; gap: 18px; width: max-content; animation: svcmqScroll 38s linear infinite; }
+  .svcmq--rev .svcmq__track { animation-direction: reverse; animation-duration: 46s; }
+  .svcmq:hover .svcmq__track { animation-play-state: paused; }
+  @keyframes svcmqScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .svcchip { flex: 0 0 auto; display: flex; align-items: center; gap: 14px; padding: 20px 28px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; transition: border-color .2s var(--ease), transform .2s var(--ease), box-shadow .2s; }
+  .svcchip:hover { border-color: var(--green); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .svcchip__icon { width: 42px; height: 42px; min-width: 42px; color: var(--green-deep); background: rgba(46,167,58,.08); border: 1px solid rgba(46,167,58,.18); border-radius: 10px; display: flex; align-items: center; justify-content: center; padding: 9px; }
+  .svcchip__icon svg { width: 100%; height: 100%; }
+  .svcchip__name { font-size: 18px; font-weight: 700; color: var(--ink); letter-spacing: -.005em; white-space: nowrap; }
+
+  /* ---- CTA ---- */
+  .svc-cta { padding: 96px 0; background: var(--bg-dark); }
+  .svc-cta__inner { text-align: center; color: #fff; }
+  .svc-cta h2 { font-size: clamp(26px,3.6vw,44px); font-weight: 700; letter-spacing: -.022em; margin: 0 auto 14px; max-width: none; }
+  @media (min-width: 620px) { .svc-cta h2 { white-space: nowrap; } }
+  .svc-cta h2 .accent { color: var(--green-bright); font-style: normal; }
+  .svc-cta__inner > p { color: rgba(255,255,255,.8); max-width: 54ch; margin: 0 auto 28px; font-size: 16px; line-height: 1.62; }
+  .svc-cta__actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .svc-cta .btn-wa { padding: 12px 24px; border-radius: 12px; background: #25D366; color: #fff; font-weight: 600; font-size: 15.5px; display: inline-flex; align-items: center; gap: 9px; text-decoration: none; border: 1px solid #25D366; transition: background .2s var(--ease); }
+  .svc-cta .btn-wa:hover { background: #1fb85a; }
+  .svc-cta .btn-wa svg { width: 18px; height: 18px; }
+
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/assets/img/reis-logo-blanco.png" alt="REIS Logística" />
+    </a>
+    <div class="nav-links">
+      <a href="/#nosotros" data-i18n="nav.nosotros">Nosotros</a>
+      <a href="/servicios" data-i18n="nav.servicios" aria-current="page">Servicios</a>
+      <a href="/#ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
+      <a href="/#clientes" data-i18n="nav.clientes">Clientes</a>
+      <a href="/blog" data-i18n="nav.blog">Blog</a>
+      <a href="/#contacto" data-i18n="nav.contacto">Contacto</a>
+    </div>
+    <div class="nav-cta">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="lang-toggle__active" id="langLabel">ES</span>
+        <span class="lang-toggle__sep">·</span>
+        <span id="langAlt">EN</span>
+      </button>
+      <a href="/#contacto" class="btn btn-primary on-dark nav-cta-btn"><span class="bl" data-i18n="nav.cotiza">Cotiza ahora</span></a>
+      <button class="nav-burger" id="navBurger" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Cerrar menú">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <a href="/#nosotros" data-i18n="nav.nosotros">Nosotros</a>
+  <a href="/servicios" data-i18n="nav.servicios" aria-current="page">Servicios</a>
+  <a href="/#ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
+  <a href="/#clientes" data-i18n="nav.clientes">Clientes</a>
+  <a href="/blog" data-i18n="nav.blog">Blog</a>
+  <a href="/#contacto" data-i18n="nav.contacto">Contacto</a>
+  <a href="/#contacto" class="btn btn-primary on-dark"><span class="bl" data-i18n="nav.cotiza">Cotiza ahora</span></a>
+</div>
+
+<!-- ===== SERVICIOS HERO (glowy reactive waves) ===== -->
+<section class="whero">
+  <canvas class="whero__canvas" id="whCanvas" aria-hidden="true"></canvas>
+  <div class="whero__content reveal">
+    <span class="eyebrow on-image" data-i18n="svc.eyebrow">Servicios</span>
+    <h1>
+      <span data-i18n="svc.h1lead">Especialistas en</span><br>
+      <span class="whero__rot"><span class="whero__word" id="whWord" data-es="warehousing,comercio exterior,logística" data-en="warehousing,foreign trade,logistics">warehousing</span><span class="whero__caret" aria-hidden="true"></span></span>
+    </h1>
+    <p class="whero__sub" data-i18n="svc.sub">3PL, IMMEX y logística integrada en México y Estados Unidos.<br>Un solo aliado para toda tu operación.</p>
+    <div class="whero__actions">
+      <a href="/#contacto" class="btn btn-primary on-dark"><span class="bl" data-i18n="svc.cta">Solicitar cotización</span></a>
+      <a href="#servicios" class="btn btn-primary on-dark"><span class="bl" data-i18n="svc.cta3">Ver servicios</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES (no numbers, hover-reveal) ===== -->
+<section class="svc2" id="servicios">
+  <div class="container">
+    <div class="svc2__head reveal">
+      <span class="eyebrow" data-i18n="svc.s.eyebrow">Lo que hacemos</span>
+      <h2 data-i18n="svc.s.h2">Cubrimos tu cadena, <span class="accent">de bodega a planta.</span></h2>
+      <p data-i18n="svc.s.p">Conoce cada servicio a detalle.</p>
+    </div>
+    <div class="svc2__grid">
+      <article class="svc2card reveal">
+        <div class="svc2card__bg"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="Warehousing 3PL" loading="lazy" /></div>
+        <div class="svc2card__scrim"></div>
+        <span class="svc2card__plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+        <div class="svc2card__body">
+          <h3 data-i18n="svc.s1.n">Warehousing 3PL</h3>
+          <p data-i18n="svc.s1.p">Almacenaje, control de inventarios, picking, packing y distribución a la medida.</p>
+          <ul class="svc2card__feats">
+            <li data-i18n="svc.s1.f1">WMS integrado y trazabilidad en tiempo real</li>
+            <li data-i18n="svc.s1.f2">Producto doméstico e importado</li>
+            <li data-i18n="svc.s1.f3">Cross-docking y servicios VMI</li>
+            <li data-i18n="svc.s1.f4">Picking, packing y kitting</li>
+          </ul>
+        </div>
+      </article>
+      <article class="svc2card reveal">
+        <div class="svc2card__bg"><img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="Comercio Exterior" loading="lazy" /></div>
+        <div class="svc2card__scrim"></div>
+        <span class="svc2card__plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+        <div class="svc2card__body">
+          <h3 data-i18n="svc.s2.n">Comercio Exterior</h3>
+          <p data-i18n="svc.s2.p">Importación temporal bajo programa IMMEX, sin aranceles ni IVA. Ahorros y cumplimiento total.</p>
+          <ul class="svc2card__feats">
+            <li data-i18n="svc.s2.f1">Programa IMMEX y consignación</li>
+            <li data-i18n="svc.s2.f2">Clasificación arancelaria especializada</li>
+            <li data-i18n="svc.s2.f3">Cumplimiento ante SAT y SE</li>
+            <li data-i18n="svc.s2.f4">Documentación y pedimentos</li>
+          </ul>
+        </div>
+      </article>
+      <article class="svc2card reveal">
+        <div class="svc2card__bg"><img src="/assets/img/service-logistica.jpg" alt="Logística integrada" loading="lazy" /></div>
+        <div class="svc2card__scrim"></div>
+        <span class="svc2card__plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+        <div class="svc2card__body">
+          <h3 data-i18n="svc.s3.n">Logística integrada</h3>
+          <p data-i18n="svc.s3.p">Entregas Just-in-Time, secuenciales y distribución de material a línea de producción.</p>
+          <ul class="svc2card__feats">
+            <li data-i18n="svc.s3.f1">Entregas JIT y secuenciales</li>
+            <li data-i18n="svc.s3.f2">Transporte a almacén y last-mile</li>
+            <li data-i18n="svc.s3.f3">Distribución de material a planta</li>
+            <li data-i18n="svc.s3.f4">Reportes y KPIs de servicio</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIDEO ===== -->
+<section class="svcvid">
+  <div class="container">
+    <div class="svcvid__head reveal">
+      <span class="eyebrow" data-i18n="svc.vid.eyebrow">Operaciones</span>
+      <h2 data-i18n="svc.vid.h">Así se mueve tu inventario, <span class="accent">día y noche.</span></h2>
+    </div>
+    <div class="svcvid__wrap reveal">
+      <video src="/assets/video/operaciones.mp4" autoplay muted loop playsinline controls preload="metadata" poster="/assets/img/hero-poster.jpg"></video>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIMELINE (illuminates on scroll) ===== -->
+<section class="svctl">
+  <div class="container">
+    <div class="svctl__head reveal">
+      <span class="eyebrow" data-i18n="svc.proc.eyebrow">Cómo trabajamos</span>
+      <h2 data-i18n="svc.proc.h2">De diagnóstico a <span class="accent">operación.</span></h2>
+    </div>
+    <div class="svctl__rail">
+      <div class="svctl__line"><div class="svctl__fill"></div></div>
+      <div class="svctl__step"><span class="svctl__dot">01</span><h3 data-i18n="svc.proc.s1t">Diagnóstico</h3><p data-i18n="svc.proc.s1d">Entendemos tu operación, volúmenes y objetivos.</p></div>
+      <div class="svctl__step"><span class="svctl__dot">02</span><h3 data-i18n="svc.proc.s2t">Diseño de solución</h3><p data-i18n="svc.proc.s2d">Definimos el modelo de almacenaje, comercio exterior y logística a tu medida.</p></div>
+      <div class="svctl__step"><span class="svctl__dot">03</span><h3 data-i18n="svc.proc.s3t">Implementación</h3><p data-i18n="svc.proc.s3d">Onboarding, integración de sistemas y arranque de operación.</p></div>
+      <div class="svctl__step"><span class="svctl__dot">04</span><h3 data-i18n="svc.proc.s4t">Operación y mejora</h3><p data-i18n="svc.proc.s4d">Ejecutamos con KPIs, visibilidad y mejora continua.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTORES (sliding marquee) ===== -->
+<section class="svcsec2">
+  <div class="container">
+    <div class="svcsec2__head reveal">
+      <span class="eyebrow" data-i18n="svc.sec.eyebrow">Sectores</span>
+      <h2 data-i18n="svc.sec.h2">Experiencia en <span class="accent">cada industria.</span></h2>
+    </div>
+  </div>
+  <div class="svcmq" aria-hidden="true"><div class="svcmq__track"><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="5"/><path d="M20 6v3M20 31v3M6 20h3M31 20h3"/><path d="M11 11l2.2 2.2M26.8 26.8l2.2 2.2M29 11l-2.2 2.2M11 29l2.2-2.2"/></svg></span><span class="svcchip__name" data-i18n="svc.sec.1">Automotriz</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="26" height="30" rx="3"/><circle cx="20" cy="23" r="7"/><circle cx="20" cy="23" r="4"/><circle cx="11" cy="10" r="1.3" fill="currentColor"/><circle cx="16" cy="10" r="1.3" fill="currentColor"/><path d="M7 15h26"/></svg></span><span class="svcchip__name" data-i18n="svc.sec.2">Electrodomésticos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5c-3.5 3-5.5 8-5.5 13v8h11v-8c0-5-2-10-5.5-13z"/><circle cx="20" cy="15" r="2.2"/><path d="M14.5 22l-4.5 6 4.5-1.5M25.5 22l4.5 6-4.5-1.5"/><path d="M17.5 27l2.5 6 2.5-6"/></svg></span><span class="svcchip__name" data-i18n="svc.sec.3">Aeroespacial</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c-2.5-2.5-7.5-2.5-10 1-2.5 4-1.5 11.5 2.5 15.5 2 2 4 2 5.5 1 .8.5 1.5.5 2 .5s1.2 0 2-.5c1.5 1 3.5 1 5.5-1 4-4 5-11.5 2.5-15.5-2.5-3.5-7.5-3.5-10-1z"/><path d="M20 13v-2"/><path d="M20 11c1.5-1.8 3.8-2.2 5.5-1-1 2.2-3.5 2.8-5.5 1z"/></svg></span><span class="svcchip__name" data-i18n="svc.sec.4">Alimentos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="12" width="16" height="16" rx="2"/><rect x="17" y="17" width="6" height="6" rx="1"/><path d="M16 12V8M24 12V8M16 32v-4M24 32v-4M12 16H8M12 24H8M32 16h-4M32 24h-4"/></svg></span><span class="svcchip__name" data-i18n="svc.sec.5">Electrónica</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="11"/><circle cx="20" cy="20" r="4"/><path d="M20 4v5M20 31v5M4 20h5M31 20h5"/><path d="M9 9l3.5 3.5M27.5 27.5L31 31M31 9l-3.5 3.5M9 31l3.5-3.5"/></svg></span><span class="svcchip__name" data-i18n="svc.sec.6">Manufactura</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="5"/><path d="M20 6v3M20 31v3M6 20h3M31 20h3"/><path d="M11 11l2.2 2.2M26.8 26.8l2.2 2.2M29 11l-2.2 2.2M11 29l2.2-2.2"/></svg></span><span class="svcchip__name" data-i18n="svc.sec.1">Automotriz</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="26" height="30" rx="3"/><circle cx="20" cy="23" r="7"/><circle cx="20" cy="23" r="4"/><circle cx="11" cy="10" r="1.3" fill="currentColor"/><circle cx="16" cy="10" r="1.3" fill="currentColor"/><path d="M7 15h26"/></svg></span><span class="svcchip__name" data-i18n="svc.sec.2">Electrodomésticos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5c-3.5 3-5.5 8-5.5 13v8h11v-8c0-5-2-10-5.5-13z"/><circle cx="20" cy="15" r="2.2"/><path d="M14.5 22l-4.5 6 4.5-1.5M25.5 22l4.5 6-4.5-1.5"/><path d="M17.5 27l2.5 6 2.5-6"/></svg></span><span class="svcchip__name" data-i18n="svc.sec.3">Aeroespacial</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c-2.5-2.5-7.5-2.5-10 1-2.5 4-1.5 11.5 2.5 15.5 2 2 4 2 5.5 1 .8.5 1.5.5 2 .5s1.2 0 2-.5c1.5 1 3.5 1 5.5-1 4-4 5-11.5 2.5-15.5-2.5-3.5-7.5-3.5-10-1z"/><path d="M20 13v-2"/><path d="M20 11c1.5-1.8 3.8-2.2 5.5-1-1 2.2-3.5 2.8-5.5 1z"/></svg></span><span class="svcchip__name" data-i18n="svc.sec.4">Alimentos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="12" width="16" height="16" rx="2"/><rect x="17" y="17" width="6" height="6" rx="1"/><path d="M16 12V8M24 12V8M16 32v-4M24 32v-4M12 16H8M12 24H8M32 16h-4M32 24h-4"/></svg></span><span class="svcchip__name" data-i18n="svc.sec.5">Electrónica</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="11"/><circle cx="20" cy="20" r="4"/><path d="M20 4v5M20 31v5M4 20h5M31 20h5"/><path d="M9 9l3.5 3.5M27.5 27.5L31 31M31 9l-3.5 3.5M9 31l3.5-3.5"/></svg></span><span class="svcchip__name" data-i18n="svc.sec.6">Manufactura</span></div></div></div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="svc-cta">
+  <div class="container svc-cta__inner">
+    <h2 data-i18n="svc.cta2.h">Recibe una <span class="accent">cotización</span> hoy mismo.</h2>
+    <p data-i18n="svc.cta2.p">Cuéntanos qué necesitas almacenar, importar o distribuir y te armamos una propuesta a la medida.</p>
+    <div class="svc-cta__actions">
+      <a href="/#contacto" class="btn btn-primary on-dark"><span class="bl" data-i18n="svc.cta2.b1">Solicitar cotización</span></a>
+      <a class="btn-wa" href="https://wa.me/+524447197812/?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20REIS%20Log%C3%ADstica." target="_blank" rel="noopener"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.003 3C9.376 3 4 8.376 4 15.003c0 2.295.602 4.547 1.748 6.526L4 28l6.65-1.741a11.99 11.99 0 0 0 5.353 1.27h.005c6.624 0 12-5.376 12.003-12.003C28.011 8.376 22.635 3 16.003 3z"/></svg><span data-i18n="svc.cta2.b2">WhatsApp</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/img/reis-logo-blanco.png" alt="REIS Logística" />
+        <p data-i18n="foot.brand">Empresa mexicana especializada en logística 3PL y almacenamiento industrial para los sectores automotriz, electrodomésticos, aeroespacial y alimentos.</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="foot.h1">Servicios</h5>
+        <ul>
+          <li><a href="/servicios" data-i18n="serv.c1.h">Warehousing 3PL</a></li>
+          <li><a href="/servicios" data-i18n="serv.c2.h">Comercio Exterior</a></li>
+          <li><a href="/servicios" data-i18n="foot.immex">Programa IMMEX</a></li>
+          <li><a href="/servicios" data-i18n="foot.jit">Logística JIT</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="foot.h2">Empresa</h5>
+        <ul>
+          <li><a href="/nosotros" data-i18n="nav.nosotros">Nosotros</a></li>
+          <li><a href="/ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a></li>
+          <li><a href="/contacto" data-i18n="nav.contacto">Contacto</a></li>
+          <li><a href="https://www.linkedin.com/company/reisbl/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="foot.h3">Dirección general</h5>
+        <ul>
+          <li style="color:var(--on-dark-mute);font-size:14px;line-height:1.6;">Eje 114 No. 590<br>Zona Industrial<br>San Luis Potosí, S.L.P.<br>78395</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="foot.legal">© 2026 REIS Logistics · Todos los derechos reservados</span>
+      <span data-i18n="foot.cert">CERTIFICADO ISO · OEA / CTPAT</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp floater -->
+<a class="wa-float" href="https://wa.me/+524447197812/?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20REIS%20Log%C3%ADstica." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <span class="wa-float__icon" aria-hidden="true">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.003 3C9.376 3 4 8.376 4 15.003c0 2.295.602 4.547 1.748 6.526L4 28l6.65-1.741a11.99 11.99 0 0 0 5.353 1.27h.005c6.624 0 12-5.376 12.003-12.003C28.011 8.376 22.635 3 16.003 3zm0 21.78a9.79 9.79 0 0 1-4.989-1.366l-.358-.213-3.945 1.034 1.052-3.842-.234-.385a9.778 9.778 0 0 1-1.493-5.205c.002-5.41 4.404-9.812 9.972-9.812 2.66 0 5.16 1.04 7.04 2.927a9.881 9.881 0 0 1 2.918 7.034c-.003 5.412-4.405 9.815-9.963 9.815zm5.46-7.346c-.298-.149-1.762-.87-2.036-.969-.272-.099-.471-.149-.671.149-.198.298-.769.969-.943 1.167-.174.198-.347.223-.645.075-.298-.149-1.258-.464-2.397-1.479-.886-.79-1.484-1.766-1.658-2.064-.173-.298-.018-.459.13-.607.133-.133.298-.347.447-.521.149-.173.198-.298.298-.496.099-.198.05-.372-.025-.521-.074-.149-.671-1.616-.918-2.213-.242-.581-.488-.502-.671-.512-.173-.008-.372-.01-.571-.01-.198 0-.521.075-.795.372-.272.298-1.043 1.018-1.043 2.484s1.067 2.882 1.215 3.081c.149.198 2.099 3.205 5.083 4.494.71.306 1.265.489 1.697.626.713.226 1.362.194 1.875.118.572-.085 1.762-.72 2.011-1.415.248-.696.248-1.292.173-1.415-.074-.124-.272-.198-.57-.347z"/></svg>
+  </span>
+  <span class="wa-float__label" data-i18n="wa.label">Contáctanos</span>
+</a>
+
+
+<script>
+  /* ============================================================
+     ANIMATED COUNTERS
+     ============================================================ */
+  function animateCounter(el, target) {
+    const duration = 1800;
+    const start = performance.now();
+    const fmt = (n) => n.toLocaleString('es-MX');
+    function tick(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = fmt(Math.round(target * eased));
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  /* REVEAL ON SCROLL + COUNTERS */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      el.classList.add('in');
+      el.querySelectorAll('[data-counter]').forEach(c => {
+        if (c.dataset.done) return;
+        c.dataset.done = '1';
+        animateCounter(c, parseInt(c.dataset.counter, 10));
+      });
+      io.unobserve(el);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* NAV scrolled state */
+  (function() {
+    const nav = document.querySelector('.nav');
+    if (!nav) return;
+    const onScroll = () => { nav.classList.toggle('is-scrolled', window.scrollY > 40); };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+
+  /* MOBILE MENU */
+  (function() {
+    const burger = document.getElementById('navBurger');
+    const menu = document.getElementById('mobileMenu');
+    const close = document.getElementById('mobileClose');
+    if (!burger || !menu) return;
+    const open = () => { menu.classList.add('open'); document.body.style.overflow = 'hidden'; };
+    const shut = () => { menu.classList.remove('open'); document.body.style.overflow = ''; };
+    burger.addEventListener('click', open);
+    close.addEventListener('click', shut);
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', shut));
+  })();
+
+  /* ============================================================
+     HERO - Glowy waves (vanilla canvas, mouse-reactive)
+     ============================================================ */
+  (function() {
+    const canvas = document.getElementById('servicesCanvas');
+    if (!canvas) return;
+    const hero = canvas.closest('.services-waves');
+    const ctx = canvas.getContext('2d');
+    if (!ctx || !hero) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2), time = 0, raf = 0;
+    const mouse = { x: 0, y: 0 }, target = { x: 0, y: 0 };
+    const mouseInfluence = reduce ? 8 : 70;
+    const influenceRadius = reduce ? 160 : 340;
+    const smoothing = reduce ? 0.05 : 0.1;
+    const waves = [
+      { offset: 0,           amplitude: 70, frequency: 0.0030, color: 'rgba(76,200,89,0.85)',  opacity: 0.52 },
+      { offset: Math.PI/2,   amplitude: 92, frequency: 0.0026, color: 'rgba(29,110,149,0.8)',  opacity: 0.44 },
+      { offset: Math.PI,     amplitude: 60, frequency: 0.0034, color: 'rgba(46,167,58,0.75)',  opacity: 0.4 },
+      { offset: Math.PI*1.5, amplitude: 82, frequency: 0.0022, color: 'rgba(120,220,170,0.5)', opacity: 0.26 },
+      { offset: Math.PI*2,   amplitude: 54, frequency: 0.0040, color: 'rgba(180,230,205,0.3)', opacity: 0.2 }
+    ];
+    function resize() {
+      W = hero.clientWidth; H = hero.clientHeight;
+      canvas.width = W * dpr; canvas.height = H * dpr;
+      canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      mouse.x = target.x = W / 2; mouse.y = target.y = H / 2;
+    }
+    function drawWave(w) {
+      ctx.save(); ctx.beginPath();
+      for (let x = 0; x <= W; x += 4) {
+        const dx = x - mouse.x, dy = H / 2 - mouse.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const infl = Math.max(0, 1 - dist / influenceRadius);
+        const me = infl * mouseInfluence * Math.sin(time * 0.001 + x * 0.01 + w.offset);
+        const y = H / 2
+          + Math.sin(x * w.frequency + time * 0.002 + w.offset) * w.amplitude
+          + Math.sin(x * w.frequency * 0.4 + time * 0.003) * (w.amplitude * 0.45)
+          + me;
+        if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.lineWidth = 2.4; ctx.strokeStyle = w.color; ctx.globalAlpha = w.opacity;
+      ctx.shadowBlur = 32; ctx.shadowColor = w.color; ctx.stroke();
+      ctx.restore();
+    }
+    function frame() {
+      time += 1;
+      mouse.x += (target.x - mouse.x) * smoothing;
+      mouse.y += (target.y - mouse.y) * smoothing;
+      const g = ctx.createLinearGradient(0, 0, 0, H);
+      g.addColorStop(0, '#0b2230'); g.addColorStop(1, '#06121a');
+      ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+      ctx.globalAlpha = 1; ctx.shadowBlur = 0;
+      waves.forEach(drawWave);
+      if (!reduce) raf = requestAnimationFrame(frame);
+    }
+    function init() {
+      resize();
+      if (W < 2 || H < 2) { requestAnimationFrame(init); return; }
+      if (raf) cancelAnimationFrame(raf);
+      frame();
+    }
+    hero.addEventListener('mousemove', (e) => {
+      const r = hero.getBoundingClientRect();
+      target.x = e.clientX - r.left; target.y = e.clientY - r.top;
+    });
+    hero.addEventListener('mouseleave', () => { target.x = W / 2; target.y = H / 2; });
+    let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(init, 200); });
+    requestAnimationFrame(init);
+  })();
+
+  /* ============================================================
+     LANGUAGE TOGGLE - i18n
+     ============================================================ */
+  (function() {
+    let lang = 'es';
+    const t = {
+      'nav.nosotros':   { es: 'Nosotros', en: 'About' },
+      'nav.servicios':  { es: 'Servicios', en: 'Services' },
+      'nav.ubicaciones':{ es: 'Ubicaciones', en: 'Locations' },
+      'nav.clientes':   { es: 'Clientes', en: 'Clients' },
+      'nav.blog':       { es: 'Blog', en: 'Blog' },
+      'nav.contacto':   { es: 'Contacto', en: 'Contact' },
+      'nav.cotiza':     { es: 'Cotiza ahora', en: 'Get a quote', keepSvg: true },
+
+      'hero.eyebrow':   { es: 'Logística 3PL · Warehousing · Comercio Exterior', en: '3PL Logistics · Warehousing · Foreign Trade' },
+      'hero.h1':        { es: 'Optimizamos tu logística y <span class="accent">warehousing</span> en México.', en: 'We optimize your logistics and <span class="accent">warehousing</span> in Mexico.' },
+      'hero.sub':       { es: 'Almacenamiento industrial en México y Estados Unidos. Logística 3PL, IMMEX y comercio exterior bajo un solo aliado estratégico.', en: 'Industrial warehousing in Mexico and the United States. 3PL logistics, IMMEX and foreign trade under a single strategic partner.' },
+      'hero.cta1':      { es: 'Cotiza ahora', en: 'Get a quote', keepSvg: true },
+      'hero.cta2':      { es: 'Ver servicios', en: 'View services' },
+      'hero.trust1':    { es: 'Certificación OEA / CTPAT', en: 'OEA / CTPAT certified' },
+      'hero.trust2':    { es: 'Licencia IMMEX vigente', en: 'Active IMMEX license' },
+      'hero.trust3':    { es: '+15 años de experiencia', en: '+15 years of experience' },
+      'hero.scroll':    { es: 'Desliza', en: 'Scroll' },
+      'hero.lead':      { es: 'Operación logística<br><span class="accent">en movimiento.</span>', en: 'Logistics<br><span class="accent">in motion.</span>' },
+
+      'kpi.l1': { es: 'Almacenamiento industrial', en: 'Industrial storage' },
+      'kpi.l2': { es: 'Clientes en portafolio', en: 'Clients in portfolio' },
+      'kpi.l3': { es: 'Liderando la industria', en: 'Years of leadership' },
+      'kpi.l4': { es: 'Bodegas en operación', en: 'Warehouses operating' },
+      'kpi.years': { es: 'años', en: 'yrs' },
+
+      'about.eyebrow':  { es: 'Sobre REIS', en: 'About REIS' },
+      'about.h2':       { es: 'Empresa mexicana, <span class="accent">aliados estratégicos</span> de tu logística.', en: 'A Mexican company, <span class="accent">strategic partners</span> for your logistics.' },
+      'about.s1.h':     { es: 'Infraestructura propia', en: 'Our own infrastructure' },
+      'about.s1.p':     { es: 'Almacenes industriales clase A en el Bajío y la frontera norte.', en: 'Class A industrial warehouses in the Bajío and the northern border.' },
+      'about.s2.h':     { es: 'Capacidad real', en: 'Real capacity' },
+      'about.s2.p':     { es: '140,000 m² de almacenamiento, maniobra y distribución.', en: '140,000 m² of storage, handling and distribution.' },
+      'about.s3.h':     { es: 'Gente que mueve tu carga', en: 'People who move your cargo' },
+      'about.s3.p':     { es: '350 colaboradores especializados en cada eslabón de tu operación.', en: '350 specialists across every link of your operation.' },
+      'about.s4.h':     { es: 'Cobertura binacional', en: 'Binational coverage' },
+      'about.s4.p':     { es: 'México y Estados Unidos bajo una misma operación.', en: 'Mexico and the United States under a single operation.' },
+      'about.p1':       { es: 'Somos una empresa mexicana dedicada a la <strong>logística para terceros (3PL)</strong> y al <strong>almacenamiento industrial</strong> para los sectores automotriz, electrodomésticos, aeroespacial y alimentos, con presencia en el bajío y el noreste de México (frontera México-USA), incluyendo operaciones en El Paso, TX.', en: 'We are a Mexican company dedicated to <strong>third-party logistics (3PL)</strong> and <strong>industrial warehousing</strong> for the automotive, appliance, aerospace and food sectors, with presence in the Bajío and northeastern Mexico (Mexico-USA border), including operations in El Paso, TX.' },
+      'about.p2':       { es: 'Contamos con más de <span class="stat-hi">15</span> años de experiencia, una plantilla de más de <span class="stat-hi">350</span> colaboradores, y un espacio de almacenamiento de más de <span class="stat-hi">140,000 m²</span> en <span class="stat-hi">10</span> bodegas en México y El Paso, TX.', en: 'We have more than <span class="stat-hi">15</span> years of experience, a workforce of over <span class="stat-hi">350</span> employees, and a storage footprint of more than <span class="stat-hi">140,000 m²</span> across <span class="stat-hi">10</span> warehouses in Mexico and El Paso, TX.' },
+      'about.cta':      { es: 'Conoce más sobre nosotros', en: 'Learn more about us', keepSvg: true },
+      'about.vidlabel': { es: 'Operaciones REIS', en: 'REIS Operations' },
+      'about.vidtitle': { es: 'Así se mueve tu inventario, día y noche.', en: 'This is how your inventory moves, day and night.' },
+
+      'serv.eyebrow':   { es: 'Cobertura integral', en: 'Full coverage' },
+      'serv.h2':        { es: 'Warehousing, comercio exterior y <span class="accent">logística.</span>', en: 'Warehousing, foreign trade and <span class="accent">logistics.</span>' },
+      'serv.p':         { es: '3PL, comercio exterior y logística integrada bajo un solo proveedor. Reducimos puntos de contacto, riesgos operativos y costos administrativos.', en: '3PL, foreign trade and integrated logistics under one provider. We reduce touchpoints, operational risk and administrative costs.' },
+      'serv.c1.h':      { es: 'Warehousing 3PL', en: 'Warehousing 3PL' },
+      'serv.c1.p':      { es: 'Almacenaje, control de inventarios, picking, packing y distribución. Soluciones a la medida según el sector y la rotación.', en: 'Storage, inventory control, picking, packing and distribution. Tailored solutions based on sector and turnover.' },
+      'serv.c1.f1':     { es: 'WMS integrado y trazabilidad en tiempo real', en: 'Integrated WMS and real-time traceability' },
+      'serv.c1.f2':     { es: 'Producto doméstico e importado', en: 'Domestic and imported goods' },
+      'serv.c1.f3':     { es: 'Cross-docking y servicios VMI', en: 'Cross-docking and VMI services' },
+      'serv.c2.h':      { es: 'Comercio Exterior', en: 'Foreign Trade' },
+      'serv.c2.p':      { es: 'Importación temporal de mercancía bajo programa IMMEX, sin pago de aranceles ni IVA. Ahorros significativos en capital de trabajo.', en: 'Temporary import of goods under the IMMEX program, with no tariffs or VAT. Significant savings in working capital.' },
+      'serv.c2.f1':     { es: 'Programa IMMEX y consignación', en: 'IMMEX program and consignment' },
+      'serv.c2.f2':     { es: 'Clasificación arancelaria especializada', en: 'Specialized tariff classification' },
+      'serv.c2.f3':     { es: 'Cumplimiento ante SAT y SE', en: 'SAT and SE compliance' },
+      'serv.c3.h':      { es: 'Logística integrada', en: 'Integrated logistics' },
+      'serv.c3.p':      { es: 'Entregas Just-in-Time, secuenciales y distribución de material a línea de producción. Visibilidad de extremo a extremo.', en: 'Just-in-Time, sequential deliveries and material distribution to the production line. End-to-end visibility.' },
+      'serv.c3.f1':     { es: 'Entregas JIT y secuenciales', en: 'JIT and sequential deliveries' },
+      'serv.c3.f2':     { es: 'Transporte a almacén y last-mile', en: 'Warehouse transport and last-mile' },
+      'serv.c3.f3':     { es: 'Distribución de material a planta', en: 'Material distribution to plant' },
+      'serv.cta':       { es: 'Ver todos los servicios', en: 'View all services', keepSvg: true },
+
+      'ind.eyebrow':    { es: 'Para qué industrias', en: 'Industries we serve' },
+      'ind.h2':         { es: 'Logística para sectores que <span class="accent-light">no toleran errores.</span>', en: 'Logistics for sectors that <span class="accent-light">tolerate no errors.</span>' },
+      'ind.p':          { es: 'Diseñamos operaciones a la medida para industrias con altos estándares de cumplimiento, trazabilidad y tiempos de respuesta.', en: 'We design tailored operations for industries with the highest standards of compliance, traceability and response times.' },
+      'ind.i1': { es: 'Automotriz', en: 'Automotive' },
+      'ind.i2': { es: 'Aeroespacial', en: 'Aerospace' },
+      'ind.i3': { es: 'Electrodomésticos', en: 'Appliances' },
+      'ind.i4': { es: 'Alimentos', en: 'Food & Beverage' },
+      'ind.i5': { es: 'Manufactura', en: 'Manufacturing' },
+
+      'dif.eyebrow':    { es: 'Por qué REIS', en: 'Why REIS' },
+      'dif.h2':         { es: 'Lo que nos <span class="accent-light">diferencia</span> en el mercado.', en: 'What sets us <span class="accent-light">apart</span> in the market.' },
+      'dif.1.h': { es: 'Localización estratégica', en: 'Strategic location' },
+      'dif.1.p': { es: '10 bodegas en los corredores más relevantes: Bajío, frontera norte y zona automotriz. Acceso directo a aduanas y nodos ferroviarios.', en: '10 warehouses in the most relevant corridors: Bajío, northern border and automotive zone. Direct access to customs and rail nodes.' },
+      'dif.2.h': { es: 'Servicio al cliente excepcional', en: 'Exceptional customer service' },
+      'dif.2.p': { es: 'Equipo dedicado disponible para atender solicitudes y emergencias de manera continua, sin intermediarios.', en: 'Dedicated team available to handle requests and emergencies continuously, without intermediaries.' },
+      'dif.3.h': { es: 'Flexibilidad a la medida', en: 'Tailored flexibility' },
+      'dif.3.p': { es: 'Soluciones diseñadas según la rotación, sector y volumen de cada cliente. Sin contratos rígidos.', en: 'Solutions designed by each client\'s turnover, sector and volume. No rigid contracts.' },
+      'dif.4.h': { es: 'Calidad y certificaciones', en: 'Quality and certifications' },
+      'dif.4.p': { es: 'ISO y OEA / CTPAT siempre vigentes. Auditorías internas trimestrales y documentación para cumplimiento regulatorio.', en: 'ISO and OEA / CTPAT always current. Quarterly internal audits and documentation for regulatory compliance.' },
+      'dif.5.h': { es: 'Instalaciones Clase A', en: 'Class A facilities' },
+      'dif.5.p': { es: 'Bodegas modernas bajo norma OEA / CTPAT con seguridad perimetral, control de temperatura y andenes de alto tráfico.', en: 'Modern warehouses under OEA / CTPAT standards with perimeter security, temperature control and high-traffic docks.' },
+      'dif.6.h': { es: '+15 años de experiencia', en: '+15 years of experience' },
+      'dif.6.p': { es: 'Conocimiento profundo del entorno logístico mexicano: sus tiempos, sus aduanas y sus corredores industriales.', en: 'Deep knowledge of the Mexican logistics landscape: its timelines, customs and industrial corridors.' },
+
+      'cli.eyebrow':    { es: 'Nuestros clientes', en: 'Our clients' },
+      'cli.h2':         { es: 'Empresas que <span class="accent">confían</span> en REIS.', en: 'Companies that <span class="accent">trust</span> REIS.' },
+
+      'ubi.eyebrow':    { es: 'Nuestras ubicaciones', en: 'Our locations' },
+      'ubi.h2':         { es: 'Cobertura estratégica<br>en <span class="accent">México y Estados Unidos.</span>', en: 'Strategic coverage<br>across <span class="accent">Mexico and the United States.</span>' },
+      'ubi.p':          { es: 'Bodegas Clase A en el bajío, la frontera norte y El Paso, TX, con acceso directo a aduanas y nodos ferroviarios.', en: 'Class A warehouses in the Bajío, northern border and El Paso, TX, with direct access to customs and rail nodes.' },
+      'ubi.slp.r':      { es: 'Dirección general y hub principal de operaciones.', en: 'Headquarters and main operations hub.' },
+      'ubi.jrz.r':      { es: 'Cruce fronterizo clave para comercio exterior e IMMEX.', en: 'Key border crossing for foreign trade and IMMEX.' },
+      'ubi.mty.r':      { es: 'Corredor automotriz y manufactura del noreste.', en: 'Automotive and manufacturing corridor in the northeast.' },
+      'ubi.elp.r':      { es: 'Operación en EE. UU. para distribución transfronteriza.', en: 'US operation for cross-border distribution.' },
+      'ubi.bodegas':    { es: 'Bodegas', en: 'Warehouses' },
+      'ubi.norma':      { es: 'Norma', en: 'Standard' },
+      'ubi.programa':   { es: 'Programa', en: 'Program' },
+      'ubi.cert':       { es: 'Certificación', en: 'Certification' },
+      'ubi.entregas':   { es: 'Entregas', en: 'Deliveries' },
+      'ubi.modelo':     { es: 'Modelo', en: 'Model' },
+      'ubi.parque':     { es: 'Parque', en: 'Park' },
+      'ubi.servicio':   { es: 'Servicio', en: 'Service' },
+      'ubi.cta':        { es: 'Nuestras ubicaciones', en: 'Our locations' },
+
+      'alm.eyebrow':    { es: 'Nuestros almacenes', en: 'Our warehouses' },
+      'alm.h2':         { es: 'Bodegas industriales <span class="accent">a tu disposición.</span>', en: 'Industrial warehouses <span class="accent">at your disposal.</span>' },
+      'alm.p':          { es: 'Instalaciones Clase A en Ciudad Juárez, Monterrey, San Luis Potosí y El Paso, TX.', en: 'Class A facilities in Ciudad Juárez, Monterrey, San Luis Potosí and El Paso, TX.' },
+
+      'cta.eyebrow':    { es: 'Cotización en 24 horas', en: 'Quote within 24 hours' },
+      'cta.h2':         { es: 'Recibe una <span class="accent">cotización</span> hoy mismo.', en: 'Get a <span class="accent">quote</span> today.' },
+      'cta.p':          { es: 'Cuéntanos qué necesitas almacenar o mover y te conectamos con el especialista de tu ciudad. Cotización formal en menos de 24 horas hábiles.', en: 'Tell us what you need to store or move and we connect you with your city specialist. Formal quote in less than 24 business hours.' },
+      'cta.cta1':       { es: 'Solicitar cotización', en: 'Request a quote', keepSvg: true },
+
+      'foot.brand':     { es: 'Empresa mexicana especializada en logística 3PL y almacenamiento industrial para los sectores automotriz, electrodomésticos, aeroespacial y alimentos.', en: 'Mexican company specializing in 3PL logistics and industrial warehousing for the automotive, appliance, aerospace and food sectors.' },
+      'foot.h1':        { es: 'Servicios', en: 'Services' },
+      'foot.h2':        { es: 'Empresa', en: 'Company' },
+      'foot.h3':        { es: 'Dirección general', en: 'General address' },
+      'foot.immex':     { es: 'Programa IMMEX', en: 'IMMEX Program' },
+      'foot.jit':       { es: 'Logística JIT', en: 'JIT Logistics' },
+      'foot.legal':     { es: '© 2026 REIS Logistics · Todos los derechos reservados', en: '© 2026 REIS Logistics · All rights reserved' },
+      'foot.cert':      { es: 'CERTIFICADO ISO · OEA / CTPAT', en: 'CERTIFIED ISO · OEA / CTPAT' },
+      'ind.d1':         { es: 'Entregas JIT y secuenciadas a línea de producción.', en: 'JIT and sequenced deliveries to the production line.' },
+      'ind.d2':         { es: 'Trazabilidad y control bajo normas estrictas.', en: 'Traceability and control under strict standards.' },
+      'ind.d3':         { es: 'Alto volumen, rotación y distribución nacional.', en: 'High volume, rotation and nationwide distribution.' },
+      'ind.d4':         { es: 'Manejo cuidadoso y cumplimiento sanitario.', en: 'Careful handling and food-safety compliance.' },
+      'ind.d5':         { es: 'Abasto continuo de materiales a planta.', en: 'Continuous supply of materials to the plant.' },
+      'ubi.cap':        { es: 'Mapa de cobertura', en: 'Coverage map' },
+      'wa.label':       { es: 'Contáctanos', en: 'Contact us' },
+      'svc.eyebrow':    { es: 'Servicios', en: 'Services' },
+      'svc.h1lead':     { es: 'Especialistas en', en: 'We specialize in' },
+      'svc.sub':        { es: '3PL, IMMEX y logística integrada en México y Estados Unidos.<br>Un solo aliado para toda tu operación.', en: '3PL, IMMEX and integrated logistics across Mexico and the United States.<br>One partner for your entire operation.' },
+      'svc.cta':        { es: 'Solicitar cotización', en: 'Request a quote' },
+      'svc.cta3':       { es: 'Ver servicios', en: 'View services' },
+      'svc.s.eyebrow':  { es: 'Lo que hacemos', en: 'What we do' },
+      'svc.s.h2':       { es: 'Cubrimos tu cadena, <span class="accent">de bodega a planta.</span>', en: 'We cover your chain, <span class="accent">from warehouse to plant.</span>' },
+      'svc.s.p':        { es: 'Conoce cada servicio a detalle.', en: 'Explore each service in detail.' },
+      'svc.s1.n':       { es: 'Warehousing 3PL', en: 'Warehousing 3PL' },
+      'svc.s1.p':       { es: 'Almacenaje, control de inventarios, picking, packing y distribución a la medida.', en: 'Storage, inventory control, picking, packing and tailored distribution.' },
+      'svc.s1.f1':      { es: 'WMS integrado y trazabilidad en tiempo real', en: 'Integrated WMS and real-time traceability' },
+      'svc.s1.f2':      { es: 'Producto doméstico e importado', en: 'Domestic and imported goods' },
+      'svc.s1.f3':      { es: 'Cross-docking y servicios VMI', en: 'Cross-docking and VMI services' },
+      'svc.s1.f4':      { es: 'Picking, packing y kitting', en: 'Picking, packing and kitting' },
+      'svc.s2.n':       { es: 'Comercio Exterior', en: 'Foreign Trade' },
+      'svc.s2.p':       { es: 'Importación temporal bajo programa IMMEX, sin aranceles ni IVA. Ahorros y cumplimiento total.', en: 'Temporary import under the IMMEX program, with no duties or VAT. Savings and full compliance.' },
+      'svc.s2.f1':      { es: 'Programa IMMEX y consignación', en: 'IMMEX program and consignment' },
+      'svc.s2.f2':      { es: 'Clasificación arancelaria especializada', en: 'Specialized tariff classification' },
+      'svc.s2.f3':      { es: 'Cumplimiento ante SAT y SE', en: 'Compliance with SAT and SE' },
+      'svc.s2.f4':      { es: 'Documentación y pedimentos', en: 'Documentation and customs filings' },
+      'svc.s3.n':       { es: 'Logística integrada', en: 'Integrated logistics' },
+      'svc.s3.p':       { es: 'Entregas Just-in-Time, secuenciales y distribución de material a línea de producción.', en: 'Just-in-Time and sequenced deliveries, plus line-side material distribution.' },
+      'svc.s3.f1':      { es: 'Entregas JIT y secuenciales', en: 'JIT and sequenced deliveries' },
+      'svc.s3.f2':      { es: 'Transporte a almacén y last-mile', en: 'Inbound transport and last-mile' },
+      'svc.s3.f3':      { es: 'Distribución de material a planta', en: 'Line-side material distribution' },
+      'svc.s3.f4':      { es: 'Reportes y KPIs de servicio', en: 'Service reports and KPIs' },
+      'svc.vid.eyebrow':{ es: 'Operaciones', en: 'Operations' },
+      'svc.vid.h':      { es: 'Así se mueve tu inventario, <span class="accent">día y noche.</span>', en: 'This is how your inventory moves, <span class="accent">day and night.</span>' },
+      'svc.vid.tag':    { es: 'Operaciones REIS', en: 'REIS Operations' },
+      'svc.proc.eyebrow':{ es: 'Cómo trabajamos', en: 'How we work' },
+      'svc.proc.h2':    { es: 'De diagnóstico a <span class="accent">operación.</span>', en: 'From assessment to <span class="accent">operation.</span>' },
+      'svc.proc.s1t':   { es: 'Diagnóstico', en: 'Assessment' },
+      'svc.proc.s1d':   { es: 'Entendemos tu operación, volúmenes y objetivos.', en: 'We map your operation, volumes and goals.' },
+      'svc.proc.s2t':   { es: 'Diseño de solución', en: 'Solution design' },
+      'svc.proc.s2d':   { es: 'Definimos el modelo de almacenaje, comercio exterior y logística a tu medida.', en: 'We design a warehousing, trade and logistics model tailored to you.' },
+      'svc.proc.s3t':   { es: 'Implementación', en: 'Implementation' },
+      'svc.proc.s3d':   { es: 'Onboarding, integración de sistemas y arranque de operación.', en: 'Onboarding, systems integration and go-live.' },
+      'svc.proc.s4t':   { es: 'Operación y mejora', en: 'Operation and improvement' },
+      'svc.proc.s4d':   { es: 'Ejecutamos con KPIs, visibilidad y mejora continua.', en: 'We run with KPIs, visibility and continuous improvement.' },
+      'svc.sec.eyebrow':{ es: 'Sectores', en: 'Industries' },
+      'svc.sec.h2':     { es: 'Experiencia en <span class="accent">cada industria.</span>', en: 'Experience across <span class="accent">every industry.</span>' },
+      'svc.sec.1':      { es: 'Automotriz', en: 'Automotive' },
+      'svc.sec.2':      { es: 'Electrodomésticos', en: 'Appliances' },
+      'svc.sec.3':      { es: 'Aeroespacial', en: 'Aerospace' },
+      'svc.sec.4':      { es: 'Alimentos', en: 'Food and beverage' },
+      'svc.sec.5':      { es: 'Electrónica', en: 'Electronics' },
+      'svc.sec.6':      { es: 'Manufactura', en: 'Manufacturing' },
+      'svc.cta2.h':     { es: 'Recibe una <span class="accent">cotización</span> hoy mismo.', en: 'Get a <span class="accent">quote</span> today.' },
+      'svc.cta2.p':     { es: 'Cuéntanos qué necesitas almacenar, importar o distribuir y te armamos una propuesta a la medida.', en: 'Tell us what you need to store, import or distribute and we will build a tailored proposal.' },
+      'svc.cta2.b1':    { es: 'Solicitar cotización', en: 'Request a quote' },
+      'svc.cta2.b2':    { es: 'WhatsApp', en: 'WhatsApp' }
+    };
+
+    function apply(l) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const dict = t[el.getAttribute('data-i18n')];
+        if (!dict || dict[l] === undefined) return;
+        if (dict.keepSvg) {
+          const svg = el.querySelector('svg');
+          el.innerHTML = dict[l];
+          if (svg) el.appendChild(svg);
+        } else {
+          el.innerHTML = dict[l];
+        }
+      });
+      document.documentElement.lang = l;
+      document.getElementById('langLabel').textContent = l.toUpperCase();
+      document.getElementById('langAlt').textContent = l === 'es' ? 'EN' : 'ES';
+    }
+    (function(){
+      var imap = document.querySelector('.imap');
+      if (!imap) return;
+      var pins = imap.querySelectorAll('.imap__pin');
+      function setOn(loc, on){
+        imap.querySelectorAll('[data-loc="' + loc + '"]').forEach(function(el){ el.classList.toggle('is-on', on); });
+        var ln = imap.querySelector('line[data-line="' + loc + '"]');
+        if (ln) ln.classList.toggle('is-on', on);
+      }
+      function clearAll(){ pins.forEach(function(p){ setOn(p.getAttribute('data-loc'), false); }); }
+      pins.forEach(function(pin){
+        var loc = pin.getAttribute('data-loc');
+        pin.addEventListener('mouseenter', function(){ setOn(loc, true); });
+        pin.addEventListener('mouseleave', function(){ setOn(loc, false); });
+        pin.addEventListener('focus', function(){ setOn(loc, true); });
+        pin.addEventListener('blur', function(){ setOn(loc, false); });
+        pin.addEventListener('click', function(e){
+          e.preventDefault();
+          var on = pin.classList.contains('is-on');
+          clearAll(); if (!on) setOn(loc, true);
+        });
+      });
+    })();
+    (function(){
+      var sec = document.querySelector('.herox');
+      if (!sec) return;
+      var v = sec.querySelector('video'); if (v) { try { v.play().catch(function(){}); } catch(e){} }
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      function clamp(x,a,b){ return Math.max(a, Math.min(b, x)); }
+      function lerp(a,b,t){ return a + (b-a)*t; }
+      function frame(){
+        var rect = sec.getBoundingClientRect();
+        var total = sec.offsetHeight - window.innerHeight;
+        var p = clamp(-rect.top / total, 0, 1);
+        var e = clamp(p / 0.8, 0, 1);
+        e = e < .5 ? 2*e*e : 1 - Math.pow(-2*e+2, 2)/2;   // easeInOutQuad
+        sec.style.setProperty('--mw', lerp(62, 100, e).toFixed(2) + 'vw');
+        sec.style.setProperty('--mh', lerp(66, 100, e).toFixed(2) + 'vh');
+        sec.style.setProperty('--mr', lerp(20, 0, e).toFixed(1) + 'px');
+        sec.style.setProperty('--scrim', (0.46 + 0.44*e).toFixed(3));
+        sec.style.setProperty('--introOp', clamp(1 - p/0.30, 0, 1).toFixed(3));
+        sec.style.setProperty('--introY', (-p*44).toFixed(1) + 'px');
+        var c = clamp((p - 0.60)/0.30, 0, 1);
+        sec.style.setProperty('--contentOp', c.toFixed(3));
+        sec.style.setProperty('--contentY', lerp(26, 0, c).toFixed(1) + 'px');
+        sec.style.setProperty('--contentPE', c > 0.6 ? 'auto' : 'none');
+      }
+      var ticking = false;
+      function onScroll(){ if (!ticking){ requestAnimationFrame(function(){ frame(); ticking = false; }); ticking = true; } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      frame();
+    })();
+    (function(){
+      var grid = document.querySelector('.shuffle');
+      if (!grid) return;
+      var cells = Array.prototype.slice.call(grid.children);
+      var timer = null, visible = false, EASE = 'cubic-bezier(.22,1,.36,1)';
+      function order(){ var a = cells.map(function(_,i){return i;}); for (var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+      function run(){
+        var first = cells.map(function(c){ return c.getBoundingClientRect(); });
+        order().forEach(function(cellIdx, pos){ cells[cellIdx].style.order = pos; });
+        requestAnimationFrame(function(){
+          cells.forEach(function(c, i){
+            var last = c.getBoundingClientRect();
+            c.style.transition = 'none';
+            c.style.transform = 'translate(' + (first[i].left - last.left) + 'px,' + (first[i].top - last.top) + 'px)';
+          });
+          requestAnimationFrame(function(){
+            cells.forEach(function(c){ c.style.transition = 'transform 1.8s ' + EASE; c.style.transform = ''; });
+          });
+        });
+      }
+      function start(){ stop(); if (!visible) return; timer = setInterval(run, 6000); }
+      function stop(){ if (timer){ clearInterval(timer); timer = null; } }
+      if ('IntersectionObserver' in window){
+        new IntersectionObserver(function(e){ visible = e[0].isIntersecting; if (visible) start(); else stop(); }, { threshold: .2 }).observe(grid);
+      } else { visible = true; start(); }
+    })();
+    (function(){
+      var names = document.querySelectorAll('.pillars__name');
+      if (!names.length) return;
+      var imgs = document.querySelectorAll('[data-pillar-img]');
+      var items = document.querySelectorAll('.pillars__item');
+      var wrap = document.querySelector('.pillars');
+      var n = names.length, cur = 0, timer = null, paused = false, visible = false;
+      var DELAY = 4000;
+      var REVEAL = 'polygon(0 0, 100% 0, 100% 100%, 0 100%)';
+      var COLLAPSE = 'polygon(0 0, 100% 0, 100% 0, 0 0)';
+      function setImg(i, anim){
+        imgs.forEach(function(img, idx){
+          if (idx === i){
+            img.style.zIndex = '2';
+            if (anim){
+              img.style.transition = 'none';
+              img.style.clipPath = COLLAPSE;           // start hidden at top
+              void img.offsetWidth;                    // reflow
+              img.style.transition = 'clip-path 1.2s cubic-bezier(.33,1,.68,1)';
+              img.style.clipPath = REVEAL;             // wipe down (top -> bottom)
+            } else {
+              img.style.transition = 'none';
+              img.style.clipPath = REVEAL;
+            }
+          } else {
+            img.style.zIndex = '1';
+            img.style.transition = 'none';
+            img.style.clipPath = REVEAL;               // stays revealed behind the active
+          }
+        });
+      }
+      function activate(i){
+        cur = i;
+        items.forEach(function(el,idx){ el.classList.toggle('is-active', idx===i); });
+        setImg(i, true);
+      }
+      setImg(0, false);
+      function start(){ stop(); if (paused || !visible) return; timer = setInterval(function(){ activate((cur+1)%n); }, DELAY); }
+      function stop(){ if (timer){ clearInterval(timer); timer = null; } }
+      names.forEach(function(btn,i){
+        btn.addEventListener('mouseenter', function(){ paused = true; stop(); activate(i); });
+        btn.addEventListener('focus', function(){ paused = true; stop(); activate(i); });
+        btn.addEventListener('click', function(){ activate(i); });
+      });
+      if (wrap){
+        wrap.addEventListener('mouseleave', function(){ paused = false; start(); });
+      }
+      // only auto-play while the section is on screen
+      if ('IntersectionObserver' in window && wrap){
+        new IntersectionObserver(function(entries){
+          visible = entries[0].isIntersecting;
+          if (visible) start(); else stop();
+        }, { threshold: 0.25 }).observe(wrap);
+      } else { visible = true; start(); }
+    })();
+    (function(){
+      var s = document.querySelector('.services-waves');
+      if (!s) return;
+      s.addEventListener('mousemove', function(e){
+        var r = s.getBoundingClientRect();
+        s.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+        s.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+      });
+    })();
+    document.getElementById('langToggle').addEventListener('click', () => {
+      lang = lang === 'es' ? 'en' : 'es';
+      apply(lang);
+    });
+  })();
+
+  /* ===== SERVICIOS interactive ===== */
+  (function(){
+    var c=document.getElementById('whCanvas'); if(!c) return;
+    var ctx=c.getContext('2d'); if(!ctx) return;
+    var sec=c.closest('.whero')||c.parentElement;
+    var W=0,H=0,t=0,raf;
+    var mouse={x:0,y:0}, target={x:0,y:0};
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var influence=reduce?12:74, radius=reduce?170:330, smooth=reduce?0.05:0.1;
+    var waves=[
+      {o:0,           amp:70, f:0.0030, col:'76,200,89',  op:0.45},
+      {o:Math.PI/2,   amp:92, f:0.0026, col:'55,174,64',  op:0.36},
+      {o:Math.PI,     amp:60, f:0.0034, col:'29,110,149', op:0.32},
+      {o:Math.PI*1.5, amp:82, f:0.0022, col:'210,243,221',op:0.22},
+      {o:Math.PI*2,   amp:55, f:0.0040, col:'255,255,255',op:0.18}
+    ];
+    function size(){ var r=sec.getBoundingClientRect(); W=Math.max(1,Math.round(r.width)); H=Math.max(1,Math.round(r.height)); var dpr=Math.min(window.devicePixelRatio||1,2); c.width=W*dpr; c.height=H*dpr; c.style.width=W+'px'; c.style.height=H+'px'; ctx.setTransform(dpr,0,0,dpr,0,0); center(); }
+    function center(){ mouse={x:W/2,y:H/2}; target={x:W/2,y:H/2}; }
+    function drawWave(w){
+      ctx.save(); ctx.beginPath();
+      for(var x=0;x<=W;x+=4){
+        var dx=x-mouse.x, dy=H/2-mouse.y, dist=Math.sqrt(dx*dx+dy*dy);
+        var inf=Math.max(0,1-dist/radius);
+        var me=inf*influence*Math.sin(t*0.001 + x*0.01 + w.o);
+        var y=H/2 + Math.sin(x*w.f + t*0.002 + w.o)*w.amp + Math.sin(x*w.f*0.4 + t*0.003)*(w.amp*0.45) + me;
+        if(x===0)ctx.moveTo(x,y); else ctx.lineTo(x,y);
+      }
+      ctx.lineWidth=2.5; ctx.strokeStyle='rgba('+w.col+',1)'; ctx.globalAlpha=w.op; ctx.shadowBlur=32; ctx.shadowColor='rgba('+w.col+',1)'; ctx.stroke(); ctx.restore();
+    }
+    function frame(){ t+=1;
+      mouse.x+=(target.x-mouse.x)*smooth; mouse.y+=(target.y-mouse.y)*smooth;
+      var g=ctx.createLinearGradient(0,0,0,H); g.addColorStop(0,'#0b1a22'); g.addColorStop(1,'#0e2731'); ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+      ctx.globalAlpha=1; ctx.shadowBlur=0;
+      for(var i=0;i<waves.length;i++) drawWave(waves[i]);
+      raf=requestAnimationFrame(frame);
+    }
+    size();
+    var rt; window.addEventListener('resize', function(){ clearTimeout(rt); rt=setTimeout(size,150); });
+    if(!reduce){ sec.addEventListener('mousemove', function(e){ var r=sec.getBoundingClientRect(); target.x=e.clientX-r.left; target.y=e.clientY-r.top; }); sec.addEventListener('mouseleave', center); }
+    frame();
+  })();
+  (function(){
+    var el=document.getElementById('whWord'); if(!el) return;
+    function words(){ var l=(document.documentElement.lang||'es'); var a=el.getAttribute('data-'+l)||el.getAttribute('data-es')||''; return a.split(',').filter(Boolean); }
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var i=0, txt='', deleting=false;
+    el.textContent='';
+    function tick(){
+      var list=words(); if(!list.length) return;
+      var full=list[i % list.length];
+      if(reduce){ el.textContent=full; i++; return setTimeout(tick, 1800); }
+      if(!deleting){
+        txt=full.slice(0, txt.length+1); el.textContent=txt;
+        if(txt===full){ deleting=true; return setTimeout(tick, 1400); }
+        setTimeout(tick, 78);
+      } else {
+        txt=full.slice(0, txt.length-1); el.textContent=txt;
+        if(txt===''){ deleting=false; i++; return setTimeout(tick, 280); }
+        setTimeout(tick, 42);
+      }
+    }
+    setTimeout(tick, 500);
+  })();
+  (function(){
+    var rail=document.querySelector('.svctl__rail'); if(!rail) return;
+    var line=rail.querySelector('.svctl__line'); var fill=rail.querySelector('.svctl__fill');
+    var steps=Array.prototype.slice.call(rail.querySelectorAll('.svctl__step'));
+    var dots=rail.querySelectorAll('.svctl__dot');
+    function layout(){ if(!dots.length||!line) return; var rr=rail.getBoundingClientRect(); var f=dots[0].getBoundingClientRect(), l=dots[dots.length-1].getBoundingClientRect(); var fc=(f.top-rr.top)+f.height/2, lc=(l.top-rr.top)+l.height/2; line.style.top=fc+'px'; line.style.height=(lc-fc)+'px'; }
+    var ticking=false;
+    function frame(){ ticking=false; if(line && !line.style.height) layout();
+      var lr=line.getBoundingClientRect(); var vh=window.innerHeight||document.documentElement.clientHeight; var trigger=vh*0.5;
+      var prog=(trigger-lr.top)/lr.height; prog=Math.max(0,Math.min(1,prog));
+      if(fill) fill.style.height=(prog*100).toFixed(1)+'%';
+      steps.forEach(function(s){ var d=s.querySelector('.svctl__dot'); var dr=d.getBoundingClientRect(); if(dr.top+dr.height/2<trigger) s.classList.add('is-lit'); else s.classList.remove('is-lit'); });
+    }
+    function onScroll(){ if(!ticking){ requestAnimationFrame(frame); ticking=true; } }
+    window.addEventListener('scroll', onScroll, {passive:true}); window.addEventListener('resize', function(){ layout(); onScroll(); }); layout(); frame();
+  })();
+
+</script>
+</body>
+</html>
