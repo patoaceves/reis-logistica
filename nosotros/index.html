@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Blog | REIS Logística</title>
-<meta name="description" content="Análisis y notas sobre comercio exterior, almacenamiento, warehousing y cadenas de suministro en México." />
+<title>Nosotros | REIS Logística</title>
+<meta name="description" content="Empresa mexicana de logística 3PL y almacenamiento industrial con más de 15 años de experiencia, 350 colaboradores y 140,000 m² en 10 bodegas. Conoce a REIS Logística." />
 <meta name="theme-color" content="#0b1a22" />
 <meta name="color-scheme" content="light" />
 <link rel="icon" type="image/png" href="/assets/img/isotipo.png" />
@@ -12,10 +12,10 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Blog | REIS Logística" />
+<meta property="og:title" content="Nosotros | REIS Logística" />
 <meta property="og:description" content="+140,000 m² de almacenamiento industrial Clase A en México y El Paso, TX. Logística 3PL, IMMEX y comercio exterior bajo un solo aliado estratégico." />
 <meta property="og:image" content="/assets/img/about-facility.jpg" />
-<meta property="og:url" content="https://www.reislogistica.com/blog" />
+<meta property="og:url" content="https://www.reislogistica.com/nosotros" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -180,10 +180,11 @@
   /* Inline section link (editorial arrow link) */
   .section-cta {
     display: inline-flex; align-items: center; gap: 10px;
-    font-weight: 700; font-size: 15px; color: var(--green-deep);
-    transition: color .2s var(--ease);
+    font-weight: 700; font-size: 16.5px; color: #fff; background: var(--green);
+    padding: 15px 30px; border: 1.5px solid var(--green); border-radius: 10px;
+    transition: background .2s var(--ease), color .2s var(--ease), box-shadow .2s var(--ease);
   }
-  .section-cta:hover { color: var(--green-bright); }
+  .section-cta:hover { background: var(--green-deep); border-color: var(--green-deep); color: #fff; box-shadow: var(--shadow-md); }
 
   /* ============================================================
      NAV
@@ -595,90 +596,79 @@
     .herox__scrim { opacity: 1 !important; } .herox__intro { opacity: 0 !important; }
     .herox__content { opacity: 1 !important; transform: none !important; pointer-events: auto !important; }
   }
-  
-  /* ============================ BLOG ============================ */
-  .blog-hero { background: var(--bg-alt); border-bottom: 1px solid var(--line); padding: 138px 0 56px; }
-  .blog-hero h1 { font-size: clamp(36px,4.6vw,58px); font-weight: 700; letter-spacing: -.024em; color: var(--ink); margin: 16px 0 16px; line-height: 1.04; }
-  .blog-hero .blog-rot { display: inline-flex; align-items: baseline; }
-  .blog-word { color: var(--green-deep); font-style: normal; }
-  .blog-caret { display: inline-block; width: 3px; height: .9em; margin-left: 6px; background: var(--green); transform: translateY(.06em); animation: blogBlink 1s steps(1) infinite; }
-  @keyframes blogBlink { 0%,50% { opacity: 1; } 50.01%,100% { opacity: 0; } }
-  .blog-hero p { color: var(--ink-mute); font-size: 18px; line-height: 1.6; max-width: 600px; }
+    .whero { position: relative; min-height: 92vh; display: flex; align-items: center; justify-content: center; overflow: hidden; isolation: isolate; padding: 150px 0 90px; background: var(--bg-dark); }
+  .whero__canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; display: block; }
+  .whero::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 72% 56% at 50% 48%, rgba(11,26,34,.5) 0%, transparent 72%); }
+  .whero__content { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; padding: 0 24px; text-align: center; color: #fff; }
+  .whero__content .eyebrow { justify-content: center; color: #d8f3dd; }
+  .whero__content .eyebrow::before { background: var(--green-2); }
+  .whero h1 { font-size: clamp(38px,5.4vw,68px); line-height: 1.1; letter-spacing: -.026em; font-weight: 700; margin: 18px auto 24px; color: rgba(255,255,255,.82); }
+  .whero__rot { display: inline-flex; align-items: center; justify-content: center; min-height: 1.12em; }
+  .whero__word { color: rgba(255,255,255,.82); }
+  .whero__caret { display: inline-block; width: 3px; height: .96em; margin-left: 7px; border-radius: 2px; background: var(--green-bright); box-shadow: 0 0 10px rgba(76,200,89,.7); animation: whBlink 1.05s steps(1) infinite; }
+  @keyframes whBlink { 0%,50% { opacity: 1; } 50.01%,100% { opacity: 0; } }
+  .whero h1 .accent { background: none; -webkit-text-fill-color: rgba(255,255,255,.82); color: rgba(255,255,255,.82); font-style: normal; }
+  .whero__sub { font-size: clamp(16px,1.5vw,20px); line-height: 1.6; color: rgba(255,255,255,.82); max-width: 620px; margin: 0 auto 32px; }
+  .whero__actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .svcsec2 { padding: 56px 0; background: var(--bg); overflow: hidden; position: relative; }
+  .svcsec2::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(11,26,34,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(11,26,34,.05) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse 82% 92% at 50% 50%, #000 42%, transparent 92%); mask-image: radial-gradient(ellipse 82% 92% at 50% 50%, #000 42%, transparent 92%); }
+  .svcsec2 > .container, .svcsec2 > .svcmq { position: relative; z-index: 1; }
+  .svcsec2__head { max-width: 720px; margin: 0 auto 28px; text-align: center; }
+  .svcsec2__head .eyebrow { justify-content: center; }
+  .svcsec2__head h2 { font-size: clamp(28px,3.6vw,44px); font-weight: 700; letter-spacing: -.02em; color: var(--ink); margin-top: 12px; }
+  .svcsec2__head h2 .accent { color: var(--green-deep); font-style: normal; }
+  .svcmq { width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  .svcmq + .svcmq { margin-top: 18px; }
+  .svcmq__track { display: flex; gap: 18px; width: max-content; animation: svcmqScroll 38s linear infinite; }
+  .svcmq--rev .svcmq__track { animation-direction: reverse; animation-duration: 46s; }
+  .svcmq:hover .svcmq__track { animation-play-state: paused; }
+  @keyframes svcmqScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .svcchip { flex: 0 0 auto; display: flex; align-items: center; gap: 14px; padding: 20px 28px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; transition: border-color .2s var(--ease), transform .2s var(--ease), box-shadow .2s; }
+  .svcchip:hover { border-color: var(--green); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .svcchip__icon { width: 42px; height: 42px; min-width: 42px; color: var(--green-deep); background: rgba(46,167,58,.08); border: 1px solid rgba(46,167,58,.18); border-radius: 10px; display: flex; align-items: center; justify-content: center; padding: 9px; }
+  .svcchip__icon svg { width: 100%; height: 100%; }
+  .svcchip__name { font-size: 18px; font-weight: 700; color: var(--ink); letter-spacing: -.005em; white-space: nowrap; }
 
-  .blog-sec { padding: 52px 0 100px; background: var(--bg); }
-  .blog-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 38px; }
-  .blog-search { display: flex; align-items: center; gap: 10px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 10px; padding: 11px 16px; flex: 1 1 260px; max-width: 360px; transition: border-color .2s var(--ease); }
-  .blog-search:focus-within { border-color: var(--green); }
-  .blog-search svg { width: 18px; height: 18px; color: var(--ink-dim); flex-shrink: 0; }
-  .blog-search input { border: 0; background: transparent; outline: 0; width: 100%; font-family: inherit; font-size: 15px; color: var(--ink); }
-  .blog-search input::placeholder { color: var(--ink-dim); }
-  .blog-filters { display: flex; flex-wrap: wrap; gap: 8px; }
-  .blog-filter { padding: 9px 15px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg-card); color: var(--ink-soft); font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: all .2s var(--ease); }
-  .blog-filter:hover { border-color: var(--green); color: var(--green-deep); }
-  .blog-filter.is-active { background: var(--green); border-color: var(--green); color: #fff; }
+  /* --- nosotros specific --- */
+  .section-head--center { text-align: center; max-width: 720px; margin-left: auto; margin-right: auto; }
+  .nos-h2 { font-size: clamp(32px, 3.6vw, 48px); font-weight: 700; letter-spacing: -.018em; line-height: 1.08; margin: 14px 0 22px; color: var(--ink); }
 
-  /* Featured = latest, DARK appearance */
-  .blog-featured { display: grid; grid-template-columns: 1.1fr 1fr; background: var(--bg-dark); border: 1px solid var(--bg-dark-2); border-radius: 18px; overflow: hidden; margin-bottom: 46px; transition: border-color .25s var(--ease), box-shadow .25s var(--ease), transform .25s var(--ease); }
-  .blog-featured:hover { border-color: var(--green); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
-  .blog-featured__media { position: relative; min-height: 340px; overflow: hidden; background: var(--bg-dark-2); }
-  .blog-featured__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
-  .blog-featured:hover .blog-featured__media img { transform: scale(1.04); }
-  .blog-featured__tag { position: absolute; top: 18px; left: 18px; background: var(--green); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; padding: 6px 13px; border-radius: 6px; }
-  .blog-featured__body { padding: 42px 44px; display: flex; flex-direction: column; justify-content: center; }
-  .blog-featured__kicker { font-family: var(--font-eyebrow); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green-2); margin-bottom: 16px; }
-  .blog-featured__title { font-size: clamp(23px,2.3vw,31px); font-weight: 700; letter-spacing: -.02em; color: #fff; line-height: 1.16; margin-bottom: 16px; transition: color .2s var(--ease); }
-  .blog-featured:hover .blog-featured__title { color: var(--green-bright); }
-  .blog-featured__excerpt { color: rgba(255,255,255,.72); font-size: 16px; line-height: 1.6; margin-bottom: 22px; }
-  .blog-featured__meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: rgba(255,255,255,.55); }
-  .blog-featured__meta .dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.4); }
-  @media (max-width: 880px) { .blog-featured { grid-template-columns: 1fr; } .blog-featured__media { min-height: 230px; } .blog-featured__body { padding: 30px 26px; } }
+  .nos-intro { background: var(--bg); }
+  .nos-intro__grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+  .nos-intro__body p { color: var(--ink-soft); font-size: 17.5px; line-height: 1.8; margin-bottom: 20px; }
+  .nos-intro__body p strong { color: var(--ink); font-weight: 700; }
+  .nos-intro__media { position: relative; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/3; background: var(--bg-alt); }
+  .nos-intro__media img { width: 100%; height: 100%; object-fit: cover; }
+  .nos-intro__badge { position: absolute; left: 18px; bottom: 18px; background: rgba(11,26,34,.82); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: #fff; border-radius: 12px; padding: 12px 16px; font-size: 13px; line-height: 1.3; }
+  .nos-intro__badge b { display: block; font-size: 20px; color: var(--green-bright); }
+  @media (max-width: 880px) { .nos-intro__grid { grid-template-columns: 1fr; gap: 32px; } }
 
-  .blog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-  @media (max-width: 980px) { .blog-grid { grid-template-columns: repeat(2,1fr); } }
-  @media (max-width: 620px) { .blog-grid { grid-template-columns: 1fr; } }
-  .blog-card { display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; transition: border-color .25s var(--ease), box-shadow .25s var(--ease), transform .25s var(--ease); }
-  .blog-card:hover { border-color: var(--green); box-shadow: var(--shadow-md); transform: translateY(-3px); }
-  .blog-card__media { position: relative; aspect-ratio: 16/10; overflow: hidden; background: var(--bg-alt); }
-  .blog-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
-  .blog-card:hover .blog-card__media img { transform: scale(1.05); }
-  .blog-card__tag { position: absolute; top: 14px; left: 14px; background: rgba(11,26,34,.82); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; padding: 5px 10px; border-radius: 6px; }
-  .blog-card__body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
-  .blog-card__title { font-size: 18px; font-weight: 700; letter-spacing: -.012em; color: var(--ink); line-height: 1.28; margin-bottom: 10px; transition: color .2s var(--ease); }
-  .blog-card:hover .blog-card__title { color: var(--green-deep); }
-  .blog-card__excerpt { color: var(--ink-mute); font-size: 14px; line-height: 1.55; margin-bottom: 18px; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .blog-card__meta { display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: var(--ink-dim); margin-top: auto; }
-  .blog-card__meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--ink-dim); }
-  .blog-empty { text-align: center; color: var(--ink-mute); font-size: 17px; padding: 52px 0; }
+  .nos-ceo { background: var(--bg-dark-2); color: #fff; }
+  .nos-ceo__grid { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: center; }
+  .nos-ceo__photo { border-radius: 18px; overflow: hidden; aspect-ratio: 1/1; background: var(--bg-dark); box-shadow: 0 30px 80px -40px rgba(0,0,0,.7); }
+  .nos-ceo__photo img { width: 100%; height: 100%; object-fit: cover; }
+  .nos-ceo__quote { font-size: clamp(20px, 2.1vw, 27px); font-weight: 600; line-height: 1.42; letter-spacing: -.015em; color: #fff; margin-bottom: 22px; }
+  .nos-ceo__quote .accent { color: var(--green-bright); }
+  .nos-ceo__name { font-size: 18px; font-weight: 700; color: #fff; }
+  .nos-ceo__role { font-family: var(--font-eyebrow); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green-2); margin-top: 4px; }
+  @media (max-width: 760px) { .nos-ceo__grid { grid-template-columns: 1fr; gap: 28px; } .nos-ceo__photo { max-width: 240px; } }
 
-  /* ============================ POST PAGE ============================ */
-  .post-hero { background: var(--bg-alt); border-bottom: 1px solid var(--line); padding: 128px 0 50px; }
-  .post-breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-mute); margin-bottom: 18px; }
-  .post-breadcrumb a { color: var(--green-deep); font-weight: 600; }
-  .post-hero__cat { display: inline-block; font-family: var(--font-eyebrow); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green-deep); margin-bottom: 14px; }
-  .post-hero__title { font-size: clamp(27px,3.2vw,42px); font-weight: 700; letter-spacing: -.022em; color: var(--ink); line-height: 1.16; max-width: 26ch; margin-bottom: 18px; }
-  .post-meta { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--ink-mute); }
-  .post-meta__dot { width: 4px; height: 4px; border-radius: 50%; background: var(--ink-dim); }
-  .post-cover { max-width: 1000px; margin: -44px auto 0; padding: 0 24px; position: relative; z-index: 2; }
-  .post-cover__inner { border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 16/8; background: var(--bg-alt); }
-  .post-cover__inner img { width: 100%; height: 100%; object-fit: cover; }
-  .post-body { max-width: 720px; margin: 0 auto; padding: 54px 24px 0; }
-  .post-body p { color: var(--ink-soft); font-size: 17px; line-height: 1.78; margin-bottom: 22px; }
-  .post-body h2 { font-size: 25px; font-weight: 700; letter-spacing: -.02em; color: var(--ink); margin: 40px 0 14px; line-height: 1.22; }
-  .post-body h3 { font-size: 20px; font-weight: 700; letter-spacing: -.01em; color: var(--ink); margin: 30px 0 12px; }
-  .post-body ul { margin: 0 0 22px; padding: 0; list-style: none; display: grid; gap: 11px; }
-  .post-body li { position: relative; padding-left: 22px; color: var(--ink-soft); font-size: 16.5px; line-height: 1.6; }
-  .post-body li::before { content: ''; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; border-radius: 2px; background: var(--green); }
-  .post-body strong { color: var(--ink); font-weight: 700; }
-  .post-body em { font-style: italic; }
-  .post-fig { margin: 30px 0; border-radius: 14px; overflow: hidden; background: var(--bg-alt); }
-  .post-fig img { width: 100%; height: auto; display: block; }
-  .post-ref { color: var(--ink-mute); font-size: 14px; line-height: 1.6; font-style: italic; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 30px; }
-  .post-end { max-width: 720px; margin: 0 auto; padding: 40px 24px; }
-  .post-cta { background: var(--bg-dark); border-radius: 18px; padding: 38px; text-align: center; color: #fff; margin-bottom: 26px; }
-  .post-cta h3 { font-size: 24px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 22px; color: #fff; }
-  .post-back { display: inline-flex; align-items: center; gap: 8px; color: var(--green-deep); font-weight: 600; font-size: 15px; }
-  .post-back svg { width: 16px; height: 16px; }
-  .post-related { padding: 58px 0 100px; background: var(--bg); border-top: 1px solid var(--line); }
+  .nos-team { background: var(--bg); }
+  .nos-team__grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+  @media (max-width: 900px) { .nos-team__grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .nos-team__grid { grid-template-columns: 1fr; } }
+  .nos-member__photo { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 5/6; background: var(--bg-alt); margin-bottom: 14px; }
+  .nos-member__photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+  .nos-member:hover .nos-member__photo img { transform: scale(1.04); }
+  .nos-member__photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(11,26,34,.35) 100%); }
+  .nos-member h3 { font-size: 17px; font-weight: 700; color: var(--ink); letter-spacing: -.01em; }
+  .nos-member p { font-size: 13.5px; color: var(--ink-mute); margin-top: 3px; line-height: 1.4; }
+
+  .nos-cta { background: var(--bg-dark); color: #fff; }
+  .nos-cta__inner { text-align: center; max-width: 720px; margin: 0 auto; }
+  .nos-cta h2 { font-size: clamp(32px, 3.6vw, 48px); font-weight: 700; letter-spacing: -.02em; color: #fff; margin-bottom: 16px; }
+  .nos-cta h2 .accent { color: var(--green-bright); }
+  .nos-cta p { color: rgba(255,255,255,.74); font-size: 17px; line-height: 1.6; margin-bottom: 28px; }
 
   </style>
 </head><nav class="nav">
@@ -687,11 +677,11 @@
       <img src="/assets/img/reis-logo-blanco.png" alt="REIS Logística" />
     </a>
     <div class="nav-links">
-      <a href="/nosotros" data-i18n="nav.nosotros">Nosotros</a>
+      <a href="/nosotros" data-i18n="nav.nosotros" aria-current="page">Nosotros</a>
       <a href="/servicios" data-i18n="nav.servicios">Servicios</a>
       <a href="/#ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
       <a href="/#clientes" data-i18n="nav.clientes">Clientes</a>
-      <a href="/blog" data-i18n="nav.blog" aria-current="page">Blog</a>
+      <a href="/blog" data-i18n="nav.blog">Blog</a>
       <a href="/#contacto" data-i18n="nav.contacto">Contacto</a>
     </div>
     <div class="nav-cta">
@@ -713,36 +703,109 @@
   <button class="mobile-close" id="mobileClose" aria-label="Cerrar menú">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
   </button>
-  <a href="/nosotros" data-i18n="nav.nosotros">Nosotros</a>
+  <a href="/nosotros" data-i18n="nav.nosotros" aria-current="page">Nosotros</a>
   <a href="/servicios" data-i18n="nav.servicios">Servicios</a>
   <a href="/#ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
   <a href="/#clientes" data-i18n="nav.clientes">Clientes</a>
-  <a href="/blog" data-i18n="nav.blog" aria-current="page">Blog</a>
+  <a href="/blog" data-i18n="nav.blog">Blog</a>
   <a href="/#contacto" data-i18n="nav.contacto">Contacto</a>
   <a href="/#contacto" class="btn btn-primary on-dark"><span class="bl" data-i18n="nav.cotiza">Cotiza ahora</span></a>
 </div>
 <main id="main">
-<section class="blog-hero">
-  <div class="container">
-    <span class="eyebrow shape-triangle">Blog</span>
-    <h1>Ideas sobre<br><span class="blog-rot"><span class="blog-word" id="blogWord" data-es="log&iacute;stica,comercio exterior,warehousing,nearshoring" data-en="logistics,foreign trade,warehousing,nearshoring">log&iacute;stica</span><span class="blog-caret"></span></span></h1>
-    <p>An&aacute;lisis y notas sobre comercio exterior, almacenamiento y cadenas de suministro en M&eacute;xico.</p>
-  </div>
-</section>
-<section class="blog-sec">
-  <div class="container">
-    <div class="blog-controls">
-      <div class="blog-search">
-        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M14 14l4 4" stroke-linecap="round"/></svg>
-        <input type="search" id="blogSearch" placeholder="Buscar por palabra clave..." aria-label="Buscar en el blog" />
-      </div>
-      <div class="blog-filters" id="blogFilters" role="tablist"></div>
+
+<section class="whero">
+  <canvas class="whero__canvas" id="whCanvas" aria-hidden="true"></canvas>
+  <div class="whero__content reveal">
+    <span class="eyebrow on-image" data-i18n="nos.eyebrow">Nosotros</span>
+    <h1>
+      <span data-i18n="nos.h1lead">M&aacute;s de 15 a&ntilde;os moviendo</span><br>
+      <span class="whero__rot"><span class="whero__word" id="whWord" data-es="tu log&iacute;stica,tu inventario,tu operaci&oacute;n,tu cadena" data-en="your logistics,your inventory,your operation,your supply chain">tu log&iacute;stica</span><span class="whero__caret" aria-hidden="true"></span></span>
+    </h1>
+    <p class="whero__sub" data-i18n="nos.sub">Empresa mexicana de log&iacute;stica 3PL y almacenamiento industrial, con presencia en el Baj&iacute;o y la frontera M&eacute;xico&ndash;Estados Unidos.</p>
+    <div class="whero__actions">
+      <a href="/#contacto" class="btn btn-primary on-dark"><span class="bl" data-i18n="nos.cta1">Recibe una cotizaci&oacute;n</span></a>
+      <a href="#equipo" class="btn btn-primary on-dark"><span class="bl" data-i18n="nos.cta2">Conoce al equipo</span></a>
     </div>
-    <a class="blog-featured" id="blogFeatured" href="#" style="display:none"></a>
-    <div class="blog-grid" id="blogGrid"></div>
-    <p class="blog-empty" id="blogEmpty" hidden>No encontramos publicaciones con ese criterio.</p>
   </div>
 </section>
+
+<section class="block nos-intro">
+  <div class="container">
+    <div class="nos-intro__grid">
+      <div class="nos-intro__body reveal">
+        <span class="eyebrow" data-i18n="nos.q.eyebrow">Qui&eacute;nes somos</span>
+        <h2 class="nos-h2" data-i18n="nos.q.h2">Un solo aliado para toda tu operaci&oacute;n.</h2>
+        <p data-i18n="nos.q.p1">Somos una empresa mexicana dedicada a la <strong>log&iacute;stica para terceros (3PL)</strong> y al <strong>almacenamiento industrial</strong> para el sector automotriz, electrodom&eacute;sticos, aeroespacial, y alimentos, con presencia en el <strong>baj&iacute;o</strong> y en el <strong>noreste de M&eacute;xico (frontera M&eacute;xico-USA)</strong>.</p>
+        <p data-i18n="nos.q.p2">Contamos con <strong>m&aacute;s de quince a&ntilde;os de experiencia</strong>, una plantilla laboral de <strong>m&aacute;s de 350 colaboradores</strong>, socios comerciales de clase mundial, y un espacio de almacenamiento de <strong>m&aacute;s de 140,000 metros cuadrados en 10 bodegas</strong> en M&eacute;xico (2025).</p>
+      </div>
+      <div class="nos-intro__media reveal">
+        <img src="https://static.wixstatic.com/media/b6d12f_a31de84dd3f0461bb2e14359b1d63ec1~mv2.jpeg/v1/fill/w_1200,h_860,al_c,q_85,enc_avif,quality_auto/b6d12f_a31de84dd3f0461bb2e14359b1d63ec1~mv2.jpeg" alt="Planta y almac&eacute;n de REIS Log&iacute;stica" loading="lazy" />
+        <div class="nos-intro__badge"><b>+140,000 m&sup2;</b>en 10 bodegas en M&eacute;xico</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kpi">
+  <div class="container">
+    <div class="kpi-grid">
+      <div class="kpi-item reveal"><div class="num"><span class="plus">+</span><span data-counter="15">0</span><span class="unit" data-i18n="kpi.years">a&ntilde;os</span></div><div class="lbl">de experiencia</div></div>
+      <div class="kpi-item reveal"><div class="num"><span class="plus">+</span><span data-counter="350">0</span></div><div class="lbl">colaboradores</div></div>
+      <div class="kpi-item reveal"><div class="num"><span class="plus">+</span><span data-counter="140000">0</span><span class="unit">m&sup2;</span></div><div class="lbl">de almacenamiento</div></div>
+      <div class="kpi-item reveal"><div class="num"><span data-counter="10">0</span></div><div class="lbl">bodegas en M&eacute;xico</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="svcsec2">
+  <div class="container">
+    <div class="section-head section-head--center reveal" style="margin-bottom:28px">
+      <span class="eyebrow" data-i18n="nos.sec.eyebrow">Sectores</span>
+      <h2 data-i18n="nos.sec.h2">Industrias que <span class="accent">atendemos.</span></h2>
+    </div>
+  </div>
+  <div class="svcmq" aria-hidden="true"><div class="svcmq__track"><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="5"/><path d="M20 6v3M20 31v3M6 20h3M31 20h3"/><path d="M11 11l2.2 2.2M26.8 26.8l2.2 2.2M29 11l-2.2 2.2M11 29l2.2-2.2"/></svg></span><span class="svcchip__name">Automotriz</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="26" height="30" rx="3"/><circle cx="20" cy="23" r="7"/><circle cx="20" cy="23" r="4"/><circle cx="11" cy="10" r="1.3" fill="currentColor"/><circle cx="16" cy="10" r="1.3" fill="currentColor"/><path d="M7 15h26"/></svg></span><span class="svcchip__name">Electrodom&eacute;sticos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5c-3.5 3-5.5 8-5.5 13v8h11v-8c0-5-2-10-5.5-13z"/><circle cx="20" cy="15" r="2.2"/><path d="M14.5 22l-4.5 6 4.5-1.5M25.5 22l4.5 6-4.5-1.5"/><path d="M17.5 27l2.5 6 2.5-6"/></svg></span><span class="svcchip__name">Aeroespacial</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c-2.5-2.5-7.5-2.5-10 1-2.5 4-1.5 11.5 2.5 15.5 2 2 4 2 5.5 1 .8.5 1.5.5 2 .5s1.2 0 2-.5c1.5 1 3.5 1 5.5-1 4-4 5-11.5 2.5-15.5-2.5-3.5-7.5-3.5-10-1z"/><path d="M20 13v-2"/><path d="M20 11c1.5-1.8 3.8-2.2 5.5-1-1 2.2-3.5 2.8-5.5 1z"/></svg></span><span class="svcchip__name">Alimentos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="5"/><path d="M20 6v3M20 31v3M6 20h3M31 20h3"/><path d="M11 11l2.2 2.2M26.8 26.8l2.2 2.2M29 11l-2.2 2.2M11 29l2.2-2.2"/></svg></span><span class="svcchip__name">Automotriz</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="26" height="30" rx="3"/><circle cx="20" cy="23" r="7"/><circle cx="20" cy="23" r="4"/><circle cx="11" cy="10" r="1.3" fill="currentColor"/><circle cx="16" cy="10" r="1.3" fill="currentColor"/><path d="M7 15h26"/></svg></span><span class="svcchip__name">Electrodom&eacute;sticos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5c-3.5 3-5.5 8-5.5 13v8h11v-8c0-5-2-10-5.5-13z"/><circle cx="20" cy="15" r="2.2"/><path d="M14.5 22l-4.5 6 4.5-1.5M25.5 22l4.5 6-4.5-1.5"/><path d="M17.5 27l2.5 6 2.5-6"/></svg></span><span class="svcchip__name">Aeroespacial</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c-2.5-2.5-7.5-2.5-10 1-2.5 4-1.5 11.5 2.5 15.5 2 2 4 2 5.5 1 .8.5 1.5.5 2 .5s1.2 0 2-.5c1.5 1 3.5 1 5.5-1 4-4 5-11.5 2.5-15.5-2.5-3.5-7.5-3.5-10-1z"/><path d="M20 13v-2"/><path d="M20 11c1.5-1.8 3.8-2.2 5.5-1-1 2.2-3.5 2.8-5.5 1z"/></svg></span><span class="svcchip__name">Alimentos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="5"/><path d="M20 6v3M20 31v3M6 20h3M31 20h3"/><path d="M11 11l2.2 2.2M26.8 26.8l2.2 2.2M29 11l-2.2 2.2M11 29l2.2-2.2"/></svg></span><span class="svcchip__name">Automotriz</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="26" height="30" rx="3"/><circle cx="20" cy="23" r="7"/><circle cx="20" cy="23" r="4"/><circle cx="11" cy="10" r="1.3" fill="currentColor"/><circle cx="16" cy="10" r="1.3" fill="currentColor"/><path d="M7 15h26"/></svg></span><span class="svcchip__name">Electrodom&eacute;sticos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5c-3.5 3-5.5 8-5.5 13v8h11v-8c0-5-2-10-5.5-13z"/><circle cx="20" cy="15" r="2.2"/><path d="M14.5 22l-4.5 6 4.5-1.5M25.5 22l4.5 6-4.5-1.5"/><path d="M17.5 27l2.5 6 2.5-6"/></svg></span><span class="svcchip__name">Aeroespacial</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c-2.5-2.5-7.5-2.5-10 1-2.5 4-1.5 11.5 2.5 15.5 2 2 4 2 5.5 1 .8.5 1.5.5 2 .5s1.2 0 2-.5c1.5 1 3.5 1 5.5-1 4-4 5-11.5 2.5-15.5-2.5-3.5-7.5-3.5-10-1z"/><path d="M20 13v-2"/><path d="M20 11c1.5-1.8 3.8-2.2 5.5-1-1 2.2-3.5 2.8-5.5 1z"/></svg></span><span class="svcchip__name">Alimentos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="5"/><path d="M20 6v3M20 31v3M6 20h3M31 20h3"/><path d="M11 11l2.2 2.2M26.8 26.8l2.2 2.2M29 11l-2.2 2.2M11 29l2.2-2.2"/></svg></span><span class="svcchip__name">Automotriz</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="26" height="30" rx="3"/><circle cx="20" cy="23" r="7"/><circle cx="20" cy="23" r="4"/><circle cx="11" cy="10" r="1.3" fill="currentColor"/><circle cx="16" cy="10" r="1.3" fill="currentColor"/><path d="M7 15h26"/></svg></span><span class="svcchip__name">Electrodom&eacute;sticos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5c-3.5 3-5.5 8-5.5 13v8h11v-8c0-5-2-10-5.5-13z"/><circle cx="20" cy="15" r="2.2"/><path d="M14.5 22l-4.5 6 4.5-1.5M25.5 22l4.5 6-4.5-1.5"/><path d="M17.5 27l2.5 6 2.5-6"/></svg></span><span class="svcchip__name">Aeroespacial</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c-2.5-2.5-7.5-2.5-10 1-2.5 4-1.5 11.5 2.5 15.5 2 2 4 2 5.5 1 .8.5 1.5.5 2 .5s1.2 0 2-.5c1.5 1 3.5 1 5.5-1 4-4 5-11.5 2.5-15.5-2.5-3.5-7.5-3.5-10-1z"/><path d="M20 13v-2"/><path d="M20 11c1.5-1.8 3.8-2.2 5.5-1-1 2.2-3.5 2.8-5.5 1z"/></svg></span><span class="svcchip__name">Alimentos</span></div></div></div>
+</section>
+
+<section class="block nos-ceo">
+  <div class="container">
+    <div class="nos-ceo__grid">
+      <div class="nos-ceo__photo reveal"><img src="https://static.wixstatic.com/media/78c590_695ca90bc4404f23ad3747c3c3f1f13b~mv2.jpg/v1/fill/w_560,h_620,al_c,q_85,enc_avif,quality_auto/78c590_695ca90bc4404f23ad3747c3c3f1f13b~mv2.jpg" alt="Jose Antonio Quiroga, Director General" loading="lazy" /></div>
+      <div class="reveal">
+        <span class="eyebrow" style="color:#d8f3dd" data-i18n="nos.ceo.eyebrow">Nuestro CEO</span>
+        <p class="nos-ceo__quote" style="margin-top:14px" data-i18n="nos.ceo.q">En REIS creemos en la <span class="accent">excelencia, innovaci&oacute;n y compromiso</span> con cada cliente. Nuestro prop&oacute;sito es construir soluciones que generen confianza y valor duradero. Gracias por ser parte de esta visi&oacute;n.</p>
+        <div class="nos-ceo__name">Jose Antonio Quiroga</div>
+        <div class="nos-ceo__role">Director General</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block nos-team" id="equipo">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="nos.team.eyebrow">Nuestro equipo</span>
+      <h2 data-i18n="nos.team.h2">La gente que <span class="accent">mueve REIS.</span></h2>
+    </div>
+    <div class="nos-team__grid">
+      <div class="nos-member reveal"><div class="nos-member__photo"><img src="https://static.wixstatic.com/media/78c590_b5b73f307e2e40aa92e112e1e033daef~mv2.jpeg/v1/crop/x_43,y_26,w_271,h_348/fill/w_520,h_580,al_c,q_85,enc_avif,quality_auto/78c590_b5b73f307e2e40aa92e112e1e033daef~mv2.jpeg" alt="Rafael Alvarado" loading="lazy" /></div><h3>Rafael Alvarado</h3><p>Gerente de Comercio Exterior</p></div>
+<div class="nos-member reveal"><div class="nos-member__photo"><img src="https://static.wixstatic.com/media/78c590_b20522fef7954ca99ff3581f7d48a206~mv2.jpeg/v1/crop/x_16,y_0,w_302,h_335/fill/w_520,h_580,al_c,q_85,enc_avif,quality_auto/78c590_b20522fef7954ca99ff3581f7d48a206~mv2.jpeg" alt="Juan Nava" loading="lazy" /></div><h3>Juan Nava</h3><p>Gerente de Operaciones &middot; Ciudad Ju&aacute;rez</p></div>
+<div class="nos-member reveal"><div class="nos-member__photo"><img src="https://static.wixstatic.com/media/78c590_4a8a44ff74c44325a8c93b27da453b79~mv2.jpeg/v1/fill/w_520,h_580,al_c,q_85,enc_avif,quality_auto/78c590_4a8a44ff74c44325a8c93b27da453b79~mv2.jpeg" alt="Mauricio Galindo" loading="lazy" /></div><h3>Mauricio Galindo</h3><p>Proyectos y Operaciones &middot; San Luis Potos&iacute;</p></div>
+<div class="nos-member reveal"><div class="nos-member__photo"><img src="https://static.wixstatic.com/media/78c590_1e989f1b4b1c4d87a14dfb29279c9f2e~mv2.png/v1/fill/w_520,h_580,al_c,q_85,enc_avif,quality_auto/78c590_1e989f1b4b1c4d87a14dfb29279c9f2e~mv2.png" alt="Roberto Trevi&ntilde;o" loading="lazy" /></div><h3>Roberto Trevi&ntilde;o</h3><p>Administraci&oacute;n y Finanzas</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block nos-cta">
+  <div class="container">
+    <div class="nos-cta__inner reveal">
+      <h2 data-i18n="nos.cta.h2">&iquest;Listo para mover tu <span class="accent">operaci&oacute;n</span>?</h2>
+      <p data-i18n="nos.cta.p">Cu&eacute;ntanos qu&eacute; necesitas y armamos una soluci&oacute;n a la medida de tu cadena de suministro.</p>
+      <a href="/#contacto" class="btn btn-primary on-dark"><span class="bl" data-i18n="nos.cta.btn">Recibe una cotizaci&oacute;n</span></a>
+    </div>
+  </div>
+</section>
+
 </main>
 <footer>
   <div class="container">
@@ -1222,54 +1285,66 @@
 </script>
   <script>
   (function(){
-    var el=document.getElementById('blogWord'); if(!el) return;
-    function words(){var lang=document.documentElement.lang||'es';return (el.getAttribute('data-'+lang)||el.getAttribute('data-es')).split(',');}
-    var i=0,txt='',del=false;
-    function tick(){
-      var ws=words(),full=ws[i%ws.length];
-      if(!del){txt=full.slice(0,txt.length+1);el.textContent=txt;if(txt===full){del=true;return setTimeout(tick,1400);}return setTimeout(tick,78);}
-      txt=full.slice(0,txt.length-1);el.textContent=txt;if(txt===''){del=false;i++;return setTimeout(tick,280);}return setTimeout(tick,42);
-    }
-    tick();
-  })();
-  </script>
-
-  <script src="/blog/posts.js"></script>
-  <script>
-  (function(){
-    var POSTS=(window.REIS_POSTS||[]).filter(function(p){return new Date(p.publishDate+'T00:00:00')<=new Date();})
-      .sort(function(a,b){return new Date(b.publishDate)-new Date(a.publishDate);});
-    var fmt=function(d){return new Date(d+'T00:00:00').toLocaleDateString('es-MX',{day:'2-digit',month:'short',year:'numeric'});};
-    var esc=function(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');};
-    var featuredEl=document.getElementById('blogFeatured'),gridEl=document.getElementById('blogGrid'),
-        emptyEl=document.getElementById('blogEmpty'),searchEl=document.getElementById('blogSearch'),
-        filtersEl=document.getElementById('blogFilters');
-    if(!gridEl) return;
-    var activeCat='Todos',query='';
-    var cats=['Todos'].concat(POSTS.map(function(p){return p.category;}).filter(function(v,i,a){return a.indexOf(v)===i;}));
-    filtersEl.innerHTML=cats.map(function(c,i){return '<button class="blog-filter'+(i===0?' is-active':'')+'" data-cat="'+esc(c)+'" role="tab">'+esc(c)+'</button>';}).join('');
-    filtersEl.addEventListener('click',function(e){var b=e.target.closest('.blog-filter');if(!b)return;activeCat=b.dataset.cat;
-      filtersEl.querySelectorAll('.blog-filter').forEach(function(x){x.classList.toggle('is-active',x===b);});render();});
-    if(searchEl)searchEl.addEventListener('input',function(){query=this.value.trim().toLowerCase();render();});
-    function match(p){var okC=activeCat==='Todos'||p.category===activeCat;
-      var okQ=!query||(p.title+' '+p.excerpt+' '+p.category).toLowerCase().indexOf(query)>=0;return okC&&okQ;}
-    function card(p){return '<a class="blog-card" href="/blog/'+p.slug+'/"><div class="blog-card__media"><img src="'+p.cover+'" alt="'+esc(p.title)+'" loading="lazy" /><span class="blog-card__tag">'+esc(p.category)+'</span></div><div class="blog-card__body"><h3 class="blog-card__title">'+esc(p.title)+'</h3><p class="blog-card__excerpt">'+esc(p.excerpt)+'</p><div class="blog-card__meta"><span>'+fmt(p.publishDate)+'</span><span class="dot"></span><span>'+p.readTime+' min</span></div></div></a>';}
-    function render(){
-      var list=POSTS.filter(match);
-      var showF=(activeCat==='Todos'&&!query&&list.length>0);
-      if(showF){
-        var f=list[0];
-        featuredEl.href='/blog/'+f.slug+'/';
-        featuredEl.innerHTML='<div class="blog-featured__media"><img src="'+f.cover+'" alt="'+esc(f.title)+'" /><span class="blog-featured__tag">Lo m\u00e1s reciente</span></div><div class="blog-featured__body"><div class="blog-featured__kicker">'+esc(f.category)+'</div><h2 class="blog-featured__title">'+esc(f.title)+'</h2><p class="blog-featured__excerpt">'+esc(f.excerpt)+'</p><div class="blog-featured__meta"><span>'+fmt(f.publishDate)+'</span><span class="dot"></span><span>'+f.readTime+' min de lectura</span></div></div>';
-        featuredEl.style.display='';
-        gridEl.innerHTML=list.slice(1).map(card).join('');
-      } else {
-        featuredEl.style.display='none';
-        gridEl.innerHTML=list.map(card).join('');
+    var c=document.getElementById('whCanvas'); if(!c) return;
+    var ctx=c.getContext('2d'); if(!ctx) return;
+    var sec=c.closest('.whero')||c.parentElement;
+    var W=0,H=0,t=0,raf;
+    var mouse={x:0,y:0}, target={x:0,y:0};
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var influence=reduce?12:74, radius=reduce?170:330, smooth=reduce?0.05:0.1;
+    var waves=[
+      {o:0,           amp:70, f:0.0030, col:'76,200,89',  op:0.45},
+      {o:Math.PI/2,   amp:92, f:0.0026, col:'55,174,64',  op:0.36},
+      {o:Math.PI,     amp:60, f:0.0034, col:'29,110,149', op:0.32},
+      {o:Math.PI*1.5, amp:82, f:0.0022, col:'210,243,221',op:0.22},
+      {o:Math.PI*2,   amp:55, f:0.0040, col:'255,255,255',op:0.18}
+    ];
+    function size(){ var r=sec.getBoundingClientRect(); W=Math.max(1,Math.round(r.width)); H=Math.max(1,Math.round(r.height)); var dpr=Math.min(window.devicePixelRatio||1,2); c.width=W*dpr; c.height=H*dpr; c.style.width=W+'px'; c.style.height=H+'px'; ctx.setTransform(dpr,0,0,dpr,0,0); center(); }
+    function center(){ mouse={x:W/2,y:H/2}; target={x:W/2,y:H/2}; }
+    function drawWave(w){
+      ctx.save(); ctx.beginPath();
+      for(var x=0;x<=W;x+=4){
+        var dx=x-mouse.x, dy=H/2-mouse.y, dist=Math.sqrt(dx*dx+dy*dy);
+        var inf=Math.max(0,1-dist/radius);
+        var me=inf*influence*Math.sin(t*0.001 + x*0.01 + w.o);
+        var y=H/2 + Math.sin(x*w.f + t*0.002 + w.o)*w.amp + Math.sin(x*w.f*0.4 + t*0.003)*(w.amp*0.45) + me;
+        if(x===0)ctx.moveTo(x,y); else ctx.lineTo(x,y);
       }
-      emptyEl.hidden=list.length>0;
+      ctx.lineWidth=2.5; ctx.strokeStyle='rgba('+w.col+',1)'; ctx.globalAlpha=w.op; ctx.shadowBlur=32; ctx.shadowColor='rgba('+w.col+',1)'; ctx.stroke(); ctx.restore();
     }
-    render();
+    function frame(){ t+=1;
+      mouse.x+=(target.x-mouse.x)*smooth; mouse.y+=(target.y-mouse.y)*smooth;
+      var g=ctx.createLinearGradient(0,0,0,H); g.addColorStop(0,'#0b1a22'); g.addColorStop(1,'#0e2731'); ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+      ctx.globalAlpha=1; ctx.shadowBlur=0;
+      for(var i=0;i<waves.length;i++) drawWave(waves[i]);
+      raf=requestAnimationFrame(frame);
+    }
+    size();
+    var rt; window.addEventListener('resize', function(){ clearTimeout(rt); rt=setTimeout(size,150); });
+    if(!reduce){ sec.addEventListener('mousemove', function(e){ var r=sec.getBoundingClientRect(); target.x=e.clientX-r.left; target.y=e.clientY-r.top; }); sec.addEventListener('mouseleave', center); }
+    frame();
+  })();
+  (function(){
+    var el=document.getElementById('whWord'); if(!el) return;
+    function words(){ var l=(document.documentElement.lang||'es'); var a=el.getAttribute('data-'+l)||el.getAttribute('data-es')||''; return a.split(',').filter(Boolean); }
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var i=0, txt='', deleting=false;
+    el.textContent='';
+    function tick(){
+      var list=words(); if(!list.length) return;
+      var full=list[i % list.length];
+      if(reduce){ el.textContent=full; i++; return setTimeout(tick, 1800); }
+      if(!deleting){
+        txt=full.slice(0, txt.length+1); el.textContent=txt;
+        if(txt===full){ deleting=true; return setTimeout(tick, 1400); }
+        setTimeout(tick, 78);
+      } else {
+        txt=full.slice(0, txt.length-1); el.textContent=txt;
+        if(txt===''){ deleting=false; i++; return setTimeout(tick, 280); }
+        setTimeout(tick, 42);
+      }
+    }
+    setTimeout(tick, 500);
   })();
   </script>
 

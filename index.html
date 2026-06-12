@@ -180,10 +180,11 @@
   /* Inline section link (editorial arrow link) */
   .section-cta {
     display: inline-flex; align-items: center; gap: 10px;
-    font-weight: 700; font-size: 15px; color: var(--green-deep);
-    transition: color .2s var(--ease);
+    font-weight: 700; font-size: 16.5px; color: #fff; background: var(--green);
+    padding: 15px 30px; border: 1.5px solid var(--green); border-radius: 10px;
+    transition: background .2s var(--ease), color .2s var(--ease), box-shadow .2s var(--ease);
   }
-  .section-cta:hover { color: var(--green-bright); }
+  .section-cta:hover { background: var(--green-deep); border-color: var(--green-deep); color: #fff; box-shadow: var(--shadow-md); }
 
   /* ============================================================
      NAV
@@ -608,7 +609,7 @@
       <img src="/assets/img/reis-logo-blanco.png" alt="REIS Logística" />
     </a>
     <div class="nav-links">
-      <a href="#nosotros" data-i18n="nav.nosotros">Nosotros</a>
+      <a href="/nosotros" data-i18n="nav.nosotros">Nosotros</a>
       <a href="/servicios" data-i18n="nav.servicios">Servicios</a>
       <a href="#ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
       <a href="#clientes" data-i18n="nav.clientes">Clientes</a>
@@ -634,7 +635,7 @@
   <button class="mobile-close" id="mobileClose" aria-label="Cerrar menú">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
   </button>
-  <a href="#nosotros" data-i18n="nav.nosotros">Nosotros</a>
+  <a href="/nosotros" data-i18n="nav.nosotros">Nosotros</a>
   <a href="/servicios" data-i18n="nav.servicios">Servicios</a>
   <a href="#ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
   <a href="#clientes" data-i18n="nav.clientes">Clientes</a>
