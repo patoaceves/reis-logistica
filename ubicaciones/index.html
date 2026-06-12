@@ -281,7 +281,8 @@
   /* ============================================================
      KPI BAR
      ============================================================ */
-  .kpi { background: #06121a; padding: 0 0 18px; position: relative; }
+  .kpi { background: radial-gradient(125% 125% at 15% 0%, #1a4456 0%, #123444 36%, #0a2230 68%, #07131b 100%); padding: 42px 0 34px; position: relative; overflow: hidden; isolation: isolate; }
+  .kpi::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(60% 72% at 86% 14%, rgba(46,167,58,.18), transparent 64%); }
   .kpi::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 780px 200px at 50% 6%, rgba(46,167,58,.13), transparent 70%); pointer-events: none; }
   .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; z-index: 1; padding-top: 2px; }
   .kpi-item { padding: 0 20px; position: relative; }
@@ -670,7 +671,7 @@
     </div>
     <div class="nav-cta">
       <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma / Switch language">
-        <span class="lang-flag is-active" data-lang="es" title="Espa&ntilde;ol"><svg viewBox="0 0 24 16" aria-hidden="true"><rect width="8" height="16" fill="#006847"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#CE1126"/></svg></span>
+        <span class="lang-flag is-active" data-lang="es" title="Espa&ntilde;ol"><svg viewBox="0 0 24 16" aria-hidden="true"><rect width="8" height="16" fill="#006847"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#CE1126"/><circle cx="12" cy="8" r="2.1" fill="#6b4a2b"/></svg></span>
         <span class="lang-flag" data-lang="en" title="English"><svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><g fill="#B22234"><rect width="24" height="1.85"/><rect y="3.7" width="24" height="1.85"/><rect y="7.4" width="24" height="1.85"/><rect y="11.1" width="24" height="1.85"/><rect y="14.8" width="24" height="1.2"/></g><rect width="10" height="8.6" fill="#3C3B6E"/></svg></span>
       </button>
       <a href="/#contacto" class="btn btn-primary on-dark nav-cta-btn"><span class="bl" data-i18n="nav.cotiza">Cotiza ahora</span></a>
