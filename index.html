@@ -283,15 +283,15 @@
   /* ============================================================
      KPI BAR
      ============================================================ */
-  .kpi { background: #06121a; padding: 0 0 34px; position: relative; }
+  .kpi { background: #06121a; padding: 0 0 18px; position: relative; }
   .kpi::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 780px 200px at 50% 6%, rgba(46,167,58,.13), transparent 70%); pointer-events: none; }
-  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; z-index: 1; padding-top: 8px; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; z-index: 1; padding-top: 2px; }
   .kpi-item { padding: 0 20px; position: relative; }
   .kpi-item + .kpi-item::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: rgba(255,255,255,.08); }
   .kpi-item .num { font-size: clamp(38px, 4.8vw, 60px); font-weight: 700; line-height: 1; letter-spacing: -.01em; color: transparent; -webkit-text-stroke: 1.4px rgba(255,255,255,.92); }
   .kpi-item .num .plus { color: var(--green-2); -webkit-text-stroke: 0; font-weight: 600; margin-right: 2px; }
   .kpi-item .num .unit { font-size: .40em; color: var(--on-dark-mute); -webkit-text-stroke: 0; margin-left: 5px; font-weight: 600; }
-  .kpi-item .lbl { font-size: 14px; font-weight: 500; color: var(--on-dark-mute); margin-top: 10px; }
+  .kpi-item .lbl { font-size: 14px; font-weight: 500; color: var(--on-dark-mute); margin-top: 5px; }
   @media (max-width: 820px) { .kpi-item + .kpi-item:nth-child(odd)::before { display: none; } }
   @media (max-width: 820px) { .kpi-grid { grid-template-columns: 1fr 1fr; gap: 28px; } }
 
@@ -569,10 +569,11 @@
     .reveal { opacity: 1; transform: none; }
   }
   /* ===== Scroll-expansion hero ===== */
-  .herox { position: relative; height: 220vh; background: var(--bg-dark); }
-  .herox__sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+  .herox { position: relative; height: 220vh; background: radial-gradient(125% 125% at 15% 0%, #1a4456 0%, #123444 36%, #0a2230 68%, #07131b 100%); }
+  .herox__sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; background: radial-gradient(125% 125% at 15% 0%, #1a4456 0%, #123444 36%, #0a2230 68%, #07131b 100%); }
+  .herox__sticky::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(55% 60% at 88% 16%, rgba(46,167,58,.16), transparent 66%); }
   .herox__topscrim { position: absolute; top: 0; left: 0; right: 0; height: 140px; z-index: 5; background: linear-gradient(180deg, rgba(6,18,26,.6), transparent); pointer-events: none; }
-  .herox__media { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: var(--mw, 62vw); height: var(--mh, 66vh); border-radius: var(--mr, 20px); overflow: hidden; box-shadow: 0 40px 120px -50px rgba(0,0,0,.7); will-change: width, height; }
+  .herox__media { z-index: 1; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: var(--mw, 62vw); height: var(--mh, 66vh); border-radius: var(--mr, 20px); overflow: hidden; box-shadow: 0 40px 120px -50px rgba(0,0,0,.7); will-change: width, height; }
   .herox__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .herox__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,18,26,.08) 0%, rgba(6,18,26,.42) 60%, rgba(6,18,26,.82) 100%); opacity: var(--scrim, .35); }
   .herox__intro { position: absolute; z-index: 4; top: 50%; left: 50%; transform: translate(-50%, calc(-50% + var(--introY, 0px))); width: min(900px, 90vw); text-align: center; color: #fff; opacity: var(--introOp, 1); pointer-events: none; }
@@ -608,7 +609,7 @@
     </a>
     <div class="nav-links">
       <a href="#nosotros" data-i18n="nav.nosotros">Nosotros</a>
-      <a href="#servicios" data-i18n="nav.servicios">Servicios</a>
+      <a href="/servicios" data-i18n="nav.servicios">Servicios</a>
       <a href="#ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
       <a href="#clientes" data-i18n="nav.clientes">Clientes</a>
       <a href="/blog" data-i18n="nav.blog">Blog</a>
@@ -634,7 +635,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
   </button>
   <a href="#nosotros" data-i18n="nav.nosotros">Nosotros</a>
-  <a href="#servicios" data-i18n="nav.servicios">Servicios</a>
+  <a href="/servicios" data-i18n="nav.servicios">Servicios</a>
   <a href="#ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
   <a href="#clientes" data-i18n="nav.clientes">Clientes</a>
   <a href="/blog" data-i18n="nav.blog">Blog</a>
@@ -664,7 +665,7 @@
       <p class="hero-sub" data-i18n="hero.sub">Almacenamiento industrial en México y Estados Unidos. Logística 3PL, IMMEX y comercio exterior bajo un solo aliado estratégico.</p>
       <div class="hero-actions">
         <a href="#contacto" class="btn btn-primary on-dark"><span class="bl" data-i18n="hero.cta1">Cotiza ahora</span></a>
-        <a href="#servicios" class="btn btn-primary on-dark"><span class="bl" data-i18n="hero.cta2">Ver servicios</span></a>
+        <a href="/servicios" class="btn btn-primary on-dark"><span class="bl" data-i18n="hero.cta2">Ver servicios</span></a>
       </div>
     </div>
   </div>

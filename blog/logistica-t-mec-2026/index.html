@@ -255,7 +255,7 @@
   .hero {
     position: relative; min-height: 80vh; min-height: 80svh;
     display: flex; align-items: center; overflow: hidden; isolation: isolate;
-    padding: 108px 0 38px; background: #07131b;
+    padding: 108px 0 38px; background: #0c3b2a;
   }
   .hero__bg { position: absolute; inset: 0; z-index: 0; }
   .hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
@@ -263,8 +263,8 @@
   .hero__overlay {
     position: absolute; inset: 0; z-index: 1; pointer-events: none;
     background:
-      linear-gradient(180deg, transparent 60%, rgba(6,18,26,.4) 82%, #06121a 100%),
-      linear-gradient(95deg, rgba(5,12,18,.93) 0%, rgba(6,16,22,.78) 38%, rgba(6,16,22,.46) 70%, rgba(6,16,22,.3) 100%);
+      linear-gradient(180deg, transparent 48%, rgba(9,52,36,.6) 80%, #06121a 100%),
+      linear-gradient(100deg, rgba(9,52,36,.96) 0%, rgba(14,92,62,.9) 42%, rgba(22,124,84,.74) 74%, rgba(33,150,100,.56) 100%);
   }
   .hero__content { position: relative; z-index: 2; max-width: 660px; color: #fff; }
   .hero__content .eyebrow { color: #d8f3dd; }
@@ -283,15 +283,15 @@
   /* ============================================================
      KPI BAR
      ============================================================ */
-  .kpi { background: #06121a; padding: 0 0 34px; position: relative; }
+  .kpi { background: #06121a; padding: 0 0 18px; position: relative; }
   .kpi::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 780px 200px at 50% 6%, rgba(46,167,58,.13), transparent 70%); pointer-events: none; }
-  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; z-index: 1; padding-top: 8px; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; z-index: 1; padding-top: 2px; }
   .kpi-item { padding: 0 20px; position: relative; }
   .kpi-item + .kpi-item::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: rgba(255,255,255,.08); }
   .kpi-item .num { font-size: clamp(38px, 4.8vw, 60px); font-weight: 700; line-height: 1; letter-spacing: -.01em; color: transparent; -webkit-text-stroke: 1.4px rgba(255,255,255,.92); }
   .kpi-item .num .plus { color: var(--green-2); -webkit-text-stroke: 0; font-weight: 600; margin-right: 2px; }
   .kpi-item .num .unit { font-size: .40em; color: var(--on-dark-mute); -webkit-text-stroke: 0; margin-left: 5px; font-weight: 600; }
-  .kpi-item .lbl { font-size: 14px; font-weight: 500; color: var(--on-dark-mute); margin-top: 10px; }
+  .kpi-item .lbl { font-size: 14px; font-weight: 500; color: var(--on-dark-mute); margin-top: 5px; }
   @media (max-width: 820px) { .kpi-item + .kpi-item:nth-child(odd)::before { display: none; } }
   @media (max-width: 820px) { .kpi-grid { grid-template-columns: 1fr 1fr; gap: 28px; } }
 
@@ -687,7 +687,7 @@
     </a>
     <div class="nav-links">
       <a href="/#nosotros" data-i18n="nav.nosotros">Nosotros</a>
-      <a href="/#servicios" data-i18n="nav.servicios">Servicios</a>
+      <a href="/servicios" data-i18n="nav.servicios">Servicios</a>
       <a href="/#ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
       <a href="/#clientes" data-i18n="nav.clientes">Clientes</a>
       <a href="/blog" data-i18n="nav.blog" aria-current="page">Blog</a>
@@ -713,7 +713,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
   </button>
   <a href="/#nosotros" data-i18n="nav.nosotros">Nosotros</a>
-  <a href="/#servicios" data-i18n="nav.servicios">Servicios</a>
+  <a href="/servicios" data-i18n="nav.servicios">Servicios</a>
   <a href="/#ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
   <a href="/#clientes" data-i18n="nav.clientes">Clientes</a>
   <a href="/blog" data-i18n="nav.blog" aria-current="page">Blog</a>
@@ -749,7 +749,7 @@
 <h2>Nearshoring: oportunidad con mayores exigencias</h2>
 <p>El nearshoring ha sido uno de los principales motores de crecimiento para México en los últimos años. La relocalización de cadenas de suministro hacia Norteamérica ha incrementado el interés de empresas internacionales por establecer operaciones en el país, especialmente en zonas industriales conectadas con Estados Unidos.</p>
 <p>Sin embargo, el nearshoring no es una ventaja automática. Para aprovecharlo, México necesita demostrar que puede ofrecer mucho más que cercanía geográfica. Las empresas requieren infraestructura, seguridad operativa, capacidad de almacenamiento, servicios de comercio exterior, transporte eficiente y proveedores logísticos capaces de operar bajo estándares internacionales.</p>
-<figure class="post-fig"><img src="https://static.wixstatic.com/media/bb3c90_96df677f32b8416283547597971ce323~mv2.png/v1/fit/w_1100,q_90,enc_avif,quality_auto/bb3c90_96df677f32b8416283547597971ce323~mv2.png" alt="Patio portuario con contenedores de carga y grúas industriales para operaciones de comercio exterior y logística internacional." loading="lazy" /></figure>
+<figure class="post-fig"><img src="https://static.wixstatic.com/media/bb3c90_96df677f32b8416283547597971ce323~mv2.png/v1/fit/w_1100,h_1100,al_c,q_88,enc_avif,quality_auto/bb3c90_96df677f32b8416283547597971ce323~mv2.png" alt="Patio portuario con contenedores de carga y grúas industriales para operaciones de comercio exterior y logística internacional." loading="lazy" /></figure>
 <p>La revisión del T-MEC puede fortalecer esta tendencia si México logra posicionarse como un socio confiable dentro de la cadena regional. Pero también puede generar presión adicional si aumentan los requisitos de cumplimiento, trazabilidad o contenido regional.</p>
 <p>Por ello, las empresas que busquen aprovechar el nearshoring deberán revisar si sus operaciones actuales están preparadas para escalar. Esto incluye evaluar la capacidad de sus almacenes, la eficiencia de sus procesos de inventario, la coordinación con proveedores, la documentación aduanal y la flexibilidad para adaptarse a cambios en la demanda.</p>
 <h2>Infraestructura logística: una condición para competir</h2>
@@ -763,7 +763,7 @@
 <p>Ante una revisión del T-MEC que podría elevar la exigencia en reglas de origen y cumplimiento regional, la correcta administración de operaciones IMMEX será todavía más importante.</p>
 <p>Un manejo adecuado puede generar eficiencias fiscales, reducir costos y facilitar operaciones internacionales. Un manejo deficiente, en cambio, puede provocar riesgos regulatorios, sanciones, retrasos o pérdida de beneficios.</p>
 <p>Por ello, las empresas que dependen de importaciones temporales, manufactura de exportación o flujos transfronterizos deben revisar desde ahora sus procesos de comercio exterior.</p>
-<figure class="post-fig"><img src="https://static.wixstatic.com/media/bb3c90_0df436f4d89c44fbaf4052af91bbfa52~mv2.png/v1/fit/w_1100,q_90,enc_avif,quality_auto/bb3c90_0df436f4d89c44fbaf4052af91bbfa52~mv2.png" alt="Camión de carga circulando junto a infraestructura fronteriza para transporte terrestre y logística transfronteriza." loading="lazy" /></figure>
+<figure class="post-fig"><img src="https://static.wixstatic.com/media/bb3c90_0df436f4d89c44fbaf4052af91bbfa52~mv2.png/v1/fit/w_1100,h_1100,al_c,q_88,enc_avif,quality_auto/bb3c90_0df436f4d89c44fbaf4052af91bbfa52~mv2.png" alt="Camión de carga circulando junto a infraestructura fronteriza para transporte terrestre y logística transfronteriza." loading="lazy" /></figure>
 <h2>Cómo preparar la cadena de suministro ante la logística T-MEC 2026</h2>
 <p>La mejor estrategia frente a la revisión del T-MEC es anticiparse. Esperar a que existan definiciones finales puede limitar la capacidad de respuesta de las empresas. En cambio, revisar la operación logística desde ahora permite identificar vulnerabilidades y fortalecer áreas críticas.</p>
 <p>Algunas acciones prioritarias incluyen:</p>
