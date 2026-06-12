@@ -195,9 +195,9 @@
     border-bottom: 1px solid transparent;
     transition: background .3s var(--ease), backdrop-filter .3s var(--ease), border-color .3s var(--ease);
   }
-  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: var(--maxw); margin: 0 auto; }
+  .nav-inner { display: flex; align-items: center; gap: 46px; padding: 14px 32px; max-width: var(--maxw); margin: 0 auto; }
   .nav-logo img { height: 50px; width: auto; transition: opacity .3s var(--ease); }
-  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links { display: flex; gap: 34px; align-items: center; }
   .nav-links a {
     font-size: 17px; font-weight: 600; color: rgba(255, 255, 255, .82);
     transition: color .15s var(--ease); position: relative;
@@ -208,7 +208,7 @@
   }
   .nav-links a:hover { color: #fff; }
   .nav-links a:hover::after { right: 0; }
-  .nav-cta { display: flex; gap: 18px; align-items: center; }
+  .nav-cta { display: flex; gap: 16px; align-items: center; margin-left: auto; }
   .nav-cta-btn { padding: 10px 22px; font-size: 15px; }
   .nav.is-scrolled {
     background: rgba(11, 26, 34, .92);
@@ -217,16 +217,13 @@
     border-bottom-color: rgba(255,255,255,.08);
   }
   /* Lang toggle */
-  .lang-toggle {
-    display: inline-flex; align-items: center; gap: 5px;
-    background: none; border: 1px solid rgba(255,255,255,.25);
-    border-radius: 999px; padding: 5px 12px;
-    font-family: var(--font-sans); font-size: 13px; font-weight: 600;
-    color: #fff; cursor: pointer; transition: border-color .2s, background .2s; letter-spacing: .04em;
-  }
+  .lang-toggle { display: inline-flex; align-items: center; gap: 8px; background: none; border: 1px solid rgba(255,255,255,.22); border-radius: 9px; padding: 6px 10px; cursor: pointer; transition: border-color .2s, background .2s; }
   .lang-toggle:hover { background: rgba(255,255,255,.1); }
-  .lang-toggle__active { color: var(--green-2); }
-  .lang-toggle__sep { opacity: .4; }
+  .lang-flag { width: 24px; height: 16px; border-radius: 3px; overflow: hidden; display: block; opacity: .35; transition: opacity .2s var(--ease), transform .2s var(--ease); box-shadow: 0 0 0 1px rgba(255,255,255,.2); }
+  .lang-flag.is-active { opacity: 1; }
+  .lang-toggle:hover .lang-flag { opacity: .7; }
+  .lang-toggle:hover .lang-flag.is-active { opacity: 1; }
+  .lang-flag svg { width: 100%; height: 100%; display: block; }
 
   /* Mobile menu button */
   .nav-burger { display: none; width: 42px; height: 42px; align-items: center; justify-content: center; border-radius: 8px; color: #fff; }
@@ -716,18 +713,18 @@
       <img src="/assets/img/reis-logo-blanco.png" alt="REIS Logística" />
     </a>
     <div class="nav-links">
+      <a href="/" data-i18n="nav.inicio">Inicio</a>
       <a href="/nosotros" data-i18n="nav.nosotros">Nosotros</a>
       <a href="/servicios" data-i18n="nav.servicios" aria-current="page">Servicios</a>
-      <a href="/#ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
-      <a href="/#clientes" data-i18n="nav.clientes">Clientes</a>
+      <a href="/ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
+      <a href="/clientes" data-i18n="nav.clientes">Clientes</a>
       <a href="/blog" data-i18n="nav.blog">Blog</a>
       <a href="/#contacto" data-i18n="nav.contacto">Contacto</a>
     </div>
     <div class="nav-cta">
-      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
-        <span class="lang-toggle__active" id="langLabel">ES</span>
-        <span class="lang-toggle__sep">·</span>
-        <span id="langAlt">EN</span>
+      <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma / Switch language">
+        <span class="lang-flag is-active" data-lang="es" title="Espa&ntilde;ol"><svg viewBox="0 0 24 16" aria-hidden="true"><rect width="8" height="16" fill="#006847"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#CE1126"/></svg></span>
+        <span class="lang-flag" data-lang="en" title="English"><svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><g fill="#B22234"><rect width="24" height="1.85"/><rect y="3.7" width="24" height="1.85"/><rect y="7.4" width="24" height="1.85"/><rect y="11.1" width="24" height="1.85"/><rect y="14.8" width="24" height="1.2"/></g><rect width="10" height="8.6" fill="#3C3B6E"/></svg></span>
       </button>
       <a href="/#contacto" class="btn btn-primary on-dark nav-cta-btn"><span class="bl" data-i18n="nav.cotiza">Cotiza ahora</span></a>
       <button class="nav-burger" id="navBurger" aria-label="Abrir menú">
@@ -742,10 +739,11 @@
   <button class="mobile-close" id="mobileClose" aria-label="Cerrar menú">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
   </button>
+  <a href="/" data-i18n="nav.inicio">Inicio</a>
   <a href="/nosotros" data-i18n="nav.nosotros">Nosotros</a>
   <a href="/servicios" data-i18n="nav.servicios" aria-current="page">Servicios</a>
-  <a href="/#ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
-  <a href="/#clientes" data-i18n="nav.clientes">Clientes</a>
+  <a href="/ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
+  <a href="/clientes" data-i18n="nav.clientes">Clientes</a>
   <a href="/blog" data-i18n="nav.blog">Blog</a>
   <a href="/#contacto" data-i18n="nav.contacto">Contacto</a>
   <a href="/#contacto" class="btn btn-primary on-dark"><span class="bl" data-i18n="nav.cotiza">Cotiza ahora</span></a>
@@ -1060,6 +1058,7 @@
   (function() {
     let lang = 'es';
     const t = {
+      'nav.inicio':     { es: 'Inicio', en: 'Home' },
       'nav.nosotros':   { es: 'Nosotros', en: 'About' },
       'nav.servicios':  { es: 'Servicios', en: 'Services' },
       'nav.ubicaciones':{ es: 'Ubicaciones', en: 'Locations' },
@@ -1255,8 +1254,7 @@
         }
       });
       document.documentElement.lang = l;
-      document.getElementById('langLabel').textContent = l.toUpperCase();
-      document.getElementById('langAlt').textContent = l === 'es' ? 'EN' : 'ES';
+      document.querySelectorAll('.lang-flag').forEach(function(f){ f.classList.toggle('is-active', f.getAttribute('data-lang') === l); });
     }
     (function(){
       var imap = document.querySelector('.imap');

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Nosotros | REIS Logística</title>
-<meta name="description" content="Empresa mexicana de logística 3PL y almacenamiento industrial con más de 15 años de experiencia, 350 colaboradores y 140,000 m² en 10 bodegas. Conoce a REIS Logística." />
+<title>Clientes | REIS Logística</title>
+<meta name="description" content="Optimizamos tu logística y warehousing en México. +140,000 m² de almacenamiento industrial Clase A en Ciudad Juárez, Monterrey, San Luis Potosí y El Paso, TX. Licencia IMMEX, certificación OEA / CTPAT, +15 años de experiencia." />
 <meta name="theme-color" content="#0b1a22" />
 <meta name="color-scheme" content="light" />
 <link rel="icon" type="image/png" href="/assets/img/isotipo.png" />
@@ -12,10 +12,10 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Nosotros | REIS Logística" />
+<meta property="og:title" content="Clientes | REIS Logística" />
 <meta property="og:description" content="+140,000 m² de almacenamiento industrial Clase A en México y El Paso, TX. Logística 3PL, IMMEX y comercio exterior bajo un solo aliado estratégico." />
 <meta property="og:image" content="/assets/img/about-facility.jpg" />
-<meta property="og:url" content="https://www.reislogistica.com/nosotros" />
+<meta property="og:url" content="https://www.reislogistica.com/clientes" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -607,65 +607,40 @@
   .whero h1 .accent { background: none; -webkit-text-fill-color: rgba(255,255,255,.82); color: rgba(255,255,255,.82); font-style: normal; }
   .whero__sub { font-size: clamp(16px,1.5vw,20px); line-height: 1.6; color: rgba(255,255,255,.82); max-width: 620px; margin: 0 auto 32px; }
   .whero__actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-  .svcsec2 { padding: 56px 0; background: var(--bg); overflow: hidden; position: relative; }
-  .svcsec2::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(11,26,34,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(11,26,34,.05) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse 82% 92% at 50% 50%, #000 42%, transparent 92%); mask-image: radial-gradient(ellipse 82% 92% at 50% 50%, #000 42%, transparent 92%); }
-  .svcsec2 > .container, .svcsec2 > .svcmq { position: relative; z-index: 1; }
-  .svcsec2__head { max-width: 720px; margin: 0 auto 28px; text-align: center; }
-  .svcsec2__head .eyebrow { justify-content: center; }
-  .svcsec2__head h2 { font-size: clamp(28px,3.6vw,44px); font-weight: 700; letter-spacing: -.02em; color: var(--ink); margin-top: 12px; }
-  .svcsec2__head h2 .accent { color: var(--green-deep); font-style: normal; }
-  .svcmq { width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
-  .svcmq + .svcmq { margin-top: 18px; }
-  .svcmq__track { display: flex; gap: 18px; width: max-content; animation: svcmqScroll 38s linear infinite; }
-  .svcmq--rev .svcmq__track { animation-direction: reverse; animation-duration: 46s; }
-  .svcmq:hover .svcmq__track { animation-play-state: paused; }
-  @keyframes svcmqScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .svcchip { flex: 0 0 auto; display: flex; align-items: center; gap: 14px; padding: 20px 28px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; transition: border-color .2s var(--ease), transform .2s var(--ease), box-shadow .2s; }
-  .svcchip:hover { border-color: var(--green); transform: translateY(-2px); box-shadow: var(--shadow-md); }
-  .svcchip__icon { width: 42px; height: 42px; min-width: 42px; color: var(--green-deep); background: rgba(46,167,58,.08); border: 1px solid rgba(46,167,58,.18); border-radius: 10px; display: flex; align-items: center; justify-content: center; padding: 9px; }
-  .svcchip__icon svg { width: 100%; height: 100%; }
-  .svcchip__name { font-size: 18px; font-weight: 700; color: var(--ink); letter-spacing: -.005em; white-space: nowrap; }
 
-  /* --- nosotros specific --- */
-  .section-head--center { text-align: center; max-width: 720px; margin-left: auto; margin-right: auto; }
-  .nos-h2 { font-size: clamp(32px, 3.6vw, 48px); font-weight: 700; letter-spacing: -.018em; line-height: 1.08; margin: 14px 0 22px; color: var(--ink); }
+  /* ---- CLIENTES ---- */
+  .cli-logos { background: var(--bg-alt); }
+  .climq { width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+  .climq + .climq { margin-top: 18px; }
+  .climq__track { display: flex; gap: 18px; width: max-content; animation: climqScroll 44s linear infinite; }
+  .climq--rev .climq__track { animation-direction: reverse; animation-duration: 52s; }
+  .climq:hover .climq__track { animation-play-state: paused; }
+  @keyframes climqScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .climq__track { animation: none; } }
+  .clilogo { flex: 0 0 auto; width: 210px; height: 116px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 22px; box-shadow: var(--shadow-sm); transition: border-color .2s var(--ease), box-shadow .2s var(--ease); }
+  .clilogo:hover { border-color: var(--green); box-shadow: var(--shadow-md); }
+  .clilogo img { max-height: 50px; max-width: 150px; width: auto; height: auto; object-fit: contain; display: block; }
 
-  .nos-intro { background: var(--bg); }
-  .nos-intro__grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
-  .nos-intro__body p { color: var(--ink-soft); font-size: 17.5px; line-height: 1.8; margin-bottom: 20px; }
-  .nos-intro__body p strong { color: var(--ink); font-weight: 700; }
-  .nos-intro__media { position: relative; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/3; background: var(--bg-alt); }
-  .nos-intro__media img { width: 100%; height: 100%; object-fit: cover; }
-  .nos-intro__badge { position: absolute; left: 18px; bottom: 18px; background: rgba(11,26,34,.82); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: #fff; border-radius: 12px; padding: 12px 16px; font-size: 13px; line-height: 1.3; }
-  .nos-intro__badge b { display: block; font-size: 20px; color: var(--green-bright); }
-  @media (max-width: 880px) { .nos-intro__grid { grid-template-columns: 1fr; gap: 32px; } }
+  .cli-why { position: relative; overflow: hidden; isolation: isolate; background: var(--bg-dark-2); color: #fff; }
+  .cli-why__spot { position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(460px circle at var(--mx,72%) var(--my,28%), rgba(76,200,89,.2), transparent 62%); transition: background .1s linear; }
+  .cli-why .container { position: relative; z-index: 2; }
+  .cli-why .section-head h2 { color: #fff; }
+  .cli-why .section-head p { color: rgba(255,255,255,.74); }
+  .cli-why__grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-top: 8px; }
+  @media (max-width: 860px) { .cli-why__grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .cli-why__grid { grid-template-columns: 1fr; } }
+  .cli-why__card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 26px 22px; transition: border-color .2s var(--ease), transform .2s var(--ease); }
+  .cli-why__card:hover { border-color: rgba(76,200,89,.5); transform: translateY(-3px); }
+  .cli-why__ic { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; background: rgba(76,200,89,.12); margin-bottom: 16px; }
+  .cli-why__ic svg { width: 24px; height: 24px; fill: none; stroke: var(--green-bright); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .cli-why__card h3 { font-size: 17px; font-weight: 700; color: #fff; letter-spacing: -.01em; margin-bottom: 8px; }
+  .cli-why__card p { font-size: 14.5px; line-height: 1.6; color: rgba(255,255,255,.72); }
 
-  .nos-ceo { background: var(--bg-dark-2); color: #fff; }
-  .nos-ceo__grid { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: center; }
-  .nos-ceo__photo { border-radius: 18px; overflow: hidden; aspect-ratio: 1/1; background: var(--bg-dark); box-shadow: 0 30px 80px -40px rgba(0,0,0,.7); }
-  .nos-ceo__photo img { width: 100%; height: 100%; object-fit: cover; }
-  .nos-ceo__quote { font-size: clamp(20px, 2.1vw, 27px); font-weight: 600; line-height: 1.42; letter-spacing: -.015em; color: #fff; margin-bottom: 22px; }
-  .nos-ceo__quote .accent { color: var(--green-bright); }
-  .nos-ceo__name { font-size: 18px; font-weight: 700; color: #fff; }
-  .nos-ceo__role { font-family: var(--font-eyebrow); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green-2); margin-top: 4px; }
-  @media (max-width: 760px) { .nos-ceo__grid { grid-template-columns: 1fr; gap: 28px; } .nos-ceo__photo { max-width: 240px; } }
-
-  .nos-team { background: var(--bg); }
-  .nos-team__grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
-  @media (max-width: 900px) { .nos-team__grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 520px) { .nos-team__grid { grid-template-columns: 1fr; } }
-  .nos-member__photo { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 5/6; background: var(--bg-alt); margin-bottom: 14px; }
-  .nos-member__photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
-  .nos-member:hover .nos-member__photo img { transform: scale(1.04); }
-  .nos-member__photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(11,26,34,.35) 100%); }
-  .nos-member h3 { font-size: 17px; font-weight: 700; color: var(--ink); letter-spacing: -.01em; }
-  .nos-member p { font-size: 13.5px; color: var(--ink-mute); margin-top: 3px; line-height: 1.4; }
-
-  .nos-cta { background: var(--bg-dark); color: #fff; }
-  .nos-cta__inner { text-align: center; max-width: 720px; margin: 0 auto; }
-  .nos-cta h2 { font-size: clamp(32px, 3.6vw, 48px); font-weight: 700; letter-spacing: -.02em; color: #fff; margin-bottom: 16px; }
-  .nos-cta h2 .accent { color: var(--green-bright); }
-  .nos-cta p { color: rgba(255,255,255,.74); font-size: 17px; line-height: 1.6; margin-bottom: 28px; }
+  .cli-cta { background: var(--bg-dark); color: #fff; }
+  .cli-cta__inner { text-align: center; max-width: 720px; margin: 0 auto; }
+  .cli-cta h2 { font-size: clamp(32px,3.6vw,48px); font-weight: 700; letter-spacing: -.02em; color: #fff; margin-bottom: 16px; }
+  .cli-cta h2 .accent { color: var(--green-bright); }
+  .cli-cta p { color: rgba(255,255,255,.74); font-size: 17px; line-height: 1.6; margin-bottom: 28px; }
 
   </style>
 </head><nav class="nav">
@@ -675,10 +650,10 @@
     </a>
     <div class="nav-links">
       <a href="/" data-i18n="nav.inicio">Inicio</a>
-      <a href="/nosotros" data-i18n="nav.nosotros" aria-current="page">Nosotros</a>
+      <a href="/nosotros" data-i18n="nav.nosotros">Nosotros</a>
       <a href="/servicios" data-i18n="nav.servicios">Servicios</a>
       <a href="/ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
-      <a href="/clientes" data-i18n="nav.clientes">Clientes</a>
+      <a href="/clientes" data-i18n="nav.clientes" aria-current="page">Clientes</a>
       <a href="/blog" data-i18n="nav.blog">Blog</a>
       <a href="/#contacto" data-i18n="nav.contacto">Contacto</a>
     </div>
@@ -701,10 +676,10 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
   </button>
   <a href="/" data-i18n="nav.inicio">Inicio</a>
-  <a href="/nosotros" data-i18n="nav.nosotros" aria-current="page">Nosotros</a>
+  <a href="/nosotros" data-i18n="nav.nosotros">Nosotros</a>
   <a href="/servicios" data-i18n="nav.servicios">Servicios</a>
   <a href="/ubicaciones" data-i18n="nav.ubicaciones">Ubicaciones</a>
-  <a href="/clientes" data-i18n="nav.clientes">Clientes</a>
+  <a href="/clientes" data-i18n="nav.clientes" aria-current="page">Clientes</a>
   <a href="/blog" data-i18n="nav.blog">Blog</a>
   <a href="/#contacto" data-i18n="nav.contacto">Contacto</a>
   <a href="/#contacto" class="btn btn-primary on-dark"><span class="bl" data-i18n="nav.cotiza">Cotiza ahora</span></a>
@@ -714,92 +689,52 @@
 <section class="whero">
   <canvas class="whero__canvas" id="whCanvas" aria-hidden="true"></canvas>
   <div class="whero__content reveal">
-    <span class="eyebrow on-image" data-i18n="nos.eyebrow">Nosotros</span>
+    <span class="eyebrow on-image">Clientes</span>
     <h1>
-      <span data-i18n="nos.h1lead">M&aacute;s de 15 a&ntilde;os moviendo</span><br>
-      <span class="whero__rot"><span class="whero__word" id="whWord" data-es="tu log&iacute;stica,tu inventario,tu operaci&oacute;n,tu cadena" data-en="your logistics,your inventory,your operation,your supply chain">tu log&iacute;stica</span><span class="whero__caret" aria-hidden="true"></span></span>
+      <span>La confianza de</span><br>
+      <span class="whero__rot"><span class="whero__word" id="whWord" data-es="la industria,el sector automotriz,marcas globales,l&iacute;deres" data-en="industry,the auto sector,global brands,leaders">la industria</span><span class="whero__caret" aria-hidden="true"></span></span>
     </h1>
-    <p class="whero__sub" data-i18n="nos.sub">Empresa mexicana de log&iacute;stica 3PL y almacenamiento industrial, con presencia en el Baj&iacute;o y la frontera M&eacute;xico&ndash;Estados Unidos.</p>
+    <p class="whero__sub">Operamos para empresas de clase mundial en automotriz, electrodom&eacute;sticos, aeroespacial y alimentos.</p>
     <div class="whero__actions">
-      <a href="/#contacto" class="btn btn-primary on-dark"><span class="bl" data-i18n="nos.cta1">Recibe una cotizaci&oacute;n</span></a>
-      <a href="#equipo" class="btn btn-primary on-dark"><span class="bl" data-i18n="nos.cta2">Conoce al equipo</span></a>
+      <a href="/#contacto" class="btn btn-primary on-dark"><span class="bl">Recibe una cotizaci&oacute;n</span></a>
     </div>
   </div>
 </section>
 
-<section class="block nos-intro">
+<section class="block cli-logos">
   <div class="container">
-    <div class="nos-intro__grid">
-      <div class="nos-intro__body reveal">
-        <span class="eyebrow" data-i18n="nos.q.eyebrow">Qui&eacute;nes somos</span>
-        <h2 class="nos-h2" data-i18n="nos.q.h2">Un solo aliado para toda tu operaci&oacute;n.</h2>
-        <p data-i18n="nos.q.p1">Somos una empresa mexicana dedicada a la <strong>log&iacute;stica para terceros (3PL)</strong> y al <strong>almacenamiento industrial</strong> para el sector automotriz, electrodom&eacute;sticos, aeroespacial, y alimentos, con presencia en el <strong>baj&iacute;o</strong> y en el <strong>noreste de M&eacute;xico (frontera M&eacute;xico-USA)</strong>.</p>
-        <p data-i18n="nos.q.p2">Contamos con <strong>m&aacute;s de quince a&ntilde;os de experiencia</strong>, una plantilla laboral de <strong>m&aacute;s de 350 colaboradores</strong>, socios comerciales de clase mundial, y un espacio de almacenamiento de <strong>m&aacute;s de 140,000 metros cuadrados en 10 bodegas</strong> en M&eacute;xico (2025).</p>
-      </div>
-      <div class="nos-intro__media reveal">
-        <img src="https://static.wixstatic.com/media/b6d12f_a31de84dd3f0461bb2e14359b1d63ec1~mv2.jpeg/v1/fill/w_1200,h_860,al_c,q_85,enc_avif,quality_auto/b6d12f_a31de84dd3f0461bb2e14359b1d63ec1~mv2.jpeg" alt="Planta y almac&eacute;n de REIS Log&iacute;stica" loading="lazy" />
-        <div class="nos-intro__badge"><b>+140,000 m&sup2;</b>en 10 bodegas en M&eacute;xico</div>
-      </div>
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">Confían en REIS</span>
+      <h2>Marcas que <span class="accent">mueven su operaci&oacute;n con nosotros.</span></h2>
+    </div>
+  </div>
+  <div class="climq" aria-hidden="true"><div class="climq__track"><div class="clilogo"><img src="/assets/img/clientes/lear.svg" alt="Lear" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/honeywell.png" alt="Honeywell" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/flex.png" alt="Flex" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/phinia.png" alt="PHINIA" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/harman.svg" alt="Harman" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/cooper.png" alt="Cooper" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/valeo.png" alt="Valeo" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/nippon.png" alt="Nippon Paint" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/lear.svg" alt="Lear" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/honeywell.png" alt="Honeywell" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/flex.png" alt="Flex" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/phinia.png" alt="PHINIA" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/harman.svg" alt="Harman" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/cooper.png" alt="Cooper" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/valeo.png" alt="Valeo" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/nippon.png" alt="Nippon Paint" loading="lazy" /></div></div></div>
+  <div class="climq climq--rev" aria-hidden="true"><div class="climq__track"><div class="clilogo"><img src="/assets/img/clientes/lear.svg" alt="Lear" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/honeywell.png" alt="Honeywell" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/flex.png" alt="Flex" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/phinia.png" alt="PHINIA" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/harman.svg" alt="Harman" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/cooper.png" alt="Cooper" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/valeo.png" alt="Valeo" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/nippon.png" alt="Nippon Paint" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/lear.svg" alt="Lear" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/honeywell.png" alt="Honeywell" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/flex.png" alt="Flex" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/phinia.png" alt="PHINIA" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/harman.svg" alt="Harman" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/cooper.png" alt="Cooper" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/valeo.png" alt="Valeo" loading="lazy" /></div><div class="clilogo"><img src="/assets/img/clientes/nippon.png" alt="Nippon Paint" loading="lazy" /></div></div></div>
+</section>
+
+<section class="block cli-why">
+  <div class="cli-why__spot" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow on-image">Por qu&eacute; REIS</span>
+      <h2>Por qu&eacute; nos <span class="accent">eligen.</span></h2>
+      <p>Operaciones a la medida para industrias con altos est&aacute;ndares de cumplimiento y tiempos de respuesta.</p>
+    </div>
+    <div class="cli-why__grid">
+      <div class="cli-why__card reveal"><div class="cli-why__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Un solo aliado</h3><p>3PL, comercio exterior y log&iacute;stica integrada bajo un mismo proveedor.</p></div>
+<div class="cli-why__card reveal"><div class="cli-why__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13l-1.5 7L12 18l4.5 2L15 13"/></svg></div><h3>Operaci&oacute;n certificada</h3><p>Certificaci&oacute;n OEA / CTPAT y licencia IMMEX vigente.</p></div>
+<div class="cli-why__card reveal"><div class="cli-why__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.8 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.8-3.8-9S9.5 5.5 12 3z"/></svg></div><h3>Cobertura binacional</h3><p>Baj&iacute;o, noreste de M&eacute;xico y frontera con Estados Unidos.</p></div>
+<div class="cli-why__card reveal"><div class="cli-why__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div><h3>Experiencia comprobada</h3><p>M&aacute;s de 15 a&ntilde;os operando para clientes de clase mundial.</p></div>
     </div>
   </div>
 </section>
 
-<section class="kpi">
+<section class="block cli-cta">
   <div class="container">
-    <div class="kpi-grid">
-      <div class="kpi-item reveal"><div class="num"><span class="plus">+</span><span data-counter="15">0</span><span class="unit" data-i18n="kpi.years">a&ntilde;os</span></div><div class="lbl">de experiencia</div></div>
-      <div class="kpi-item reveal"><div class="num"><span class="plus">+</span><span data-counter="350">0</span></div><div class="lbl">colaboradores</div></div>
-      <div class="kpi-item reveal"><div class="num"><span class="plus">+</span><span data-counter="140000">0</span><span class="unit">m&sup2;</span></div><div class="lbl">de almacenamiento</div></div>
-      <div class="kpi-item reveal"><div class="num"><span data-counter="10">0</span></div><div class="lbl">bodegas en M&eacute;xico</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="svcsec2">
-  <div class="container">
-    <div class="section-head section-head--center reveal" style="margin-bottom:28px">
-      <span class="eyebrow" data-i18n="nos.sec.eyebrow">Sectores</span>
-      <h2 data-i18n="nos.sec.h2">Industrias que <span class="accent">atendemos.</span></h2>
-    </div>
-  </div>
-  <div class="svcmq" aria-hidden="true"><div class="svcmq__track"><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="5"/><path d="M20 6v3M20 31v3M6 20h3M31 20h3"/><path d="M11 11l2.2 2.2M26.8 26.8l2.2 2.2M29 11l-2.2 2.2M11 29l2.2-2.2"/></svg></span><span class="svcchip__name">Automotriz</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="26" height="30" rx="3"/><circle cx="20" cy="23" r="7"/><circle cx="20" cy="23" r="4"/><circle cx="11" cy="10" r="1.3" fill="currentColor"/><circle cx="16" cy="10" r="1.3" fill="currentColor"/><path d="M7 15h26"/></svg></span><span class="svcchip__name">Electrodom&eacute;sticos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5c-3.5 3-5.5 8-5.5 13v8h11v-8c0-5-2-10-5.5-13z"/><circle cx="20" cy="15" r="2.2"/><path d="M14.5 22l-4.5 6 4.5-1.5M25.5 22l4.5 6-4.5-1.5"/><path d="M17.5 27l2.5 6 2.5-6"/></svg></span><span class="svcchip__name">Aeroespacial</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c-2.5-2.5-7.5-2.5-10 1-2.5 4-1.5 11.5 2.5 15.5 2 2 4 2 5.5 1 .8.5 1.5.5 2 .5s1.2 0 2-.5c1.5 1 3.5 1 5.5-1 4-4 5-11.5 2.5-15.5-2.5-3.5-7.5-3.5-10-1z"/><path d="M20 13v-2"/><path d="M20 11c1.5-1.8 3.8-2.2 5.5-1-1 2.2-3.5 2.8-5.5 1z"/></svg></span><span class="svcchip__name">Alimentos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="5"/><path d="M20 6v3M20 31v3M6 20h3M31 20h3"/><path d="M11 11l2.2 2.2M26.8 26.8l2.2 2.2M29 11l-2.2 2.2M11 29l2.2-2.2"/></svg></span><span class="svcchip__name">Automotriz</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="26" height="30" rx="3"/><circle cx="20" cy="23" r="7"/><circle cx="20" cy="23" r="4"/><circle cx="11" cy="10" r="1.3" fill="currentColor"/><circle cx="16" cy="10" r="1.3" fill="currentColor"/><path d="M7 15h26"/></svg></span><span class="svcchip__name">Electrodom&eacute;sticos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5c-3.5 3-5.5 8-5.5 13v8h11v-8c0-5-2-10-5.5-13z"/><circle cx="20" cy="15" r="2.2"/><path d="M14.5 22l-4.5 6 4.5-1.5M25.5 22l4.5 6-4.5-1.5"/><path d="M17.5 27l2.5 6 2.5-6"/></svg></span><span class="svcchip__name">Aeroespacial</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c-2.5-2.5-7.5-2.5-10 1-2.5 4-1.5 11.5 2.5 15.5 2 2 4 2 5.5 1 .8.5 1.5.5 2 .5s1.2 0 2-.5c1.5 1 3.5 1 5.5-1 4-4 5-11.5 2.5-15.5-2.5-3.5-7.5-3.5-10-1z"/><path d="M20 13v-2"/><path d="M20 11c1.5-1.8 3.8-2.2 5.5-1-1 2.2-3.5 2.8-5.5 1z"/></svg></span><span class="svcchip__name">Alimentos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="5"/><path d="M20 6v3M20 31v3M6 20h3M31 20h3"/><path d="M11 11l2.2 2.2M26.8 26.8l2.2 2.2M29 11l-2.2 2.2M11 29l2.2-2.2"/></svg></span><span class="svcchip__name">Automotriz</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="26" height="30" rx="3"/><circle cx="20" cy="23" r="7"/><circle cx="20" cy="23" r="4"/><circle cx="11" cy="10" r="1.3" fill="currentColor"/><circle cx="16" cy="10" r="1.3" fill="currentColor"/><path d="M7 15h26"/></svg></span><span class="svcchip__name">Electrodom&eacute;sticos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5c-3.5 3-5.5 8-5.5 13v8h11v-8c0-5-2-10-5.5-13z"/><circle cx="20" cy="15" r="2.2"/><path d="M14.5 22l-4.5 6 4.5-1.5M25.5 22l4.5 6-4.5-1.5"/><path d="M17.5 27l2.5 6 2.5-6"/></svg></span><span class="svcchip__name">Aeroespacial</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c-2.5-2.5-7.5-2.5-10 1-2.5 4-1.5 11.5 2.5 15.5 2 2 4 2 5.5 1 .8.5 1.5.5 2 .5s1.2 0 2-.5c1.5 1 3.5 1 5.5-1 4-4 5-11.5 2.5-15.5-2.5-3.5-7.5-3.5-10-1z"/><path d="M20 13v-2"/><path d="M20 11c1.5-1.8 3.8-2.2 5.5-1-1 2.2-3.5 2.8-5.5 1z"/></svg></span><span class="svcchip__name">Alimentos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="5"/><path d="M20 6v3M20 31v3M6 20h3M31 20h3"/><path d="M11 11l2.2 2.2M26.8 26.8l2.2 2.2M29 11l-2.2 2.2M11 29l2.2-2.2"/></svg></span><span class="svcchip__name">Automotriz</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="26" height="30" rx="3"/><circle cx="20" cy="23" r="7"/><circle cx="20" cy="23" r="4"/><circle cx="11" cy="10" r="1.3" fill="currentColor"/><circle cx="16" cy="10" r="1.3" fill="currentColor"/><path d="M7 15h26"/></svg></span><span class="svcchip__name">Electrodom&eacute;sticos</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5c-3.5 3-5.5 8-5.5 13v8h11v-8c0-5-2-10-5.5-13z"/><circle cx="20" cy="15" r="2.2"/><path d="M14.5 22l-4.5 6 4.5-1.5M25.5 22l4.5 6-4.5-1.5"/><path d="M17.5 27l2.5 6 2.5-6"/></svg></span><span class="svcchip__name">Aeroespacial</span></div><div class="svcchip"><span class="svcchip__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c-2.5-2.5-7.5-2.5-10 1-2.5 4-1.5 11.5 2.5 15.5 2 2 4 2 5.5 1 .8.5 1.5.5 2 .5s1.2 0 2-.5c1.5 1 3.5 1 5.5-1 4-4 5-11.5 2.5-15.5-2.5-3.5-7.5-3.5-10-1z"/><path d="M20 13v-2"/><path d="M20 11c1.5-1.8 3.8-2.2 5.5-1-1 2.2-3.5 2.8-5.5 1z"/></svg></span><span class="svcchip__name">Alimentos</span></div></div></div>
-</section>
-
-<section class="block nos-ceo">
-  <div class="container">
-    <div class="nos-ceo__grid">
-      <div class="nos-ceo__photo reveal"><img src="https://static.wixstatic.com/media/78c590_695ca90bc4404f23ad3747c3c3f1f13b~mv2.jpg/v1/fill/w_560,h_620,al_c,q_85,enc_avif,quality_auto/78c590_695ca90bc4404f23ad3747c3c3f1f13b~mv2.jpg" alt="Jose Antonio Quiroga, Director General" loading="lazy" /></div>
-      <div class="reveal">
-        <span class="eyebrow" style="color:#d8f3dd" data-i18n="nos.ceo.eyebrow">Nuestro CEO</span>
-        <p class="nos-ceo__quote" style="margin-top:14px" data-i18n="nos.ceo.q">En REIS creemos en la <span class="accent">excelencia, innovaci&oacute;n y compromiso</span> con cada cliente. Nuestro prop&oacute;sito es construir soluciones que generen confianza y valor duradero. Gracias por ser parte de esta visi&oacute;n.</p>
-        <div class="nos-ceo__name">Jose Antonio Quiroga</div>
-        <div class="nos-ceo__role">Director General</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="block nos-team" id="equipo">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow" data-i18n="nos.team.eyebrow">Nuestro equipo</span>
-      <h2 data-i18n="nos.team.h2">La gente que <span class="accent">mueve REIS.</span></h2>
-    </div>
-    <div class="nos-team__grid">
-      <div class="nos-member reveal"><div class="nos-member__photo"><img src="https://static.wixstatic.com/media/78c590_b5b73f307e2e40aa92e112e1e033daef~mv2.jpeg/v1/crop/x_43,y_26,w_271,h_348/fill/w_520,h_580,al_c,q_85,enc_avif,quality_auto/78c590_b5b73f307e2e40aa92e112e1e033daef~mv2.jpeg" alt="Rafael Alvarado" loading="lazy" /></div><h3>Rafael Alvarado</h3><p>Gerente de Comercio Exterior</p></div>
-<div class="nos-member reveal"><div class="nos-member__photo"><img src="https://static.wixstatic.com/media/78c590_b20522fef7954ca99ff3581f7d48a206~mv2.jpeg/v1/crop/x_16,y_0,w_302,h_335/fill/w_520,h_580,al_c,q_85,enc_avif,quality_auto/78c590_b20522fef7954ca99ff3581f7d48a206~mv2.jpeg" alt="Juan Nava" loading="lazy" /></div><h3>Juan Nava</h3><p>Gerente de Operaciones &middot; Ciudad Ju&aacute;rez</p></div>
-<div class="nos-member reveal"><div class="nos-member__photo"><img src="https://static.wixstatic.com/media/78c590_4a8a44ff74c44325a8c93b27da453b79~mv2.jpeg/v1/fill/w_520,h_580,al_c,q_85,enc_avif,quality_auto/78c590_4a8a44ff74c44325a8c93b27da453b79~mv2.jpeg" alt="Mauricio Galindo" loading="lazy" /></div><h3>Mauricio Galindo</h3><p>Proyectos y Operaciones &middot; San Luis Potos&iacute;</p></div>
-<div class="nos-member reveal"><div class="nos-member__photo"><img src="https://static.wixstatic.com/media/78c590_1e989f1b4b1c4d87a14dfb29279c9f2e~mv2.png/v1/fill/w_520,h_580,al_c,q_85,enc_avif,quality_auto/78c590_1e989f1b4b1c4d87a14dfb29279c9f2e~mv2.png" alt="Roberto Trevi&ntilde;o" loading="lazy" /></div><h3>Roberto Trevi&ntilde;o</h3><p>Administraci&oacute;n y Finanzas</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="block nos-cta">
-  <div class="container">
-    <div class="nos-cta__inner reveal">
-      <h2 data-i18n="nos.cta.h2">&iquest;Listo para mover tu <span class="accent">operaci&oacute;n</span>?</h2>
-      <p data-i18n="nos.cta.p">Cu&eacute;ntanos qu&eacute; necesitas y armamos una soluci&oacute;n a la medida de tu cadena de suministro.</p>
-      <a href="/#contacto" class="btn btn-primary on-dark"><span class="bl" data-i18n="nos.cta.btn">Recibe una cotizaci&oacute;n</span></a>
+    <div class="cli-cta__inner reveal">
+      <h2>&iquest;Listo para sumarte a <span class="accent">nuestros clientes</span>?</h2>
+      <p>Cu&eacute;ntanos sobre tu operaci&oacute;n y dise&ntilde;amos una soluci&oacute;n a la medida de tu cadena de suministro.</p>
+      <a href="/#contacto" class="btn btn-primary on-dark"><span class="bl">Recibe una cotizaci&oacute;n</span></a>
     </div>
   </div>
 </section>
@@ -1343,6 +1278,13 @@
       }
     }
     setTimeout(tick, 500);
+  })();
+  </script>
+
+  <script>
+  (function(){
+    var sec=document.querySelector('.cli-why'); if(!sec) return;
+    sec.addEventListener('mousemove', function(e){ var r=sec.getBoundingClientRect(); sec.style.setProperty('--mx',(e.clientX-r.left)+'px'); sec.style.setProperty('--my',(e.clientY-r.top)+'px'); });
   })();
   </script>
 
