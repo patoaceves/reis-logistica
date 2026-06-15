@@ -568,8 +568,8 @@
     .reveal { opacity: 1; transform: none; }
   }
   /* ===== Scroll-expansion hero ===== */
-  .herox { position: relative; height: 220vh; background: radial-gradient(125% 125% at 15% 0%, #1a4456 0%, #123444 36%, #0a2230 68%, #07131b 100%); }
-  .herox__sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; background: radial-gradient(125% 125% at 15% 0%, #1a4456 0%, #123444 36%, #0a2230 68%, #07131b 100%); }
+  .herox { position: relative; height: 220vh; background: #07131b; }
+  .herox__sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; background: linear-gradient(180deg, rgba(7,19,27,.42), rgba(7,19,27,.64)), url(/assets/img/reis-oficinas.jpg) center/cover no-repeat #07131b; }
   .herox__sticky::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(55% 60% at 88% 16%, rgba(46,167,58,.16), transparent 66%); }
   .herox__topscrim { position: absolute; top: 0; left: 0; right: 0; height: 140px; z-index: 5; background: linear-gradient(180deg, rgba(6,18,26,.6), transparent); pointer-events: none; }
   .herox__media { z-index: 1; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: var(--mw, 62vw); height: var(--mh, 66vh); border-radius: var(--mr, 20px); overflow: hidden; box-shadow: 0 40px 120px -50px rgba(0,0,0,.7); will-change: width, height; }
@@ -716,11 +716,11 @@
       <div class="shuffle reveal" aria-label="Instalaciones y operaciones de REIS">
         <div class="shuffle__cell"><img src="/assets/img/about-facility.jpg" alt="" loading="lazy" /></div>
         <div class="shuffle__cell"><img src="/assets/img/reis-oficinas.jpg" alt="" loading="lazy" /></div>
-        <div class="shuffle__cell"><img src="/assets/img/service-comercio.jpg" alt="" loading="lazy" /></div>
+        <div class="shuffle__cell"><img src="/assets/img/stock-puerto.jpg" alt="" loading="lazy" /></div>
         <div class="shuffle__cell"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="" loading="lazy" /></div>
-        <div class="shuffle__cell"><img src="/assets/img/service-warehousing.jpg" alt="" loading="lazy" /></div>
+        <div class="shuffle__cell"><img src="/assets/img/stock-montacargas.jpg" alt="" loading="lazy" /></div>
         <div class="shuffle__cell"><img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="" loading="lazy" /></div>
-        <div class="shuffle__cell"><img src="/assets/img/service-immex.jpg" alt="" loading="lazy" /></div>
+        <div class="shuffle__cell"><img src="/assets/img/stock-transporte.jpg" alt="" loading="lazy" /></div>
         <div class="shuffle__cell"><img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="" loading="lazy" /></div>
         <div class="shuffle__cell"><img src="/assets/img/almacenes/05-slp-green.jpg" alt="" loading="lazy" /></div>
       </div>
@@ -737,7 +737,7 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow" data-i18n="serv.eyebrow">Cobertura integral</span>
-      <h2 data-i18n="serv.h2">Warehousing, comercio exterior y <span class="accent">logística.</span></h2>
+      <h2 data-i18n="serv.h2">Nuestros <span class="accent">Servicios</span></h2>
       <p data-i18n="serv.p">3PL, comercio exterior y logística integrada bajo un solo proveedor. Reducimos puntos de contacto, riesgos operativos y costos administrativos.</p>
     </div>
 
@@ -778,9 +778,9 @@
         </li>
       </ul>
       <div class="pillars__media">
-        <img data-pillar-img="0" class="is-active" src="/assets/img/service-3pl.webp" alt="Warehousing 3PL" />
-        <img data-pillar-img="1" src="/assets/img/service-immex.jpg" alt="Comercio Exterior" />
-        <img data-pillar-img="2" src="/assets/img/service-logistica.jpg" alt="Logística integrada" />
+        <img data-pillar-img="0" class="is-active" src="/assets/img/pillar-warehousing.jpg" alt="Warehousing 3PL" />
+        <img data-pillar-img="1" src="/assets/img/pillar-comercio.jpg" alt="Comercio Exterior" />
+        <img data-pillar-img="2" src="/assets/img/pillar-logistica.jpg" alt="Logística integrada" />
       </div>
     </div>
 
@@ -1172,7 +1172,7 @@
       'about.vidtitle': { es: 'Así se mueve tu inventario, día y noche.', en: 'This is how your inventory moves, day and night.' },
 
       'serv.eyebrow':   { es: 'Cobertura integral', en: 'Full coverage' },
-      'serv.h2':        { es: 'Warehousing, comercio exterior y <span class="accent">logística.</span>', en: 'Warehousing, foreign trade and <span class="accent">logistics.</span>' },
+      'serv.h2':        { es: 'Nuestros <span class="accent">Servicios</span>', en: 'Our <span class="accent">Services</span>' },
       'serv.p':         { es: '3PL, comercio exterior y logística integrada bajo un solo proveedor. Reducimos puntos de contacto, riesgos operativos y costos administrativos.', en: '3PL, foreign trade and integrated logistics under one provider. We reduce touchpoints, operational risk and administrative costs.' },
       'serv.c1.h':      { es: 'Warehousing 3PL', en: 'Warehousing 3PL' },
       'serv.c1.p':      { es: 'Almacenaje, control de inventarios, picking, packing y distribución. Soluciones a la medida según el sector y la rotación.', en: 'Storage, inventory control, picking, packing and distribution. Tailored solutions based on sector and turnover.' },
