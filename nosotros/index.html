@@ -612,10 +612,10 @@
   .svcsec2::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse 82% 92% at 50% 50%, #000 42%, transparent 92%); mask-image: radial-gradient(ellipse 82% 92% at 50% 50%, #000 42%, transparent 92%); }
   .svcsec2 > .container, .svcsec2 > .svcmq { position: relative; z-index: 1; }
   .svcsec2__head { max-width: 720px; margin: 0 auto 28px; text-align: center; }
-  .svcsec2__head .eyebrow, .svcsec2 .section-head .eyebrow { justify-content: center; color: #fff; }
+  .svcsec2__head .eyebrow, .svcsec2 .section-head .eyebrow { justify-content: center; color: #fff !important; }
   .svcsec2__head .eyebrow::after, .svcsec2 .section-head .eyebrow::after { background: rgba(255,255,255,.65); }
-  .svcsec2__head h2, .svcsec2 .section-head h2 { font-size: clamp(28px,3.6vw,44px); font-weight: 700; letter-spacing: -.02em; color: #fff; margin-top: 12px; }
-  .svcsec2__head h2 .accent, .svcsec2 .section-head h2 .accent { color: #fff; font-style: normal; }
+  .svcsec2__head h2, .svcsec2 .section-head h2 { font-size: clamp(28px,3.6vw,44px); font-weight: 700; letter-spacing: -.02em; color: #fff !important; margin-top: 12px; }
+  .svcsec2__head h2 .accent, .svcsec2 .section-head h2 .accent { color: #fff !important; font-style: normal; }
   .svcmq { width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
   .svcmq + .svcmq { margin-top: 18px; }
   .svcmq__track { display: flex; gap: 18px; width: max-content; animation: svcmqScroll 38s linear infinite; }
