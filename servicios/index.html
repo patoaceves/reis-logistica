@@ -625,8 +625,8 @@
   .svc2__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
   .svc2card { position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 4/5; display: flex; align-items: flex-end; isolation: isolate; box-shadow: var(--shadow-md); }
   .svc2card__bg { position: absolute; inset: 0; z-index: 0; }
-  .svc2card__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .7s var(--ease); }
-  .svc2card:hover .svc2card__bg img { transform: scale(1.06); }
+  .svc2card__bg img, .svc2card__bg video { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .7s var(--ease); }
+  .svc2card:hover .svc2card__bg img, .svc2card:hover .svc2card__bg video { transform: scale(1.06); }
   .svc2card__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(11,26,34,.08) 0%, rgba(11,26,34,.55) 55%, rgba(11,26,34,.93) 100%); transition: background .35s var(--ease); }
   .svc2card:hover .svc2card__scrim { background: linear-gradient(180deg, rgba(11,26,34,.28) 0%, rgba(11,26,34,.74) 45%, rgba(8,22,14,.97) 100%); }
   .svc2card__body { position: relative; z-index: 2; padding: 28px; color: #fff; width: 100%; }
@@ -673,24 +673,25 @@
   .svctl__step.is-lit p { color: rgba(255,255,255,.8); }
 
   /* ---- SECTORES (sliding marquee) ---- */
-  .svcsec2 { padding: 56px 0; background: var(--bg); overflow: hidden; position: relative; }
-  .svcsec2::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(11,26,34,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(11,26,34,.05) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse 82% 92% at 50% 50%, #000 42%, transparent 92%); mask-image: radial-gradient(ellipse 82% 92% at 50% 50%, #000 42%, transparent 92%); }
+  .svcsec2 { padding: 56px 0; background: radial-gradient(125% 125% at 15% 0%, #2c8f3a 0%, #1f6e2b 38%, #134a1d 70%, #0c3314 100%); color: #fff; overflow: hidden; position: relative; }
+  .svcsec2::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse 82% 92% at 50% 50%, #000 42%, transparent 92%); mask-image: radial-gradient(ellipse 82% 92% at 50% 50%, #000 42%, transparent 92%); }
   .svcsec2 > .container, .svcsec2 > .svcmq { position: relative; z-index: 1; }
   .svcsec2__head { max-width: 720px; margin: 0 auto 28px; text-align: center; }
-  .svcsec2__head .eyebrow { justify-content: center; }
-  .svcsec2__head h2 { font-size: clamp(28px,3.6vw,44px); font-weight: 700; letter-spacing: -.02em; color: var(--ink); margin-top: 12px; }
-  .svcsec2__head h2 .accent { color: var(--green-deep); font-style: normal; }
+  .svcsec2__head .eyebrow { justify-content: center; color: rgba(255,255,255,.92); }
+  .svcsec2__head .eyebrow::after { background: #bff2c8; }
+  .svcsec2__head h2 { font-size: clamp(28px,3.6vw,44px); font-weight: 700; letter-spacing: -.02em; color: #fff; margin-top: 12px; }
+  .svcsec2__head h2 .accent { color: #cdeed5; font-style: normal; }
   .svcmq { width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
   .svcmq + .svcmq { margin-top: 18px; }
   .svcmq__track { display: flex; gap: 18px; width: max-content; animation: svcmqScroll 38s linear infinite; }
   .svcmq--rev .svcmq__track { animation-direction: reverse; animation-duration: 46s; }
   .svcmq:hover .svcmq__track { animation-play-state: paused; }
   @keyframes svcmqScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .svcchip { flex: 0 0 auto; display: flex; align-items: center; gap: 14px; padding: 20px 28px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; transition: border-color .2s var(--ease), transform .2s var(--ease), box-shadow .2s; }
-  .svcchip:hover { border-color: var(--green); transform: translateY(-2px); box-shadow: var(--shadow-md); }
-  .svcchip__icon { width: 42px; height: 42px; min-width: 42px; color: var(--green-deep); background: rgba(46,167,58,.08); border: 1px solid rgba(46,167,58,.18); border-radius: 10px; display: flex; align-items: center; justify-content: center; padding: 9px; }
+  .svcchip { flex: 0 0 auto; display: flex; align-items: center; gap: 14px; padding: 20px 28px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 14px; transition: border-color .2s var(--ease), transform .2s var(--ease), box-shadow .2s; }
+  .svcchip:hover { border-color: rgba(255,255,255,.45); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .svcchip__icon { width: 42px; height: 42px; min-width: 42px; color: #cdeed5; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; padding: 9px; }
   .svcchip__icon svg { width: 100%; height: 100%; }
-  .svcchip__name { font-size: 18px; font-weight: 700; color: var(--ink); letter-spacing: -.005em; white-space: nowrap; }
+  .svcchip__name { font-size: 18px; font-weight: 700; color: #fff; letter-spacing: -.005em; white-space: nowrap; }
 
   /* ---- CTA ---- */
   .svc-cta { padding: 96px 0; background: var(--bg-dark); }
@@ -777,7 +778,7 @@
     </div>
     <div class="svc2__grid">
       <article class="svc2card reveal">
-        <div class="svc2card__bg"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="Warehousing 3PL" loading="lazy" /></div>
+        <div class="svc2card__bg"><video autoplay muted loop playsinline preload="metadata" poster="/assets/img/poster-almacenaje.jpg"><source src="/assets/video/svc-almacenaje.mp4" type="video/mp4" /></video></div>
         <div class="svc2card__scrim"></div>
         <span class="svc2card__plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
         <div class="svc2card__body">
@@ -792,7 +793,7 @@
         </div>
       </article>
       <article class="svc2card reveal">
-        <div class="svc2card__bg"><img src="/assets/img/almacenes/03-juarez-eastlake.jpg" alt="Comercio Exterior" loading="lazy" /></div>
+        <div class="svc2card__bg"><video autoplay muted loop playsinline preload="metadata" poster="/assets/img/poster-comercio.jpg"><source src="/assets/video/svc-comercio.mp4" type="video/mp4" /></video></div>
         <div class="svc2card__scrim"></div>
         <span class="svc2card__plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
         <div class="svc2card__body">
@@ -807,7 +808,7 @@
         </div>
       </article>
       <article class="svc2card reveal">
-        <div class="svc2card__bg"><img src="/assets/img/service-logistica.jpg" alt="Logística integrada" loading="lazy" /></div>
+        <div class="svc2card__bg"><video autoplay muted loop playsinline preload="metadata" poster="/assets/img/poster-logistica.jpg"><source src="/assets/video/svc-logistica.mp4" type="video/mp4" /></video></div>
         <div class="svc2card__scrim"></div>
         <span class="svc2card__plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
         <div class="svc2card__body">

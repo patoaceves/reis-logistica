@@ -467,7 +467,7 @@
   @media (prefers-reduced-motion: reduce) { .imap__truck { display: none; } } 8% { opacity: 1; } 86% { stroke-dashoffset: var(--end, -120); opacity: 1; } 100% { stroke-dashoffset: var(--end, -120); opacity: 0; } }
   @media (prefers-reduced-motion: reduce) { .imap__comet { animation: none; opacity: 0; } }
   @media (prefers-reduced-motion: reduce) { .imap__routes path { animation: none; opacity: 0; } }
-  .imap__label { position: absolute; transform: translateX(-50%); color: #fff; font-size: 12.5px; font-weight: 700; letter-spacing: -.01em; white-space: nowrap; pointer-events: none; transition: opacity .3s var(--ease); z-index: 3; background: rgba(6,26,14,.62); padding: 3px 9px; border-radius: 999px; box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+  .imap__label { position: absolute; transform: translateX(-50%); color: #fff; font-size: 12.5px; font-weight: 700; letter-spacing: -.01em; white-space: nowrap; pointer-events: none; transition: opacity .3s var(--ease); z-index: 3; background: rgba(8,20,28,.72); border: 1px solid rgba(255,255,255,.12); padding: 4px 9px; border-radius: 7px; box-shadow: 0 2px 8px rgba(0,0,0,.3); }
   .imap__label.is-on { opacity: 0; }
   .imap__base { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 62%; height: auto; }
   .imap__lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; z-index: 2; }
@@ -718,7 +718,7 @@
         <div class="shuffle__cell"><img src="/assets/img/reis-oficinas.jpg" alt="" loading="lazy" /></div>
         <div class="shuffle__cell"><img src="/assets/img/stock-puerto.jpg" alt="" loading="lazy" /></div>
         <div class="shuffle__cell"><img src="/assets/img/almacenes/04-slp-docks.jpg" alt="" loading="lazy" /></div>
-        <div class="shuffle__cell"><img src="/assets/img/stock-montacargas.jpg" alt="" loading="lazy" /></div>
+        <div class="shuffle__cell"><img src="/assets/img/stock-bodega.jpg" alt="" loading="lazy" /></div>
         <div class="shuffle__cell"><img src="/assets/img/almacenes/01-slp-aurora.jpg" alt="" loading="lazy" /></div>
         <div class="shuffle__cell"><img src="/assets/img/stock-transporte.jpg" alt="" loading="lazy" /></div>
         <div class="shuffle__cell"><img src="/assets/img/almacenes/02-mty-e1a.jpg" alt="" loading="lazy" /></div>
@@ -838,65 +838,62 @@
       <div class="imap reveal">
         <img class="imap__base" src="/assets/img/mexico-outline.png" alt="Mapa de México con las ubicaciones de REIS" />
         <svg class="imap__routes" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-          <path class="imap__guide" d="M -3 16 Q 20.0 25.6 43.8 18" />
-          <path class="imap__guide" d="M 103 64 Q 78.5 34.4 43.8 18" />
+          <path class="imap__guide" d="M -26 16 Q 20.0 25.6 43.8 18" />
+          <path class="imap__guide" d="M 126 64 Q 78.5 34.4 43.8 18" />
           <path class="imap__guide" d="M 76 103 Q 51.5 63.7 43.8 18" />
           <path class="imap__guide" d="M 36 103 Q 48.3 61.3 43.8 18" />
-          <path class="imap__guide" d="M -3 96 Q 15.6 54.1 43.8 18" />
-          <path class="imap__guide" d="M -3 32 Q 17.2 14.2 43.8 18" />
-          <path class="imap__guide" d="M 103 28 Q 76.0 16.0 47 22" />
-          <path class="imap__guide" d="M 103 52 Q 69.9 46.6 47 22" />
+          <path class="imap__guide" d="M -26 96 Q 15.6 54.1 43.8 18" />
+          <path class="imap__guide" d="M 126 28 Q 76.0 16.0 47 22" />
           <path class="imap__guide" d="M 84 103 Q 54.1 67.7 47 22" />
           <path class="imap__guide" d="M 56 103 Q 43.0 63.4 47 22" />
-          <path class="imap__guide" d="M -3 80 Q 28.6 56.7 47 22" />
-          <path class="imap__guide" d="M -3 28 Q 23.1 34.1 47 22" />
-          <path class="imap__guide" d="M -3 28 Q 26.3 27.3 54 37" />
-          <path class="imap__guide" d="M 103 44 Q 77.3 49.1 54 37" />
-          <path class="imap__guide" d="M 103 88 Q 82.2 59.0 54 37" />
+          <path class="imap__guide" d="M -26 80 Q 28.6 56.7 47 22" />
+          <path class="imap__guide" d="M -26 28 Q 23.1 34.1 47 22" />
+          <path class="imap__guide" d="M -26 28 Q 26.3 27.3 54 37" />
+          <path class="imap__guide" d="M 126 44 Q 77.3 49.1 54 37" />
+          <path class="imap__guide" d="M 126 88 Q 82.2 59.0 54 37" />
           <path class="imap__guide" d="M 76 103 Q 73.8 67.1 54 37" />
           <path class="imap__guide" d="M 32 103 Q 54.2 73.7 54 37" />
-          <path class="imap__guide" d="M -3 80 Q 19.7 50.9 54 37" />
-          <path class="imap__guide" d="M -3 24 Q 29.1 27.4 50 52" />
-          <path class="imap__guide" d="M 103 28 Q 72.7 31.6 50 52" />
-          <path class="imap__guide" d="M 103 92 Q 69.0 82.0 50 52" />
+          <path class="imap__guide" d="M -26 24 Q 29.1 27.4 50 52" />
+          <path class="imap__guide" d="M 126 28 Q 72.7 31.6 50 52" />
+          <path class="imap__guide" d="M 126 92 Q 69.0 82.0 50 52" />
           <path class="imap__guide" d="M 60 103 Q 49.6 78.6 50 52" />
           <path class="imap__guide" d="M 44 103 Q 40.5 76.7 50 52" />
-          <path class="imap__guide" d="M -3 88 Q 19.4 63.9 50 52" />
+          <path class="imap__guide" d="M -26 88 Q 19.4 63.9 50 52" />
           <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="11.39s" begin="-2.98s" repeatCount="indefinite" path="M 76 103 Q 73.8 67.1 54 37" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="11.39s" begin="-2.98s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="12.16s" begin="-7.05s" repeatCount="indefinite" path="M -3 88 Q 19.4 63.9 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="12.16s" begin="-7.05s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.77s" begin="-11.77s" repeatCount="indefinite" path="M -3 16 Q 20.0 25.6 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.77s" begin="-11.77s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="12.16s" begin="-7.05s" repeatCount="indefinite" path="M -26 88 Q 19.4 63.9 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="12.16s" begin="-7.05s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.77s" begin="-11.77s" repeatCount="indefinite" path="M -26 16 Q 20.0 25.6 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.77s" begin="-11.77s" repeatCount="indefinite" /></ellipse>
           <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.31s" begin="-10.28s" repeatCount="indefinite" path="M 76 103 Q 51.5 63.7 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.31s" begin="-10.28s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="7.66s" begin="-2.88s" repeatCount="indefinite" path="M 103 88 Q 82.2 59.0 54 37" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="7.66s" begin="-2.88s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="12.15s" begin="-7.16s" repeatCount="indefinite" path="M -3 88 Q 19.4 63.9 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="12.15s" begin="-7.16s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="7.78s" begin="-11.42s" repeatCount="indefinite" path="M 103 28 Q 76.0 16.0 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="7.78s" begin="-11.42s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="7.66s" begin="-2.88s" repeatCount="indefinite" path="M 126 88 Q 82.2 59.0 54 37" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="7.66s" begin="-2.88s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="12.15s" begin="-7.16s" repeatCount="indefinite" path="M -26 88 Q 19.4 63.9 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="12.15s" begin="-7.16s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="7.78s" begin="-11.42s" repeatCount="indefinite" path="M 126 28 Q 76.0 16.0 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="7.78s" begin="-11.42s" repeatCount="indefinite" /></ellipse>
           <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="11.27s" begin="-3.92s" repeatCount="indefinite" path="M 32 103 Q 54.2 73.7 54 37" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="11.27s" begin="-3.92s" repeatCount="indefinite" /></ellipse>
           <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="7.52s" begin="-0.02s" repeatCount="indefinite" path="M 56 103 Q 43.0 63.4 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="7.52s" begin="-0.02s" repeatCount="indefinite" /></ellipse>
           <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="8.19s" begin="-2.81s" repeatCount="indefinite" path="M 84 103 Q 54.1 67.7 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="8.19s" begin="-2.81s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="11.38s" begin="-0.79s" repeatCount="indefinite" path="M -3 32 Q 17.2 14.2 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="11.38s" begin="-0.79s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="7.89s" begin="-7.69s" repeatCount="indefinite" path="M -3 96 Q 15.6 54.1 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="7.89s" begin="-7.69s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="11.38s" begin="-0.79s" repeatCount="indefinite" path="M -26 32 Q 17.2 14.2 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="11.38s" begin="-0.79s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="7.89s" begin="-7.69s" repeatCount="indefinite" path="M -26 96 Q 15.6 54.1 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="7.89s" begin="-7.69s" repeatCount="indefinite" /></ellipse>
           <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="8.44s" begin="-4.22s" repeatCount="indefinite" path="M 44 103 Q 40.5 76.7 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="8.44s" begin="-4.22s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="9.12s" begin="-0.47s" repeatCount="indefinite" path="M -3 32 Q 17.2 14.2 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="9.12s" begin="-0.47s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="11.1s" begin="-1.82s" repeatCount="indefinite" path="M 103 28 Q 72.7 31.6 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="11.1s" begin="-1.82s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="12.44s" begin="-7.64s" repeatCount="indefinite" path="M -3 96 Q 15.6 54.1 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="12.44s" begin="-7.64s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="9.0s" begin="-11.44s" repeatCount="indefinite" path="M -3 80 Q 19.7 50.9 54 37" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="9.0s" begin="-11.44s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.09s" begin="-10.69s" repeatCount="indefinite" path="M 103 44 Q 77.3 49.1 54 37" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.09s" begin="-10.69s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.37s" begin="-4.2s" repeatCount="indefinite" path="M -3 28 Q 26.3 27.3 54 37" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.37s" begin="-4.2s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="11.46s" begin="-5.74s" repeatCount="indefinite" path="M -3 28 Q 23.1 34.1 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="11.46s" begin="-5.74s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="9.38s" begin="-6.99s" repeatCount="indefinite" path="M -3 80 Q 28.6 56.7 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="9.38s" begin="-6.99s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="9.12s" begin="-0.47s" repeatCount="indefinite" path="M -26 32 Q 17.2 14.2 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="9.12s" begin="-0.47s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="11.1s" begin="-1.82s" repeatCount="indefinite" path="M 126 28 Q 72.7 31.6 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="11.1s" begin="-1.82s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="12.44s" begin="-7.64s" repeatCount="indefinite" path="M -26 96 Q 15.6 54.1 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="12.44s" begin="-7.64s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="9.0s" begin="-11.44s" repeatCount="indefinite" path="M -26 80 Q 19.7 50.9 54 37" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="9.0s" begin="-11.44s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.09s" begin="-10.69s" repeatCount="indefinite" path="M 126 44 Q 77.3 49.1 54 37" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.09s" begin="-10.69s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.37s" begin="-4.2s" repeatCount="indefinite" path="M -26 28 Q 26.3 27.3 54 37" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.37s" begin="-4.2s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="11.46s" begin="-5.74s" repeatCount="indefinite" path="M -26 28 Q 23.1 34.1 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="11.46s" begin="-5.74s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="9.38s" begin="-6.99s" repeatCount="indefinite" path="M -26 80 Q 28.6 56.7 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="9.38s" begin="-6.99s" repeatCount="indefinite" /></ellipse>
           <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.06s" begin="-5.84s" repeatCount="indefinite" path="M 60 103 Q 49.6 78.6 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.06s" begin="-5.84s" repeatCount="indefinite" /></ellipse>
           <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="11.17s" begin="-3.28s" repeatCount="indefinite" path="M 36 103 Q 48.3 61.3 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="11.17s" begin="-3.28s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.1s" begin="-7.97s" repeatCount="indefinite" path="M 103 52 Q 69.9 46.6 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.1s" begin="-7.97s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="11.22s" begin="-10.91s" repeatCount="indefinite" path="M 103 64 Q 78.5 34.4 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="11.22s" begin="-10.91s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.93s" begin="-11.62s" repeatCount="indefinite" path="M 103 92 Q 69.0 82.0 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.93s" begin="-11.62s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.1s" begin="-7.97s" repeatCount="indefinite" path="M 126 52 Q 69.9 46.6 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.1s" begin="-7.97s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="11.22s" begin="-10.91s" repeatCount="indefinite" path="M 126 64 Q 78.5 34.4 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="11.22s" begin="-10.91s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.93s" begin="-11.62s" repeatCount="indefinite" path="M 126 92 Q 69.0 82.0 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.93s" begin="-11.62s" repeatCount="indefinite" /></ellipse>
           <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="12.47s" begin="-1.18s" repeatCount="indefinite" path="M 44 103 Q 40.5 76.7 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="12.47s" begin="-1.18s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="9.36s" begin="-7.78s" repeatCount="indefinite" path="M -3 24 Q 29.1 27.4 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="9.36s" begin="-7.78s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.59s" begin="-9.43s" repeatCount="indefinite" path="M -3 28 Q 23.1 34.1 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.59s" begin="-9.43s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="9.36s" begin="-7.78s" repeatCount="indefinite" path="M -26 24 Q 29.1 27.4 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="9.36s" begin="-7.78s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.59s" begin="-9.43s" repeatCount="indefinite" path="M -26 28 Q 23.1 34.1 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.59s" begin="-9.43s" repeatCount="indefinite" /></ellipse>
           <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="9.09s" begin="-5.7s" repeatCount="indefinite" path="M 60 103 Q 49.6 78.6 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="9.09s" begin="-5.7s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="9.56s" begin="-2.1s" repeatCount="indefinite" path="M -3 24 Q 29.1 27.4 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="9.56s" begin="-2.1s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="9.56s" begin="-2.1s" repeatCount="indefinite" path="M -26 24 Q 29.1 27.4 50 52" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="9.56s" begin="-2.1s" repeatCount="indefinite" /></ellipse>
           <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="11.3s" begin="-4.27s" repeatCount="indefinite" path="M 76 103 Q 73.8 67.1 54 37" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="11.3s" begin="-4.27s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.59s" begin="-2.08s" repeatCount="indefinite" path="M 103 88 Q 82.2 59.0 54 37" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.59s" begin="-2.08s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.59s" begin="-2.08s" repeatCount="indefinite" path="M 126 88 Q 82.2 59.0 54 37" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.59s" begin="-2.08s" repeatCount="indefinite" /></ellipse>
           <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="10.63s" begin="-6.89s" repeatCount="indefinite" path="M 36 103 Q 48.3 61.3 43.8 18" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="10.63s" begin="-6.89s" repeatCount="indefinite" /></ellipse>
-          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="7.94s" begin="-4.76s" repeatCount="indefinite" path="M -3 80 Q 28.6 56.7 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="7.94s" begin="-4.76s" repeatCount="indefinite" /></ellipse>
+          <ellipse class="imap__truck" rx="0.34" ry="0.68"><animateMotion dur="7.94s" begin="-4.76s" repeatCount="indefinite" path="M -26 80 Q 28.6 56.7 47 22" /><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.07;0.82;0.97;1" dur="7.94s" begin="-4.76s" repeatCount="indefinite" /></ellipse>
         </svg>
         <svg class="imap__lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
           <line data-line="elpaso" x1="43.8" y1="18" x2="14" y2="20" />
@@ -1334,8 +1331,23 @@
       if (!grid) return;
       var cells = Array.prototype.slice.call(grid.children);
       var timer = null, visible = false, EASE = 'cubic-bezier(.22,1,.36,1)';
+      var pool = ['/assets/img/stock-puerto-grua.jpg','/assets/img/stock-racks.jpg','/assets/img/stock-camion.jpg','/assets/img/stock-equipo.jpg','/assets/img/stock-cajas.jpg'];
+      pool.forEach(function(u){ var im = new Image(); im.src = u; });
+      var pIdx = 0;
+      var swappable = cells.filter(function(_, i){ return i > 1; });
+      function cycleImg(){
+        if (!pool.length || !swappable.length) return;
+        var cell = swappable[Math.floor(Math.random() * swappable.length)];
+        var img = cell.querySelector('img');
+        if (!img) return;
+        var old = img.getAttribute('src');
+        img.src = pool[pIdx];
+        pool[pIdx] = old;
+        pIdx = (pIdx + 1) % pool.length;
+      }
       function order(){ var a = cells.map(function(_,i){return i;}); for (var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
       function run(){
+        cycleImg();
         var first = cells.map(function(c){ return c.getBoundingClientRect(); });
         order().forEach(function(cellIdx, pos){ cells[cellIdx].style.order = pos; });
         requestAnimationFrame(function(){
@@ -1349,7 +1361,7 @@
           });
         });
       }
-      function start(){ stop(); if (!visible) return; timer = setInterval(run, 6000); }
+      function start(){ stop(); if (!visible) return; timer = setInterval(run, 3800); }
       function stop(){ if (timer){ clearInterval(timer); timer = null; } }
       if ('IntersectionObserver' in window){
         new IntersectionObserver(function(e){ visible = e[0].isIntersecting; if (visible) start(); else stop(); }, { threshold: .2 }).observe(grid);

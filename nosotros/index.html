@@ -651,7 +651,11 @@
   .nos-ceo__role { font-family: var(--font-eyebrow); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green-2); margin-top: 4px; }
   @media (max-width: 760px) { .nos-ceo__grid { grid-template-columns: 1fr; gap: 28px; } .nos-ceo__photo { max-width: 240px; } }
 
-  .nos-team { background: var(--bg); }
+  .nos-team { background: var(--bg); position: relative; isolation: isolate; overflow: hidden; --mx: 50%; --my: 30%; }
+  .nos-team::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(11,26,34,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(11,26,34,.05) 1px, transparent 1px); background-size: 64px 64px; -webkit-mask-image: radial-gradient(ellipse 92% 92% at 50% 38%, #000 46%, transparent 92%); mask-image: radial-gradient(ellipse 92% 92% at 50% 38%, #000 46%, transparent 92%); }
+  .nos-team__spot { position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(420px circle at var(--mx) var(--my), rgba(46,167,58,.2), transparent 62%); opacity: 0; transition: opacity .4s var(--ease); }
+  .nos-team:hover .nos-team__spot { opacity: 1; }
+  .nos-team > .container { position: relative; z-index: 1; }
   .nos-team__grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
   @media (max-width: 900px) { .nos-team__grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 520px) { .nos-team__grid { grid-template-columns: 1fr; } }
@@ -781,6 +785,7 @@
 </section>
 
 <section class="block nos-team" id="equipo">
+  <div class="nos-team__spot" aria-hidden="true"></div>
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow" data-i18n="nos.team.eyebrow">Nuestro equipo</span>
@@ -1268,12 +1273,13 @@
       } else { visible = true; start(); }
     })();
     (function(){
-      var s = document.querySelector('.services-waves');
-      if (!s) return;
-      s.addEventListener('mousemove', function(e){
-        var r = s.getBoundingClientRect();
-        s.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
-        s.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+      var els = document.querySelectorAll('.services-waves, .nos-team');
+      els.forEach(function(s){
+        s.addEventListener('mousemove', function(e){
+          var r = s.getBoundingClientRect();
+          s.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+          s.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+        });
       });
     })();
     document.getElementById('langToggle').addEventListener('click', () => {
