@@ -619,23 +619,25 @@
   .umap-sec__intro .section-head { text-align: left; margin: 0; max-width: none; }
   .umap-sec__intro .section-head .eyebrow { justify-content: flex-start; }
   .umap-sec__list { list-style: none; display: flex; flex-direction: column; gap: 11px; margin-top: 26px; }
-  .umap-sec__list li { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 15.5px; color: #fff; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: 12px 16px; }
+  .umap-sec__list li { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 15.5px; color: #fff; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: 12px 16px; cursor: default; transition: border-color .2s var(--ease), background .2s var(--ease); }
+  .umap-sec__list li:hover { border-color: rgba(76,200,89,.55); background: rgba(76,200,89,.12); }
   .umap-sec__dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green-bright); box-shadow: 0 0 0 4px rgba(76,200,89,.18); flex-shrink: 0; }
   .umap { position: relative; max-width: 520px; width: 100%; margin: 0; }
   .umap__bg { width: 100%; height: auto; display: block; opacity: .16; }
   @media (max-width: 860px) { .umap-sec__grid { grid-template-columns: 1fr; gap: 30px; } .umap-sec__intro .section-head { text-align: center; } .umap-sec__intro .section-head .eyebrow { justify-content: center; } .umap-sec__list { max-width: 420px; margin: 26px auto 0; } .umap { max-width: 540px; margin: 0 auto; } }
-  .umap__pin { position: absolute; transform: translate(-50%,-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; cursor: default; }
+  .umap__pin { position: absolute; transform: translate(-50%,-50%); display: flex; flex-direction: column-reverse; align-items: center; gap: 8px; cursor: default; }
   .umap__pin--up { flex-direction: column-reverse; }
-  .umap__dot { width: 15px; height: 15px; border-radius: 50%; background: var(--green-bright);
-    box-shadow: 0 0 0 5px rgba(76,200,89,.2), 0 0 16px rgba(76,200,89,.55); transition: transform .2s var(--ease); }
-  .umap__pin:hover .umap__dot { transform: scale(1.25); }
-  .umap__lbl { font-family: var(--font-eyebrow); font-size: 12.5px; font-weight: 700; letter-spacing: .03em; color: #fff;
-    background: rgba(8,20,28,.72); border: 1px solid rgba(255,255,255,.12); padding: 4px 9px; border-radius: 7px; white-space: nowrap; }
+  .umap__dot { position: relative; z-index: 1; width: 15px; height: 15px; border-radius: 50%; background: var(--green-bright);
+    box-shadow: 0 0 0 5px rgba(76,200,89,.2), 0 0 16px rgba(76,200,89,.55); transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
+  .umap__pin:hover .umap__dot, .umap__pin.is-hi .umap__dot { transform: scale(1.45); box-shadow: 0 0 0 7px rgba(76,200,89,.3), 0 0 24px rgba(76,200,89,.85); }
+  .umap__lbl { position: relative; z-index: 5; font-family: var(--font-eyebrow); font-size: 12.5px; font-weight: 700; letter-spacing: .03em; color: #fff;
+    background: rgba(8,20,28,.72); border: 1px solid rgba(255,255,255,.12); padding: 4px 9px; border-radius: 7px; white-space: nowrap; transition: border-color .2s var(--ease); }
+  .umap__pin.is-hi .umap__lbl { border-color: rgba(76,200,89,.6); }
   @media (max-width: 620px) { .umap__lbl { font-size: 10.5px; padding: 3px 6px; } .umap__dot { width: 11px; height: 11px; } }
 
   .ureps { background: var(--bg-alt); position: relative; isolation: isolate; overflow: hidden; }
-  .ureps::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(46,167,58,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(46,167,58,.08) 1px, transparent 1px); background-size: 60px 60px; -webkit-mask-image: radial-gradient(ellipse 96% 88% at 50% 32%, #000 48%, transparent 92%); mask-image: radial-gradient(ellipse 96% 88% at 50% 32%, #000 48%, transparent 92%); }
-  .ureps::after { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(560px 380px at 88% 6%, rgba(46,167,58,.13), transparent 64%), radial-gradient(520px 360px at 8% 98%, rgba(46,167,58,.1), transparent 66%); }
+  .ureps::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(46,167,58,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(46,167,58,.13) 1px, transparent 1px); background-size: 58px 58px; -webkit-mask-image: radial-gradient(ellipse 98% 90% at 50% 34%, #000 52%, transparent 94%); mask-image: radial-gradient(ellipse 98% 90% at 50% 34%, #000 52%, transparent 94%); }
+  .ureps::after { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(620px 420px at 90% 2%, rgba(46,167,58,.22), transparent 62%), radial-gradient(560px 400px at 6% 100%, rgba(46,167,58,.18), transparent 64%); }
   .ureps > .container { position: relative; z-index: 1; }
   .ureps__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
   @media (max-width: 820px) { .ureps__grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; } }
@@ -735,18 +737,18 @@
           <p>Cuatro ubicaciones que conectan el Baj&iacute;o y el noreste con la frontera M&eacute;xico&ndash;Estados Unidos.</p>
         </div>
         <ul class="umap-sec__list">
-          <li><span class="umap-sec__dot"></span>El Paso, TX</li>
-          <li><span class="umap-sec__dot"></span>Ciudad Ju&aacute;rez</li>
-          <li><span class="umap-sec__dot"></span>Monterrey</li>
-          <li><span class="umap-sec__dot"></span>San Luis Potos&iacute;</li>
+          <li data-loc="elpaso"><span class="umap-sec__dot"></span>El Paso, TX</li>
+          <li data-loc="juarez"><span class="umap-sec__dot"></span>Ciudad Ju&aacute;rez</li>
+          <li data-loc="monterrey"><span class="umap-sec__dot"></span>Monterrey</li>
+          <li data-loc="slp"><span class="umap-sec__dot"></span>San Luis Potos&iacute;</li>
         </ul>
       </div>
       <div class="umap reveal">
         <img class="umap__bg" src="/assets/img/mexico-outline.png" alt="Mapa de M&eacute;xico con las ubicaciones de REIS Log&iacute;stica" />
-        <span class="umap__pin umap__pin--up" style="left:34.5%;top:4.5%"><span class="umap__dot"></span><span class="umap__lbl">El Paso, TX</span></span>
-<span class="umap__pin" style="left:37%;top:9.5%"><span class="umap__dot"></span><span class="umap__lbl">Ciudad Ju&aacute;rez</span></span>
-<span class="umap__pin" style="left:56.5%;top:31.5%"><span class="umap__dot"></span><span class="umap__lbl">Monterrey</span></span>
-<span class="umap__pin" style="left:50%;top:51%"><span class="umap__dot"></span><span class="umap__lbl">San Luis Potos&iacute;</span></span>
+        <span class="umap__pin umap__pin--up" data-loc="elpaso" style="left:34.5%;top:4.5%"><span class="umap__dot"></span><span class="umap__lbl">El Paso, TX</span></span>
+<span class="umap__pin" data-loc="juarez" style="left:37%;top:9.5%"><span class="umap__dot"></span><span class="umap__lbl">Ciudad Ju&aacute;rez</span></span>
+<span class="umap__pin" data-loc="monterrey" style="left:56.5%;top:31.5%"><span class="umap__dot"></span><span class="umap__lbl">Monterrey</span></span>
+<span class="umap__pin" data-loc="slp" style="left:50%;top:51%"><span class="umap__dot"></span><span class="umap__lbl">San Luis Potos&iacute;</span></span>
       </div>
     </div>
   </div>
@@ -1256,6 +1258,16 @@
         var r = s.getBoundingClientRect();
         s.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
         s.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+      });
+    })();
+    (function(){
+      var items = document.querySelectorAll('.umap-sec__list li[data-loc]');
+      items.forEach(function(li){
+        var loc = li.getAttribute('data-loc');
+        var pin = document.querySelector('.umap__pin[data-loc="' + loc + '"]');
+        if (!pin) return;
+        li.addEventListener('mouseenter', function(){ pin.classList.add('is-hi'); });
+        li.addEventListener('mouseleave', function(){ pin.classList.remove('is-hi'); });
       });
     })();
     document.getElementById('langToggle').addEventListener('click', () => {
