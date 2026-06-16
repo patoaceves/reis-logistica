@@ -576,10 +576,10 @@
   .herox__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .herox__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,18,26,.08) 0%, rgba(6,18,26,.42) 60%, rgba(6,18,26,.82) 100%); opacity: var(--scrim, .35); }
   .herox__intro { position: absolute; z-index: 4; top: 50%; left: 50%; transform: translate(-50%, calc(-50% + var(--introY, 0px))); width: min(900px, 90vw); text-align: center; color: #fff; opacity: var(--introOp, 1); pointer-events: none; }
-  .herox__intro::before { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 135%; height: 155%; background: radial-gradient(ellipse at center, rgba(6,18,26,.44) 0%, rgba(6,18,26,.18) 46%, transparent 72%); z-index: -1; pointer-events: none; }
+  .herox__intro::before { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 135%; height: 155%; background: radial-gradient(ellipse at center, rgba(6,18,26,.62) 0%, rgba(6,18,26,.24) 46%, transparent 72%); z-index: -1; pointer-events: none; }
   .herox__intro .eyebrow { color: rgba(255,255,255,.92); }
-  .herox__lead { font-size: clamp(36px, 6.4vw, 86px); font-weight: 700; letter-spacing: -.022em; line-height: 1.03; margin: 16px 0 24px; color: rgba(255,255,255,.16); -webkit-text-stroke: 1.6px rgba(255,255,255,.95); text-stroke: 1.6px rgba(255,255,255,.95); text-shadow: 0 2px 22px rgba(0,0,0,.5); }
-  .herox__lead .accent { color: rgba(76,200,89,.22); -webkit-text-stroke: 1.6px rgba(108,230,124,.98); text-stroke: 1.6px rgba(108,230,124,.98); }
+  .herox__lead { font-size: clamp(36px, 6.4vw, 86px); font-weight: 700; letter-spacing: -.022em; line-height: 1.03; margin: 16px 0 24px; text-shadow: 0 2px 6px rgba(0,0,0,.6), 0 8px 28px rgba(0,0,0,.55); }
+  .herox__lead .accent { color: var(--green-bright); }
   .herox__hint { display: inline-flex; align-items: center; gap: 8px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.85); }
   .herox__hint svg { width: 17px; height: 17px; animation: heroxbob 1.8s ease-in-out infinite; }
   @keyframes heroxbob { 0%,100% { transform: translateY(-2px); } 50% { transform: translateY(3px); } }
