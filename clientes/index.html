@@ -1085,6 +1085,7 @@
         }
       });
       document.documentElement.lang = l;
+      if(window.__whReset) window.__whReset();
       document.querySelectorAll('.lang-flag').forEach(function(f){ f.classList.toggle('is-active', f.getAttribute('data-lang') === l); });
     }
     (function(){
@@ -1283,6 +1284,7 @@
     var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
     var i=0, txt='', deleting=false;
     el.textContent='';
+    window.__whReset=function(){ i=0; txt=''; deleting=false; el.textContent=''; };
     function tick(){
       var list=words(); if(!list.length) return;
       var full=list[i % list.length];

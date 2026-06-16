@@ -627,6 +627,7 @@
   @media (max-width: 860px) { .umap-sec__grid { grid-template-columns: 1fr; gap: 30px; } .umap-sec__intro .section-head { text-align: center; } .umap-sec__intro .section-head .eyebrow { justify-content: center; } .umap-sec__list { max-width: 420px; margin: 26px auto 0; } .umap { max-width: 540px; margin: 0 auto; } }
   .umap__pin { position: absolute; transform: translate(-50%,-50%); display: flex; flex-direction: column-reverse; align-items: center; gap: 8px; cursor: default; }
   .umap__pin--up { flex-direction: column-reverse; }
+  .umap__pin--down { flex-direction: column; }
   .umap__dot { position: relative; z-index: 1; width: 15px; height: 15px; border-radius: 50%; background: var(--green-bright);
     box-shadow: 0 0 0 5px rgba(76,200,89,.2), 0 0 16px rgba(76,200,89,.55); transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
   .umap__pin:hover .umap__dot, .umap__pin.is-hi .umap__dot { transform: scale(1.45); box-shadow: 0 0 0 7px rgba(76,200,89,.3), 0 0 24px rgba(76,200,89,.85); }
@@ -746,7 +747,7 @@
       <div class="umap reveal">
         <img class="umap__bg" src="/assets/img/mexico-outline.png" alt="Mapa de M&eacute;xico con las ubicaciones de REIS Log&iacute;stica" />
         <span class="umap__pin umap__pin--up" data-loc="elpaso" style="left:34.5%;top:4.5%"><span class="umap__dot"></span><span class="umap__lbl">El Paso, TX</span></span>
-<span class="umap__pin" data-loc="juarez" style="left:37%;top:9.5%"><span class="umap__dot"></span><span class="umap__lbl">Ciudad Ju&aacute;rez</span></span>
+<span class="umap__pin umap__pin--down" data-loc="juarez" style="left:37%;top:9.5%"><span class="umap__dot"></span><span class="umap__lbl">Ciudad Ju&aacute;rez</span></span>
 <span class="umap__pin" data-loc="monterrey" style="left:56.5%;top:31.5%"><span class="umap__dot"></span><span class="umap__lbl">Monterrey</span></span>
 <span class="umap__pin" data-loc="slp" style="left:50%;top:51%"><span class="umap__dot"></span><span class="umap__lbl">San Luis Potos&iacute;</span></span>
       </div>
@@ -1132,6 +1133,7 @@
         }
       });
       document.documentElement.lang = l;
+      if(window.__whReset) window.__whReset();
       document.querySelectorAll('.lang-flag').forEach(function(f){ f.classList.toggle('is-active', f.getAttribute('data-lang') === l); });
     }
     (function(){
@@ -1340,6 +1342,7 @@
     var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
     var i=0, txt='', deleting=false;
     el.textContent='';
+    window.__whReset=function(){ i=0; txt=''; deleting=false; el.textContent=''; };
     function tick(){
       var list=words(); if(!list.length) return;
       var full=list[i % list.length];
