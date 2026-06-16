@@ -697,12 +697,12 @@
 <section class="whero">
   <canvas class="whero__canvas" id="whCanvas" aria-hidden="true"></canvas>
   <div class="whero__content reveal">
-    <span class="eyebrow on-image">Contacto</span>
+    <span class="eyebrow on-image" data-i18n="con.eyebrow">Contacto</span>
     <h1>
-      <span>Hablemos de</span><br>
+      <span data-i18n="con.h1lead">Hablemos de</span><br>
       <span class="whero__rot"><span class="whero__word" id="whWord" data-es="tu log&iacute;stica,tu inventario,tu operaci&oacute;n,tu cadena" data-en="your logistics,your inventory,your operation,your supply chain">tu log&iacute;stica</span><span class="whero__caret" aria-hidden="true"></span></span>
     </h1>
-    <p class="whero__sub">Cot&iacute;zaci&oacute;n formal en menos de 24 horas h&aacute;biles. Te conectamos con el especialista de tu ciudad.</p>
+    <p class="whero__sub" data-i18n="con.sub">Cot&iacute;zaci&oacute;n formal en menos de 24 horas h&aacute;biles. Te conectamos con el especialista de tu ciudad.</p>
   </div>
 </section>
 
@@ -711,14 +711,14 @@
     <div class="cform-grid">
 
       <div class="cform-info reveal">
-        <h2>Hablemos.</h2>
-        <p class="cform-info__lead">Cu&eacute;ntanos qu&eacute; necesitas almacenar o mover y te respondemos r&aacute;pido.</p>
+        <h2 data-i18n="con.info.h2">Hablemos.</h2>
+        <p class="cform-info__lead" data-i18n="con.info.lead">Cu&eacute;ntanos qu&eacute; necesitas almacenar o mover y te respondemos r&aacute;pido.</p>
         <div class="cinfo-item">
-          <div class="cinfo-item__label">Direcci&oacute;n General</div>
+          <div class="cinfo-item__label" data-i18n="con.info.l1">Direcci&oacute;n General</div>
           <p>Eje 114 No. 590, Zona Industrial<br>San Luis Potos&iacute;, S.L.P. MX 78395</p>
         </div>
         <div class="cinfo-item">
-          <div class="cinfo-item__label">Ventas &middot; Comercio Exterior</div>
+          <div class="cinfo-item__label" data-i18n="con.info.l2">Ventas &middot; Comercio Exterior</div>
           <p>Rafael Alvarado<br><a href="tel:+526563523565">+52 656 352 3565</a> &middot; <a href="mailto:rafael.a@reisbl.com">rafael.a@reisbl.com</a></p>
         </div>
         <div class="cinfo-item">
@@ -733,30 +733,30 @@
 
       <div class="cform-card reveal">
         <div id="cformBody">
-          <h3>Recibe una cotizaci&oacute;n</h3>
-          <p class="cform-card__sub">Respondemos en menos de 24 horas h&aacute;biles.</p>
+          <h3 data-i18n="con.card.h3">Recibe una cotizaci&oacute;n</h3>
+          <p class="cform-card__sub" data-i18n="con.card.sub">Respondemos en menos de 24 horas h&aacute;biles.</p>
           <form id="quoteForm" novalidate>
             <div class="cform-row">
-              <div class="cfield"><label>Nombre *</label><input name="nombre" required /></div>
-              <div class="cfield"><label>Apellidos</label><input name="apellidos" /></div>
+              <div class="cfield"><label data-i18n="con.f.nombre">Nombre *</label><input name="nombre" required /></div>
+              <div class="cfield"><label data-i18n="con.f.apellidos">Apellidos</label><input name="apellidos" /></div>
             </div>
-            <div class="cfield"><label>Empresa</label><input name="empresa" /></div>
+            <div class="cfield"><label data-i18n="con.f.empresa">Empresa</label><input name="empresa" /></div>
             <div class="cform-row">
-              <div class="cfield"><label>Correo *</label><input type="email" name="correo" required /></div>
-              <div class="cfield"><label>Tel&eacute;fono *</label><input type="tel" name="telefono" required /></div>
+              <div class="cfield"><label data-i18n="con.f.correo">Correo *</label><input type="email" name="correo" required /></div>
+              <div class="cfield"><label data-i18n="con.f.telefono">Tel&eacute;fono *</label><input type="tel" name="telefono" required /></div>
             </div>
             <div class="cform-row">
-              <div class="cfield"><label>Tipo de servicio</label><select name="servicio"><option value="">Elige una opci&oacute;n</option><option>Almacenaje</option><option>Comercio Exterior</option><option>Log&iacute;stica integrada</option><option>Otro</option></select></div>
-              <div class="cfield"><label>Ubicaci&oacute;n</label><select name="ubicacion"><option value="">Elige una ciudad</option><option>Ciudad Ju&aacute;rez</option><option>San Luis Potos&iacute;</option><option>Monterrey</option><option>El Paso, TX</option><option>Otra</option></select></div>
+              <div class="cfield"><label data-i18n="con.f.servicio">Tipo de servicio</label><select name="servicio"><option value="" data-i18n="con.o.elige">Elige una opci&oacute;n</option><option data-i18n="con.o.almacenaje">Almacenaje</option><option data-i18n="con.o.comercio">Comercio Exterior</option><option data-i18n="con.o.logistica">Log&iacute;stica integrada</option><option data-i18n="con.o.otro">Otro</option></select></div>
+              <div class="cfield"><label data-i18n="con.f.ubicacion">Ubicaci&oacute;n</label><select name="ubicacion"><option value="" data-i18n="con.o.ciudad">Elige una ciudad</option><option>Ciudad Ju&aacute;rez</option><option>San Luis Potos&iacute;</option><option>Monterrey</option><option>El Paso, TX</option><option data-i18n="con.o.otra">Otra</option></select></div>
             </div>
-            <div class="cfield"><label>Mensaje</label><textarea name="mensaje" placeholder="Cu&eacute;ntanos qu&eacute; necesitas almacenar o mover..."></textarea></div>
-            <button type="submit" class="cform-submit">Enviar solicitud</button>
+            <div class="cfield"><label data-i18n="con.f.mensaje">Mensaje</label><textarea name="mensaje" data-i18n-ph="con.ph.mensaje" placeholder="Cu&eacute;ntanos qu&eacute; necesitas almacenar o mover..."></textarea></div>
+            <button type="submit" class="cform-submit" data-i18n="con.submit">Enviar solicitud</button>
           </form>
         </div>
         <div class="cform-ok" id="cformOk">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
-          <h3>&iexcl;Gracias!</h3>
-          <p>Te contactaremos en menos de 24 horas h&aacute;biles.</p>
+          <h3 data-i18n="con.ok.h3">&iexcl;Gracias!</h3>
+          <p data-i18n="con.ok.p">Te contactaremos en menos de 24 horas h&aacute;biles.</p>
         </div>
       </div>
 
@@ -945,6 +945,34 @@
   (function() {
     let lang = 'es';
     const t = {
+      'con.eyebrow':    { es: 'Contacto', en: 'Contact' },
+      'con.h1lead':     { es: 'Hablemos de', en: 'Let\'s talk about' },
+      'con.sub':        { es: 'Cotización formal en menos de 24 horas hábiles. Te conectamos con el especialista de tu ciudad.', en: 'Formal quote in less than 24 business hours. We connect you with your city specialist.' },
+      'con.info.h2':    { es: 'Hablemos.', en: 'Let\'s talk.' },
+      'con.info.lead':  { es: 'Cuéntanos qué necesitas almacenar o mover y te respondemos rápido.', en: 'Tell us what you need to store or move and we respond fast.' },
+      'con.info.l1':    { es: 'Dirección General', en: 'Head Office' },
+      'con.info.l2':    { es: 'Ventas &middot; Comercio Exterior', en: 'Sales &middot; Foreign Trade' },
+      'con.card.h3':    { es: 'Recibe una cotización', en: 'Get a quote' },
+      'con.card.sub':   { es: 'Respondemos en menos de 24 horas hábiles.', en: 'We respond in less than 24 business hours.' },
+      'con.f.nombre':   { es: 'Nombre *', en: 'Name *' },
+      'con.f.apellidos':{ es: 'Apellidos', en: 'Last name' },
+      'con.f.empresa':  { es: 'Empresa', en: 'Company' },
+      'con.f.correo':   { es: 'Correo *', en: 'Email *' },
+      'con.f.telefono': { es: 'Teléfono *', en: 'Phone *' },
+      'con.f.servicio': { es: 'Tipo de servicio', en: 'Service type' },
+      'con.f.ubicacion':{ es: 'Ubicación', en: 'Location' },
+      'con.f.mensaje':  { es: 'Mensaje', en: 'Message' },
+      'con.o.elige':    { es: 'Elige una opción', en: 'Choose an option' },
+      'con.o.almacenaje':{ es: 'Almacenaje', en: 'Warehousing' },
+      'con.o.comercio': { es: 'Comercio Exterior', en: 'Foreign Trade' },
+      'con.o.logistica':{ es: 'Logística integrada', en: 'Integrated logistics' },
+      'con.o.otro':     { es: 'Otro', en: 'Other' },
+      'con.o.ciudad':   { es: 'Elige una ciudad', en: 'Choose a city' },
+      'con.o.otra':     { es: 'Otra', en: 'Other' },
+      'con.submit':     { es: 'Enviar solicitud', en: 'Send request' },
+      'con.ok.h3':      { es: '¡Gracias!', en: 'Thank you!' },
+      'con.ok.p':       { es: 'Te contactaremos en menos de 24 horas hábiles.', en: 'We will contact you in less than 24 business hours.' },
+      'con.ph.mensaje': { es: 'Cuéntanos qué necesitas almacenar o mover...', en: 'Tell us what you need to store or move...' },
       'nav.inicio':     { es: 'Inicio', en: 'Home' },
       'nav.nosotros':   { es: 'Nosotros', en: 'About' },
       'nav.servicios':  { es: 'Servicios', en: 'Services' },
@@ -1088,6 +1116,10 @@
         } else {
           el.innerHTML = dict[l];
         }
+      });
+      document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+        const dict = t[el.getAttribute('data-i18n-ph')];
+        if (dict && dict[l] !== undefined) el.setAttribute('placeholder', dict[l]);
       });
       document.documentElement.lang = l;
       document.querySelectorAll('.lang-flag').forEach(function(f){ f.classList.toggle('is-active', f.getAttribute('data-lang') === l); });

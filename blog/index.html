@@ -740,8 +740,8 @@
   <canvas class="whero__canvas" id="whCanvas" aria-hidden="true"></canvas>
   <div class="whero__content reveal">
     <span class="eyebrow on-image">Blog</span>
-    <h1><span>Ideas sobre</span><br><span class="whero__rot"><span class="whero__word" id="whWord" data-es="log&iacute;stica,comercio exterior,warehousing,nearshoring" data-en="logistics,foreign trade,warehousing,nearshoring">log&iacute;stica</span><span class="whero__caret" aria-hidden="true"></span></span></h1>
-    <p class="whero__sub">An&aacute;lisis y notas sobre comercio exterior, almacenamiento y cadenas de suministro en M&eacute;xico.</p>
+    <h1><span data-i18n="blog.h1lead">Ideas sobre</span><br><span class="whero__rot"><span class="whero__word" id="whWord" data-es="log&iacute;stica,comercio exterior,warehousing,nearshoring" data-en="logistics,foreign trade,warehousing,nearshoring">log&iacute;stica</span><span class="whero__caret" aria-hidden="true"></span></span></h1>
+    <p class="whero__sub" data-i18n="blog.sub">An&aacute;lisis y notas sobre comercio exterior, almacenamiento y cadenas de suministro en M&eacute;xico.</p>
   </div>
 </section>
 <section class="blog-sec">
@@ -749,13 +749,13 @@
     <div class="blog-controls">
       <div class="blog-search">
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M14 14l4 4" stroke-linecap="round"/></svg>
-        <input type="search" id="blogSearch" placeholder="Buscar por palabra clave..." aria-label="Buscar en el blog" />
+        <input type="search" id="blogSearch" data-i18n-ph="blog.search.ph" placeholder="Buscar por palabra clave..." aria-label="Buscar en el blog" />
       </div>
       <div class="blog-filters" id="blogFilters" role="tablist"></div>
     </div>
     <a class="blog-featured" id="blogFeatured" href="#" style="display:none"></a>
     <div class="blog-grid" id="blogGrid"></div>
-    <p class="blog-empty" id="blogEmpty" hidden>No encontramos publicaciones con ese criterio.</p>
+    <p class="blog-empty" id="blogEmpty" data-i18n="blog.empty" hidden>No encontramos publicaciones con ese criterio.</p>
   </div>
 </section>
 </main>
@@ -939,6 +939,10 @@
   (function() {
     let lang = 'es';
     const t = {
+      'blog.h1lead':    { es: 'Ideas sobre', en: 'Ideas on' },
+      'blog.sub':       { es: 'Análisis y notas sobre comercio exterior, almacenamiento y cadenas de suministro en México.', en: 'Analysis and notes on foreign trade, warehousing and supply chains in Mexico.' },
+      'blog.search.ph': { es: 'Buscar por palabra clave...', en: 'Search by keyword...' },
+      'blog.empty':     { es: 'No encontramos publicaciones con ese criterio.', en: 'No posts match that filter.' },
       'nav.inicio':     { es: 'Inicio', en: 'Home' },
       'nav.nosotros':   { es: 'Nosotros', en: 'About' },
       'nav.servicios':  { es: 'Servicios', en: 'Services' },
@@ -1082,6 +1086,10 @@
         } else {
           el.innerHTML = dict[l];
         }
+      });
+      document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+        const dict = t[el.getAttribute('data-i18n-ph')];
+        if (dict && dict[l] !== undefined) el.setAttribute('placeholder', dict[l]);
       });
       document.documentElement.lang = l;
       document.querySelectorAll('.lang-flag').forEach(function(f){ f.classList.toggle('is-active', f.getAttribute('data-lang') === l); });
