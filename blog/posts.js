@@ -10,7 +10,10 @@ window.REIS_POSTS = [
     "readTime": 6,
     "category_en": "Foreign Trade",
     "title_en": "USMCA Logistics 2026: how to prepare supply chains for North America's new trade balance",
-    "excerpt_en": "The review of the treaty between Mexico, the United States and Canada, better known as the USMCA, will be one of the most relevant economic processes for companies…"
+    "excerpt_en": "The review of the treaty between Mexico, the United States and Canada, better known as the USMCA, will be one of the most relevant economic processes for companies…",
+    "category_zh": "对外贸易",
+    "title_zh": "USMCA 物流 2026：如何为北美新的贸易平衡做好供应链准备",
+    "excerpt_zh": "墨西哥、美国与加拿大之间协定（即 USMCA / T-MEC）的审议，将是对相关企业最重要的经济进程之一……"
   },
   {
     "slug": "logistica-2026",
@@ -22,7 +25,10 @@ window.REIS_POSTS = [
     "readTime": 4,
     "category_en": "Logistics",
     "title_en": "Logistics 2026: how to operate amid trade shifts, tariffs and greater regulatory volatility",
-    "excerpt_en": "Logistics in 2026 is shaping up to be one of the most important topics for companies involved in foreign trade, imports, exports,…"
+    "excerpt_en": "Logistics in 2026 is shaping up to be one of the most important topics for companies involved in foreign trade, imports, exports,…",
+    "category_zh": "物流",
+    "title_zh": "物流 2026：在贸易变局、关税与更高监管波动下如何运营",
+    "excerpt_zh": "2026 年的物流正成为参与对外贸易、进口与出口企业最重要的议题之一……"
   },
   {
     "slug": "inteligencia-artificial-logistica-mexico",
@@ -34,7 +40,10 @@ window.REIS_POSTS = [
     "readTime": 4,
     "category_en": "Technology",
     "title_en": "Artificial intelligence in logistics in Mexico: the transformation reshaping supply chains",
-    "excerpt_en": "Logistics in Mexico is undergoing a profound transformation. What for decades was seen as an operational challenge based mainly on…"
+    "excerpt_en": "Logistics in Mexico is undergoing a profound transformation. What for decades was seen as an operational challenge based mainly on…",
+    "category_zh": "技术",
+    "title_zh": "墨西哥物流中的人工智能：重塑供应链的变革",
+    "excerpt_zh": "墨西哥的物流正经历深刻变革。几十年来，它一直被视为一项主要基于运营的挑战……"
   },
   {
     "slug": "mercado-transporte-carga-mexico-2026",
@@ -46,7 +55,10 @@ window.REIS_POSTS = [
     "readTime": 4,
     "category_en": "Logistics",
     "title_en": "Mexico's freight and logistics market to grow 5.38% in 2026, driven by nearshoring and e-commerce",
-    "excerpt_en": "Mexico's freight transport and logistics market continues to show sustained growth, consolidating itself as one of the most important pillars…"
+    "excerpt_en": "Mexico's freight transport and logistics market continues to show sustained growth, consolidating itself as one of the most important pillars…",
+    "category_zh": "物流",
+    "title_zh": "墨西哥货运与物流市场 2026 年将增长 5.38%，由近岸外包与电商驱动",
+    "excerpt_zh": "墨西哥货运与物流市场持续保持稳定增长，成为最重要的支柱之一……"
   },
   {
     "slug": "mercado-warehousing-mexico-2034",
@@ -58,7 +70,10 @@ window.REIS_POSTS = [
     "readTime": 4,
     "category_en": "Warehousing",
     "title_en": "Warehousing market in Mexico: growth, technology and opportunities toward 2034",
-    "excerpt_en": "In recent years, the role of a logistics company in Mexico has evolved significantly. It is no longer only about moving goods from one…"
+    "excerpt_en": "In recent years, the role of a logistics company in Mexico has evolved significantly. It is no longer only about moving goods from one…",
+    "category_zh": "仓储",
+    "title_zh": "墨西哥仓储市场：迈向 2034 年的增长、技术与机遇",
+    "excerpt_zh": "近年来，墨西哥物流企业的角色发生了显著演变。如今已不再只是把货物从一处……"
   },
   {
     "slug": "foreign-trade-zones-exportadores",
@@ -70,6 +85,9 @@ window.REIS_POSTS = [
     "readTime": 5,
     "category_en": "Foreign Trade",
     "title_en": "Foreign Trade Zones for exporters: logistics and tax advantages on the Mexico–United States border",
-    "excerpt_en": "In today's international trade, competitiveness does not depend solely on producing faster or selling cheaper. Increasingly, the strategic advantage…"
+    "excerpt_en": "In today's international trade, competitiveness does not depend solely on producing faster or selling cheaper. Increasingly, the strategic advantage…",
+    "category_zh": "对外贸易",
+    "title_zh": "面向出口商的对外贸易区（FTZ）：墨美边境的物流与税务优势",
+    "excerpt_zh": "在当今的国际贸易中，竞争力不再仅取决于生产更快或售价更低。战略优势正越来越……"
   }
 ];
