@@ -711,7 +711,7 @@
     <div class="nav-cta">
       <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma / Switch language">
         <span class="lang-flag is-active" data-lang="es" title="Espa&ntilde;ol"><svg viewBox="0 0 24 16" aria-hidden="true"><rect width="8" height="16" fill="#006847"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#CE1126"/><circle cx="12" cy="8" r="2.1" fill="#6b4a2b"/></svg></span>
-        <span class="lang-flag" data-lang="en" title="English"><svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><g fill="#B22234"><rect width="24" height="1.85"/><rect y="3.7" width="24" height="1.85"/><rect y="7.4" width="24" height="1.85"/><rect y="11.1" width="24" height="1.85"/><rect y="14.8" width="24" height="1.2"/></g><rect width="10" height="8.6" fill="#3C3B6E"/></svg></span>
+        <span class="lang-flag" data-lang="en" title="English"><svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><g fill="#B22234"><rect width="24" height="1.85"/><rect y="3.7" width="24" height="1.85"/><rect y="7.4" width="24" height="1.85"/><rect y="11.1" width="24" height="1.85"/><rect y="14.8" width="24" height="1.2"/></g><rect width="10" height="8.6" fill="#3C3B6E"/></svg></span><span class="lang-flag" data-lang="zh" title="中文"><svg viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#DE2910"/><g fill="#FFDE00"><polygon points="3.8,2.1 4.34,3.66 5.99,3.69 4.68,4.68 5.15,6.26 3.8,5.32 2.45,6.26 2.93,4.68 1.61,3.69 3.26,3.66"/><circle cx="7.4" cy="2.1" r=".5"/><circle cx="8.9" cy="3.3" r=".5"/><circle cx="8.9" cy="5.2" r=".5"/><circle cx="7.4" cy="6.4" r=".5"/></g></svg></span>
       </button>
       <a href="/contacto" class="btn btn-primary on-dark nav-cta-btn"><span class="bl" data-i18n="nav.cotiza">Cotiza ahora</span></a>
       <button class="nav-burger" id="navBurger" aria-label="Abrir menú">
@@ -859,6 +859,14 @@
 <p>The projected growth reflects not only greater demand for logistics services, but also a profound transformation in how supply chains operate.</p>
 <p>Today, logistics positions itself as a strategic element that defines companies' competitiveness. The ability to adapt, integrate technology and optimize processes will be key to seizing the opportunities this growing market offers.</p>
 <p class="post-ref">References: TYT. (2026). Mexico's freight and logistics market to grow 5.38% in 2026: Mordor.</p>
+    </div>
+    <div class="post-body" data-i18n-block="zh" style="display:none">
+<div style="text-align:center;padding:56px 22px;">
+<p style="font-size:22px;font-weight:700;margin:0 0 12px;">此文章暂无中文版本</p>
+<p style="opacity:.72;margin:0 0 8px;">This article is not available in Chinese.</p>
+<p style="opacity:.72;margin:0 0 18px;">Este art&iacute;culo no est&aacute; disponible en chino.</p>
+<p style="margin:0;">请切换至 <strong>Espa&ntilde;ol</strong> 或 <strong>English</strong> 阅读全文。</p>
+</div>
     </div>
     <div class="post-end">
       <div class="post-cta">
@@ -1355,8 +1363,8 @@
         s.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
       });
     })();
-    document.getElementById('langToggle').addEventListener('click', () => {
-      lang = lang === 'es' ? 'en' : 'es';
+    document.getElementById('langToggle').addEventListener('click', (e) => {
+      var f = e.target.closest('.lang-flag'); lang = f ? f.getAttribute('data-lang') : (lang === 'es' ? 'en' : lang === 'en' ? 'zh' : 'es');
       apply(lang);
     });
   })();
@@ -1367,7 +1375,7 @@
     var cur="mercado-transporte-carga-mexico-2026";
     var posts=(window.REIS_POSTS||[]).filter(function(p){return p.slug!==cur&&new Date(p.publishDate+'T00:00:00')<=new Date();})
       .sort(function(a,b){return new Date(b.publishDate)-new Date(a.publishDate);}).slice(0,3);
-    function L(){return document.documentElement.lang==='en'?'en':'es';}
+    function L(){var l=document.documentElement.lang;return (l==='en'||l==='zh')?'en':'es';}
     function F(p,k){return L()==='en'?(p[k+'_en']||p[k]):p[k];}
     var catEN={};posts.forEach(function(p){if(p.category_en)catEN[p.category]=p.category_en;});
     function catLabel(c){return L()==='en'?(catEN[c]||c):c;}
