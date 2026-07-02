@@ -573,11 +573,11 @@
   .herox__sticky::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(55% 60% at 88% 16%, rgba(46,167,58,.16), transparent 66%); }
   .herox__topscrim { position: absolute; top: 0; left: 0; right: 0; height: 140px; z-index: 5; background: linear-gradient(180deg, rgba(6,18,26,.6), transparent); pointer-events: none; }
   .herox__media { z-index: 1; position: absolute; top: 50%; left: 50%;
-    --w0: calc(100vw - 64px);                /* reposo: margen lateral 32px (igual que el boton WA) */
+    --w0: calc(100% - 64px);                 /* reposo: margen lateral 32px (igual que el boton WA, sin scrollbar) */
     --h0: 76vh;                              /* reposo: alto, deja ver el fondo */
     --y0: 3vh;                               /* reposo: bajado para librar el nav */
     --r0: 12px;                              /* reposo: redondeo */
-    width: calc(var(--w0) + (100vw - var(--w0)) * var(--e, 0));
+    width: calc(var(--w0) + (100% - var(--w0)) * var(--e, 0));
     height: calc(var(--h0) + (100vh - var(--h0)) * var(--e, 0));
     border-radius: calc(var(--r0) * (1 - var(--e, 0)));
     transform: translate(-50%, calc(-50% + var(--y0) * (1 - var(--e, 0))));
@@ -597,10 +597,10 @@
   .herox__content h1 { font-size: clamp(30px, 4.4vw, 60px); font-weight: 700; letter-spacing: -.02em; line-height: 1.08; max-width: 17ch; margin: 0 0 16px; text-shadow: 0 4px 30px rgba(0,0,0,.4); }
   .herox__content h1 .accent { color: var(--green-bright); }
   .herox__content .hero-sub { max-width: 54ch; font-size: clamp(15px, 1.4vw, 18px); line-height: 1.6; color: rgba(255,255,255,.88); margin: 0 0 24px; text-shadow: 0 2px 18px rgba(0,0,0,.4); }
-  @media (max-width: 760px) { .herox { height: 200vh; } .herox__content { padding: 0 24px; bottom: 64px; } .herox__media { --w0: calc(100vw - 32px); --h0: 72vh; } }
+  @media (max-width: 760px) { .herox { height: 200vh; } .herox__content { padding: 0 24px; bottom: 64px; } .herox__media { --w0: calc(100% - 32px); --h0: 72vh; } }
   @media (prefers-reduced-motion: reduce) {
     .herox { height: 100vh; }
-    .herox__media { width: 100vw !important; height: 100vh !important; border-radius: 0 !important; transform: translate(-50%,-50%) !important; }
+    .herox__media { width: 100% !important; height: 100vh !important; border-radius: 0 !important; transform: translate(-50%,-50%) !important; }
     .herox__scrim { opacity: 1 !important; } .herox__intro { opacity: 0 !important; }
     .herox__content { opacity: 1 !important; transform: none !important; pointer-events: auto !important; }
   }
