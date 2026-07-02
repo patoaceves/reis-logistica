@@ -572,7 +572,7 @@
   .herox__sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; background: linear-gradient(180deg, rgba(7,19,27,.42), rgba(7,19,27,.64)), url(/assets/img/reis-oficinas.jpg) center/cover no-repeat #07131b; }
   .herox__sticky::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(55% 60% at 88% 16%, rgba(46,167,58,.16), transparent 66%); }
   .herox__topscrim { position: absolute; top: 0; left: 0; right: 0; height: 140px; z-index: 5; background: linear-gradient(180deg, rgba(6,18,26,.6), transparent); pointer-events: none; }
-  .herox__media { z-index: 1; position: absolute; top: 50%; left: 50%; transform: translate(-50%, calc(-50% + var(--mediaY, 4vh))); width: var(--mw, 80vw); height: var(--mh, 72vh); border-radius: var(--mr, 20px); overflow: hidden; box-shadow: 0 40px 120px -50px rgba(0,0,0,.7); will-change: width, height; }
+  .herox__media { z-index: 1; position: absolute; top: 50%; left: 50%; transform: translate(-50%, calc(-50% + var(--mediaY, 2vh))); width: var(--mw, 92vw); height: var(--mh, 88vh); border-radius: var(--mr, 10px); overflow: hidden; box-shadow: 0 40px 120px -50px rgba(0,0,0,.7); will-change: width, height; }
   .herox__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .herox__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,18,26,.08) 0%, rgba(6,18,26,.42) 60%, rgba(6,18,26,.82) 100%); opacity: var(--scrim, .35); }
   .herox__intro { position: absolute; z-index: 4; top: 50%; left: 50%; transform: translate(-50%, calc(-50% + var(--introY, 0px))); width: min(900px, 90vw); text-align: center; color: #fff; opacity: var(--introOp, 1); pointer-events: none; }
@@ -1289,10 +1289,10 @@
         var p = clamp(-rect.top / total, 0, 1);
         var e = clamp(p / 0.8, 0, 1);
         e = e < .5 ? 2*e*e : 1 - Math.pow(-2*e+2, 2)/2;   // easeInOutQuad
-        sec.style.setProperty('--mw', lerp(80, 100, e).toFixed(2) + 'vw');
-        sec.style.setProperty('--mh', lerp(72, 100, e).toFixed(2) + 'vh');
-        sec.style.setProperty('--mediaY', lerp(4, 0, e).toFixed(2) + 'vh');
-        sec.style.setProperty('--mr', lerp(20, 0, e).toFixed(1) + 'px');
+        sec.style.setProperty('--mw', lerp(92, 100, e).toFixed(2) + 'vw');
+        sec.style.setProperty('--mh', lerp(88, 100, e).toFixed(2) + 'vh');
+        sec.style.setProperty('--mediaY', lerp(2, 0, e).toFixed(2) + 'vh');
+        sec.style.setProperty('--mr', lerp(10, 0, e).toFixed(1) + 'px');
         sec.style.setProperty('--scrim', (0.46 + 0.44*e).toFixed(3));
         sec.style.setProperty('--introOp', clamp(1 - p/0.30, 0, 1).toFixed(3));
         sec.style.setProperty('--introY', (-p*44).toFixed(1) + 'px');
