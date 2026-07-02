@@ -573,15 +573,14 @@
   .herox__sticky::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(55% 60% at 88% 16%, rgba(46,167,58,.16), transparent 66%); }
   .herox__topscrim { position: absolute; top: 0; left: 0; right: 0; height: 140px; z-index: 5; background: linear-gradient(180deg, rgba(6,18,26,.6), transparent); pointer-events: none; }
   .herox__media { z-index: 1; position: absolute; top: 50%; left: 50%;
-    --e: 0;
-    --w0: min(1176px, calc(100vw - 64px));  /* reposo: ancho del menú (logo↔CTA) */
+    --w0: min(1176px, calc(100vw - 48px));   /* reposo: ancho del menú (logo↔CTA) */
     --h0: 76vh;                              /* reposo: alto, deja ver el fondo */
     --y0: 3vh;                               /* reposo: bajado para librar el nav */
     --r0: 12px;                              /* reposo: redondeo */
-    width: calc(var(--w0) + (100vw - var(--w0)) * var(--e));
-    height: calc(var(--h0) + (100vh - var(--h0)) * var(--e));
-    border-radius: calc(var(--r0) * (1 - var(--e)));
-    transform: translate(-50%, calc(-50% + var(--y0) * (1 - var(--e))));
+    width: calc(var(--w0) + (100vw - var(--w0)) * var(--e, 0));
+    height: calc(var(--h0) + (100vh - var(--h0)) * var(--e, 0));
+    border-radius: calc(var(--r0) * (1 - var(--e, 0)));
+    transform: translate(-50%, calc(-50% + var(--y0) * (1 - var(--e, 0))));
     overflow: hidden; box-shadow: 0 40px 120px -50px rgba(0,0,0,.7); will-change: width, height; }
   .herox__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .herox__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,18,26,.08) 0%, rgba(6,18,26,.42) 60%, rgba(6,18,26,.82) 100%); opacity: var(--scrim, .35); }
