@@ -552,7 +552,7 @@
   /* ============================================================
      WHATSAPP FLOATER
      ============================================================ */
-  .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 100; display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px 12px 14px; background: #25D366; color: #fff; border-radius: 999px; font-size: 15px; font-weight: 600; letter-spacing: -.005em; box-shadow: 0 6px 18px -4px rgba(14,14,31,.28); transition: background .2s var(--ease), transform .2s var(--ease); }
+  .wa-float { position: fixed; bottom: 24px; right: 32px; z-index: 100; display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px 12px 14px; background: #25D366; color: #fff; border-radius: 999px; font-size: 15px; font-weight: 600; letter-spacing: -.005em; box-shadow: 0 6px 18px -4px rgba(14,14,31,.28); transition: background .2s var(--ease), transform .2s var(--ease); }
   .wa-float:hover { background: #1EBE5C; transform: translateY(-2px); }
   .wa-float__icon { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; flex-shrink: 0; }
   .wa-float__icon svg { width: 100%; height: 100%; }
@@ -573,7 +573,7 @@
   .herox__sticky::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(55% 60% at 88% 16%, rgba(46,167,58,.16), transparent 66%); }
   .herox__topscrim { position: absolute; top: 0; left: 0; right: 0; height: 140px; z-index: 5; background: linear-gradient(180deg, rgba(6,18,26,.6), transparent); pointer-events: none; }
   .herox__media { z-index: 1; position: absolute; top: 50%; left: 50%;
-    --w0: calc(100vw - 48px);                /* reposo: casi full-ancho, margen lateral fino */
+    --w0: calc(100vw - 64px);                /* reposo: margen lateral 32px (igual que el boton WA) */
     --h0: 76vh;                              /* reposo: alto, deja ver el fondo */
     --y0: 3vh;                               /* reposo: bajado para librar el nav */
     --r0: 12px;                              /* reposo: redondeo */
