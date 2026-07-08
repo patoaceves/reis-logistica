@@ -678,14 +678,17 @@
   .post-body p { color: var(--ink-soft); font-size: 17px; line-height: 1.78; margin-bottom: 22px; }
   .post-body h2 { font-size: 25px; font-weight: 700; letter-spacing: -.02em; color: var(--ink); margin: 40px 0 14px; line-height: 1.22; }
   .post-body h3 { font-size: 20px; font-weight: 700; letter-spacing: -.01em; color: var(--ink); margin: 30px 0 12px; }
-  .post-body ul { margin: 0 0 22px; padding: 0; list-style: none; display: grid; gap: 11px; }
+  .post-body ul, .post-body ol { margin: 0 0 22px; padding: 0; list-style: none; display: grid; gap: 11px; }
   .post-body li { position: relative; padding-left: 22px; color: var(--ink-soft); font-size: 16.5px; line-height: 1.6; }
   .post-body li::before { content: ''; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; border-radius: 2px; background: var(--green); }
+  .post-body ol { counter-reset: postnum; }
+  .post-body ol li { padding-left: 30px; counter-increment: postnum; }
+  .post-body ol li::before { content: counter(postnum) "."; top: 0; width: auto; height: auto; background: none; border-radius: 0; color: var(--green-deep); font-weight: 700; }
   .post-body strong { color: var(--ink); font-weight: 700; }
   .post-body em { font-style: italic; }
   .post-fig { margin: 30px 0; border-radius: 14px; overflow: hidden; background: var(--bg-alt); }
   .post-fig img { width: 100%; height: auto; display: block; }
-  .post-ref { color: var(--ink-mute); font-size: 14px; line-height: 1.6; font-style: italic; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 30px; }
+  .post-body .post-ref { color: var(--ink-mute); font-size: 12.5px; line-height: 1.6; font-style: italic; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 30px; }
   .post-end { max-width: 720px; margin: 0 auto; padding: 40px 24px; }
   .post-cta { background: var(--bg-dark); border-radius: 18px; padding: 38px; text-align: center; color: #fff; margin-bottom: 26px; }
   .post-cta h3 { font-size: 24px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 22px; color: #fff; }
