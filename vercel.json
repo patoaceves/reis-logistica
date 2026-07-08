@@ -46,6 +46,11 @@
       "permanent": false
     },
     {
+      "source": "/post/costos-logísticos-el-factor-silencioso-que-define-la-competitividad-en-el-comercio-internacional",
+      "destination": "/blog/costos-logisticos-competitividad-comercio-internacional",
+      "permanent": true
+    },
+    {
       "source": "/post/logística-t-mec-2026-cómo-preparar-las-cadenas-de-suministro-ante-el-nuevo-equilibrio-comercial-de",
       "destination": "/blog/logistica-t-mec-2026",
       "permanent": true

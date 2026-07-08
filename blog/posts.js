@@ -1,6 +1,21 @@
 /* ===== REIS Logistica - Blog posts (auto-generated, real published posts) ===== */
 window.REIS_POSTS = [
   {
+    "slug": "costos-logisticos-competitividad-comercio-internacional",
+    "title": "Costos logísticos: el factor silencioso que define la competitividad en el comercio internacional",
+    "category": "Comercio Exterior",
+    "cover": "https://static.wixstatic.com/media/78c590_bcb64713ea31402fb920674b6c071ac6~mv2.png/v1/fill/w_1200,h_750,al_c,q_88,enc_avif,quality_auto/78c590_bcb64713ea31402fb920674b6c071ac6~mv2.png",
+    "excerpt": "En el comercio internacional, muchas empresas se concentran en variables visibles como precios, proveedores o aranceles. Pero hay un factor silencioso que define la rentabilidad y la competitividad: los costos logísticos…",
+    "publishDate": "2026-06-25",
+    "readTime": 6,
+    "category_en": "Foreign Trade",
+    "title_en": "Logistics costs: the silent factor that defines competitiveness in international trade",
+    "excerpt_en": "In international trade, many companies focus on visible variables like prices, suppliers or tariffs. But a silent factor defines profitability and competitiveness: logistics costs…",
+    "category_zh": "对外贸易",
+    "title_zh": "物流成本：定义国际贸易竞争力的隐形因素",
+    "excerpt_zh": "在国际贸易中，许多企业关注价格、供应商或关税等显性变量，但有一个隐形因素决定着盈利能力与竞争力：物流成本……"
+  },
+  {
     "slug": "logistica-t-mec-2026",
     "title": "Logística T-MEC 2026: cómo preparar las cadenas de suministro ante el nuevo equilibrio comercial de Norteamérica",
     "category": "Comercio Exterior",
