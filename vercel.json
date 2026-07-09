@@ -46,6 +46,11 @@
       "permanent": false
     },
     {
+      "source": "/post/almacenamiento-eficiente-la-clave-para-reducir-errores-y-fortalecer-la-cadena-de-suministro",
+      "destination": "/blog/almacenamiento-eficiente-cadena-suministro",
+      "permanent": true
+    },
+    {
       "source": "/post/costos-logísticos-el-factor-silencioso-que-define-la-competitividad-en-el-comercio-internacional",
       "destination": "/blog/costos-logisticos-competitividad-comercio-internacional",
       "permanent": true

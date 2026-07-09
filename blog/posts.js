@@ -1,6 +1,21 @@
 /* ===== REIS Logistica - Blog posts (auto-generated, real published posts) ===== */
 window.REIS_POSTS = [
   {
+    "slug": "almacenamiento-eficiente-cadena-suministro",
+    "title": "Almacenamiento eficiente: la clave para reducir errores y fortalecer la cadena de suministro",
+    "category": "Warehousing",
+    "cover": "https://static.wixstatic.com/media/78c590_46094f3dffa74481ad100b37cf22ac0f~mv2.png/v1/fill/w_1200,h_750,al_c,q_88,enc_avif,quality_auto/78c590_46094f3dffa74481ad100b37cf22ac0f~mv2.png",
+    "excerpt": "En una cadena de suministro, el almacén no es solo un espacio para guardar mercancía. Es un punto estratégico donde se define gran parte de la eficiencia operativa de una empresa…",
+    "publishDate": "2026-07-08",
+    "readTime": 6,
+    "category_en": "Warehousing",
+    "title_en": "Efficient warehousing: the key to reducing errors and strengthening the supply chain",
+    "excerpt_en": "In a supply chain, the warehouse is not just a place to store goods. It is a strategic point where much of a company's operational efficiency is defined…",
+    "category_zh": "仓储",
+    "title_zh": "高效仓储：减少错误、强化供应链的关键",
+    "excerpt_zh": "在供应链中，仓库不仅仅是存放货物的空间，而是决定企业大部分运营效率的战略节点……"
+  },
+  {
     "slug": "costos-logisticos-competitividad-comercio-internacional",
     "title": "Costos logísticos: el factor silencioso que define la competitividad en el comercio internacional",
     "category": "Comercio Exterior",
