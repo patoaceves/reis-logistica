@@ -1364,7 +1364,7 @@
       var items = document.querySelectorAll('.pillars__item');
       var wrap = document.querySelector('.pillars');
       var n = names.length, cur = 0, timer = null, paused = false, visible = false;
-      var DELAY = 4000;
+      var DELAY = 5500;
       var REVEAL = 'polygon(0 0, 100% 0, 100% 100%, 0 100%)';
       var COLLAPSE = 'polygon(0 0, 100% 0, 100% 0, 0 0)';
       function setImg(i, anim){
@@ -1407,9 +1407,11 @@
       // only auto-play while the section is on screen
       if ('IntersectionObserver' in window && wrap){
         new IntersectionObserver(function(entries){
-          visible = entries[0].isIntersecting;
+          var vis = entries[0].isIntersecting;
+          if (vis && !visible){ cur = 0; activate(0); }
+          visible = vis;
           if (visible) start(); else stop();
-        }, { threshold: 0.25 }).observe(wrap);
+        }, { threshold: 0.3 }).observe(wrap);
       } else { visible = true; start(); }
     })();
     (function(){
