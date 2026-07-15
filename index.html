@@ -376,7 +376,8 @@
   .pillars__list { list-style: none; }
   .pillars__item { border-top: 1px solid rgba(255,255,255,.12); }
   .pillars__item:last-child { border-bottom: 1px solid rgba(255,255,255,.12); }
-  .pillars__name { display: block; width: 100%; text-align: left; background: none; border: 0; cursor: default; font-family: inherit; font-size: clamp(23px, 2.9vw, 35px); font-weight: 700; letter-spacing: -.02em; line-height: 1.2; color: rgba(255,255,255,.34); padding: 18px 0; transition: color .3s var(--ease); }
+  .pillars__name { display: block; width: 100%; text-align: left; background: none; border: 0; cursor: pointer; font-family: inherit; font-size: clamp(23px, 2.9vw, 35px); font-weight: 700; letter-spacing: -.02em; line-height: 1.2; color: rgba(255,255,255,.34); padding: 18px 0; transition: color .3s var(--ease); }
+  .pillars__name:hover { color: rgba(255,255,255,.72); }
   .pillars__item.is-active .pillars__name { color: var(--green-bright); }
   .pillars__desc { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows .5s var(--ease), opacity .4s var(--ease); }
   .pillars__desc-inner { overflow: hidden; min-height: 0; }
@@ -1395,16 +1396,10 @@
       setImg(0, false);
       function start(){ stop(); if (paused || !visible) return; timer = setInterval(function(){ activate((cur+1)%n); }, DELAY); }
       function stop(){ if (timer){ clearInterval(timer); timer = null; } }
-      // Pilares en auto-play puro: sin activacion por hover/click para no interferir al hacer scroll.
-      // only auto-play while the section is on screen
-      if ('IntersectionObserver' in window && wrap){
-        new IntersectionObserver(function(entries){
-          var vis = entries[0].isIntersecting;
-          if (vis && !visible){ cur = 0; activate(0); }
-          visible = vis;
-          if (visible) start(); else stop();
-        }, { threshold: 0.3 }).observe(wrap);
-      } else { visible = true; start(); }
+      // Pilares click-only: cambian solo si el usuario le pica (sin auto-play ni hover).
+      names.forEach(function(btn,i){
+        btn.addEventListener('click', function(){ activate(i); });
+      });
     })();
     (function(){
       var s = document.querySelector('.services-waves');
